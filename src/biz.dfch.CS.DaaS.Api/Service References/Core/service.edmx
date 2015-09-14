@@ -99,6 +99,32 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
       </EntityType>
+      <EntityType Name="ActiveDirectoryUser">
+        <Key>
+          <PropertyRef Name="cn" />
+        </Key>
+        <Property Name="cn" Type="Edm.String" Nullable="false" />
+        <Property Name="description" Type="Edm.String" />
+        <Property Name="distinguishedName" Type="Edm.String" />
+        <Property Name="groupType" Type="Edm.Int32" Nullable="false" />
+        <Property Name="name" Type="Edm.String" />
+        <Property Name="sn" Type="Edm.String" />
+        <Property Name="givenName" Type="Edm.String" />
+        <Property Name="department" Type="Edm.String" />
+        <Property Name="displayName" Type="Edm.String" />
+        <Property Name="mail" Type="Edm.String" />
+        <Property Name="objectGUID" Type="Edm.String" />
+        <Property Name="objectSID" Type="Edm.String" />
+        <Property Name="sAMAccountName" Type="Edm.String" />
+        <Property Name="employeeID" Type="Edm.String" />
+        <Property Name="telephoneNumber" Type="Edm.String" />
+        <Property Name="mobile" Type="Edm.String" />
+        <Property Name="sAMAccountType" Type="Edm.Int32" Nullable="false" />
+        <Property Name="uSNChanged" Type="Edm.Int64" Nullable="false" />
+        <Property Name="uSNCreated" Type="Edm.Int64" Nullable="false" />
+        <Property Name="whenChanged" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="whenCreated" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
       <EntityType Name="OrderItem">
         <Key>
           <PropertyRef Name="Id" />
@@ -141,6 +167,7 @@
         <EntitySet Name="OrderItems" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Order" />
         <EntitySet Name="Aces" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Ace" />
         <EntitySet Name="Approvals" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Approval" />
+        <EntitySet Name="ActiveDirectoryUsers" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.ActiveDirectoryUser" />
         <FunctionImport Name="Run" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" />
         </FunctionImport>
