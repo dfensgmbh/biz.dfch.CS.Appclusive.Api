@@ -16,7 +16,6 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Diagnostics
             var result = svc.Endpoints.AddQueryOption("$top", 1).Execute();
 
             Assert.IsNotNull(result);
-            
         }
     }
 }
