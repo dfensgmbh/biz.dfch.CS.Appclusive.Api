@@ -1,0 +1,27 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Person">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="UserName" Type="Edm.String" Nullable="false" />
+        <Property Name="GivenName" Type="Edm.String" Nullable="false" />
+        <Property Name="Email" Type="Edm.String" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="Utilities" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Persons" EntityType="biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.Person" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

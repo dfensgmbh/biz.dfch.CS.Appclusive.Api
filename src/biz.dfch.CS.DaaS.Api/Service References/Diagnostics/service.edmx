@@ -1,0 +1,42 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Endpoint">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Version" Type="Edm.String" Nullable="false" />
+        <Property Name="Address" Type="Edm.String" Nullable="false" />
+        <Property Name="RouteTemplate" Type="Edm.String" Nullable="false" />
+        <Property Name="RoutePrefix" Type="Edm.String" Nullable="false" />
+        <Property Name="ServerRole" Type="Edm.String" Nullable="false" />
+        <Property Name="Priority" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="Diagnostics" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Endpoints" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint" />
+        <FunctionImport Name="Refresh" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint" />
+        </FunctionImport>
+        <FunctionImport Name="Reload" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint" />
+        </FunctionImport>
+        <FunctionImport Name="Enable" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint" />
+        </FunctionImport>
+        <FunctionImport Name="Disable" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
