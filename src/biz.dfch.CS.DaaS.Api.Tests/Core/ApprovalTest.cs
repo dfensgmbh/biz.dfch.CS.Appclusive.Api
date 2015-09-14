@@ -19,12 +19,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace biz.dfch.CS.DaaS.Api.Tests.Core
 {
+    [TestClass]
     public class ApprovalTest
     {
         // DFTODO Get approvals
         // DFTODO Approve/Decline (-> Approval itself, Jobs and Order get adjusted)
+
+        [TestMethod]
+        public void GetApprovalsReturnsApprovals()
+        {
+
+        }
     }
 }
