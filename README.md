@@ -1,2 +1,2 @@
-# biz.dfch.CS.Sunrise.DaaS.Api
+# biz.dfch.CS.DaaS.Api
 Service reference to the DaaS Framework
