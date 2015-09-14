@@ -66,6 +66,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\ApprovalTest.cs" />
+    <Compile Include="Core\JobTest.cs" />
+    <Compile Include="Core\OrderTest.cs" />
     <Compile Include="Diagnostics\EndpointTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,7 +79,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
