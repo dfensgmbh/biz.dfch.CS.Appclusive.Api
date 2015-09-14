@@ -70,35 +70,6 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <NavigationProperty Name="OrderItems" Relationship="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartner" ToRole="OrderItems" FromRole="OrderItemsPartner" />
       </EntityType>
-      <EntityType Name="Ace">
-        <Key>
-          <PropertyRef Name="Id" />
-        </Key>
-        <Property Name="Resource" Type="Edm.String" Nullable="false" />
-        <Property Name="Trustee" Type="Edm.String" Nullable="false" />
-        <Property Name="Action" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Tid" Type="Edm.String" Nullable="false" />
-        <Property Name="Name" Type="Edm.String" Nullable="false" />
-        <Property Name="Description" Type="Edm.String" />
-        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
-        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
-        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-      </EntityType>
-      <EntityType Name="Approval">
-        <Key>
-          <PropertyRef Name="Id" />
-        </Key>
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Tid" Type="Edm.String" Nullable="false" />
-        <Property Name="Name" Type="Edm.String" Nullable="false" />
-        <Property Name="Description" Type="Edm.String" />
-        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
-        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
-        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-      </EntityType>
       <EntityType Name="OrderItem">
         <Key>
           <PropertyRef Name="Id" />
@@ -119,6 +90,62 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <NavigationProperty Name="Order" Relationship="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderPartner" ToRole="Order" FromRole="OrderPartner" />
       </EntityType>
+      <EntityType Name="Ace">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Resource" Type="Edm.String" Nullable="false" />
+        <Property Name="Trustee" Type="Edm.String" Nullable="false" />
+        <Property Name="Action" Type="Edm.String" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+      </EntityType>
+      <EntityType Name="Approval">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+      </EntityType>
+      <EntityType Name="ActiveDirectoryUser">
+        <Key>
+          <PropertyRef Name="cn" />
+        </Key>
+        <Property Name="cn" Type="Edm.String" Nullable="false" />
+        <Property Name="description" Type="Edm.String" />
+        <Property Name="distinguishedName" Type="Edm.String" />
+        <Property Name="groupType" Type="Edm.Int32" Nullable="false" />
+        <Property Name="name" Type="Edm.String" />
+        <Property Name="sn" Type="Edm.String" />
+        <Property Name="givenName" Type="Edm.String" />
+        <Property Name="department" Type="Edm.String" />
+        <Property Name="displayName" Type="Edm.String" />
+        <Property Name="mail" Type="Edm.String" />
+        <Property Name="objectGUID" Type="Edm.String" />
+        <Property Name="objectSID" Type="Edm.String" />
+        <Property Name="sAMAccountName" Type="Edm.String" />
+        <Property Name="employeeID" Type="Edm.String" />
+        <Property Name="telephoneNumber" Type="Edm.String" />
+        <Property Name="mobile" Type="Edm.String" />
+        <Property Name="sAMAccountType" Type="Edm.Int32" Nullable="false" />
+        <Property Name="uSNChanged" Type="Edm.Int64" Nullable="false" />
+        <Property Name="uSNCreated" Type="Edm.Int64" Nullable="false" />
+        <Property Name="whenChanged" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="whenCreated" Type="Edm.DateTime" Nullable="false" />
+      </EntityType>
       <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJobPartner">
         <End Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" Role="ParentJob" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" Role="ParentJobPartner" Multiplicity="0..1" />
@@ -138,9 +165,10 @@
         <EntitySet Name="Jobs" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" />
         <EntitySet Name="CatalogueItems" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.CatalogueItem" />
         <EntitySet Name="Orders" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Order" />
-        <EntitySet Name="OrderItems" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Order" />
+        <EntitySet Name="OrderItems" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.OrderItem" />
         <EntitySet Name="Aces" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Ace" />
         <EntitySet Name="Approvals" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Approval" />
+        <EntitySet Name="ActiveDirectoryUsers" EntityType="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.ActiveDirectoryUser" />
         <FunctionImport Name="Run" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" />
         </FunctionImport>
@@ -150,6 +178,14 @@
         <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJobPartnerSet" Association="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJobPartner">
           <End Role="ParentJobPartner" EntitySet="Jobs" />
           <End Role="ParentJob" EntitySet="Jobs" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartnerSet" Association="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartner">
+          <End Role="OrderItemsPartner" EntitySet="Orders" />
+          <End Role="OrderItems" EntitySet="OrderItems" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderPartnerSet" Association="biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderPartner">
+          <End Role="OrderPartner" EntitySet="OrderItems" />
+          <End Role="Order" EntitySet="Orders" />
         </AssociationSet>
       </EntityContainer>
     </Schema>

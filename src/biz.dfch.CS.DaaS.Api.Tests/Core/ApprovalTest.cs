@@ -16,15 +16,25 @@
 
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+﻿using System.Configuration;
+﻿using System.Data.Services.Client;
+﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+﻿using biz.dfch.CS.DaaS.Api.Core;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace biz.dfch.CS.DaaS.Api.Tests.Core
 {
+    [TestClass]
     public class ApprovalTest
     {
-        // DFTODO Get approvals
-        // DFTODO Approve/Decline (-> Approval itself, Jobs and Order get adjusted)
+        private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+
+        [TestMethod]
+        public void GetApprovalsReturnsJobs()
+        {
+
+        }
     }
 }
