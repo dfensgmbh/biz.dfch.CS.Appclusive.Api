@@ -71,34 +71,41 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
             order.Tid = "Tid";
 
 
-            //var orderCount = svc.Orders.ToList().Count();
-            //var jobsCount = svc.Jobs.ToList().Count();
-            //var approvalsCount = svc.Approvals.ToList().Count();
+            var orderCount = svc.Orders.ToList().Count();
+            var jobsCount = svc.Jobs.ToList().Count();
+            var approvalsCount = svc.Approvals.ToList().Count();
 
             svc.AddToOrders(order);
             svc.SaveChanges();
 
-            
-            var orderResult = svc.Orders;
-            //Assert.AreEqual(orderCount + 1, orderResult.Count());
-            var orderEntity = orderResult.LastOrDefault();
+
+            var orderResult = svc.Orders.Expand(o => o.OrderItems).ToList();
+            Assert.AreEqual(orderCount + 1, orderResult.Count());
+            var orderEntity2 = orderResult.LastOrDefault();
+            var orderEntity =
+                svc.Orders.AddQueryOption("$filter", String.Format("Id eq {0}", orderEntity2.Id))
+                    .AddQueryOption("$expand", "OrderItems").FirstOrDefault();
             Assert.AreEqual("Created", orderEntity.Status);
             Assert.AreNotEqual("User", orderEntity.CreatedBy);
 
-            var orderItemsResult = svc.OrderItems;
-            Assert.AreEqual(1, orderItemsResult.Count());
-            var orderItemEntity = orderItemsResult.LastOrDefault();
-            Assert.IsFalse(String.IsNullOrWhiteSpace(orderItemEntity.Parameters));
+            //var orderItemsResult = orderEntity.OrderItems;
+            //Assert.AreEqual(1, orderItemsResult.Count());
+            //var orderItemEntity = orderItemsResult.LastOrDefault();
+            //Assert.IsFalse(String.IsNullOrWhiteSpace(orderItemEntity.Parameters));
 
-            
-            var jobResult = svc.Jobs;
-            //Assert.AreEqual(jobsCount + 2, jobResult);
+
+            var jobResult = svc.Jobs.ToList();
+            //Assert.AreEqual(jobsCount + 2, jobResult.Count);
             var jobResultEntity = jobResult.LastOrDefault();
 
             
-            var approvalResult = svc.Approvals;
-            //Assert.AreEqual(approvalsCount + 1, approvalResult.Count());
+            var approvalResult = svc.Approvals.ToList();
+            Assert.AreEqual(approvalsCount + 1, approvalResult.Count());
             var approval = approvalResult.LastOrDefault();
+
+            approval.State = "Approved";
+            svc.UpdateObject(approval);
+            svc.SaveChanges();
         }
 
         [TestMethod]
