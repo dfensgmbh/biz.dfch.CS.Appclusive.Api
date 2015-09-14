@@ -90,6 +90,7 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
+        <Property Name="State" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 14.09.2015 17:46:39
+// Generation date: 14.09.2015 18:28:30
 namespace biz.dfch.CS.DaaS.Api.Core
 {
     
@@ -326,85 +326,85 @@ namespace biz.dfch.CS.DaaS.Api.Core
                 "e=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Typ" +
                 "e=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.Da" +
                 "teTimeOffset\" Nullable=\"false\" /></EntityType><EntityType Name=\"Approval\"><Key><" +
-                "PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"fal" +
-                "se\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
-                "Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Ed" +
-                "m.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
-                "perty Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Cre" +
-                "ated\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Typ" +
-                "e=\"Edm.DateTimeOffset\" Nullable=\"false\" /></EntityType><EntityType Name=\"ActiveD" +
-                "irectoryUser\"><Key><PropertyRef Name=\"cn\" /></Key><Property Name=\"cn\" Type=\"Edm." +
-                "String\" Nullable=\"false\" /><Property Name=\"description\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"distinguishedName\" Type=\"Edm.String\" /><Property Name=\"groupType\" Ty" +
-                "pe=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"name\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"sn\" Type=\"Edm.String\" /><Property Name=\"givenName\" Type=\"Edm.String\"" +
-                " /><Property Name=\"department\" Type=\"Edm.String\" /><Property Name=\"displayName\" " +
-                "Type=\"Edm.String\" /><Property Name=\"mail\" Type=\"Edm.String\" /><Property Name=\"ob" +
-                "jectGUID\" Type=\"Edm.String\" /><Property Name=\"objectSID\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"sAMAccountName\" Type=\"Edm.String\" /><Property Name=\"employeeID\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"telephoneNumber\" Type=\"Edm.String\" /><Property " +
-                "Name=\"mobile\" Type=\"Edm.String\" /><Property Name=\"sAMAccountType\" Type=\"Edm.Int3" +
-                "2\" Nullable=\"false\" /><Property Name=\"uSNChanged\" Type=\"Edm.Int64\" Nullable=\"fal" +
-                "se\" /><Property Name=\"uSNCreated\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property " +
-                "Name=\"whenChanged\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"whenCr" +
-                "eated\" Type=\"Edm.DateTime\" Nullable=\"false\" /></EntityType><EntityType Name=\"Ord" +
-                "erItem\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"OrderId\" Type=\"Edm.I" +
-                "nt32\" Nullable=\"false\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"Quantity\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Version\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Parameters\" Type=\"Edm.String\" Nullable=\"false\" /><Pr" +
-                "operty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"" +
-                "Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=" +
-                "\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Creat" +
-                "edBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm" +
-                ".String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" N" +
-                "ullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"" +
-                "false\" /><NavigationProperty Name=\"Order\" Relationship=\"biz";
+                "PropertyRef Name=\"Id\" /></Key><Property Name=\"State\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm." +
+                "String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.Str" +
+                "ing\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"fals" +
+                "e\" /></EntityType><EntityType Name=\"ActiveDirectoryUser\"><Key><PropertyRef Name=" +
+                "\"cn\" /></Key><Property Name=\"cn\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"description\" Type=\"Edm.String\" /><Property Name=\"distinguishedName\" Type=\"" +
+                "Edm.String\" /><Property Name=\"groupType\" Type=\"Edm.Int32\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"name\" Type=\"Edm.String\" /><Property Name=\"sn\" Type=\"Edm.String\" /><" +
+                "Property Name=\"givenName\" Type=\"Edm.String\" /><Property Name=\"department\" Type=\"" +
+                "Edm.String\" /><Property Name=\"displayName\" Type=\"Edm.String\" /><Property Name=\"m" +
+                "ail\" Type=\"Edm.String\" /><Property Name=\"objectGUID\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"objectSID\" Type=\"Edm.String\" /><Property Name=\"sAMAccountName\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"employeeID\" Type=\"Edm.String\" /><Property Name=\"tele" +
+                "phoneNumber\" Type=\"Edm.String\" /><Property Name=\"mobile\" Type=\"Edm.String\" /><Pr" +
+                "operty Name=\"sAMAccountType\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=" +
+                "\"uSNChanged\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"uSNCreated\" Typ" +
+                "e=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"whenChanged\" Type=\"Edm.DateTime" +
+                "\" Nullable=\"false\" /><Property Name=\"whenCreated\" Type=\"Edm.DateTime\" Nullable=\"" +
+                "false\" /></EntityType><EntityType Name=\"OrderItem\"><Key><PropertyRef Name=\"Id\" /" +
+                "></Key><Property Name=\"OrderId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Na" +
+                "me=\"Status\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Int32\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Parameter" +
+                "s\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nul" +
+                "lable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description" +
+                "\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property" +
+                " Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Mod" +
+                "ified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Naviga";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = ".dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpo" +
-                "ints_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Sunrise_DaaS_Endpoints_Odata" +
-                "Services_Core_Order_OrderPartner\" ToRole=\"Order\" FromRole=\"OrderPartner\" /></Ent" +
-                "ityType><Association Name=\"biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core" +
-                "_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJ" +
-                "obPartner\"><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job\"" +
-                " Role=\"ParentJob\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endp" +
-                "oints.OdataServices.Core.Job\" Role=\"ParentJobPartner\" Multiplicity=\"0..1\" /></As" +
-                "sociation><Association Name=\"biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Co" +
-                "re_Order_OrderItems_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderI" +
-                "tem_OrderItemsPartner\"><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServic" +
-                "es.Core.OrderItem\" Role=\"OrderItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.S" +
-                "unrise.DaaS.Endpoints.OdataServices.Core.Order\" Role=\"OrderItemsPartner\" Multipl" +
-                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Sunrise_DaaS_Endpoin" +
-                "ts_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataSe" +
-                "rvices_Core_Order_OrderPartner\"><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.Od" +
-                "ataServices.Core.Order\" Role=\"Order\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
-                "S.Sunrise.DaaS.Endpoints.OdataServices.Core.OrderItem\" Role=\"OrderPartner\" Multi" +
-                "plicity=\"0..1\" /></Association></Schema><Schema Namespace=\"Default\" xmlns=\"http:" +
-                "//schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Core\" m:IsDefaul" +
-                "tEntityContainer=\"true\"><EntitySet Name=\"KeyNameValues\" EntityType=\"biz.dfch.CS." +
-                "Sunrise.DaaS.Endpoints.OdataServices.Core.KeyNameValue\" /><EntitySet Name=\"Jobs\"" +
-                " EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job\" /><Entit" +
-                "ySet Name=\"CatalogueItems\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataS" +
-                "ervices.Core.CatalogueItem\" /><EntitySet Name=\"Orders\" EntityType=\"biz.dfch.CS.S" +
-                "unrise.DaaS.Endpoints.OdataServices.Core.Order\" /><EntitySet Name=\"OrderItems\" E" +
-                "ntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Order\" /><Entit" +
-                "ySet Name=\"Aces\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Co" +
-                "re.Ace\" /><EntitySet Name=\"Approvals\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpo" +
-                "ints.OdataServices.Core.Approval\" /><EntitySet Name=\"ActiveDirectoryUsers\" Entit" +
-                "yType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.ActiveDirectoryUser" +
-                "\" /><FunctionImport Name=\"Run\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlw" +
-                "aysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise." +
-                "DaaS.Endpoints.OdataServices.Core.Job\" /></FunctionImport><FunctionImport Name=\"" +
-                "Finish\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataSer" +
-                "vices.Core.Job\" /></FunctionImport><AssociationSet Name=\"biz_dfch_CS_Sunrise_Daa" +
-                "S_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_" +
-                "OdataServices_Core_Job_ParentJobPartnerSet\" Association=\"biz.dfch.CS.Sunrise.Daa" +
-                "S.Endpoints.OdataServices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_" +
-                "Core_Job_ParentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_Par" +
-                "entJobPartner\"><End Role=\"ParentJobPartner\" EntitySet=\"Jobs\" /><End Role=\"Parent" +
-                "Job\" EntitySet=\"Jobs\" /></AssociationSet></EntityContainer></Schema></edmx:DataS" +
-                "ervices></edmx:Edmx>";
+            private const string ModelPart1 = "tionProperty Name=\"Order\" Relationship=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataS" +
+                "ervices.Core.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_Ord" +
+                "er_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderPartner\" ToR" +
+                "ole=\"Order\" FromRole=\"OrderPartner\" /></EntityType><Association Name=\"biz_dfch_C" +
+                "S_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunrise_Da" +
+                "aS_Endpoints_OdataServices_Core_Job_ParentJobPartner\"><End Type=\"biz.dfch.CS.Sun" +
+                "rise.DaaS.Endpoints.OdataServices.Core.Job\" Role=\"ParentJob\" Multiplicity=\"0..1\"" +
+                " /><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job\" Role=\"P" +
+                "arentJobPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch" +
+                "_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Sunri" +
+                "se_DaaS_Endpoints_OdataServices_Core_OrderItem_OrderItemsPartner\"><End Type=\"biz" +
+                ".dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.OrderItem\" Role=\"OrderItems\" " +
+                "Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.C" +
+                "ore.Order\" Role=\"OrderItemsPartner\" Multiplicity=\"0..1\" /></Association><Associa" +
+                "tion Name=\"biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_OrderItem_Order" +
+                "_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_OrderPartner\"><End " +
+                "Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Order\" Role=\"Order\" " +
+                "Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataService" +
+                "s.Core.OrderItem\" Role=\"OrderPartner\" Multiplicity=\"0..1\" /></Association></Sche" +
+                "ma><Schema Namespace=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/e" +
+                "dm\"><EntityContainer Name=\"Core\" m:IsDefaultEntityContainer=\"true\"><EntitySet Na" +
+                "me=\"KeyNameValues\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices." +
+                "Core.KeyNameValue\" /><EntitySet Name=\"Jobs\" EntityType=\"biz.dfch.CS.Sunrise.DaaS" +
+                ".Endpoints.OdataServices.Core.Job\" /><EntitySet Name=\"CatalogueItems\" EntityType" +
+                "=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.CatalogueItem\" /><Entity" +
+                "Set Name=\"Orders\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.C" +
+                "ore.Order\" /><EntitySet Name=\"OrderItems\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.E" +
+                "ndpoints.OdataServices.Core.Order\" /><EntitySet Name=\"Aces\" EntityType=\"biz.dfch" +
+                ".CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Ace\" /><EntitySet Name=\"Approvals\"" +
+                " EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Approval\" /><" +
+                "EntitySet Name=\"ActiveDirectoryUsers\" EntityType=\"biz.dfch.CS.Sunrise.DaaS.Endpo" +
+                "ints.OdataServices.Core.ActiveDirectoryUser\" /><FunctionImport Name=\"Run\" Return" +
+                "Type=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job" +
+                "\" /></FunctionImport><FunctionImport Name=\"Finish\" ReturnType=\"Edm.String\" IsBin" +
+                "dable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"" +
+                "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.Job\" /></FunctionImport><A" +
+                "ssociationSet Name=\"biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_Pa" +
+                "rentJob_biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJobPartn" +
+                "erSet\" Association=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Core.biz_df" +
+                "ch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Sunris" +
+                "e_DaaS_Endpoints_OdataServices_Core_Job_ParentJobPartner\"><End Role=\"ParentJobPa" +
+                "rtner\" EntitySet=\"Jobs\" /><End Role=\"ParentJob\" EntitySet=\"Jobs\" /></Association" +
+                "Set></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -2016,6 +2016,28 @@ namespace biz.dfch.CS.DaaS.Api.Core
             approval.Modified = modified;
             return approval;
         }
+        /// <summary>
+        /// There are no comments for Property State in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string State
+        {
+            get
+            {
+                return this._State;
+            }
+            set
+            {
+                this.OnStateChanging(value);
+                this._State = value;
+                this.OnStateChanged();
+                this.OnPropertyChanged("State");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _State;
+        partial void OnStateChanging(string value);
+        partial void OnStateChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
