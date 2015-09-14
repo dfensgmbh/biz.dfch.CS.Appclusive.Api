@@ -16,7 +16,8 @@
 
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+﻿using System.Configuration;
+﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -26,8 +27,8 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
     [TestClass]
     public class JobTest
     {
-        // DFTODO Query Job/Jobs
-
+        private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+        
         [TestMethod]
         public void GetJobsReturnsJobs()
         {
