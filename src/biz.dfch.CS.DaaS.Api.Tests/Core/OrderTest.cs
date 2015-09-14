@@ -38,7 +38,10 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
             biz.dfch.CS.DaaS.Api.Core.Core svc = new biz.dfch.CS.DaaS.Api.Core.Core(uri);
             svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
+            var count = svc.CatalogueItems.ToList().Count();
+
             var catalogueItem = new CatalogueItem();
+            catalogueItem.Id = 0;
             catalogueItem.Created = DateTimeOffset.Now;
             catalogueItem.CreatedBy = "User";
             catalogueItem.Modified = DateTimeOffset.Now;
@@ -49,10 +52,13 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
             catalogueItem.Collection = "";
 
             svc.AddToCatalogueItems(catalogueItem);
-            var catalogueItems = svc.CatalogueItems.Execute();
-            Assert.AreEqual(1, catalogueItems.Count());
+            svc.SaveChanges();
+
+            var catalogueItems = svc.CatalogueItems.ToList();
+            Assert.AreEqual(count + 1, catalogueItems.Count());
 
             var order = new Order();
+            order.Id = 0;
             order.Created = DateTimeOffset.Now;
             order.CreatedBy = "User";
             order.Modified = DateTimeOffset.Now;
@@ -60,30 +66,39 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
             order.Description = "Description";
             order.Name = "MyOrder";
             order.OrderItems = new DataServiceCollection<OrderItem>();
-            order.Parameters = "[{\"Quantity\":1,\"CatalogueItemId\":1}]";
+            order.Parameters = "[{\"Quantity\":1,\"CatalogueItemId\":" + catalogueItems.LastOrDefault().Id + "}]";
             order.Status = "Created";
             order.Tid = "Tid";
 
-            svc.AddToOrders(order);
 
-            var orderResult = svc.Orders.Execute();
-            Assert.AreEqual(1, orderResult.Count());
-            var orderEntity = orderResult.FirstOrDefault();
+            //var orderCount = svc.Orders.ToList().Count();
+            //var jobsCount = svc.Jobs.ToList().Count();
+            //var approvalsCount = svc.Approvals.ToList().Count();
+
+            svc.AddToOrders(order);
+            svc.SaveChanges();
+
+            
+            var orderResult = svc.Orders;
+            //Assert.AreEqual(orderCount + 1, orderResult.Count());
+            var orderEntity = orderResult.LastOrDefault();
             Assert.AreEqual("Created", orderEntity.Status);
             Assert.AreNotEqual("User", orderEntity.CreatedBy);
 
-            var orderItemsResult = svc.OrderItems.Execute();
+            var orderItemsResult = svc.OrderItems;
             Assert.AreEqual(1, orderItemsResult.Count());
-            var orderItemEntity = orderItemsResult.FirstOrDefault();
+            var orderItemEntity = orderItemsResult.LastOrDefault();
             Assert.IsFalse(String.IsNullOrWhiteSpace(orderItemEntity.Parameters));
 
-            var jobResult = svc.Jobs.Execute();
-            Assert.AreEqual(2, jobResult);
-            var jobResultEntity = jobResult.FirstOrDefault();
+            
+            var jobResult = svc.Jobs;
+            //Assert.AreEqual(jobsCount + 2, jobResult);
+            var jobResultEntity = jobResult.LastOrDefault();
 
+            
             var approvalResult = svc.Approvals;
-            Assert.AreEqual(1, approvalResult.Count());
-            var approval = approvalResult.FirstOrDefault();
+            //Assert.AreEqual(approvalsCount + 1, approvalResult.Count());
+            var approval = approvalResult.LastOrDefault();
         }
 
         [TestMethod]

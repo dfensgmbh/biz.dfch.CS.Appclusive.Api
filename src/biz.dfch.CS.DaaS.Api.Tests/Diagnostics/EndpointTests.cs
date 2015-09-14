@@ -15,7 +15,7 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Diagnostics
         {
             var uri = new Uri(_uriPrefix + "Diagnostics");
             biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics(uri);
-            svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.AddQueryOption("$top", 1).Execute();
 
             Assert.IsNotNull(result);
