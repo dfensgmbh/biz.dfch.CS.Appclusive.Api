@@ -7,8 +7,8 @@
     <ProjectGuid>{58C10414-FBF6-4087-9144-249EE0977A2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>biz.dfch.CS.DaaS.Api</RootNamespace>
-    <AssemblyName>biz.dfch.CS.DaaS.Api</AssemblyName>
+    <RootNamespace>biz.dfch.CS.Appclusive.Api</RootNamespace>
+    <AssemblyName>biz.dfch.CS.Appclusive.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

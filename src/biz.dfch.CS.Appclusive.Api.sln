@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.DaaS.Api", "biz.dfch.CS.DaaS.Api\biz.dfch.CS.DaaS.Api.csproj", "{58C10414-FBF6-4087-9144-249EE0977A2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.Appclusive.Api", "biz.dfch.CS.Appclusive.Api\biz.dfch.CS.Appclusive.Api.csproj", "{58C10414-FBF6-4087-9144-249EE0977A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.DaaS.Api.Tests", "biz.dfch.CS.DaaS.Api.Tests\biz.dfch.CS.DaaS.Api.Tests.csproj", "{E8C105F2-13E9-49A2-B013-C1A7E3362429}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.Appclusive.Api.Tests", "biz.dfch.CS.Appclusive.Api.Tests\biz.dfch.CS.Appclusive.Api.Tests.csproj", "{E8C105F2-13E9-49A2-B013-C1A7E3362429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

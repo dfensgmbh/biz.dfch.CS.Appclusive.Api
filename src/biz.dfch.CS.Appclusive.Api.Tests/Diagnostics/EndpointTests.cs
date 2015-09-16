@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using biz.dfch.CS.DaaS.Api.Diagnostics;
+using biz.dfch.CS.Appclusive.Api.Diagnostics;
 
-namespace biz.dfch.CS.DaaS.Api.Tests.Diagnostics
+namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
 {
     [TestClass]
     public class EndpointTests
@@ -21,7 +21,7 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Diagnostics
         [TestMethod]
         public void GetEndpointsSucceeds()
         {
-            biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics(_uri);
+            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.AddQueryOption("$top", 1).Execute();
 
@@ -32,7 +32,7 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Diagnostics
         public void GetEndpoint0Succeeds()
         {
             var uri = new Uri(_uriPrefix + "Diagnostics");
-            biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.DaaS.Api.Diagnostics.Diagnostics(_uri);
+            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Id == 0).First();
 

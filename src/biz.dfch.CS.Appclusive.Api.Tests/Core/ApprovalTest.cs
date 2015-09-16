@@ -21,10 +21,10 @@ using System.Collections.Generic;
 ﻿using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-﻿using biz.dfch.CS.DaaS.Api.Core;
+﻿using biz.dfch.CS.Appclusive.Api.Core;
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace biz.dfch.CS.DaaS.Api.Tests.Core
+namespace biz.dfch.CS.Appclusive.Api.Tests.Core
 {
     [TestClass]
     public class ApprovalTest

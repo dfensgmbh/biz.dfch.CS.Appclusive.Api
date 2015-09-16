@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>biz.dfch.CS.DaaS.Api</id>
+        <id>biz.dfch.CS.Appclusive.Api</id>
         <version>0.0.2</version>
-        <title>biz.dfch.CS.DaaS.Api</title>
+        <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
-		<licenseUrl>https://github.com/dfensgmbh/biz.dfch.CS.DaaS.Api/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/dfensgmbh/biz.dfch.CS.DaaS.Api.git</projectUrl>
+		<licenseUrl>https://github.com/dfensgmbh/biz.dfch.CS.Appclusive.Api/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/dfensgmbh/biz.dfch.CS.Appclusive.Api.git</projectUrl>
         <iconUrl>https://avatars1.githubusercontent.com/u/8310404?v=3&amp;s=200</iconUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
-        <description>biz.dfch.CS.DaaS.Api
+        <description>biz.dfch.CS.Appclusive.Api
 ========================
 
-Service reference to the DaaS Framework
+Service reference to the Appclusive Framework
 		</description>
-        <summary>Service reference to the DaaS Framework</summary>
+        <summary>Service reference to the Appclusive Framework</summary>
         <releaseNotes>20150914
 * Initial release</releaseNotes>
         <copyright>Copyright © 2015 d-fens GmbH</copyright>
-        <tags>dfch OData service reference DaaS C#</tags>
+        <tags>dfch OData service reference Appclusive C#</tags>
         <dependencies>
 			<dependency id="Microsoft.Data.Edm" version="5.6.4" />
 			<dependency id="Microsoft.Data.OData" version="5.6.4" />
@@ -28,6 +28,6 @@ Service reference to the DaaS Framework
         </dependencies>
     </metadata>
 	<files>
-		<file src="biz.dfch.CS.DaaS.Api\bin\Release\biz.dfch.CS.DaaS.Api.dll" target="lib\" />
+		<file src="biz.dfch.CS.Appclusive.Api\bin\Release\biz.dfch.CS.Appclusive.Api.dll" target="lib\" />
 	</files>
 </package>

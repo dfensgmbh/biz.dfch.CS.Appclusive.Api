@@ -22,7 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace biz.dfch.CS.DaaS.Api.Tests.Core
+namespace biz.dfch.CS.Appclusive.Api.Tests.Core
 {
     [TestClass]
     public class JobTest

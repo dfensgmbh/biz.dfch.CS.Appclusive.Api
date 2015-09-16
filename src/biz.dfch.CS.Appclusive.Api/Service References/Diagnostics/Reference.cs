@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/15/2015 5:01:07 AM
-namespace biz.dfch.CS.DaaS.Api.Utilities
+// Generation date: 9/16/2015 3:54:48 PM
+namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
     /// <summary>
-    /// There are no comments for Utilities in the schema.
+    /// There are no comments for Diagnostics in the schema.
     /// </summary>
-    public partial class Utilities : global::System.Data.Services.Client.DataServiceContext
+    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext
     {
         /// <summary>
-        /// Initialize a new Utilities object.
+        /// Initialize a new Diagnostics object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Utilities(global::System.Uri serviceRoot) : 
+        public Diagnostics(global::System.Uri serviceRoot) : 
                 base(serviceRoot, global::System.Data.Services.Common.DataServiceProtocolVersion.V3)
         {
             this.ResolveName = new global::System.Func<global::System.Type, string>(this.ResolveNameFromType);
@@ -39,7 +39,7 @@ namespace biz.dfch.CS.DaaS.Api.Utilities
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities", "biz.dfch.CS.DaaS.Api.Utilities");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics", "biz.dfch.CS.Appclusive.Api.Diagnostics");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -54,36 +54,36 @@ namespace biz.dfch.CS.DaaS.Api.Utilities
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected string ResolveNameFromType(global::System.Type clientType)
         {
-            if (clientType.Namespace.Equals("biz.dfch.CS.DaaS.Api.Utilities", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("biz.dfch.CS.Appclusive.Api.Diagnostics", global::System.StringComparison.Ordinal))
             {
-                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.", clientType.Name);
+                return string.Concat("biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.", clientType.Name);
             }
             return null;
         }
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for Endpoints in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Person> Persons
+        public global::System.Data.Services.Client.DataServiceQuery<Endpoint> Endpoints
         {
             get
             {
-                if ((this._Persons == null))
+                if ((this._Endpoints == null))
                 {
-                    this._Persons = base.CreateQuery<Person>("Persons");
+                    this._Endpoints = base.CreateQuery<Endpoint>("Endpoints");
                 }
-                return this._Persons;
+                return this._Endpoints;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Person> _Persons;
+        private global::System.Data.Services.Client.DataServiceQuery<Endpoint> _Endpoints;
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for Endpoints in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToPersons(Person person)
+        public void AddToEndpoints(Endpoint endpoint)
         {
-            base.AddObject("Persons", person);
+            base.AddObject("Endpoints", endpoint);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
@@ -91,7 +91,38 @@ namespace biz.dfch.CS.DaaS.Api.Utilities
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static global::Microsoft.Data.Edm.IEdmModel ParsedModel = LoadModelFromString();
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart0 = @"<edmx:Edmx Version=""1.0"" xmlns:edmx=""http://schemas.microsoft.com/ado/2007/06/edmx""><edmx:DataServices m:DataServiceVersion=""3.0"" m:MaxDataServiceVersion=""3.0"" xmlns:m=""http://schemas.microsoft.com/ado/2007/08/dataservices/metadata""><Schema Namespace=""biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityType Name=""Person""><Key><PropertyRef Name=""Id"" /></Key><Property Name=""UserName"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""GivenName"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Email"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" /><Property Name=""Tid"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Name"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Description"" Type=""Edm.String"" /><Property Name=""CreatedBy"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""ModifiedBy"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Created"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /><Property Name=""Modified"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /></EntityType></Schema><Schema Namespace=""Default"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityContainer Name=""Utilities"" m:IsDefaultEntityContainer=""true""><EntitySet Name=""Persons"" EntityType=""biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.Person"" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
+                "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
+                "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
+                "Namespace=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics\" xmlns=\"http://" +
+                "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Endpoint\"><Key><Propert" +
+                "yRef Name=\"Id\" /></Key><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"fals" +
+                "e\" /><Property Name=\"Address\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
+                "e=\"RouteTemplate\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RoutePref" +
+                "ix\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ServerRole\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"" +
+                "Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property " +
+                "Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTi" +
+                "meOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
+                " Nullable=\"false\" /></EntityType></Schema><Schema Namespace=\"Default\" xmlns=\"htt" +
+                "p://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Diagnostics\" m" +
+                ":IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endpoints\" EntityType=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /><FunctionImport Name=" +
+                "\"Refresh\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><" +
+                "Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Reload\" ReturnT" +
+                "ype=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.End" +
+                "point\" /></FunctionImport><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\"" +
+                " IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></Functi" +
+                "onImport><FunctionImport Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"tru" +
+                "e\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport></Entit" +
+                "yContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -124,21 +155,24 @@ namespace biz.dfch.CS.DaaS.Api.Utilities
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Controllers.OdataServices.Utilities.Person in the schema.
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("Persons")]
+    [global::System.Data.Services.Common.EntitySetAttribute("Endpoints")]
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class Person : global::System.ComponentModel.INotifyPropertyChanged
+    public partial class Endpoint : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
-        /// Create a new Person object.
+        /// Create a new Endpoint object.
         /// </summary>
-        /// <param name="userName">Initial value of UserName.</param>
-        /// <param name="givenName">Initial value of GivenName.</param>
-        /// <param name="email">Initial value of Email.</param>
+        /// <param name="version">Initial value of Version.</param>
+        /// <param name="address">Initial value of Address.</param>
+        /// <param name="routeTemplate">Initial value of RouteTemplate.</param>
+        /// <param name="routePrefix">Initial value of RoutePrefix.</param>
+        /// <param name="serverRole">Initial value of ServerRole.</param>
+        /// <param name="priority">Initial value of Priority.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -147,87 +181,156 @@ namespace biz.dfch.CS.DaaS.Api.Utilities
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Person CreatePerson(string userName, string givenName, string email, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static Endpoint CreateEndpoint(string version, string address, string routeTemplate, string routePrefix, string serverRole, int priority, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
-            Person person = new Person();
-            person.UserName = userName;
-            person.GivenName = givenName;
-            person.Email = email;
-            person.Id = ID;
-            person.Tid = tid;
-            person.Name = name;
-            person.CreatedBy = createdBy;
-            person.ModifiedBy = modifiedBy;
-            person.Created = created;
-            person.Modified = modified;
-            return person;
+            Endpoint endpoint = new Endpoint();
+            endpoint.Version = version;
+            endpoint.Address = address;
+            endpoint.RouteTemplate = routeTemplate;
+            endpoint.RoutePrefix = routePrefix;
+            endpoint.ServerRole = serverRole;
+            endpoint.Priority = priority;
+            endpoint.Id = ID;
+            endpoint.Tid = tid;
+            endpoint.Name = name;
+            endpoint.CreatedBy = createdBy;
+            endpoint.ModifiedBy = modifiedBy;
+            endpoint.Created = created;
+            endpoint.Modified = modified;
+            return endpoint;
         }
         /// <summary>
-        /// There are no comments for Property UserName in the schema.
+        /// There are no comments for Property Version in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string UserName
+        public string Version
         {
             get
             {
-                return this._UserName;
+                return this._Version;
             }
             set
             {
-                this.OnUserNameChanging(value);
-                this._UserName = value;
-                this.OnUserNameChanged();
-                this.OnPropertyChanged("UserName");
+                this.OnVersionChanging(value);
+                this._Version = value;
+                this.OnVersionChanged();
+                this.OnPropertyChanged("Version");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _UserName;
-        partial void OnUserNameChanging(string value);
-        partial void OnUserNameChanged();
+        private string _Version;
+        partial void OnVersionChanging(string value);
+        partial void OnVersionChanged();
         /// <summary>
-        /// There are no comments for Property GivenName in the schema.
+        /// There are no comments for Property Address in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string GivenName
+        public string Address
         {
             get
             {
-                return this._GivenName;
+                return this._Address;
             }
             set
             {
-                this.OnGivenNameChanging(value);
-                this._GivenName = value;
-                this.OnGivenNameChanged();
-                this.OnPropertyChanged("GivenName");
+                this.OnAddressChanging(value);
+                this._Address = value;
+                this.OnAddressChanged();
+                this.OnPropertyChanged("Address");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _GivenName;
-        partial void OnGivenNameChanging(string value);
-        partial void OnGivenNameChanged();
+        private string _Address;
+        partial void OnAddressChanging(string value);
+        partial void OnAddressChanged();
         /// <summary>
-        /// There are no comments for Property Email in the schema.
+        /// There are no comments for Property RouteTemplate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Email
+        public string RouteTemplate
         {
             get
             {
-                return this._Email;
+                return this._RouteTemplate;
             }
             set
             {
-                this.OnEmailChanging(value);
-                this._Email = value;
-                this.OnEmailChanged();
-                this.OnPropertyChanged("Email");
+                this.OnRouteTemplateChanging(value);
+                this._RouteTemplate = value;
+                this.OnRouteTemplateChanged();
+                this.OnPropertyChanged("RouteTemplate");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Email;
-        partial void OnEmailChanging(string value);
-        partial void OnEmailChanged();
+        private string _RouteTemplate;
+        partial void OnRouteTemplateChanging(string value);
+        partial void OnRouteTemplateChanged();
+        /// <summary>
+        /// There are no comments for Property RoutePrefix in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string RoutePrefix
+        {
+            get
+            {
+                return this._RoutePrefix;
+            }
+            set
+            {
+                this.OnRoutePrefixChanging(value);
+                this._RoutePrefix = value;
+                this.OnRoutePrefixChanged();
+                this.OnPropertyChanged("RoutePrefix");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _RoutePrefix;
+        partial void OnRoutePrefixChanging(string value);
+        partial void OnRoutePrefixChanged();
+        /// <summary>
+        /// There are no comments for Property ServerRole in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ServerRole
+        {
+            get
+            {
+                return this._ServerRole;
+            }
+            set
+            {
+                this.OnServerRoleChanging(value);
+                this._ServerRole = value;
+                this.OnServerRoleChanged();
+                this.OnPropertyChanged("ServerRole");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ServerRole;
+        partial void OnServerRoleChanging(string value);
+        partial void OnServerRoleChanged();
+        /// <summary>
+        /// There are no comments for Property Priority in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Priority
+        {
+            get
+            {
+                return this._Priority;
+            }
+            set
+            {
+                this.OnPriorityChanging(value);
+                this._Priority = value;
+                this.OnPriorityChanged();
+                this.OnPropertyChanged("Priority");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Priority;
+        partial void OnPriorityChanging(int value);
+        partial void OnPriorityChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>

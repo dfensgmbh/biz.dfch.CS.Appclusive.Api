@@ -21,10 +21,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using biz.dfch.CS.DaaS.Api.Core;
+using biz.dfch.CS.Appclusive.Api.Core;
 using System.Data.Services.Client;
 
-namespace biz.dfch.CS.DaaS.Api.Tests.Core
+namespace biz.dfch.CS.Appclusive.Api.Tests.Core
 {
     [TestClass]
     public class OrderTest
@@ -35,7 +35,7 @@ namespace biz.dfch.CS.DaaS.Api.Tests.Core
         public void CreateOrderCreatesOrderItemsJobsAndApproval()
         {
             var uri = new Uri(_uriPrefix + "Core");
-            biz.dfch.CS.DaaS.Api.Core.Core svc = new biz.dfch.CS.DaaS.Api.Core.Core(uri);
+            biz.dfch.CS.Appclusive.Api.Core.Core svc = new biz.dfch.CS.Appclusive.Api.Core.Core(uri);
             svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
             var count = svc.CatalogueItems.ToList().Count();
