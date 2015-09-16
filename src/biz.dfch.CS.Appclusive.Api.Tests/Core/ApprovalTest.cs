@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Marc Rufer, d-fens GmbH
+ * Copyright 2015 d-fens GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,13 +15,8 @@
  */
 
 ﻿using System;
-using System.Collections.Generic;
 ﻿using System.Configuration;
-﻿using System.Data.Services.Client;
 ﻿using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-﻿using biz.dfch.CS.Appclusive.Api.Core;
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests.Core
@@ -29,6 +24,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
     [TestClass]
     public class ApprovalTest
     {
+        // DFTODO - comply with naming convention
         private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
 
         [TestMethod]

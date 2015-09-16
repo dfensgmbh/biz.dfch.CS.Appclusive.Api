@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright 2015 d-fens GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,26 +14,14 @@
  * limitations under the License.
  */
 
-﻿using System;
-using System.Collections.Generic;
-﻿using System.Configuration;
-﻿using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Linq;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests.Core
 {
-    [TestClass]
-    public class JobTest
+    class OrderParameters : JsonObject
     {
-        // DFTODO - comply with naming convention
-        private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
-        
-        [TestMethod]
-        public void GetJobsReturnsJobs()
-        {
-
-        }
+        public int Quantity { get; set; }
+        public int CatalogueItemId { get; set; }
     }
 }
