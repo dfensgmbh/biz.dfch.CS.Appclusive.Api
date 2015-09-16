@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Marc Rufer, d-fens GmbH
+ * Copyright 2015 d-fens GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,12 +29,14 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
     [TestClass]
     public class OrderTest
     {
+        // DFTODO - comply with naming convention
         private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
 
+        [Ignore]
         [TestMethod]
         public void CreateOrderCreatesOrderItemsJobsAndApproval()
         {
-            var uri = new Uri(_uriPrefix + "Core");
+            var uri = new Uri(_uriPrefix + "Core.svc");
             biz.dfch.CS.Appclusive.Api.Core.Core svc = new biz.dfch.CS.Appclusive.Api.Core.Core(uri);
             svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
@@ -66,7 +68,13 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
             order.Description = "Description";
             order.Name = "MyOrder";
             order.OrderItems = new DataServiceCollection<OrderItem>();
-            order.Parameters = "[{\"Quantity\":1,\"CatalogueItemId\":" + catalogueItems.LastOrDefault().Id + "}]";
+            order.Parameters = new OrderParameters()
+                {
+                    Quantity = 1
+                    ,
+                    CatalogueItemId = catalogueItems.LastOrDefault().Id
+                }
+                .ToJsonString();
             order.Status = "Created";
             order.Tid = "Tid";
 
@@ -81,9 +89,10 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
 
             var orderResult = svc.Orders.Expand(o => o.OrderItems).ToList();
             Assert.AreEqual(orderCount + 1, orderResult.Count());
-            var orderEntity2 = orderResult.LastOrDefault();
+            var lastEntity = orderResult.LastOrDefault();
             var orderEntity =
-                svc.Orders.AddQueryOption("$filter", String.Format("Id eq {0}", orderEntity2.Id))
+                svc.Orders
+                    .AddQueryOption("$filter", String.Format("Id eq {0}", lastEntity.Id))
                     .AddQueryOption("$expand", "OrderItems").FirstOrDefault();
             Assert.AreEqual("Created", orderEntity.Status);
             Assert.AreNotEqual("User", orderEntity.CreatedBy);
@@ -103,7 +112,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
             Assert.AreEqual(approvalsCount + 1, approvalResult.Count());
             var approval = approvalResult.LastOrDefault();
 
-            approval.State = "Approved";
+            approval.Status = "Approved";
             svc.UpdateObject(approval);
             svc.SaveChanges();
         }
