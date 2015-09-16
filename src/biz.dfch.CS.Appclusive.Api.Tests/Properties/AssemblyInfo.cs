@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("biz.dfch.CS.DaaS.Api.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("biz.dfch.CS.Appclusive.Api.Tests")]
+[assembly: AssemblyDescription("Integration tests for the Appclusive Framework")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("biz.dfch.CS.DaaS.Api.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("d-fens GmbH")]
+[assembly: AssemblyProduct("biz.dfch.CS.Appclusive.Api.Tests")]
+[assembly: AssemblyCopyright("Copyright ©  2015 d-fens GmbH")]
+[assembly: AssemblyTrademark("The d-fens logo is a registered trademark in the European Union")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

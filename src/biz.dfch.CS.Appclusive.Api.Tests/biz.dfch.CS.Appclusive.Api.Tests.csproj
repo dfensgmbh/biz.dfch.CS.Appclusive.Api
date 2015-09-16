@@ -6,8 +6,8 @@
     <ProjectGuid>{E8C105F2-13E9-49A2-B013-C1A7E3362429}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>biz.dfch.CS.DaaS.Api.Tests</RootNamespace>
-    <AssemblyName>biz.dfch.CS.DaaS.Api.Tests</AssemblyName>
+    <RootNamespace>biz.dfch.CS.Appclusive.Api.Tests</RootNamespace>
+    <AssemblyName>biz.dfch.CS.Appclusive.Api.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -47,6 +47,10 @@
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -67,16 +71,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="JsonObject.cs" />
     <Compile Include="Core\ApprovalTest.cs" />
+    <Compile Include="Core\OrderParameters.cs" />
     <Compile Include="Core\JobTest.cs" />
     <Compile Include="Core\OrderTest.cs" />
     <Compile Include="Diagnostics\EndpointTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\biz.dfch.CS.DaaS.Api\biz.dfch.CS.DaaS.Api.csproj">
+    <ProjectReference Include="..\biz.dfch.CS.Appclusive.Api\biz.dfch.CS.Appclusive.Api.csproj">
       <Project>{58c10414-fbf6-4087-9144-249ee0977a2b}</Project>
-      <Name>biz.dfch.CS.DaaS.Api</Name>
+      <Name>biz.dfch.CS.Appclusive.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

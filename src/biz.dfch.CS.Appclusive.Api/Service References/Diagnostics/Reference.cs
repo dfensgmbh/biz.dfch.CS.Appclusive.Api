@@ -9,8 +9,8 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/14/2015 2:56:39 PM
-namespace biz.dfch.CS.DaaS.Api.Diagnostics
+// Generation date: 9/16/2015 3:54:48 PM
+namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
     /// <summary>
@@ -39,7 +39,7 @@ namespace biz.dfch.CS.DaaS.Api.Diagnostics
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics", "biz.dfch.CS.DaaS.Api.Diagnostics");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics", "biz.dfch.CS.Appclusive.Api.Diagnostics");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -54,9 +54,9 @@ namespace biz.dfch.CS.DaaS.Api.Diagnostics
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected string ResolveNameFromType(global::System.Type clientType)
         {
-            if (clientType.Namespace.Equals("biz.dfch.CS.DaaS.Api.Diagnostics", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("biz.dfch.CS.Appclusive.Api.Diagnostics", global::System.StringComparison.Ordinal))
             {
-                return string.Concat("biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.", clientType.Name);
+                return string.Concat("biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.", clientType.Name);
             }
             return null;
         }
@@ -94,36 +94,35 @@ namespace biz.dfch.CS.DaaS.Api.Diagnostics
             private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
                 "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
                 "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
-                "Namespace=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics\" xmlns=\"" +
-                "http://schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Endpoint\"><Key><" +
-                "PropertyRef Name=\"Id\" /></Key><Property Name=\"Version\" Type=\"Edm.String\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Address\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
-                "rty Name=\"RouteTemplate\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Ro" +
-                "utePrefix\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ServerRole\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Null" +
-                "able=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property" +
-                " Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm" +
-                ".String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Pr" +
-                "operty Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Mod" +
-                "ifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm" +
-                ".DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTime" +
-                "Offset\" Nullable=\"false\" /></EntityType></Schema><Schema Namespace=\"Default\" xml" +
-                "ns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Diagnos" +
-                "tics\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endpoints\" EntityType=\"" +
-                "biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint\" /><Functi" +
-                "onImport Name=\"Refresh\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBin" +
-                "dable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.E" +
-                "ndpoints.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport " +
-                "Name=\"Reload\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"tru" +
-                "e\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.O" +
-                "dataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Enab" +
-                "le\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parame" +
-                "ter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServic" +
-                "es.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Disable\" Retur" +
-                "nType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
-                "\"bindingParameter\" Type=\"biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagno" +
-                "stics.Endpoint\" /></FunctionImport></EntityContainer></Schema></edmx:DataService" +
-                "s></edmx:Edmx>";
+                "Namespace=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics\" xmlns=\"http://" +
+                "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Endpoint\"><Key><Propert" +
+                "yRef Name=\"Id\" /></Key><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"fals" +
+                "e\" /><Property Name=\"Address\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
+                "e=\"RouteTemplate\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RoutePref" +
+                "ix\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ServerRole\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"" +
+                "Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property " +
+                "Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTi" +
+                "meOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
+                " Nullable=\"false\" /></EntityType></Schema><Schema Namespace=\"Default\" xmlns=\"htt" +
+                "p://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Diagnostics\" m" +
+                ":IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endpoints\" EntityType=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /><FunctionImport Name=" +
+                "\"Refresh\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><" +
+                "Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Reload\" ReturnT" +
+                "ype=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.End" +
+                "point\" /></FunctionImport><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\"" +
+                " IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></Functi" +
+                "onImport><FunctionImport Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"tru" +
+                "e\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport></Entit" +
+                "yContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -156,7 +155,7 @@ namespace biz.dfch.CS.DaaS.Api.Diagnostics
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Sunrise.DaaS.Endpoints.OdataServices.Diagnostics.Endpoint in the schema.
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
