@@ -75,7 +75,7 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="OrderId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderId" Type="Edm.Int32" />
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
         <Property Name="Version" Type="Edm.String" Nullable="false" />
@@ -153,6 +153,7 @@
         </Key>
         <Property Name="Username" Type="Edm.String" Nullable="false" />
         <Property Name="EncryptedPassword" Type="Edm.String" Nullable="false" />
+        <Property Name="Password" Type="Edm.String" Nullable="false" />
         <Property Name="Id" Type="Edm.Int32" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -161,6 +162,24 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <NavigationProperty Name="ManagementUris" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner" ToRole="ManagementUris" FromRole="ManagementUrisPartner" />
+      </EntityType>
+      <EntityType Name="ManagementUri">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Type" Type="Edm.String" />
+        <Property Name="Value" Type="Edm.String" />
+        <Property Name="ManagementCredentialId" Type="Edm.Int32" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <NavigationProperty Name="ManagementCredential" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner" ToRole="ManagementCredential" FromRole="ManagementCredentialPartner" />
       </EntityType>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJobPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" Role="ParentJob" Multiplicity="0..1" />
@@ -174,6 +193,14 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" Role="Order" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" Role="OrderPartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" Role="ManagementUris" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" Role="ManagementUrisPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" Role="ManagementCredential" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" Role="ManagementCredentialPartner" Multiplicity="0..1" />
+      </Association>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Core" m:IsDefaultEntityContainer="true">
@@ -186,11 +213,68 @@
         <EntitySet Name="Approvals" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
         <EntitySet Name="ActiveDirectoryUsers" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ActiveDirectoryUser" />
         <EntitySet Name="ManagementCredentials" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" />
+        <EntitySet Name="ManagementUris" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" />
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)" Nullable="false" />
+          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
         <FunctionImport Name="Run" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
         </FunctionImport>
         <FunctionImport Name="Finish" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Trustee" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Resource" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" IsBindable="true" EntitySet="ManagementCredentials" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" IsBindable="true" EntitySet="ManagementCredentials" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Username" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Password" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EncryptionKey" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Encrypt" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" IsBindable="true" EntitySet="ManagementCredentials" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)" Nullable="false" />
+          <Parameter Name="EncryptionKey" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Encrypt" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)" IsBindable="true" EntitySet="ManagementCredentials" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" />
+          <Parameter Name="EncryptionKey" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Decrypt" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" />
+          <Parameter Name="EncryptionKey" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="SetEncryptionKey" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)" Nullable="false" />
+          <Parameter Name="EncryptionKey" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" IsBindable="true" EntitySet="ManagementUris" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" IsBindable="true" EntitySet="ManagementUris" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJobPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJobPartner">
           <End Role="ParentJobPartner" EntitySet="Jobs" />
@@ -203,6 +287,14 @@
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner">
           <End Role="OrderPartner" EntitySet="OrderItems" />
           <End Role="Order" EntitySet="Orders" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner">
+          <End Role="ManagementUrisPartner" EntitySet="ManagementCredentials" />
+          <End Role="ManagementUris" EntitySet="ManagementUris" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner">
+          <End Role="ManagementCredentialPartner" EntitySet="ManagementUris" />
+          <End Role="ManagementCredential" EntitySet="ManagementCredentials" />
         </AssociationSet>
       </EntityContainer>
     </Schema>
