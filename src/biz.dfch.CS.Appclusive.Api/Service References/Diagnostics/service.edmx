@@ -20,10 +20,29 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
       </EntityType>
+      <EntityType Name="AuditTrail">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="EntityId" Type="Edm.String" Nullable="false" />
+        <Property Name="EntityType" Type="Edm.String" Nullable="false" />
+        <Property Name="EntityState" Type="Edm.String" Nullable="false" />
+        <Property Name="Original" Type="Edm.String" Nullable="false" />
+        <Property Name="Current" Type="Edm.String" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+      </EntityType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Diagnostics" m:IsDefaultEntityContainer="true">
         <EntitySet Name="Endpoints" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint" />
+        <EntitySet Name="AuditTrails" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail" />
         <FunctionImport Name="Refresh" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint" />
         </FunctionImport>
@@ -35,6 +54,19 @@
         </FunctionImport>
         <FunctionImport Name="Disable" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail" IsBindable="true" EntitySet="AuditTrails" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail" IsBindable="true" EntitySet="AuditTrails" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityId" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityType" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityState" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Original" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Current" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
       </EntityContainer>
     </Schema>

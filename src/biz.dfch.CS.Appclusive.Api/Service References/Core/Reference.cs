@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/16/2015 3:55:35 PM
+// Generation date: 9/28/2015 12:27:56 AM
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     
@@ -163,6 +163,23 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Ace> _Aces;
         /// <summary>
+        /// There are no comments for Acls in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<Acl> Acls
+        {
+            get
+            {
+                if ((this._Acls == null))
+                {
+                    this._Acls = base.CreateQuery<Acl>("Acls");
+                }
+                return this._Acls;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Acl> _Acls;
+        /// <summary>
         /// There are no comments for Approvals in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -214,6 +231,91 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ManagementCredential> _ManagementCredentials;
         /// <summary>
+        /// There are no comments for ManagementUris in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<ManagementUri> ManagementUris
+        {
+            get
+            {
+                if ((this._ManagementUris == null))
+                {
+                    this._ManagementUris = base.CreateQuery<ManagementUri>("ManagementUris");
+                }
+                return this._ManagementUris;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<ManagementUri> _ManagementUris;
+        /// <summary>
+        /// There are no comments for Catalogues in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<Catalogue> Catalogues
+        {
+            get
+            {
+                if ((this._Catalogues == null))
+                {
+                    this._Catalogues = base.CreateQuery<Catalogue>("Catalogues");
+                }
+                return this._Catalogues;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Catalogue> _Catalogues;
+        /// <summary>
+        /// There are no comments for EntityTypes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<EntityType> EntityTypes
+        {
+            get
+            {
+                if ((this._EntityTypes == null))
+                {
+                    this._EntityTypes = base.CreateQuery<EntityType>("EntityTypes");
+                }
+                return this._EntityTypes;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<EntityType> _EntityTypes;
+        /// <summary>
+        /// There are no comments for Entitys in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<Entity> Entitys
+        {
+            get
+            {
+                if ((this._Entitys == null))
+                {
+                    this._Entitys = base.CreateQuery<Entity>("Entitys");
+                }
+                return this._Entitys;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Entity> _Entitys;
+        /// <summary>
+        /// There are no comments for Links in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public new global::System.Data.Services.Client.DataServiceQuery<Link> Links
+        {
+            get
+            {
+                if ((this._Links == null))
+                {
+                    this._Links = base.CreateQuery<Link>("Links");
+                }
+                return this._Links;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Link> _Links;
+        /// <summary>
         /// There are no comments for KeyNameValues in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -262,6 +364,14 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             base.AddObject("Aces", ace);
         }
         /// <summary>
+        /// There are no comments for Acls in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToAcls(Acl acl)
+        {
+            base.AddObject("Acls", acl);
+        }
+        /// <summary>
         /// There are no comments for Approvals in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -285,6 +395,46 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         {
             base.AddObject("ManagementCredentials", managementCredential);
         }
+        /// <summary>
+        /// There are no comments for ManagementUris in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToManagementUris(ManagementUri managementUri)
+        {
+            base.AddObject("ManagementUris", managementUri);
+        }
+        /// <summary>
+        /// There are no comments for Catalogues in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToCatalogues(Catalogue catalogue)
+        {
+            base.AddObject("Catalogues", catalogue);
+        }
+        /// <summary>
+        /// There are no comments for EntityTypes in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToEntityTypes(EntityType entityType)
+        {
+            base.AddObject("EntityTypes", entityType);
+        }
+        /// <summary>
+        /// There are no comments for Entitys in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToEntitys(Entity entity)
+        {
+            base.AddObject("Entitys", entity);
+        }
+        /// <summary>
+        /// There are no comments for Links in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToLinks(Link link)
+        {
+            base.AddObject("Links", link);
+        }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
         {
@@ -305,155 +455,567 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 "false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><" +
                 "Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /></EntityTy" +
                 "pe><EntityType Name=\"Job\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"St" +
-                "atus\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.Strin" +
-                "g\" Nullable=\"false\" /><Property Name=\"ReferencedItemId\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"Token\" Type=\"Edm.String\" /><Property Name=\"TenantId\" Type=\"Edm.Strin" +
-                "g\" /><Property Name=\"Parameters\" Type=\"Edm.String\" /><Property Name=\"Error\" Type" +
-                "=\"Edm.String\" /><Property Name=\"EndTime\" Type=\"Edm.DateTimeOffset\" /><Property N" +
-                "ame=\"ParentId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm" +
-                ".Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"fals" +
-                "e\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
-                "Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nu" +
-                "llable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "/><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Propert" +
-                "y Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProper" +
-                "ty Name=\"ParentJob\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Job_ParentJobPartner\" ToRole=\"ParentJob\" FromRole=\"" +
-                "ParentJobPartner\" /></EntityType><EntityType Name=\"CatalogueItem\"><Key><Property" +
-                "Ref Name=\"Id\" /></Key><Property Name=\"Collection\" Type=\"Edm.String\" /><Property " +
-                "Name=\"Version\" Type=\"Edm.String\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable" +
-                "=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property N" +
-                "ame=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Typ" +
-                "e=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /" +
-                "><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
-                "=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified" +
-                "\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /></EntityType><EntityType Name=\"Or" +
-                "der\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"OrderOnBehalfOf\" Type=\"" +
-                "Edm.String\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Parame" +
-                "ters\" Type=\"Edm.String\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" " +
-                "/><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name" +
-                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
-                "y Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created" +
-                "\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"E" +
-                "dm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=\"OrderItems\" Rela" +
-                "tionship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_OrderItem_OrderItemsPartner\" ToRole=\"OrderItems\" FromRole=\"OrderItemsPar" +
-                "tner\" /></EntityType><EntityType Name=\"OrderItem\"><Key><PropertyRef Name=\"Id\" />" +
-                "</Key><Property Name=\"OrderId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Nam" +
-                "e=\"Status\" Type=\"Edm.String\" /><Property Name=\"Quantity\" Type=\"Edm.Int32\" Nullab" +
-                "le=\"false\" /><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"false\" /><Prop" +
-                "erty Name=\"Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Parameters" +
-                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Null" +
+                "atus\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ReferencedItemId\" Typ" +
+                "e=\"Edm.String\" /><Property Name=\"Token\" Type=\"Edm.String\" /><Property Name=\"Tena" +
+                "ntId\" Type=\"Edm.String\" /><Property Name=\"Parameters\" Type=\"Edm.String\" /><Prope" +
+                "rty Name=\"Error\" Type=\"Edm.String\" /><Property Name=\"EndTime\" Type=\"Edm.DateTime" +
+                "Offset\" /><Property Name=\"ParentId\" Type=\"Edm.Int32\" /><Property Name=\"Id\" Type=" +
+                "\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"" +
+                "false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationPr" +
+                "operty Name=\"Parent\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Job_ParentPartner\" ToRole=\"Parent\" FromRole=\"ParentPa" +
+                "rtner\" /></EntityType><EntityType Name=\"CatalogueItem\"><Key><PropertyRef Name=\"I" +
+                "d\" /></Key><Property Name=\"CatalogueId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"Type\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Version\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ValidFrom\" Type=\"Edm.DateTi" +
+                "meOffset\" Nullable=\"false\" /><Property Name=\"ValidUntil\" Type=\"Edm.DateTimeOffse" +
+                "t\" Nullable=\"false\" /><Property Name=\"EndOfSale\" Type=\"Edm.DateTimeOffset\" Nulla" +
+                "ble=\"false\" /><Property Name=\"EndOfLife\" Type=\"Edm.DateTimeOffset\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Parameters\" Type=\"Edm.String\" /><Property Name=\"Collection" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><P" +
+                "roperty Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Ty" +
+                "pe=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String" +
+                "\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Ty" +
+                "pe=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.D" +
+                "ateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=\"Catalogue\" Relations" +
+                "hip=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_Catalogue_CataloguePartner\" ToRole=\"Catalogue\" FromRole=\"CataloguePart" +
+                "ner\" /></EntityType><EntityType Name=\"Order\"><Key><PropertyRef Name=\"Id\" /></Key" +
+                "><Property Name=\"Requester\" Type=\"Edm.String\" /><Property Name=\"Status\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"Parameters\" Type=\"Edm.String\" /><Property Name=\"Id\" " +
+                "Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable" +
+                "=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /" +
+                "><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Navigat" +
+                "ionProperty Name=\"OrderItems\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartner\" ToRole=\"O" +
+                "rderItems\" FromRole=\"OrderItemsPartner\" /></EntityType><EntityType Name=\"OrderIt" +
+                "em\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"OrderId\" Type=\"Edm.Int32" +
+                "\" Nullable=\"false\" /><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=" +
+                "\"Quantity\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Version\" Type=\"Ed" +
+                "m.String\" Nullable=\"false\" /><Property Name=\"Type\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Parameters\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm." +
+                "String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy" +
+                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.Str" +
+                "ing\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"fals" +
+                "e\" /><NavigationProperty Name=\"Order\" Relationship=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Orde" +
+                "r_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner\" ToRole=\"Ord" +
+                "er\" FromRole=\"OrderPartner\" /></EntityType><EntityType Name=\"Ace\"><Key><Property" +
+                "Ref Name=\"Id\" /></Key><Property Name=\"Trustee\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Action\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
+                "\"AclId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\"" +
+                " Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
+                "roperty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Descrip" +
+                "tion\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=" +
+                "\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Prop" +
+                "erty Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=" +
+                "\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name" +
+                "=\"Acl\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_Acl_AclPartner\" ToRole=\"Acl\" FromRole=\"AclPartner\" /></EntityType><Ent" +
+                "ityType Name=\"Acl\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=" +
+                "\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"" +
+                "false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationPr" +
+                "operty Name=\"Aces\" Relationship=\"biz.dfch.CS.Appclusive.Cor";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart1 = "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartner\" ToRole=\"Aces\" FromRo" +
+                "le=\"AcesPartner\" /></EntityType><EntityType Name=\"Approval\"><Key><PropertyRef Na" +
+                "me=\"Id\" /></Key><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"Id\" " +
+                "Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.S" +
+                "tring\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable" +
+                "=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /" +
+                "><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /></Entity" +
+                "Type><EntityType Name=\"ActiveDirectoryUser\"><Key><PropertyRef Name=\"cn\" /></Key>" +
+                "<Property Name=\"cn\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"descrip" +
+                "tion\" Type=\"Edm.String\" /><Property Name=\"distinguishedName\" Type=\"Edm.String\" /" +
+                "><Property Name=\"groupType\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"" +
+                "name\" Type=\"Edm.String\" /><Property Name=\"sn\" Type=\"Edm.String\" /><Property Name" +
+                "=\"givenName\" Type=\"Edm.String\" /><Property Name=\"department\" Type=\"Edm.String\" /" +
+                "><Property Name=\"displayName\" Type=\"Edm.String\" /><Property Name=\"mail\" Type=\"Ed" +
+                "m.String\" /><Property Name=\"objectGUID\" Type=\"Edm.String\" /><Property Name=\"obje" +
+                "ctSID\" Type=\"Edm.String\" /><Property Name=\"sAMAccountName\" Type=\"Edm.String\" /><" +
+                "Property Name=\"employeeID\" Type=\"Edm.String\" /><Property Name=\"telephoneNumber\" " +
+                "Type=\"Edm.String\" /><Property Name=\"mobile\" Type=\"Edm.String\" /><Property Name=\"" +
+                "sAMAccountType\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"uSNChanged\" " +
+                "Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"uSNCreated\" Type=\"Edm.Int64\"" +
+                " Nullable=\"false\" /><Property Name=\"whenChanged\" Type=\"Edm.DateTime\" Nullable=\"f" +
+                "alse\" /><Property Name=\"whenCreated\" Type=\"Edm.DateTime\" Nullable=\"false\" /></En" +
+                "tityType><EntityType Name=\"ManagementCredential\"><Key><PropertyRef Name=\"Id\" /><" +
+                "/Key><Property Name=\"Username\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"EncryptedPassword\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Pass" +
+                "word\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" " +
+                "Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Descript" +
+                "ion\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"" +
+                "false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"" +
+                "Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=" +
+                "\"ManagementUris\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPart" +
+                "ner\" ToRole=\"ManagementUris\" FromRole=\"ManagementUrisPartner\" /></EntityType><En" +
+                "tityType Name=\"ManagementUri\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name" +
+                "=\"Type\" Type=\"Edm.String\" /><Property Name=\"Value\" Type=\"Edm.String\" /><Property" +
+                " Name=\"ManagementCredentialId\" Type=\"Edm.Int32\" /><Property Name=\"Id\" Type=\"Edm." +
+                "Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"D" +
+                "escription\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nul" +
+                "lable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /" +
+                "><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property" +
+                " Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationPropert" +
+                "y Name=\"ManagementCredential\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_Manageme" +
+                "ntCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential" +
+                "_ManagementCredentialPartner\" ToRole=\"ManagementCredential\" FromRole=\"Management" +
+                "CredentialPartner\" /></EntityType><EntityType Name=\"Catalogue\"><Key><PropertyRef" +
+                " Name=\"Id\" /></Key><Property Name=\"Status\" Type=\"Edm.String\" /><Property Name=\"V" +
+                "ersion\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32" +
+                "\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><" +
+                "Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Descri" +
+                "ption\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable" +
+                "=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Pro" +
+                "perty Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name" +
+                "=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Nam" +
+                "e=\"CatalogueItems\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner\" ToRo" +
+                "le=\"CatalogueItems\" FromRole=\"CatalogueItemsPartner\" /></EntityType><EntityType " +
+                "Name=\"EntityType\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Parameters" +
+                "\" Type=\"Edm.String\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><P" +
+                "roperty Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Ty" +
+                "pe=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String" +
+                "\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Na" +
+                "me=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Ty" +
+                "pe=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.D" +
+                "ateTimeOffset\" Nullable=\"false\" /></EntityType><EntityType Name=\"Entity\"><Key><P" +
+                "ropertyRef Name=\"Id\" /></Key><Property Name=\"Type\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Parameters\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"ParentId\" Type=\"Edm.Int32\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
+                "y Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" " +
+                "Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property N" +
+                "ame=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modif" +
+                "ied\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=\"Pare" +
+                "nt\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Entity_Parent_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Entity_ParentPartner\" ToRole=\"Parent\" FromRole=\"ParentPartner\" /><N" +
+                "avigationProperty Name=\"Children\" Relationship=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Children_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_ChildrenPartner\" ToRole=\"Chi" +
+                "ldren\" FromRole=\"ChildrenPartner\" /><NavigationProperty Name=\"IncomingLinks\" Rel" +
+                "ationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Entity_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Link_IncomingLinksPartner\" ToRole=\"IncomingLinks\" FromRole=\"Incomin" +
+                "gLinksPartner\" /><NavigationProperty Name=\"OutgoingLinks\" Relationship=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart2 = "ve_Core_OdataServices_Core_Entity_OutgoingLinks_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_Link_OutgoingLinksPartner\" ToRole=\"OutgoingLinks\" FromRole=\"Outgoi" +
+                "ngLinksPartner\" /></EntityType><EntityType Name=\"Link\"><Key><PropertyRef Name=\"I" +
+                "d\" /></Key><Property Name=\"Order\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property " +
+                "Name=\"SourceId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"DestinationI" +
+                "d\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Null" +
                 "able=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
                 "ty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\"" +
                 " Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"fals" +
                 "e\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
                 "Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modi" +
-                "fied\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=\"Ord" +
-                "er\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Order_OrderPartner\" ToRole=\"Order\" FromRole=\"OrderPartner\" /></En" +
-                "tityType><EntityType Name=\"Ace\"><Key><PropertyRef Name=\"Id\" /></Key><Property Na" +
-                "me=\"Resource\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Trustee\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Action\" Type=\"Edm.String\" Nulla" +
-                "ble=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property " +
-                "Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm." +
-                "String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Pro" +
-                "perty Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Modi" +
-                "fiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm." +
-                "DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeO" +
-                "ffset\" Nullable=\"false\" /></EntityType><EntityType Name=\"Approval\"><Key><Propert" +
-                "yRef Name=\"Id\" /></Key><Property Name=\"Status\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String" +
-                "\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" />" +
-                "<Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type" +
-                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" N" +
-                "ullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"f" +
-                "alse\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><" +
-                "/EntityType><EntityType Name=\"ActiveDirectoryUser\"><Key><PropertyRef Name=\"cn\" /" +
-                "></Key><Property Name=\"cn\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
-                "description\" Type=\"Edm.String\" /><Property Name=\"distinguishedName\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"groupType\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property" +
-                " Name=\"name\" Type=\"Edm.String\" /><Property Name=\"sn\" Type=\"Edm.String\" /><Proper" +
-                "ty Name=\"givenName\" Type=\"Edm.String\" /><Property Name=\"department\" Type=\"Edm.St" +
-                "ring\" /><Property Name=\"displayName\" Type=\"Edm.String\" /><Property Name=\"mail\" T" +
-                "ype=\"Edm.String\" /><Property Name=\"objectGUID\" Type=\"Edm.String\" /><Property Nam" +
-                "e=\"objectSID\" Type=\"Edm.String\" /><Property Name=\"sAMAccountName\" Type=\"Edm.Stri" +
-                "ng\" /><Property Name=\"employeeID\" Type=\"Edm.String\" /><Property Name=\"telephoneN" +
-                "umber\" Type=\"Edm.String\" /><Property Name=\"mobile\" Type=\"Edm.String\" /><Property" +
-                " Name=\"sAMAccountType\" Type=\"Edm.Int32\" Nullable=\"false\" />";
+                "fied\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><NavigationProperty Name=\"Sou" +
+                "rce\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Entity_SourcePartner\" ToRole=\"Source\" FromRole=\"SourcePartner\" /><Na" +
+                "vigationProperty Name=\"Destination\" Relationship=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_DestinationPartner\" ToRol" +
+                "e=\"Destination\" FromRole=\"DestinationPartner\" /></EntityType><Association Name=\"" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Job_ParentPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Job\" Role=\"Parent\" Multiplicity=\"0..1\" /><End Type=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"ParentPartner\" Multiplicity=" +
+                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "Catalogue_CataloguePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.Catalogue\" Role=\"Catalogue\" Multiplicity=\"1\" /><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.CatalogueItem\" Role=\"CataloguePartner\" Multiplici" +
+                "ty=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Orde" +
+                "rItem_OrderItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.OrderItem\" Role=\"OrderItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.Order\" Role=\"OrderItemsPartner\" Multiplicity=\"0..1\"" +
+                " /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPar" +
+                "tner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"Ord" +
+                "er\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.OrderItem\" Role=\"OrderPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
+                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Acl_AclPartner\"><End Type=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.Acl\" Role=\"Acl\" Multiplicity=\"1\" /><End Type=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.Ace\" Role=\"AclPartner\" Multiplicity=\"0..1" +
+                "\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartner\"><En" +
+                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" Role=\"Aces\" Multipli" +
+                "city=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"" +
+                "AcesPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner\"><End " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" Role=\"Manage" +
+                "mentUris\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.ManagementCredential\" Role=\"ManagementUrisPartner\" Multiplicity=\"0..1\" />" +
+                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_ManagementCredential_ManagementCredentialPartner\"><End Type=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.ManagementCredential\" Role=\"ManagementCredential\" " +
+                "Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "ManagementUri\" Role=\"ManagementCredentialPartner\" Multiplicity=\"0..1\" /></Associ" +
+                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogu" +
+                "e_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Ca" +
+                "talogueItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.C" +
+                "atalogueItem\" Role=\"CatalogueItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.Catalogue\" Role=\"CatalogueItemsPartner\" Multipl" +
+                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Entity_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Enti" +
+                "ty_ParentPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Enti" +
+                "ty\" Role=\"Parent\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Entity\" Role=\"ParentPartner\" Multiplicity=\"0..1\" /></Associati" +
+                "on><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Chil" +
+                "dren_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_ChildrenPartner\"><End" +
+                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity\" Role=\"Children\" Mu" +
+                "ltiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entit" +
+                "y\" Role=\"ChildrenPartner\" Multiplicity=\"0..1\" /></Association><Association Name=" +
+                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_IncomingLinks_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartner\"><End Type=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.Link\" Role=\"IncomingLinks\" Multiplicity" +
+                "=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity\" Role=\"I" +
+                "ncomingLinksPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Entity_OutgoingLinks_biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Link_OutgoingLinksPartner\"><End Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Link\" Role=\"OutgoingLinks\" Multiplicity=\"*\" " +
+                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity\" Role=\"Outgoi" +
+                "ngLinksPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Entity_SourcePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.Entity\" Role=\"Source\" Multiplicity=\"1\" /><End Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Link\" Role=\"SourcePartner\" Multiplicity=\"0.." +
+                "1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Dest" +
+                "inationPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity" +
+                "\" Role=\"Destination\" Multiplicity=\"1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Link\" Role=\"DestinationPartner\" Multiplicity=\"0..1\" /></Associ" +
+                "ation></Schema><Schema Namespace=\"Default\" xmlns=\"http://schemas.microsoft.com/a" +
+                "do/2009/11/edm\"><EntityContainer Name=\"Core\" m:IsDefaultEnt";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "<Property Name=\"uSNChanged\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"u" +
-                "SNCreated\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"whenChanged\" Type" +
-                "=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"whenCreated\" Type=\"Edm.DateTi" +
-                "me\" Nullable=\"false\" /></EntityType><EntityType Name=\"ManagementCredential\"><Key" +
-                "><PropertyRef Name=\"Id\" /></Key><Property Name=\"Username\" Type=\"Edm.String\" Null" +
-                "able=\"false\" /><Property Name=\"EncryptedPassword\" Type=\"Edm.String\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"T" +
-                "id\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\"" +
-                " Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property N" +
-                "ame=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\"" +
-                " Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTim" +
-                "eOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" " +
-                "Nullable=\"false\" /></EntityType><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_Job_ParentJob_biz_dfch_CS_Appclusive_Core_OdataServices_Core_J" +
-                "ob_ParentJobPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.J" +
-                "ob\" Role=\"ParentJob\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.Job\" Role=\"ParentJobPartner\" Multiplicity=\"0..1\" /></Associ" +
-                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Or" +
-                "derItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPart" +
-                "ner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=\"" +
-                "OrderItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.Order\" Role=\"OrderItemsPartner\" Multiplicity=\"0..1\" /></Association><As" +
-                "sociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner\"><End Type=\"biz" +
-                ".dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"Order\" Multiplicity=\"0." +
-                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=" +
-                "\"OrderPartner\" Multiplicity=\"0..1\" /></Association></Schema><Schema Namespace=\"D" +
-                "efault\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Na" +
-                "me=\"Core\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyNameValues\" Enti" +
-                "tyType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" /><EntitySe" +
-                "t Name=\"Jobs\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" />" +
-                "<EntitySet Name=\"CatalogueItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.CatalogueItem\" /><EntitySet Name=\"Orders\" EntityType=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.Order\" /><EntitySet Name=\"OrderItems\" EntityTyp" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" /><EntitySet Name=\"" +
-                "Aces\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" /><EntityS" +
-                "et Name=\"Approvals\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.A" +
-                "pproval\" /><EntitySet Name=\"ActiveDirectoryUsers\" EntityType=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.ActiveDirectoryUser\" /><EntitySet Name=\"ManagementC" +
-                "redentials\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Managemen" +
-                "tCredential\" /><FunctionImport Name=\"Run\" ReturnType=\"Edm.String\" IsBindable=\"tr" +
-                "ue\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch." +
-                "CS.Appclusive.Core.OdataServices.Core.Job\" /></FunctionImport><FunctionImport Na" +
-                "me=\"Finish\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\">" +
-                "<Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.Job\" /></FunctionImport><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Job_ParentJob_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Job_ParentJobPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentJob_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_Job_ParentJobPartner\"><End Role=\"ParentJobPar" +
-                "tner\" EntitySet=\"Jobs\" /><End Role=\"ParentJob\" EntitySet=\"Jobs\" /></AssociationS" +
-                "et><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Or" +
-                "derItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPart" +
-                "nerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_OrderItem_OrderItemsPartner\"><End Role=\"OrderItemsPartner\" En" +
-                "titySet=\"Orders\" /><End Role=\"OrderItems\" EntitySet=\"OrderItems\" /></Association" +
-                "Set><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderIt" +
-                "em_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartnerSet\" A" +
-                "ssociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Order_OrderPartner\"><End Role=\"OrderPartner\" EntitySet=\"OrderItems\" /><" +
-                "End Role=\"Order\" EntitySet=\"Orders\" /></AssociationSet></EntityContainer></Schem" +
-                "a></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart3 = "ityContainer=\"true\"><EntitySet Name=\"KeyNameValues\" EntityType=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.KeyNameValue\" /><EntitySet Name=\"Jobs\" EntityType=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" /><EntitySet Name=\"Catalogu" +
+                "eItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" +
+                "\" /><EntitySet Name=\"Orders\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.Order\" /><EntitySet Name=\"OrderItems\" EntityType=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.OrderItem\" /><EntitySet Name=\"Aces\" EntityType=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.Ace\" /><EntitySet Name=\"Acls\" EntityType" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" /><EntitySet Name=\"Approva" +
+                "ls\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" /><Enti" +
+                "tySet Name=\"ActiveDirectoryUsers\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.ActiveDirectoryUser\" /><EntitySet Name=\"ManagementCredentials\" Enti" +
+                "tyType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><" +
+                "EntitySet Name=\"ManagementUris\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.ManagementUri\" /><EntitySet Name=\"Catalogues\" EntityType=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Catalogue\" /><EntitySet Name=\"EntityTypes\" E" +
+                "ntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType\" /><EntityS" +
+                "et Name=\"Entitys\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ent" +
+                "ity\" /><EntitySet Name=\"Links\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.Link\" /><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysB" +
+                "indable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Job)\" Nullable=\"false\" /></FunctionImport><Fun" +
+                "ctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Paramete" +
+                "r Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.Job)\" Nullable=\"false\" /><Parameter Name=\"Status\" Type=\"Edm.String\" Fi" +
+                "xedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fix" +
+                "edLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Contin" +
+                "ue\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Paramet" +
+                "er Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "Job\" /></FunctionImport><FunctionImport Name=\"Cancel\" ReturnType=\"Edm.String\" Is" +
+                "Bindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
+                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" /></FunctionImport><Funct" +
+                "ionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.CatalogueItem\" IsBindable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlwaysBinda" +
+                "ble=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.CatalogueItem)\" Nullable=\"false\" /></FunctionImpor" +
+                "t><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.CatalogueItem\" IsBindable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlway" +
+                "sBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.CatalogueItem)\" Nullable=\"false\" /><Paramete" +
+                "r Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter" +
+                " Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
+                "ameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Pa" +
+                "rameter Name=\"ValidFrom\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
+                "><Parameter Name=\"ValidUntil\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
+                "se\" /><Parameter Name=\"EndOfSale\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=" +
+                "\"false\" /><Parameter Name=\"EndOfLife\" Type=\"Edm.String\" FixedLength=\"false\" Unic" +
+                "ode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\"" +
+                " Unicode=\"false\" /><Parameter Name=\"Collection\" Type=\"Edm.String\" FixedLength=\"f" +
+                "alse\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnT" +
+                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" IsBindable=\"true\" Ent" +
+                "itySet=\"Orders\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
+                "e=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order)\" Nullable=\"f" +
+                "alse\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Order\" IsBindable=\"true\" EntitySet=\"Orders\" m:" +
+                "IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.Order)\" Nullable=\"false\" /><Parameter" +
+                " Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter " +
+                "Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"Requester\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><" +
+                "Parameter Name=\"Status\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "<Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
+                "e\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.OrderItem\" IsBindable=\"true\" EntitySet=\"OrderIt" +
+                "ems\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
+                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem)\" Nullable=\"false\" /" +
+                "></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.OrderItem\" IsBindable=\"true\" EntitySet=\"OrderItems\" m" +
+                ":IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem)\" Nullable=\"false\" /><Para" +
+                "meter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Param" +
+                "eter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "<Parameter Name=\"Quantity\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /><Parameter Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
+                "e\" /><Parameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false" +
+                "\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"" +
+                "false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Ace\" IsBindable=\"true\" EntitySet=\"Aces\" m:I" +
+                "sAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Ace)\" Nullable=\"false\" /></FunctionImp" +
+                "ort><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.Ace\" IsBindable=\"true\" EntitySet=\"Aces\" m:IsAlwaysBindable=\"true\"><" +
+                "Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Ace)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Stri" +
+                "ng\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Ed" +
+                "m.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Trustee\" Type=\"" +
+                "Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Action\" Type=" +
+                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Resource\" Ty" +
+                "pe=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Function" +
+                "Import Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.Acl\" IsBindable=\"true\" EntitySet=\"Acls\" m:IsAlwaysBindabl";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart4 = "e=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.Acl)\" Nullable=\"false\" /></FunctionImport><FunctionIm" +
+                "port Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ac" +
+                "l\" IsBindable=\"true\" EntitySet=\"Acls\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
+                "\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.Acl)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength" +
+                "=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" Fixed" +
+                "Length=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template" +
+                "\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" IsBindabl" +
+                "e=\"true\" EntitySet=\"Approvals\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindin" +
+                "gParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Appr" +
+                "oval)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" Retur" +
+                "nType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" IsBi" +
+                "ndable=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"true\"><Param" +
+                "eter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.ManagementCredential)\" Nullable=\"false\" /></FunctionImport><Functio" +
+                "nImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".ManagementCredential\" IsBindable=\"true\" EntitySet=\"ManagementCredentials\" m:IsA" +
+                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)\" Nullable=\"false\" " +
+                "/><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
+                "><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
+                "lse\" /><Parameter Name=\"Username\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=" +
+                "\"false\" /><Parameter Name=\"Password\" Type=\"Edm.String\" FixedLength=\"false\" Unico" +
+                "de=\"false\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"fals" +
+                "e\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Encrypt\" ReturnType=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" IsBindable" +
+                "=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"true\"><Parameter N" +
+                "ame=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.ManagementCredential)\" Nullable=\"false\" /><Parameter Name=\"EncryptionKey\"" +
+                " Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Funct" +
+                "ionImport Name=\"Encrypt\" ReturnType=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.ManagementCredential)\" IsBindable=\"true\" EntitySet=\"ManagementCre" +
+                "dentials\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><Parameter N" +
+                "ame=\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Fu" +
+                "nctionImport><FunctionImport Name=\"Decrypt\" ReturnType=\"Edm.String\" IsBindable=\"" +
+                "true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><Parameter Name=" +
+                "\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Functi" +
+                "onImport><FunctionImport Name=\"SetEncryptionKey\" ReturnType=\"Edm.Boolean\" IsBind" +
+                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"C" +
+                "ollection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)\" " +
+                "Nullable=\"false\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength" +
+                "=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" Retu" +
+                "rnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" IsBindable" +
+                "=\"true\" EntitySet=\"ManagementUris\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bi" +
+                "ndingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "ManagementUri)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create" +
+                "\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" IsBi" +
+                "ndable=\"true\" EntitySet=\"ManagementUris\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.ManagementUri)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String" +
+                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm." +
+                "String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Type\" Type=\"Edm.S" +
+                "tring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Value\" Type=\"Edm.S" +
+                "tring\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Na" +
+                "me=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalog" +
+                "ue\" IsBindable=\"true\" EntitySet=\"Catalogues\" m:IsAlwaysBindable=\"true\"><Paramete" +
+                "r Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.Catalogue)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"" +
+                "Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" Is" +
+                "Bindable=\"true\" EntitySet=\"Catalogues\" m:IsAlwaysBindable=\"true\"><Parameter Name" +
+                "=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.Catalogue)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fixe" +
+                "dLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String" +
+                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Status\" Type=\"Edm.Strin" +
+                "g\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Version\" Type=\"Edm.Str" +
+                "ing\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name" +
+                "=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityTyp" +
+                "e\" IsBindable=\"true\" EntitySet=\"EntityTypes\" m:IsAlwaysBindable=\"true\"><Paramete" +
+                "r Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.EntityType)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=" +
+                "\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType\" " +
+                "IsBindable=\"true\" EntitySet=\"EntityTypes\" m:IsAlwaysBindable=\"true\"><Parameter N" +
+                "ame=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.EntityType)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" " +
+                "FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.St" +
+                "ring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"E" +
+                "dm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImpor" +
+                "t Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ent" +
+                "ity\" IsBindable=\"true\" EntitySet=\"Entitys\" m:IsAlwaysBindable=\"true\"><Parameter " +
+                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.Entity)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Creat" +
+                "e\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity\" IsBindable" +
+                "=\"true\" EntitySet=\"Entitys\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPa" +
+                "rameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity)" +
+                "\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false" +
+                "\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=" +
+                "\"false\" Unicode=\"false\" /><Parameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"" +
+                "false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLen" +
+                "gth=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" R" +
+                "eturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link\" IsBindable=\"true" +
+                "\" EntitySet=\"Links\" m:IsAlwaysBindable=\"true\"><Parameter Na";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart5 = "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Link)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" Re" +
+                "turnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link\" IsBindable=\"true\"" +
+                " EntitySet=\"Links\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" " +
+                "Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link)\" Nullable=" +
+                "\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"" +
+                "false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
+                "code=\"false\" /><Parameter Name=\"SourceId\" Type=\"Edm.Int32\" Nullable=\"false\" /><P" +
+                "arameter Name=\"DestinationId\" Type=\"Edm.Int32\" Nullable=\"false\" /><Parameter Nam" +
+                "e=\"Order\" Type=\"Edm.Int32\" Nullable=\"false\" /></FunctionImport><AssociationSet N" +
+                "ame=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_Job_ParentPartnerSet\" Association=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_J" +
+                "ob_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner\"><End" +
+                " Role=\"ParentPartner\" EntitySet=\"Jobs\" /><End Role=\"Parent\" EntitySet=\"Jobs\" /><" +
+                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cata" +
+                "logue_CataloguePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartner\"><End Ro" +
+                "le=\"CataloguePartner\" EntitySet=\"CatalogueItems\" /><End Role=\"Catalogue\" EntityS" +
+                "et=\"Catalogues\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_OrderItem_OrderItemsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderIt" +
+                "ems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartner\">" +
+                "<End Role=\"OrderItemsPartner\" EntitySet=\"Orders\" /><End Role=\"OrderItems\" Entity" +
+                "Set=\"OrderItems\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_Order_OrderPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner\"><End Role=\"OrderPar" +
+                "tner\" EntitySet=\"OrderItems\" /><End Role=\"Order\" EntitySet=\"Orders\" /></Associat" +
+                "ionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_" +
+                "Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartnerSet\" Associatio" +
+                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclP" +
+                "artner\"><End Role=\"AclPartner\" EntitySet=\"Aces\" /><End Role=\"Acl\" EntitySet=\"Acl" +
+                "s\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartn" +
+                "erSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_Ace_AcesPartner\"><End Role=\"AcesPartner\" EntitySet=\"Acls\" /><End Role=" +
+                "\"Aces\" EntitySet=\"Aces\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartnerSet\" Assoc" +
+                "iation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner\"><End Role=\"Managem" +
+                "entUrisPartner\" EntitySet=\"ManagementCredentials\" /><End Role=\"ManagementUris\" E" +
+                "ntitySet=\"ManagementUris\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPar" +
+                "tnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialP" +
+                "artner\"><End Role=\"ManagementCredentialPartner\" EntitySet=\"ManagementUris\" /><En" +
+                "d Role=\"ManagementCredential\" EntitySet=\"ManagementCredentials\" /></AssociationS" +
+                "et><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogu" +
+                "e_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Ca" +
+                "talogueItemsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner\">" +
+                "<End Role=\"CatalogueItemsPartner\" EntitySet=\"Catalogues\" /><End Role=\"CatalogueI" +
+                "tems\" EntitySet=\"CatalogueItems\" /></AssociationSet><AssociationSet Name=\"biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Entity_Parent_biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_Entity_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity" +
+                "_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_ParentPartner\"><En" +
+                "d Role=\"ParentPartner\" EntitySet=\"Entitys\" /><End Role=\"Parent\" EntitySet=\"Entit" +
+                "ys\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Entity_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entit" +
+                "y_ChildrenPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Children_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Entity_ChildrenPartner\"><End Role=\"ChildrenPartn" +
+                "er\" EntitySet=\"Entitys\" /><End Role=\"Children\" EntitySet=\"Entitys\" /></Associati" +
+                "onSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entit" +
+                "y_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLink" +
+                "sPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Entity_IncomingLinks_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Link_IncomingLinksPartner\"><End Role=\"IncomingLinksP" +
+                "artner\" EntitySet=\"Entitys\" /><End Role=\"IncomingLinks\" EntitySet=\"Links\" /></As" +
+                "sociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Entity_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Outgo" +
+                "ingLinksPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_OutgoingLinks_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartner\"><End Role=\"Outgoin" +
+                "gLinksPartner\" EntitySet=\"Entitys\" /><End Role=\"OutgoingLinks\" EntitySet=\"Links\"" +
+                " /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Sourc" +
+                "ePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_Entity_SourcePartner\"><End Role=\"SourcePartner\" EntitySet=\"Li" +
+                "nks\" /><End Role=\"Source\" EntitySet=\"Entitys\" /></Associati";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart6 = @"onSet><AssociationSet Name=""biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_DestinationPartnerSet"" Association=""biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_DestinationPartner""><End Role=""DestinationPartner"" EntitySet=""Links"" /><End Role=""Destination"" EntitySet=""Entitys"" /></AssociationSet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
-                return string.Concat(ModelPart0, ModelPart1);
+                return string.Concat(ModelPart0, ModelPart1, ModelPart2, ModelPart3, ModelPart4, ModelPart5, ModelPart6);
             }
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             public static global::Microsoft.Data.Edm.IEdmModel GetInstance()
@@ -763,8 +1325,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// Create a new Job object.
         /// </summary>
         /// <param name="status">Initial value of Status.</param>
-        /// <param name="type">Initial value of Type.</param>
-        /// <param name="parentId">Initial value of ParentId.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -773,12 +1333,10 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Job CreateJob(string status, string type, int parentId, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static Job CreateJob(string status, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             Job job = new Job();
             job.Status = status;
-            job.Type = type;
-            job.ParentId = parentId;
             job.Id = ID;
             job.Tid = tid;
             job.Name = name;
@@ -810,28 +1368,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private string _Status;
         partial void OnStatusChanging(string value);
         partial void OnStatusChanged();
-        /// <summary>
-        /// There are no comments for Property Type in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Type
-        {
-            get
-            {
-                return this._Type;
-            }
-            set
-            {
-                this.OnTypeChanging(value);
-                this._Type = value;
-                this.OnTypeChanged();
-                this.OnPropertyChanged("Type");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Type;
-        partial void OnTypeChanging(string value);
-        partial void OnTypeChanged();
         /// <summary>
         /// There are no comments for Property ReferencedItemId in the schema.
         /// </summary>
@@ -968,7 +1504,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// There are no comments for Property ParentId in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int ParentId
+        public global::System.Nullable<int> ParentId
         {
             get
             {
@@ -983,8 +1519,8 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _ParentId;
-        partial void OnParentIdChanging(int value);
+        private global::System.Nullable<int> _ParentId;
+        partial void OnParentIdChanging(global::System.Nullable<int> value);
         partial void OnParentIdChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
@@ -1163,23 +1699,23 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
         /// <summary>
-        /// There are no comments for ParentJob in the schema.
+        /// There are no comments for Parent in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Job ParentJob
+        public Job Parent
         {
             get
             {
-                return this._ParentJob;
+                return this._Parent;
             }
             set
             {
-                this._ParentJob = value;
-                this.OnPropertyChanged("ParentJob");
+                this._Parent = value;
+                this.OnPropertyChanged("Parent");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private Job _ParentJob;
+        private Job _Parent;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1204,6 +1740,13 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <summary>
         /// Create a new CatalogueItem object.
         /// </summary>
+        /// <param name="catalogueId">Initial value of CatalogueId.</param>
+        /// <param name="type">Initial value of Type.</param>
+        /// <param name="version">Initial value of Version.</param>
+        /// <param name="validFrom">Initial value of ValidFrom.</param>
+        /// <param name="validUntil">Initial value of ValidUntil.</param>
+        /// <param name="endOfSale">Initial value of EndOfSale.</param>
+        /// <param name="endOfLife">Initial value of EndOfLife.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -1212,9 +1755,16 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static CatalogueItem CreateCatalogueItem(int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static CatalogueItem CreateCatalogueItem(int catalogueId, string type, string version, global::System.DateTimeOffset validFrom, global::System.DateTimeOffset validUntil, global::System.DateTimeOffset endOfSale, global::System.DateTimeOffset endOfLife, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             CatalogueItem catalogueItem = new CatalogueItem();
+            catalogueItem.CatalogueId = catalogueId;
+            catalogueItem.Type = type;
+            catalogueItem.Version = version;
+            catalogueItem.ValidFrom = validFrom;
+            catalogueItem.ValidUntil = validUntil;
+            catalogueItem.EndOfSale = endOfSale;
+            catalogueItem.EndOfLife = endOfLife;
             catalogueItem.Id = ID;
             catalogueItem.Tid = tid;
             catalogueItem.Name = name;
@@ -1225,27 +1775,49 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             return catalogueItem;
         }
         /// <summary>
-        /// There are no comments for Property Collection in the schema.
+        /// There are no comments for Property CatalogueId in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Collection
+        public int CatalogueId
         {
             get
             {
-                return this._Collection;
+                return this._CatalogueId;
             }
             set
             {
-                this.OnCollectionChanging(value);
-                this._Collection = value;
-                this.OnCollectionChanged();
-                this.OnPropertyChanged("Collection");
+                this.OnCatalogueIdChanging(value);
+                this._CatalogueId = value;
+                this.OnCatalogueIdChanged();
+                this.OnPropertyChanged("CatalogueId");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Collection;
-        partial void OnCollectionChanging(string value);
-        partial void OnCollectionChanged();
+        private int _CatalogueId;
+        partial void OnCatalogueIdChanging(int value);
+        partial void OnCatalogueIdChanged();
+        /// <summary>
+        /// There are no comments for Property Type in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+            set
+            {
+                this.OnTypeChanging(value);
+                this._Type = value;
+                this.OnTypeChanged();
+                this.OnPropertyChanged("Type");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Type;
+        partial void OnTypeChanging(string value);
+        partial void OnTypeChanged();
         /// <summary>
         /// There are no comments for Property Version in the schema.
         /// </summary>
@@ -1268,6 +1840,138 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private string _Version;
         partial void OnVersionChanging(string value);
         partial void OnVersionChanged();
+        /// <summary>
+        /// There are no comments for Property ValidFrom in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset ValidFrom
+        {
+            get
+            {
+                return this._ValidFrom;
+            }
+            set
+            {
+                this.OnValidFromChanging(value);
+                this._ValidFrom = value;
+                this.OnValidFromChanged();
+                this.OnPropertyChanged("ValidFrom");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _ValidFrom;
+        partial void OnValidFromChanging(global::System.DateTimeOffset value);
+        partial void OnValidFromChanged();
+        /// <summary>
+        /// There are no comments for Property ValidUntil in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset ValidUntil
+        {
+            get
+            {
+                return this._ValidUntil;
+            }
+            set
+            {
+                this.OnValidUntilChanging(value);
+                this._ValidUntil = value;
+                this.OnValidUntilChanged();
+                this.OnPropertyChanged("ValidUntil");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _ValidUntil;
+        partial void OnValidUntilChanging(global::System.DateTimeOffset value);
+        partial void OnValidUntilChanged();
+        /// <summary>
+        /// There are no comments for Property EndOfSale in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset EndOfSale
+        {
+            get
+            {
+                return this._EndOfSale;
+            }
+            set
+            {
+                this.OnEndOfSaleChanging(value);
+                this._EndOfSale = value;
+                this.OnEndOfSaleChanged();
+                this.OnPropertyChanged("EndOfSale");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _EndOfSale;
+        partial void OnEndOfSaleChanging(global::System.DateTimeOffset value);
+        partial void OnEndOfSaleChanged();
+        /// <summary>
+        /// There are no comments for Property EndOfLife in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset EndOfLife
+        {
+            get
+            {
+                return this._EndOfLife;
+            }
+            set
+            {
+                this.OnEndOfLifeChanging(value);
+                this._EndOfLife = value;
+                this.OnEndOfLifeChanged();
+                this.OnPropertyChanged("EndOfLife");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _EndOfLife;
+        partial void OnEndOfLifeChanging(global::System.DateTimeOffset value);
+        partial void OnEndOfLifeChanged();
+        /// <summary>
+        /// There are no comments for Property Parameters in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Parameters
+        {
+            get
+            {
+                return this._Parameters;
+            }
+            set
+            {
+                this.OnParametersChanging(value);
+                this._Parameters = value;
+                this.OnParametersChanged();
+                this.OnPropertyChanged("Parameters");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Parameters;
+        partial void OnParametersChanging(string value);
+        partial void OnParametersChanged();
+        /// <summary>
+        /// There are no comments for Property Collection in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Collection
+        {
+            get
+            {
+                return this._Collection;
+            }
+            set
+            {
+                this.OnCollectionChanging(value);
+                this._Collection = value;
+                this.OnCollectionChanged();
+                this.OnPropertyChanged("Collection");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Collection;
+        partial void OnCollectionChanging(string value);
+        partial void OnCollectionChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
@@ -1444,6 +2148,24 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Catalogue in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Catalogue Catalogue
+        {
+            get
+            {
+                return this._Catalogue;
+            }
+            set
+            {
+                this._Catalogue = value;
+                this.OnPropertyChanged("Catalogue");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Catalogue _Catalogue;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1489,27 +2211,27 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             return order;
         }
         /// <summary>
-        /// There are no comments for Property OrderOnBehalfOf in the schema.
+        /// There are no comments for Property Requester in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string OrderOnBehalfOf
+        public string Requester
         {
             get
             {
-                return this._OrderOnBehalfOf;
+                return this._Requester;
             }
             set
             {
-                this.OnOrderOnBehalfOfChanging(value);
-                this._OrderOnBehalfOf = value;
-                this.OnOrderOnBehalfOfChanged();
-                this.OnPropertyChanged("OrderOnBehalfOf");
+                this.OnRequesterChanging(value);
+                this._Requester = value;
+                this.OnRequesterChanged();
+                this.OnPropertyChanged("Requester");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _OrderOnBehalfOf;
-        partial void OnOrderOnBehalfOfChanging(string value);
-        partial void OnOrderOnBehalfOfChanged();
+        private string _Requester;
+        partial void OnRequesterChanging(string value);
+        partial void OnRequesterChanged();
         /// <summary>
         /// There are no comments for Property Status in the schema.
         /// </summary>
@@ -2152,9 +2874,9 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <summary>
         /// Create a new Ace object.
         /// </summary>
-        /// <param name="resource">Initial value of Resource.</param>
         /// <param name="trustee">Initial value of Trustee.</param>
         /// <param name="action">Initial value of Action.</param>
+        /// <param name="aclId">Initial value of AclId.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -2163,12 +2885,12 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Ace CreateAce(string resource, string trustee, string action, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static Ace CreateAce(string trustee, string action, int aclId, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             Ace ace = new Ace();
-            ace.Resource = resource;
             ace.Trustee = trustee;
             ace.Action = action;
+            ace.AclId = aclId;
             ace.Id = ID;
             ace.Tid = tid;
             ace.Name = name;
@@ -2178,28 +2900,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             ace.Modified = modified;
             return ace;
         }
-        /// <summary>
-        /// There are no comments for Property Resource in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Resource
-        {
-            get
-            {
-                return this._Resource;
-            }
-            set
-            {
-                this.OnResourceChanging(value);
-                this._Resource = value;
-                this.OnResourceChanged();
-                this.OnPropertyChanged("Resource");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Resource;
-        partial void OnResourceChanging(string value);
-        partial void OnResourceChanged();
         /// <summary>
         /// There are no comments for Property Trustee in the schema.
         /// </summary>
@@ -2244,6 +2944,28 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private string _Action;
         partial void OnActionChanging(string value);
         partial void OnActionChanged();
+        /// <summary>
+        /// There are no comments for Property AclId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int AclId
+        {
+            get
+            {
+                return this._AclId;
+            }
+            set
+            {
+                this.OnAclIdChanging(value);
+                this._AclId = value;
+                this.OnAclIdChanged();
+                this.OnPropertyChanged("AclId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _AclId;
+        partial void OnAclIdChanging(int value);
+        partial void OnAclIdChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
@@ -2420,6 +3142,262 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Acl in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Acl Acl
+        {
+            get
+            {
+                return this._Acl;
+            }
+            set
+            {
+                this._Acl = value;
+                this.OnPropertyChanged("Acl");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Acl _Acl;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Acls")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Acl : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Acl object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Acl CreateAcl(int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Acl acl = new Acl();
+            acl.Id = ID;
+            acl.Tid = tid;
+            acl.Name = name;
+            acl.CreatedBy = createdBy;
+            acl.ModifiedBy = modifiedBy;
+            acl.Created = created;
+            acl.Modified = modified;
+            return acl;
+        }
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Aces in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Ace> Aces
+        {
+            get
+            {
+                return this._Aces;
+            }
+            set
+            {
+                this._Aces = value;
+                this.OnPropertyChanged("Aces");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Ace> _Aces = new global::System.Data.Services.Client.DataServiceCollection<Ace>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3194,6 +4172,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// </summary>
         /// <param name="username">Initial value of Username.</param>
         /// <param name="encryptedPassword">Initial value of EncryptedPassword.</param>
+        /// <param name="password">Initial value of Password.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -3202,11 +4181,12 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ManagementCredential CreateManagementCredential(string username, string encryptedPassword, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static ManagementCredential CreateManagementCredential(string username, string encryptedPassword, string password, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             ManagementCredential managementCredential = new ManagementCredential();
             managementCredential.Username = username;
             managementCredential.EncryptedPassword = encryptedPassword;
+            managementCredential.Password = password;
             managementCredential.Id = ID;
             managementCredential.Tid = tid;
             managementCredential.Name = name;
@@ -3260,6 +4240,28 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private string _EncryptedPassword;
         partial void OnEncryptedPasswordChanging(string value);
         partial void OnEncryptedPasswordChanged();
+        /// <summary>
+        /// There are no comments for Property Password in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Password
+        {
+            get
+            {
+                return this._Password;
+            }
+            set
+            {
+                this.OnPasswordChanging(value);
+                this._Password = value;
+                this.OnPasswordChanged();
+                this.OnPropertyChanged("Password");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Password;
+        partial void OnPasswordChanging(string value);
+        partial void OnPasswordChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
@@ -3436,6 +4438,1544 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for ManagementUris in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ManagementUri> ManagementUris
+        {
+            get
+            {
+                return this._ManagementUris;
+            }
+            set
+            {
+                this._ManagementUris = value;
+                this.OnPropertyChanged("ManagementUris");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ManagementUri> _ManagementUris = new global::System.Data.Services.Client.DataServiceCollection<ManagementUri>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ManagementUris")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class ManagementUri : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new ManagementUri object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ManagementUri CreateManagementUri(int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            ManagementUri managementUri = new ManagementUri();
+            managementUri.Id = ID;
+            managementUri.Tid = tid;
+            managementUri.Name = name;
+            managementUri.CreatedBy = createdBy;
+            managementUri.ModifiedBy = modifiedBy;
+            managementUri.Created = created;
+            managementUri.Modified = modified;
+            return managementUri;
+        }
+        /// <summary>
+        /// There are no comments for Property Type in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+            set
+            {
+                this.OnTypeChanging(value);
+                this._Type = value;
+                this.OnTypeChanged();
+                this.OnPropertyChanged("Type");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Type;
+        partial void OnTypeChanging(string value);
+        partial void OnTypeChanged();
+        /// <summary>
+        /// There are no comments for Property Value in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Value
+        {
+            get
+            {
+                return this._Value;
+            }
+            set
+            {
+                this.OnValueChanging(value);
+                this._Value = value;
+                this.OnValueChanged();
+                this.OnPropertyChanged("Value");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Value;
+        partial void OnValueChanging(string value);
+        partial void OnValueChanged();
+        /// <summary>
+        /// There are no comments for Property ManagementCredentialId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> ManagementCredentialId
+        {
+            get
+            {
+                return this._ManagementCredentialId;
+            }
+            set
+            {
+                this.OnManagementCredentialIdChanging(value);
+                this._ManagementCredentialId = value;
+                this.OnManagementCredentialIdChanged();
+                this.OnPropertyChanged("ManagementCredentialId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _ManagementCredentialId;
+        partial void OnManagementCredentialIdChanging(global::System.Nullable<int> value);
+        partial void OnManagementCredentialIdChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for ManagementCredential in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public ManagementCredential ManagementCredential
+        {
+            get
+            {
+                return this._ManagementCredential;
+            }
+            set
+            {
+                this._ManagementCredential = value;
+                this.OnPropertyChanged("ManagementCredential");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private ManagementCredential _ManagementCredential;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Catalogues")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Catalogue : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Catalogue object.
+        /// </summary>
+        /// <param name="version">Initial value of Version.</param>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Catalogue CreateCatalogue(string version, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Catalogue catalogue = new Catalogue();
+            catalogue.Version = version;
+            catalogue.Id = ID;
+            catalogue.Tid = tid;
+            catalogue.Name = name;
+            catalogue.CreatedBy = createdBy;
+            catalogue.ModifiedBy = modifiedBy;
+            catalogue.Created = created;
+            catalogue.Modified = modified;
+            return catalogue;
+        }
+        /// <summary>
+        /// There are no comments for Property Status in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Status
+        {
+            get
+            {
+                return this._Status;
+            }
+            set
+            {
+                this.OnStatusChanging(value);
+                this._Status = value;
+                this.OnStatusChanged();
+                this.OnPropertyChanged("Status");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Status;
+        partial void OnStatusChanging(string value);
+        partial void OnStatusChanged();
+        /// <summary>
+        /// There are no comments for Property Version in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Version
+        {
+            get
+            {
+                return this._Version;
+            }
+            set
+            {
+                this.OnVersionChanging(value);
+                this._Version = value;
+                this.OnVersionChanged();
+                this.OnPropertyChanged("Version");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Version;
+        partial void OnVersionChanging(string value);
+        partial void OnVersionChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for CatalogueItems in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<CatalogueItem> CatalogueItems
+        {
+            get
+            {
+                return this._CatalogueItems;
+            }
+            set
+            {
+                this._CatalogueItems = value;
+                this.OnPropertyChanged("CatalogueItems");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<CatalogueItem> _CatalogueItems = new global::System.Data.Services.Client.DataServiceCollection<CatalogueItem>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("EntityTypes")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class EntityType : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new EntityType object.
+        /// </summary>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static EntityType CreateEntityType(int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            EntityType entityType = new EntityType();
+            entityType.Id = ID;
+            entityType.Tid = tid;
+            entityType.Name = name;
+            entityType.CreatedBy = createdBy;
+            entityType.ModifiedBy = modifiedBy;
+            entityType.Created = created;
+            entityType.Modified = modified;
+            return entityType;
+        }
+        /// <summary>
+        /// There are no comments for Property Parameters in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Parameters
+        {
+            get
+            {
+                return this._Parameters;
+            }
+            set
+            {
+                this.OnParametersChanging(value);
+                this._Parameters = value;
+                this.OnParametersChanged();
+                this.OnPropertyChanged("Parameters");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Parameters;
+        partial void OnParametersChanging(string value);
+        partial void OnParametersChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entity in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Entitys")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Entity : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Entity object.
+        /// </summary>
+        /// <param name="type">Initial value of Type.</param>
+        /// <param name="parameters">Initial value of Parameters.</param>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Entity CreateEntity(string type, string parameters, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Entity entity = new Entity();
+            entity.Type = type;
+            entity.Parameters = parameters;
+            entity.Id = ID;
+            entity.Tid = tid;
+            entity.Name = name;
+            entity.CreatedBy = createdBy;
+            entity.ModifiedBy = modifiedBy;
+            entity.Created = created;
+            entity.Modified = modified;
+            return entity;
+        }
+        /// <summary>
+        /// There are no comments for Property Type in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Type
+        {
+            get
+            {
+                return this._Type;
+            }
+            set
+            {
+                this.OnTypeChanging(value);
+                this._Type = value;
+                this.OnTypeChanged();
+                this.OnPropertyChanged("Type");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Type;
+        partial void OnTypeChanging(string value);
+        partial void OnTypeChanged();
+        /// <summary>
+        /// There are no comments for Property Parameters in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Parameters
+        {
+            get
+            {
+                return this._Parameters;
+            }
+            set
+            {
+                this.OnParametersChanging(value);
+                this._Parameters = value;
+                this.OnParametersChanged();
+                this.OnPropertyChanged("Parameters");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Parameters;
+        partial void OnParametersChanging(string value);
+        partial void OnParametersChanged();
+        /// <summary>
+        /// There are no comments for Property ParentId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> ParentId
+        {
+            get
+            {
+                return this._ParentId;
+            }
+            set
+            {
+                this.OnParentIdChanging(value);
+                this._ParentId = value;
+                this.OnParentIdChanged();
+                this.OnPropertyChanged("ParentId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _ParentId;
+        partial void OnParentIdChanging(global::System.Nullable<int> value);
+        partial void OnParentIdChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Parent in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Entity Parent
+        {
+            get
+            {
+                return this._Parent;
+            }
+            set
+            {
+                this._Parent = value;
+                this.OnPropertyChanged("Parent");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Entity _Parent;
+        /// <summary>
+        /// There are no comments for Children in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Entity> Children
+        {
+            get
+            {
+                return this._Children;
+            }
+            set
+            {
+                this._Children = value;
+                this.OnPropertyChanged("Children");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Entity> _Children = new global::System.Data.Services.Client.DataServiceCollection<Entity>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for IncomingLinks in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Link> IncomingLinks
+        {
+            get
+            {
+                return this._IncomingLinks;
+            }
+            set
+            {
+                this._IncomingLinks = value;
+                this.OnPropertyChanged("IncomingLinks");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Link> _IncomingLinks = new global::System.Data.Services.Client.DataServiceCollection<Link>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for OutgoingLinks in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Link> OutgoingLinks
+        {
+            get
+            {
+                return this._OutgoingLinks;
+            }
+            set
+            {
+                this._OutgoingLinks = value;
+                this.OnPropertyChanged("OutgoingLinks");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Link> _OutgoingLinks = new global::System.Data.Services.Client.DataServiceCollection<Link>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Links")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Link : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Link object.
+        /// </summary>
+        /// <param name="order">Initial value of Order.</param>
+        /// <param name="sourceId">Initial value of SourceId.</param>
+        /// <param name="destinationId">Initial value of DestinationId.</param>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdBy">Initial value of CreatedBy.</param>
+        /// <param name="modifiedBy">Initial value of ModifiedBy.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Link CreateLink(int order, int sourceId, int destinationId, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Link link = new Link();
+            link.Order = order;
+            link.SourceId = sourceId;
+            link.DestinationId = destinationId;
+            link.Id = ID;
+            link.Tid = tid;
+            link.Name = name;
+            link.CreatedBy = createdBy;
+            link.ModifiedBy = modifiedBy;
+            link.Created = created;
+            link.Modified = modified;
+            return link;
+        }
+        /// <summary>
+        /// There are no comments for Property Order in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Order
+        {
+            get
+            {
+                return this._Order;
+            }
+            set
+            {
+                this.OnOrderChanging(value);
+                this._Order = value;
+                this.OnOrderChanged();
+                this.OnPropertyChanged("Order");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Order;
+        partial void OnOrderChanging(int value);
+        partial void OnOrderChanged();
+        /// <summary>
+        /// There are no comments for Property SourceId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int SourceId
+        {
+            get
+            {
+                return this._SourceId;
+            }
+            set
+            {
+                this.OnSourceIdChanging(value);
+                this._SourceId = value;
+                this.OnSourceIdChanged();
+                this.OnPropertyChanged("SourceId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _SourceId;
+        partial void OnSourceIdChanging(int value);
+        partial void OnSourceIdChanged();
+        /// <summary>
+        /// There are no comments for Property DestinationId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int DestinationId
+        {
+            get
+            {
+                return this._DestinationId;
+            }
+            set
+            {
+                this.OnDestinationIdChanging(value);
+                this._DestinationId = value;
+                this.OnDestinationIdChanged();
+                this.OnPropertyChanged("DestinationId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _DestinationId;
+        partial void OnDestinationIdChanging(int value);
+        partial void OnDestinationIdChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Tid;
+        partial void OnTidChanging(string value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this.OnCreatedByChanging(value);
+                this._CreatedBy = value;
+                this.OnCreatedByChanged();
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CreatedBy;
+        partial void OnCreatedByChanging(string value);
+        partial void OnCreatedByChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this.OnModifiedByChanging(value);
+                this._ModifiedBy = value;
+                this.OnModifiedByChanged();
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ModifiedBy;
+        partial void OnModifiedByChanging(string value);
+        partial void OnModifiedByChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Source in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Entity Source
+        {
+            get
+            {
+                return this._Source;
+            }
+            set
+            {
+                this._Source = value;
+                this.OnPropertyChanged("Source");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Entity _Source;
+        /// <summary>
+        /// There are no comments for Destination in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Entity Destination
+        {
+            get
+            {
+                return this._Destination;
+            }
+            set
+            {
+                this._Destination = value;
+                this.OnPropertyChanged("Destination");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Entity _Destination;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
