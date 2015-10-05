@@ -11,7 +11,7 @@
         <Property Name="RoutePrefix" Type="Edm.String" Nullable="false" />
         <Property Name="ServerRole" Type="Edm.String" Nullable="false" />
         <Property Name="Priority" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -19,6 +19,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
       <EntityType Name="AuditTrail">
         <Key>
@@ -29,7 +30,7 @@
         <Property Name="EntityState" Type="Edm.String" Nullable="false" />
         <Property Name="Original" Type="Edm.String" Nullable="false" />
         <Property Name="Current" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -37,6 +38,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/28/2015 9:02:11 AM
+// Generation date: 10/5/2015 11:51:58 AM
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
@@ -126,56 +126,57 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 "e=\"RouteTemplate\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RoutePref" +
                 "ix\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ServerRole\" Type=\"Edm.S" +
                 "tring\" Nullable=\"false\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Nullable=\"f" +
-                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"" +
+                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"" +
                 "Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String" +
                 "\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property " +
                 "Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy" +
                 "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTi" +
                 "meOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
-                " Nullable=\"false\" /></EntityType><EntityType Name=\"AuditTrail\"><Key><PropertyRef" +
-                " Name=\"Id\" /></Key><Property Name=\"EntityId\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "/><Property Name=\"EntityType\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
-                "e=\"EntityState\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Original\" T" +
-                "ype=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Current\" Type=\"Edm.String\" N" +
-                "ullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" /><Prope" +
-                "rty Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"" +
-                "Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" />" +
-                "<Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"" +
-                "ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"" +
-                "Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateT" +
-                "imeOffset\" Nullable=\"false\" /></EntityType></Schema><Schema Namespace=\"Default\" " +
-                "xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Diag" +
-                "nostics\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endpoints\" EntityTyp" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /><EntitySet " +
-                "Name=\"AuditTrails\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnos" +
-                "tics.AuditTrail\" /><FunctionImport Name=\"Refresh\" ReturnType=\"Edm.Boolean\" IsBin" +
-                "dable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImpo" +
-                "rt><FunctionImport Name=\"Reload\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:Is" +
-                "AlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImpor" +
-                "t Name=\"Enable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"t" +
+                " Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /></EntityType" +
+                "><EntityType Name=\"AuditTrail\"><Key><PropertyRef Name=\"Id\" /></Key><Property Nam" +
+                "e=\"EntityId\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"EntityType\" Ty" +
+                "pe=\"Edm.String\" Nullable=\"false\" /><Property Name=\"EntityState\" Type=\"Edm.String" +
+                "\" Nullable=\"false\" /><Property Name=\"Original\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Current\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
+                "=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\"" +
+                " Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><" +
+                "Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=" +
+                "\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nu" +
+                "llable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"fa" +
+                "lse\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><P" +
+                "roperty Name=\"RowVersion\" Type=\"Edm.Binary\" /></EntityType></Schema><Schema Name" +
+                "space=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityCont" +
+                "ainer Name=\"Diagnostics\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endp" +
+                "oints\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoin" +
+                "t\" /><EntitySet Name=\"AuditTrails\" EntityType=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Diagnostics.AuditTrail\" /><FunctionImport Name=\"Refresh\" ReturnType=\"Ed" +
+                "m.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingP" +
+                "arameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" " +
+                "/></FunctionImport><FunctionImport Name=\"Reload\" ReturnType=\"Edm.Boolean\" IsBind" +
+                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImpor" +
+                "t><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsA" +
+                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport" +
+                " Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"t" +
                 "rue\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Disable\" " +
-                "ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter " +
-                "Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnost" +
-                "ics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz" +
-                ".dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" IsBindable=\"true\"" +
-                " EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParam" +
-                "eter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Aud" +
-                "itTrail)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" Retu" +
-                "rnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" IsBind" +
-                "able=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
-                "indingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diag" +
-                "nostics.AuditTrail)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\"" +
-                " FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.S" +
-                "tring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityId\" Type=\"Ed" +
-                "m.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityType\" Typ" +
-                "e=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityStat" +
-                "e\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Orig" +
-                "inal\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"C" +
-                "urrent\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport" +
-                "></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+                "ervices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Template\"" +
+                " ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" I" +
+                "sBindable=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Diagnostics.AuditTrail)\" Nullable=\"false\" /></FunctionImport><FunctionImport Na" +
+                "me=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Au" +
+                "ditTrail\" IsBindable=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><P" +
+                "arameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Diagnostics.AuditTrail)\" Nullable=\"false\" /><Parameter Name=\"Name\" T" +
+                "ype=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descript" +
+                "ion\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"En" +
+                "tityId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=" +
+                "\"EntityType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter " +
+                "Name=\"EntityState\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"Original\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><P" +
+                "arameter Name=\"Current\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "</FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -234,7 +235,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Endpoint CreateEndpoint(string version, string address, string routeTemplate, string routePrefix, string serverRole, int priority, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static Endpoint CreateEndpoint(string version, string address, string routeTemplate, string routePrefix, string serverRole, int priority, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             Endpoint endpoint = new Endpoint();
             endpoint.Version = version;
@@ -388,7 +389,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// There are no comments for Property Id in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int Id
+        public long Id
         {
             get
             {
@@ -403,8 +404,8 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _Id;
-        partial void OnIdChanging(int value);
+        private long _Id;
+        partial void OnIdChanging(long value);
         partial void OnIdChanged();
         /// <summary>
         /// There are no comments for Property Tid in the schema.
@@ -560,6 +561,35 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -597,7 +627,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static AuditTrail CreateAuditTrail(string entityId, string entityType, string entityState, string original, string current, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static AuditTrail CreateAuditTrail(string entityId, string entityType, string entityState, string original, string current, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             AuditTrail auditTrail = new AuditTrail();
             auditTrail.EntityId = entityId;
@@ -728,7 +758,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// There are no comments for Property Id in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int Id
+        public long Id
         {
             get
             {
@@ -743,8 +773,8 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _Id;
-        partial void OnIdChanging(int value);
+        private long _Id;
+        partial void OnIdChanging(long value);
         partial void OnIdChanged();
         /// <summary>
         /// There are no comments for Property Tid in the schema.
@@ -900,6 +930,35 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
