@@ -22,6 +22,6 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
     class OrderParameters : JsonObject
     {
         public int Quantity { get; set; }
-        public int CatalogueItemId { get; set; }
+        public long CatalogueItemId { get; set; }
     }
 }

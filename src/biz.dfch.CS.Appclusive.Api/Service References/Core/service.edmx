@@ -7,7 +7,7 @@
         </Key>
         <Property Name="Key" Type="Edm.String" Nullable="false" />
         <Property Name="Value" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -15,6 +15,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
       <EntityType Name="Job">
         <Key>
@@ -27,8 +28,8 @@
         <Property Name="Parameters" Type="Edm.String" />
         <Property Name="Error" Type="Edm.String" />
         <Property Name="EndTime" Type="Edm.DateTimeOffset" />
-        <Property Name="ParentId" Type="Edm.Int32" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ParentId" Type="Edm.Int64" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -36,13 +37,14 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Parent" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner" ToRole="Parent" FromRole="ParentPartner" />
       </EntityType>
       <EntityType Name="Acl">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -50,6 +52,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Aces" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartner" ToRole="Aces" FromRole="AcesPartner" />
       </EntityType>
       <EntityType Name="Ace">
@@ -58,8 +61,8 @@
         </Key>
         <Property Name="Trustee" Type="Edm.String" Nullable="false" />
         <Property Name="Action" Type="Edm.String" Nullable="false" />
-        <Property Name="AclId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="AclId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -67,6 +70,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Acl" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartner" ToRole="Acl" FromRole="AclPartner" />
       </EntityType>
       <EntityType Name="EntityType">
@@ -74,7 +78,7 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Parameters" Type="Edm.String" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -82,6 +86,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
       <EntityType Name="Entity">
         <Key>
@@ -89,8 +94,8 @@
         </Key>
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
-        <Property Name="ParentId" Type="Edm.Int32" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ParentId" Type="Edm.Int64" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -98,6 +103,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Parent" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_ParentPartner" ToRole="Parent" FromRole="ParentPartner" />
         <NavigationProperty Name="Children" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_ChildrenPartner" ToRole="Children" FromRole="ChildrenPartner" />
         <NavigationProperty Name="IncomingLinks" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartner" ToRole="IncomingLinks" FromRole="IncomingLinksPartner" />
@@ -107,10 +113,10 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="Order" Type="Edm.Int32" Nullable="false" />
-        <Property Name="SourceId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="DestinationId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Order" Type="Edm.Int64" Nullable="false" />
+        <Property Name="SourceId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="DestinationId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -118,6 +124,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Source" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_SourcePartner" ToRole="Source" FromRole="SourcePartner" />
         <NavigationProperty Name="Destination" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity_DestinationPartner" ToRole="Destination" FromRole="DestinationPartner" />
       </EntityType>
@@ -128,7 +135,7 @@
         <Property Name="Username" Type="Edm.String" Nullable="false" />
         <Property Name="EncryptedPassword" Type="Edm.String" Nullable="false" />
         <Property Name="Password" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -136,6 +143,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="ManagementUris" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner" ToRole="ManagementUris" FromRole="ManagementUrisPartner" />
       </EntityType>
       <EntityType Name="ManagementUri">
@@ -144,8 +152,8 @@
         </Key>
         <Property Name="Type" Type="Edm.String" />
         <Property Name="Value" Type="Edm.String" />
-        <Property Name="ManagementCredentialId" Type="Edm.Int32" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ManagementCredentialId" Type="Edm.Int64" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -153,6 +161,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="ManagementCredential" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner" ToRole="ManagementCredential" FromRole="ManagementCredentialPartner" />
       </EntityType>
       <EntityType Name="ActiveDirectoryUser">
@@ -187,7 +196,7 @@
         </Key>
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Version" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -195,13 +204,14 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="CatalogueItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
       </EntityType>
       <EntityType Name="CatalogueItem">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="CatalogueId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CatalogueId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Version" Type="Edm.String" Nullable="false" />
         <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
@@ -210,7 +220,7 @@
         <Property Name="EndOfLife" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" />
         <Property Name="Collection" Type="Edm.String" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -218,13 +228,14 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Catalogue" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartner" ToRole="Catalogue" FromRole="CataloguePartner" />
       </EntityType>
       <EntityType Name="Cart">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -232,16 +243,17 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="CartItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartner" ToRole="CartItems" FromRole="CartItemsPartner" />
       </EntityType>
       <EntityType Name="CartItem">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="CartId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CartId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
-        <Property Name="CatalogueItemId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -249,6 +261,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Cart" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Cart_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartPartner" ToRole="Cart" FromRole="CartPartner" />
         <NavigationProperty Name="CatalogueItem" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CatalogueItem_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemPartner" ToRole="CatalogueItem" FromRole="CatalogueItemPartner" />
       </EntityType>
@@ -259,7 +272,7 @@
         <Property Name="Requester" Type="Edm.String" />
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Parameters" Type="Edm.String" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -267,19 +280,20 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="OrderItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartner" ToRole="OrderItems" FromRole="OrderItemsPartner" />
       </EntityType>
       <EntityType Name="OrderItem">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="OrderId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="OrderId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
         <Property Name="Version" Type="Edm.String" Nullable="false" />
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -287,6 +301,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Order" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner" ToRole="Order" FromRole="OrderPartner" />
       </EntityType>
       <EntityType Name="Approval">
@@ -294,7 +309,7 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Status" Type="Edm.String" />
-        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
@@ -302,6 +317,7 @@
         <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" Role="Parent" Multiplicity="0..1" />
