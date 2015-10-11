@@ -30,21 +30,37 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         }
 
         [TestMethod]
-        public void GetEndpoint0Succeeds()
+        public void GetEndpoint1Succeeds()
         {
+            long endpointId = 1;
             var uri = new Uri(_uriPrefix + "Diagnostics.svc");
             biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
-            var result = svc.Endpoints.Where(e => e.Id == 0).First();
+            var result = svc.Endpoints.Where(e => e.Id == endpointId).First();
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(0, result.Id);
+            Assert.AreEqual(endpointId, result.Id);
             Assert.AreEqual(Guid.Empty.ToString(), result.Tid);
             Assert.AreEqual("BaseUri", result.Name);
             Assert.AreEqual("BaseUri", result.Description);
             Assert.AreEqual("SYSTEM", result.CreatedBy);
             Assert.AreEqual("SYSTEM", result.ModifiedBy);
             Assert.AreEqual((new Version(0, 0, 0, 0)).ToString(), result.Version);
+        }
+
+        // DFTODO - move [ExpectContractException] into System.Utilities module
+        [Ignore]
+        [TestMethod]
+        //[ExpectContractException]
+        public void GetEndpoint0Fails()
+        {
+            long endpointId = 0;
+            var uri = new Uri(_uriPrefix + "Diagnostics.svc");
+            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            var result = svc.Endpoints.Where(e => e.Id == endpointId).First();
+
+            Assert.Fail("Test should have failed before.");
         }
     }
 }
