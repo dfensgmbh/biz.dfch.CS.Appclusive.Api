@@ -270,6 +270,7 @@
         <Property Name="CartId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
         <Property Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Parameters" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
