@@ -345,7 +345,7 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" Role="AcesPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" Role="Acl" Multiplicity="1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" Role="Acl" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" Role="AclPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner">
@@ -365,11 +365,11 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="OutgoingLinksPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Source" Multiplicity="1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Source" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="SourcePartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Destination" Multiplicity="1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Destination" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="DestinationPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner">
@@ -385,7 +385,7 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue" Role="CatalogueItemsPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue" Role="Catalogue" Multiplicity="1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue" Role="Catalogue" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" Role="CataloguePartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartner">

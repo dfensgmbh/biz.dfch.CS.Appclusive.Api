@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         {
             // DFTODO - comply with naming convention
             _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
-            _uri = new Uri(_uriPrefix + "Diagnostics.svc");
+            _uri = new Uri(_uriPrefix + "Diagnostics");
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         public void GetEndpoint1Succeeds()
         {
             long endpointId = 1;
-            var uri = new Uri(_uriPrefix + "Diagnostics.svc");
+            var uri = new Uri(_uriPrefix + "Diagnostics");
             biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Id == endpointId).First();
@@ -55,7 +55,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         public void GetEndpoint0Fails()
         {
             long endpointId = 0;
-            var uri = new Uri(_uriPrefix + "Diagnostics.svc");
+            var uri = new Uri(_uriPrefix + "Diagnostics");
             biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Id == endpointId).First();

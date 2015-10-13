@@ -36,7 +36,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
         [TestMethod]
         public void CreateOrderCreatesOrderItemsJobsAndApproval()
         {
-            var uri = new Uri(_uriPrefix + "Core.svc");
+            var uri = new Uri(_uriPrefix + "Core");
             biz.dfch.CS.Appclusive.Api.Core.Core svc = new biz.dfch.CS.Appclusive.Api.Core.Core(uri);
             svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
 

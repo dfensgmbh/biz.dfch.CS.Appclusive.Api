@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2ce18da9-ac8c-469f-9167-77dbae1eda2b" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53422/api/Diagnostics.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:53422/api/Diagnostics" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="cbaee27d-6ac4-4e12-854e-15dc5d4cd7fe" SourceId="1" SourceUrl="http://localhost:53422/api/Diagnostics.svc" />
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="cbaee27d-6ac4-4e12-854e-15dc5d4cd7fe" SourceId="1" SourceUrl="http://localhost:53422/api/Diagnostics" />
   </Metadata>
   <Extensions />
   <Parameters>
