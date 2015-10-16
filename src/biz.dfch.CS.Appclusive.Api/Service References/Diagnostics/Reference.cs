@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 10/13/2015 12:53:27 PM
+// Generation date: 10/16/2015 11:00:12 AM
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
@@ -61,23 +61,6 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             return null;
         }
         /// <summary>
-        /// There are no comments for Endpoints in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Endpoint> Endpoints
-        {
-            get
-            {
-                if ((this._Endpoints == null))
-                {
-                    this._Endpoints = base.CreateQuery<Endpoint>("Endpoints");
-                }
-                return this._Endpoints;
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Endpoint> _Endpoints;
-        /// <summary>
         /// There are no comments for AuditTrails in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -98,10 +81,19 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// There are no comments for Endpoints in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToEndpoints(Endpoint endpoint)
+        public global::System.Data.Services.Client.DataServiceQuery<Endpoint> Endpoints
         {
-            base.AddObject("Endpoints", endpoint);
+            get
+            {
+                if ((this._Endpoints == null))
+                {
+                    this._Endpoints = base.CreateQuery<Endpoint>("Endpoints");
+                }
+                return this._Endpoints;
+            }
         }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Endpoint> _Endpoints;
         /// <summary>
         /// There are no comments for AuditTrails in the schema.
         /// </summary>
@@ -109,6 +101,14 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         public void AddToAuditTrails(AuditTrail auditTrail)
         {
             base.AddObject("AuditTrails", auditTrail);
+        }
+        /// <summary>
+        /// There are no comments for Endpoints in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToEndpoints(Endpoint endpoint)
+        {
+            base.AddObject("Endpoints", endpoint);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
@@ -120,24 +120,24 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
                 "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
                 "Namespace=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics\" xmlns=\"http://" +
-                "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"Endpoint\"><Key><Propert" +
-                "yRef Name=\"Id\" /></Key><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"fals" +
-                "e\" /><Property Name=\"Address\" Type=\"Edm.String\" Nullable=\"false\" /><Property Nam" +
-                "e=\"RouteTemplate\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RoutePref" +
-                "ix\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ServerRole\" Type=\"Edm.S" +
-                "tring\" Nullable=\"false\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Nullable=\"f" +
-                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"" +
-                "Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String" +
-                "\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property " +
-                "Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"ModifiedBy" +
-                "\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTi" +
-                "meOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
-                " Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /></EntityType" +
-                "><EntityType Name=\"AuditTrail\"><Key><PropertyRef Name=\"Id\" /></Key><Property Nam" +
-                "e=\"EntityId\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"EntityType\" Ty" +
-                "pe=\"Edm.String\" Nullable=\"false\" /><Property Name=\"EntityState\" Type=\"Edm.String" +
-                "\" Nullable=\"false\" /><Property Name=\"Original\" Type=\"Edm.String\" Nullable=\"false" +
-                "\" /><Property Name=\"Current\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name" +
+                "schemas.microsoft.com/ado/2009/11/edm\"><EntityType Name=\"AuditTrail\"><Key><Prope" +
+                "rtyRef Name=\"Id\" /></Key><Property Name=\"EntityId\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"EntityType\" Type=\"Edm.String\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"EntityState\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Origi" +
+                "nal\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Current\" Type=\"Edm.Str" +
+                "ing\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" />" +
+                "<Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Name\" " +
+                "Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.Stri" +
+                "ng\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property " +
+                "Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Created\" " +
+                "Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm" +
+                ".DateTimeOffset\" Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary" +
+                "\" /></EntityType><EntityType Name=\"Endpoint\"><Key><PropertyRef Name=\"Id\" /></Key" +
+                "><Property Name=\"Version\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"A" +
+                "ddress\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RouteTemplate\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" /><Property Name=\"RoutePrefix\" Type=\"Edm.String\" " +
+                "Nullable=\"false\" /><Property Name=\"ServerRole\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Priority\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name" +
                 "=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\"" +
                 " Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><" +
                 "Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=" +
@@ -146,36 +146,36 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 "lse\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><P" +
                 "roperty Name=\"RowVersion\" Type=\"Edm.Binary\" /></EntityType></Schema><Schema Name" +
                 "space=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityCont" +
-                "ainer Name=\"Diagnostics\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Endp" +
-                "oints\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoin" +
-                "t\" /><EntitySet Name=\"AuditTrails\" EntityType=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Diagnostics.AuditTrail\" /><FunctionImport Name=\"Refresh\" ReturnType=\"Ed" +
-                "m.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingP" +
-                "arameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" " +
-                "/></FunctionImport><FunctionImport Name=\"Reload\" ReturnType=\"Edm.Boolean\" IsBind" +
-                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImpor" +
-                "t><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsA" +
-                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport" +
-                " Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"t" +
-                "rue\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Template\"" +
-                " ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" I" +
-                "sBindable=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
-                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Diagnostics.AuditTrail)\" Nullable=\"false\" /></FunctionImport><FunctionImport Na" +
-                "me=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Au" +
-                "ditTrail\" IsBindable=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><P" +
-                "arameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Od" +
-                "ataServices.Diagnostics.AuditTrail)\" Nullable=\"false\" /><Parameter Name=\"Name\" T" +
-                "ype=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descript" +
-                "ion\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"En" +
-                "tityId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=" +
-                "\"EntityType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter " +
-                "Name=\"EntityState\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
-                "meter Name=\"Original\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><P" +
-                "arameter Name=\"Current\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "ainer Name=\"Diagnostics\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Audi" +
+                "tTrails\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Audit" +
+                "Trail\" /><EntitySet Name=\"Endpoints\" EntityType=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Diagnostics.Endpoint\" /><FunctionImport Name=\"Template\" ReturnType=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" IsBindable=\"tru" +
+                "e\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPar" +
+                "ameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.A" +
+                "uditTrail)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" Re" +
+                "turnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail\" IsBi" +
+                "ndable=\"true\" EntitySet=\"AuditTrails\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
+                "\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Di" +
+                "agnostics.AuditTrail)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Strin" +
+                "g\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm" +
+                ".String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityId\" Type=\"" +
+                "Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityType\" T" +
+                "ype=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntitySt" +
+                "ate\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Or" +
+                "iginal\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=" +
+                "\"Current\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImpo" +
+                "rt><FunctionImport Name=\"Refresh\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:I" +
+                "sAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><FunctionImpo" +
+                "rt Name=\"Reload\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"" +
+                "true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Diagnostics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Enable\" " +
+                "ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter " +
+                "Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnost" +
+                "ics.Endpoint\" /></FunctionImport><FunctionImport Name=\"Disable\" ReturnType=\"Edm." +
+                "Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPar" +
+                "ameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" />" +
                 "</FunctionImport></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
@@ -209,24 +209,23 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint in the schema.
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("Endpoints")]
+    [global::System.Data.Services.Common.EntitySetAttribute("AuditTrails")]
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class Endpoint : global::System.ComponentModel.INotifyPropertyChanged
+    public partial class AuditTrail : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
-        /// Create a new Endpoint object.
+        /// Create a new AuditTrail object.
         /// </summary>
-        /// <param name="version">Initial value of Version.</param>
-        /// <param name="address">Initial value of Address.</param>
-        /// <param name="routeTemplate">Initial value of RouteTemplate.</param>
-        /// <param name="routePrefix">Initial value of RoutePrefix.</param>
-        /// <param name="serverRole">Initial value of ServerRole.</param>
-        /// <param name="priority">Initial value of Priority.</param>
+        /// <param name="entityId">Initial value of EntityId.</param>
+        /// <param name="entityType">Initial value of EntityType.</param>
+        /// <param name="entityState">Initial value of EntityState.</param>
+        /// <param name="original">Initial value of Original.</param>
+        /// <param name="current">Initial value of Current.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -235,156 +234,133 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Endpoint CreateEndpoint(string version, string address, string routeTemplate, string routePrefix, string serverRole, int priority, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static AuditTrail CreateAuditTrail(string entityId, string entityType, string entityState, string original, string current, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
-            Endpoint endpoint = new Endpoint();
-            endpoint.Version = version;
-            endpoint.Address = address;
-            endpoint.RouteTemplate = routeTemplate;
-            endpoint.RoutePrefix = routePrefix;
-            endpoint.ServerRole = serverRole;
-            endpoint.Priority = priority;
-            endpoint.Id = ID;
-            endpoint.Tid = tid;
-            endpoint.Name = name;
-            endpoint.CreatedBy = createdBy;
-            endpoint.ModifiedBy = modifiedBy;
-            endpoint.Created = created;
-            endpoint.Modified = modified;
-            return endpoint;
+            AuditTrail auditTrail = new AuditTrail();
+            auditTrail.EntityId = entityId;
+            auditTrail.EntityType = entityType;
+            auditTrail.EntityState = entityState;
+            auditTrail.Original = original;
+            auditTrail.Current = current;
+            auditTrail.Id = ID;
+            auditTrail.Tid = tid;
+            auditTrail.Name = name;
+            auditTrail.CreatedBy = createdBy;
+            auditTrail.ModifiedBy = modifiedBy;
+            auditTrail.Created = created;
+            auditTrail.Modified = modified;
+            return auditTrail;
         }
         /// <summary>
-        /// There are no comments for Property Version in the schema.
+        /// There are no comments for Property EntityId in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Version
+        public string EntityId
         {
             get
             {
-                return this._Version;
+                return this._EntityId;
             }
             set
             {
-                this.OnVersionChanging(value);
-                this._Version = value;
-                this.OnVersionChanged();
-                this.OnPropertyChanged("Version");
+                this.OnEntityIdChanging(value);
+                this._EntityId = value;
+                this.OnEntityIdChanged();
+                this.OnPropertyChanged("EntityId");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Version;
-        partial void OnVersionChanging(string value);
-        partial void OnVersionChanged();
+        private string _EntityId;
+        partial void OnEntityIdChanging(string value);
+        partial void OnEntityIdChanged();
         /// <summary>
-        /// There are no comments for Property Address in the schema.
+        /// There are no comments for Property EntityType in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Address
+        public string EntityType
         {
             get
             {
-                return this._Address;
+                return this._EntityType;
             }
             set
             {
-                this.OnAddressChanging(value);
-                this._Address = value;
-                this.OnAddressChanged();
-                this.OnPropertyChanged("Address");
+                this.OnEntityTypeChanging(value);
+                this._EntityType = value;
+                this.OnEntityTypeChanged();
+                this.OnPropertyChanged("EntityType");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Address;
-        partial void OnAddressChanging(string value);
-        partial void OnAddressChanged();
+        private string _EntityType;
+        partial void OnEntityTypeChanging(string value);
+        partial void OnEntityTypeChanged();
         /// <summary>
-        /// There are no comments for Property RouteTemplate in the schema.
+        /// There are no comments for Property EntityState in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string RouteTemplate
+        public string EntityState
         {
             get
             {
-                return this._RouteTemplate;
+                return this._EntityState;
             }
             set
             {
-                this.OnRouteTemplateChanging(value);
-                this._RouteTemplate = value;
-                this.OnRouteTemplateChanged();
-                this.OnPropertyChanged("RouteTemplate");
+                this.OnEntityStateChanging(value);
+                this._EntityState = value;
+                this.OnEntityStateChanged();
+                this.OnPropertyChanged("EntityState");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _RouteTemplate;
-        partial void OnRouteTemplateChanging(string value);
-        partial void OnRouteTemplateChanged();
+        private string _EntityState;
+        partial void OnEntityStateChanging(string value);
+        partial void OnEntityStateChanged();
         /// <summary>
-        /// There are no comments for Property RoutePrefix in the schema.
+        /// There are no comments for Property Original in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string RoutePrefix
+        public string Original
         {
             get
             {
-                return this._RoutePrefix;
+                return this._Original;
             }
             set
             {
-                this.OnRoutePrefixChanging(value);
-                this._RoutePrefix = value;
-                this.OnRoutePrefixChanged();
-                this.OnPropertyChanged("RoutePrefix");
+                this.OnOriginalChanging(value);
+                this._Original = value;
+                this.OnOriginalChanged();
+                this.OnPropertyChanged("Original");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _RoutePrefix;
-        partial void OnRoutePrefixChanging(string value);
-        partial void OnRoutePrefixChanged();
+        private string _Original;
+        partial void OnOriginalChanging(string value);
+        partial void OnOriginalChanged();
         /// <summary>
-        /// There are no comments for Property ServerRole in the schema.
+        /// There are no comments for Property Current in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string ServerRole
+        public string Current
         {
             get
             {
-                return this._ServerRole;
+                return this._Current;
             }
             set
             {
-                this.OnServerRoleChanging(value);
-                this._ServerRole = value;
-                this.OnServerRoleChanged();
-                this.OnPropertyChanged("ServerRole");
+                this.OnCurrentChanging(value);
+                this._Current = value;
+                this.OnCurrentChanged();
+                this.OnPropertyChanged("Current");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _ServerRole;
-        partial void OnServerRoleChanging(string value);
-        partial void OnServerRoleChanged();
-        /// <summary>
-        /// There are no comments for Property Priority in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int Priority
-        {
-            get
-            {
-                return this._Priority;
-            }
-            set
-            {
-                this.OnPriorityChanging(value);
-                this._Priority = value;
-                this.OnPriorityChanged();
-                this.OnPropertyChanged("Priority");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _Priority;
-        partial void OnPriorityChanging(int value);
-        partial void OnPriorityChanged();
+        private string _Current;
+        partial void OnCurrentChanging(string value);
+        partial void OnCurrentChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
@@ -602,23 +578,24 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail in the schema.
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("AuditTrails")]
+    [global::System.Data.Services.Common.EntitySetAttribute("Endpoints")]
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class AuditTrail : global::System.ComponentModel.INotifyPropertyChanged
+    public partial class Endpoint : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
-        /// Create a new AuditTrail object.
+        /// Create a new Endpoint object.
         /// </summary>
-        /// <param name="entityId">Initial value of EntityId.</param>
-        /// <param name="entityType">Initial value of EntityType.</param>
-        /// <param name="entityState">Initial value of EntityState.</param>
-        /// <param name="original">Initial value of Original.</param>
-        /// <param name="current">Initial value of Current.</param>
+        /// <param name="version">Initial value of Version.</param>
+        /// <param name="address">Initial value of Address.</param>
+        /// <param name="routeTemplate">Initial value of RouteTemplate.</param>
+        /// <param name="routePrefix">Initial value of RoutePrefix.</param>
+        /// <param name="serverRole">Initial value of ServerRole.</param>
+        /// <param name="priority">Initial value of Priority.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -627,133 +604,156 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static AuditTrail CreateAuditTrail(string entityId, string entityType, string entityState, string original, string current, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static Endpoint CreateEndpoint(string version, string address, string routeTemplate, string routePrefix, string serverRole, int priority, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
-            AuditTrail auditTrail = new AuditTrail();
-            auditTrail.EntityId = entityId;
-            auditTrail.EntityType = entityType;
-            auditTrail.EntityState = entityState;
-            auditTrail.Original = original;
-            auditTrail.Current = current;
-            auditTrail.Id = ID;
-            auditTrail.Tid = tid;
-            auditTrail.Name = name;
-            auditTrail.CreatedBy = createdBy;
-            auditTrail.ModifiedBy = modifiedBy;
-            auditTrail.Created = created;
-            auditTrail.Modified = modified;
-            return auditTrail;
+            Endpoint endpoint = new Endpoint();
+            endpoint.Version = version;
+            endpoint.Address = address;
+            endpoint.RouteTemplate = routeTemplate;
+            endpoint.RoutePrefix = routePrefix;
+            endpoint.ServerRole = serverRole;
+            endpoint.Priority = priority;
+            endpoint.Id = ID;
+            endpoint.Tid = tid;
+            endpoint.Name = name;
+            endpoint.CreatedBy = createdBy;
+            endpoint.ModifiedBy = modifiedBy;
+            endpoint.Created = created;
+            endpoint.Modified = modified;
+            return endpoint;
         }
         /// <summary>
-        /// There are no comments for Property EntityId in the schema.
+        /// There are no comments for Property Version in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string EntityId
+        public string Version
         {
             get
             {
-                return this._EntityId;
+                return this._Version;
             }
             set
             {
-                this.OnEntityIdChanging(value);
-                this._EntityId = value;
-                this.OnEntityIdChanged();
-                this.OnPropertyChanged("EntityId");
+                this.OnVersionChanging(value);
+                this._Version = value;
+                this.OnVersionChanged();
+                this.OnPropertyChanged("Version");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _EntityId;
-        partial void OnEntityIdChanging(string value);
-        partial void OnEntityIdChanged();
+        private string _Version;
+        partial void OnVersionChanging(string value);
+        partial void OnVersionChanged();
         /// <summary>
-        /// There are no comments for Property EntityType in the schema.
+        /// There are no comments for Property Address in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string EntityType
+        public string Address
         {
             get
             {
-                return this._EntityType;
+                return this._Address;
             }
             set
             {
-                this.OnEntityTypeChanging(value);
-                this._EntityType = value;
-                this.OnEntityTypeChanged();
-                this.OnPropertyChanged("EntityType");
+                this.OnAddressChanging(value);
+                this._Address = value;
+                this.OnAddressChanged();
+                this.OnPropertyChanged("Address");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _EntityType;
-        partial void OnEntityTypeChanging(string value);
-        partial void OnEntityTypeChanged();
+        private string _Address;
+        partial void OnAddressChanging(string value);
+        partial void OnAddressChanged();
         /// <summary>
-        /// There are no comments for Property EntityState in the schema.
+        /// There are no comments for Property RouteTemplate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string EntityState
+        public string RouteTemplate
         {
             get
             {
-                return this._EntityState;
+                return this._RouteTemplate;
             }
             set
             {
-                this.OnEntityStateChanging(value);
-                this._EntityState = value;
-                this.OnEntityStateChanged();
-                this.OnPropertyChanged("EntityState");
+                this.OnRouteTemplateChanging(value);
+                this._RouteTemplate = value;
+                this.OnRouteTemplateChanged();
+                this.OnPropertyChanged("RouteTemplate");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _EntityState;
-        partial void OnEntityStateChanging(string value);
-        partial void OnEntityStateChanged();
+        private string _RouteTemplate;
+        partial void OnRouteTemplateChanging(string value);
+        partial void OnRouteTemplateChanged();
         /// <summary>
-        /// There are no comments for Property Original in the schema.
+        /// There are no comments for Property RoutePrefix in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Original
+        public string RoutePrefix
         {
             get
             {
-                return this._Original;
+                return this._RoutePrefix;
             }
             set
             {
-                this.OnOriginalChanging(value);
-                this._Original = value;
-                this.OnOriginalChanged();
-                this.OnPropertyChanged("Original");
+                this.OnRoutePrefixChanging(value);
+                this._RoutePrefix = value;
+                this.OnRoutePrefixChanged();
+                this.OnPropertyChanged("RoutePrefix");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Original;
-        partial void OnOriginalChanging(string value);
-        partial void OnOriginalChanged();
+        private string _RoutePrefix;
+        partial void OnRoutePrefixChanging(string value);
+        partial void OnRoutePrefixChanged();
         /// <summary>
-        /// There are no comments for Property Current in the schema.
+        /// There are no comments for Property ServerRole in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Current
+        public string ServerRole
         {
             get
             {
-                return this._Current;
+                return this._ServerRole;
             }
             set
             {
-                this.OnCurrentChanging(value);
-                this._Current = value;
-                this.OnCurrentChanged();
-                this.OnPropertyChanged("Current");
+                this.OnServerRoleChanging(value);
+                this._ServerRole = value;
+                this.OnServerRoleChanged();
+                this.OnPropertyChanged("ServerRole");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Current;
-        partial void OnCurrentChanging(string value);
-        partial void OnCurrentChanged();
+        private string _ServerRole;
+        partial void OnServerRoleChanging(string value);
+        partial void OnServerRoleChanged();
+        /// <summary>
+        /// There are no comments for Property Priority in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Priority
+        {
+            get
+            {
+                return this._Priority;
+            }
+            set
+            {
+                this.OnPriorityChanging(value);
+                this._Priority = value;
+                this.OnPriorityChanged();
+                this.OnPropertyChanged("Priority");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Priority;
+        partial void OnPriorityChanging(int value);
+        partial void OnPriorityChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
