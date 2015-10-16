@@ -236,7 +236,6 @@
         <Property Name="EndOfSale" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="EndOfLife" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" />
-        <Property Name="Collection" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
