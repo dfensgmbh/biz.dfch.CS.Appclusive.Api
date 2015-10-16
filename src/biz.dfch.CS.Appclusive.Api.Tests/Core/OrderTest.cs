@@ -51,7 +51,6 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
             catalogueItem.Name = "CatalogueItem";
             catalogueItem.Tid = "Tid";
             catalogueItem.Version = "1.0";
-            catalogueItem.Collection = "";
 
             svc.AddToCatalogueItems(catalogueItem);
             svc.SaveChanges();
