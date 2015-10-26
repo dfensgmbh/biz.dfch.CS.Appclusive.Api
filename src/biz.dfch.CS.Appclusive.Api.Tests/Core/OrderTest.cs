@@ -50,7 +50,6 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
             catalogueItem.ModifiedBy = "User";
             catalogueItem.Name = "CatalogueItem";
             catalogueItem.Tid = "Tid";
-            catalogueItem.Version = "1.0";
 
             svc.AddToCatalogueItems(catalogueItem);
             svc.SaveChanges();
