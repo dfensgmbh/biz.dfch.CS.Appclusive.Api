@@ -94,6 +94,7 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
+        <Property Name="Version" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
@@ -229,8 +230,7 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="CatalogueId" Type="Edm.Int64" Nullable="false" />
-        <Property Name="Type" Type="Edm.String" Nullable="false" />
-        <Property Name="Version" Type="Edm.String" Nullable="false" />
+        <Property Name="ProductId" Type="Edm.Int64" Nullable="false" />
         <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="ValidUntil" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="EndOfSale" Type="Edm.DateTimeOffset" Nullable="false" />
@@ -246,6 +246,7 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Catalogue" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartner" ToRole="Catalogue" FromRole="CataloguePartner" />
+        <NavigationProperty Name="Product" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ProductPartner" ToRole="Product" FromRole="ProductPartner" />
       </EntityType>
       <EntityType Name="Cart">
         <Key>
@@ -325,6 +326,8 @@
           <PropertyRef Name="Id" />
         </Key>
         <Property Name="Status" Type="Edm.String" />
+        <Property Name="NotBefore" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="ExpiresAt" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -334,6 +337,28 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
+      </EntityType>
+      <EntityType Name="Product">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Type" Type="Edm.String" Nullable="false" />
+        <Property Name="Version" Type="Edm.String" Nullable="false" />
+        <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="ValidUntil" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="EndOfSale" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="EndOfLife" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Parameters" Type="Edm.String" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+        <NavigationProperty Name="CatalogueItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
       </EntityType>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" Role="Parent" Multiplicity="0..1" />
@@ -387,6 +412,10 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue" Role="Catalogue" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" Role="CataloguePartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ProductPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" Role="Product" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" Role="ProductPartner" Multiplicity="0..1" />
+      </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem" Role="CartItems" Multiplicity="*" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" Role="CartItemsPartner" Multiplicity="0..1" />
@@ -406,6 +435,10 @@
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" Role="Order" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" Role="OrderPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" Role="CatalogueItems" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" Role="CatalogueItemsPartner" Multiplicity="0..1" />
       </Association>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -428,13 +461,25 @@
         <EntitySet Name="Orders" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" />
         <EntitySet Name="OrderItems" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" />
         <EntitySet Name="Approvals" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
+        <EntitySet Name="Products" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" />
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" IsBindable="true" EntitySet="KeyNameValues" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" IsBindable="true" EntitySet="KeyNameValues" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Key" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)" Nullable="false" />
-          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Continue" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
@@ -447,8 +492,10 @@
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" IsBindable="true" EntitySet="Gates" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)" Nullable="false" />
-          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Acquire" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" />
@@ -474,7 +521,7 @@
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Trustee" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Resource" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="AclId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType" IsBindable="true" EntitySet="EntityTypes" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType)" Nullable="false" />
@@ -483,6 +530,7 @@
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Version" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" IsBindable="true" EntitySet="Nodes" m:IsAlwaysBindable="true">
@@ -502,8 +550,8 @@
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="SourceId" Type="Edm.Int32" Nullable="false" />
-          <Parameter Name="DestinationId" Type="Edm.Int32" Nullable="false" />
+          <Parameter Name="SourceId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="DestinationId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="Order" Type="Edm.Int32" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" IsBindable="true" EntitySet="ManagementCredentials" m:IsAlwaysBindable="true">
@@ -567,7 +615,8 @@
           <Parameter Name="EndOfSale" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="EndOfLife" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Collection" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="CatalogueId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="ProductId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" IsBindable="true" EntitySet="Carts" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart)" Nullable="false" />
@@ -582,9 +631,11 @@
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem" IsBindable="true" EntitySet="CartItems" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Quantity" Type="Edm.Int32" Nullable="false" />
-          <Parameter Name="CartId" Type="Edm.Int32" Nullable="false" />
+          <Parameter Name="CartId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" IsBindable="true" EntitySet="Orders" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order)" Nullable="false" />
@@ -604,13 +655,28 @@
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Quantity" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Quantity" Type="Edm.Int32" Nullable="false" />
           <Parameter Name="Version" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="OrderId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" IsBindable="true" EntitySet="Approvals" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" IsBindable="true" EntitySet="Products" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" IsBindable="true" EntitySet="Products" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Version" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="ValidFrom" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="ValidUntil" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EndOfSale" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EndOfLife" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner">
           <End Role="ParentPartner" EntitySet="Jobs" />
@@ -664,6 +730,10 @@
           <End Role="CataloguePartner" EntitySet="CatalogueItems" />
           <End Role="Catalogue" EntitySet="Catalogues" />
         </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ProductPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ProductPartner">
+          <End Role="ProductPartner" EntitySet="CatalogueItems" />
+          <End Role="Product" EntitySet="Products" />
+        </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartner">
           <End Role="CartItemsPartner" EntitySet="Carts" />
           <End Role="CartItems" EntitySet="CartItems" />
@@ -683,6 +753,10 @@
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner">
           <End Role="OrderPartner" EntitySet="OrderItems" />
           <End Role="Order" EntitySet="Orders" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner">
+          <End Role="CatalogueItemsPartner" EntitySet="Products" />
+          <End Role="CatalogueItems" EntitySet="CatalogueItems" />
         </AssociationSet>
       </EntityContainer>
     </Schema>

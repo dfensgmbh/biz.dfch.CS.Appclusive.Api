@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 10/16/2015 11:00:12 AM
+// Generation date: 10/26/2015 4:26:50 PM
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
