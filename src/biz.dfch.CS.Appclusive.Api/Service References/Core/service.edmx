@@ -26,6 +26,8 @@
         <Property Name="Token" Type="Edm.String" />
         <Property Name="TenantId" Type="Edm.String" />
         <Property Name="Parameters" Type="Edm.String" />
+        <Property Name="Condition" Type="Edm.String" />
+        <Property Name="ConditionParameters" Type="Edm.String" />
         <Property Name="Error" Type="Edm.String" />
         <Property Name="EndTime" Type="Edm.DateTimeOffset" />
         <Property Name="ParentId" Type="Edm.Int64" />
