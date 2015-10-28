@@ -101,7 +101,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoreExtensionMethods.cs" />
+    <Compile Include="BaseExtensions.cs" />
+    <Compile Include="Diagnostics.cs" />
+    <Compile Include="CoreDerived.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="DiagnosticsExtensions.cs" />
+    <Compile Include="CoreExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Core\Reference.cs">
       <AutoGen>True</AutoGen>

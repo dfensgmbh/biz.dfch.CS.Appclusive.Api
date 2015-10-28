@@ -16,17 +16,30 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api
 {
-    public static class CoreExtensionMethods
+    public static class DiagnosticsExtensions
     {
-        public static void AttachIfNeeded(this biz.dfch.CS.Appclusive.Api.Core.Core svc, string entitySetName, object entity)
+        public static void AttachIfNeeded(this biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc, string entitySetName, object entity)
         {
+            Contract.Requires(null != svc);
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(null != entity);
+            Contract.Requires("BaseEntity" == entity.GetType().Name);
+
             return;
+        }
+
+        public static Version GetVersion(this biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            return assembly.GetName().Version;
         }
     }
 }
