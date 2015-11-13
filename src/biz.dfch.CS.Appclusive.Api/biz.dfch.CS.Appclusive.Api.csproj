@@ -74,6 +74,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="biz.dfch.CS.Appclusive.Contracts">
+      <HintPath>..\..\..\biz.dfch.CS.Appclusive\src\biz.dfch.CS.Appclusive.Contracts\bin\Debug\biz.dfch.CS.Appclusive.Contracts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
       <Private>True</Private>
@@ -101,12 +104,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseExtensions.cs" />
     <Compile Include="Diagnostics.cs" />
-    <Compile Include="CoreDerived.cs" />
     <Compile Include="Core.cs" />
-    <Compile Include="DiagnosticsExtensions.cs" />
-    <Compile Include="CoreExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Core\Reference.cs">
       <AutoGen>True</AutoGen>

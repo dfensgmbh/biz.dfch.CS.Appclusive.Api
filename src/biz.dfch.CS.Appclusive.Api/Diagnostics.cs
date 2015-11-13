@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -28,7 +29,42 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         public static Version GetVersion()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetName().Version;
+            var assemblyName = assembly.GetName();
+            return assemblyName.Version;
+        }
+
+        public void AttachIfNeeded(object entity)
+        {
+            Contract.Requires(null != entity);
+
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+
+            AttachIfNeededPrivate(entitySetName, entity);
+            return;
+        }
+
+        public void AttachIfNeeded(string entitySetName, object entity)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+
+            AttachIfNeededPrivate(entitySetName, entity);
+            return;
+        }
+
+        private void AttachIfNeededPrivate(string entitySetName, object entity)
+        {
+            try
+            {
+                this.AttachTo(entitySetName, entity);
+            }
+            catch (InvalidOperationException ex)
+            {
+                if (!ex.Message.Equals("The context is already tracking the entity."))
+                {
+                    throw;
+                }
+            }
         }
     }
 }
