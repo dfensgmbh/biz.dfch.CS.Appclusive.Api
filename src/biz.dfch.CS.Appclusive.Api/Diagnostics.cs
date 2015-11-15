@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data.Services.Client;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Reflection;
@@ -24,7 +25,7 @@ using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
-    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext
+    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper
     {
         public static Version GetVersion()
         {
@@ -35,8 +36,6 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 
         public void AttachIfNeeded(object entity)
         {
-            Contract.Requires(null != entity);
-
             var entitySetName = string.Concat(entity.GetType().Name, "s");
 
             AttachIfNeededPrivate(entitySetName, entity);
@@ -45,9 +44,6 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 
         public void AttachIfNeeded(string entitySetName, object entity)
         {
-            Contract.Requires(null != entity);
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
-
             AttachIfNeededPrivate(entitySetName, entity);
             return;
         }
