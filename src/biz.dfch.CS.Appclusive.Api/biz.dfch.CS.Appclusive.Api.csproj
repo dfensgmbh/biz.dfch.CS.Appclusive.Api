@@ -105,9 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContractClassForIDataServiceClientHelper.cs" />
+    <Compile Include="ContractClassForIOdataActionHelper.cs" />
     <Compile Include="Diagnostics.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IDataServiceClientHelper.cs" />
+    <Compile Include="IOdataActionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Core\Reference.cs">
       <AutoGen>True</AutoGen>

@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Services.Client;
 using System.Diagnostics.Contracts;
@@ -25,7 +26,7 @@ using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
-    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper
+    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper, IOdataActionHelper
     {
         public static Version GetVersion()
         {
@@ -61,6 +62,89 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                     throw;
                 }
             }
+        }
+
+        public void InvokeEntitySetActionWithVoidResult(object entity, string actionName, object inputParameters)
+        {
+            InvokeEntitySetActionWithVoidResult(string.Concat(entity.GetType().Name, "s"), actionName, inputParameters);
+        }
+
+        public void InvokeEntitySetActionWithVoidResult(string entitySetName, string actionName, object inputParameters)
+        {
+            var methodName = "POST";
+            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+
+            BodyOperationParameter[] bodyParameters;
+            if (inputParameters is Hashtable)
+            {
+                bodyParameters = GetBodyOperationParametersFromHashtable(inputParameters as Hashtable);
+            }
+            else if (inputParameters is Dictionary<string, object>)
+            {
+                bodyParameters = GetBodyOperationParametersFromDictionary(inputParameters as Dictionary<string, object>);
+            }
+            else
+            {
+                bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
+            }
+            var result = this.Execute(uriAction, methodName, bodyParameters);
+        }
+
+        public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
+        {
+            var operationParameters = new List<BodyOperationParameter>();
+            if (null == input)
+            {
+                return operationParameters.ToArray();
+            }
+
+            const BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.Instance;
+
+            var properties = input.GetType().GetProperties(bindingFlags);
+            foreach (var property in properties)
+            {
+                var operationParameter = new BodyOperationParameter(property.Name, property.GetValue(input));
+                operationParameters.Add(operationParameter);
+            }
+            var fields = input.GetType().GetFields(bindingFlags);
+            foreach (var field in fields)
+            {
+                var operationParameter = new BodyOperationParameter(field.Name, field.GetValue(input));
+                operationParameters.Add(operationParameter);
+            }
+            return operationParameters.ToArray();
+        }
+
+        public BodyOperationParameter[] GetBodyOperationParametersFromHashtable(Hashtable input)
+        {
+            var operationParameters = new List<BodyOperationParameter>();
+            if (null == input)
+            {
+                return operationParameters.ToArray();
+            }
+
+            foreach (DictionaryEntry entry in input)
+            {
+                var operationParameter = new BodyOperationParameter(entry.Key.ToString(), entry.Value);
+                operationParameters.Add(operationParameter);
+            }
+            return operationParameters.ToArray();
+        }
+
+        public BodyOperationParameter[] GetBodyOperationParametersFromDictionary(Dictionary<string, object> input)
+        {
+            var operationParameters = new List<BodyOperationParameter>();
+            if (null == input)
+            {
+                return operationParameters.ToArray();
+            }
+
+            foreach (var entry in input)
+            {
+                var operationParameter = new BodyOperationParameter(entry.Key, entry.Value);
+                operationParameters.Add(operationParameter);
+            }
+            return operationParameters.ToArray();
         }
     }
 }

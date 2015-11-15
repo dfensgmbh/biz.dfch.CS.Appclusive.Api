@@ -22,12 +22,23 @@ using System.Text;
 using System.Threading.Tasks;
 using biz.dfch.CS.Appclusive.Api.Diagnostics;
 using Telerik.JustMock;
+using System.Configuration;
+using System.Collections;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
     [TestClass]
     public class DiagnosticsTest
     {
+        private static string _uriPrefix;
+        private static Uri _uri;
+
+        static DiagnosticsTest()
+        {
+            _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+            _uri = new Uri(_uriPrefix + "Diagnostics");
+        }
+
         [TestMethod]
         public void AttachingDetachedEntitySucceeds()
         {

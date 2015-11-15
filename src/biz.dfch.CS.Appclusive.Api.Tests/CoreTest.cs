@@ -15,6 +15,7 @@
  */
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Telerik.JustMock;
 using biz.dfch.CS.Appclusive.Api.Core;
+using System.Configuration;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
@@ -57,6 +59,124 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
             // Assert
             Mock.Assert(svc);
+        }
+
+        private static string _uriPrefix;
+        private static Uri _uri;
+
+        static CoreTest()
+        {
+            _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+            _uri = new Uri(_uriPrefix + "Core");
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateActionSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            svc.IgnoreMissingProperties = true;
+            //var result = svc.Nodes.Where(e => e.Id == endpointId).First();
+
+            var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
+
+            // Act
+            var result = svc.Execute<Node>(_uriAction, "POST", true).Single();
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        private const string FIELD3_VALUE = "field3";
+
+        public class BodyOperationTestClass
+        {
+            public string Param1 { get; set; }
+            public int Param2;
+            public string Field3 = FIELD3_VALUE;
+        }
+
+        [TestMethod]
+        public void GetBodyOperationParametersFromObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+
+            var param1Value = "some arbitrary value";
+            var param2Value = 42;
+            var input = new BodyOperationTestClass()
+            {
+                Param1 = param1Value
+                ,
+                Param2 = param2Value
+            };
+
+            // Act
+            var result = svc.GetBodyOperationParametersFromObject(input);
+
+            // Assert
+            Assert.AreEqual(3, result.Count());
+            var p1 = result.Where(e => e.Name == "Param1").Single();
+            Assert.AreEqual(param1Value, p1.Value);
+            var p2 = result.Where(e => e.Name == "Param2").Single();
+            Assert.AreEqual(param2Value, p2.Value);
+            var p3 = result.Where(e => e.Name == "Field3").Single();
+            Assert.AreEqual(FIELD3_VALUE, p3.Value);
+        }
+
+        [TestMethod]
+        public void GetBodyOperationParametersFromHashtableSucceeds()
+        {
+            // Arrange
+            var param1Value = "some arbitrary value";
+            var param2Value = 42;
+
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+
+            var input = new Hashtable();
+            input.Add("Param1", param1Value);
+            input.Add("Param2", param2Value);
+            input.Add("Field3", FIELD3_VALUE);
+
+            // Act
+            var result = svc.GetBodyOperationParametersFromHashtable(input);
+
+            // Assert
+            Assert.AreEqual(3, result.Count());
+            var p1 = result.Where(e => e.Name == "Param1").Single();
+            Assert.AreEqual(param1Value, p1.Value);
+            var p2 = result.Where(e => e.Name == "Param2").Single();
+            Assert.AreEqual(param2Value, p2.Value);
+            var p3 = result.Where(e => e.Name == "Field3").Single();
+            Assert.AreEqual(FIELD3_VALUE, p3.Value);
+        }
+
+        [TestMethod]
+        public void GetBodyOperationParametersFromDictionarySucceeds()
+        {
+            // Arrange
+            var param1Value = "some arbitrary value";
+            var param2Value = 42;
+
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+
+            var input = new Dictionary<string, object>();
+            input.Add("Param1", param1Value);
+            input.Add("Param2", param2Value);
+            input.Add("Field3", FIELD3_VALUE);
+
+            // Act
+            var result = svc.GetBodyOperationParametersFromDictionary(input);
+
+            // Assert
+            Assert.AreEqual(3, result.Count());
+            var p1 = result.Where(e => e.Name == "Param1").Single();
+            Assert.AreEqual(param1Value, p1.Value);
+            var p2 = result.Where(e => e.Name == "Param2").Single();
+            Assert.AreEqual(param2Value, p2.Value);
+            var p3 = result.Where(e => e.Name == "Field3").Single();
+            Assert.AreEqual(FIELD3_VALUE, p3.Value);
         }
     }
 }
