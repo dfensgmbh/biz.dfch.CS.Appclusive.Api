@@ -40,11 +40,26 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
       </EntityType>
+      <EntityType Name="ConfigurationUpdate">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+      </EntityType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Diagnostics" m:IsDefaultEntityContainer="true">
         <EntitySet Name="AuditTrails" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail" />
         <EntitySet Name="Endpoints" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint" />
+        <EntitySet Name="ConfigurationUpdates" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.ConfigurationUpdate" />
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail" IsBindable="true" EntitySet="AuditTrails" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.AuditTrail)" Nullable="false" />
         </FunctionImport>

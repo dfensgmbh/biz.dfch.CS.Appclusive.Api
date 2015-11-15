@@ -9,7 +9,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
     [TestClass]
     public class EndpointTests
     {
-        private static String _uriPrefix;
+        private static string _uriPrefix;
         private static Uri _uri;
 
         static EndpointTests()
@@ -22,7 +22,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         [TestMethod]
         public void GetEndpointsSucceeds()
         {
-            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.AddQueryOption("$top", 1).Execute();
 
@@ -30,11 +30,10 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         }
 
         [TestMethod]
-        public void GetEndpoint1Succeeds()
+        public void GetEndpoint1BaseUriSucceeds()
         {
             long endpointId = 1;
-            var uri = new Uri(_uriPrefix + "Diagnostics");
-            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Id == endpointId).First();
 
@@ -49,18 +48,21 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         }
 
         // DFTODO - move [ExpectContractException] into System.Utilities module
-        [Ignore]
         [TestMethod]
-        //[ExpectContractException]
         public void GetEndpoint0Fails()
         {
             long endpointId = 0;
-            var uri = new Uri(_uriPrefix + "Diagnostics");
-            biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
-            var result = svc.Endpoints.Where(e => e.Id == endpointId).First();
-
-            Assert.Fail("Test should have failed before.");
+            try
+            {
+                var result = svc.Endpoints.Where(e => e.Id == endpointId).FirstOrDefault();
+                Assert.Fail("Test should have failed before.");
+            }
+            catch
+            {
+                // Intentionally left blank
+            }
         }
     }
 }

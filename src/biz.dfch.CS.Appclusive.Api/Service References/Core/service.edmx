@@ -474,6 +474,9 @@
           <Parameter Name="Key" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
+        <FunctionImport Name="Notify" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
+        </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)" Nullable="false" />
         </FunctionImport>
