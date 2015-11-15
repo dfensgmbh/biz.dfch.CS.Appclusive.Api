@@ -81,7 +81,7 @@
     <Compile Include="Core\OrderParameters.cs" />
     <Compile Include="Core\JobTest.cs" />
     <Compile Include="Core\OrderTest.cs" />
-    <Compile Include="Diagnostics\EndpointTests.cs" />
+    <Compile Include="Diagnostics\EndpointTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
