@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -68,6 +68,75 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
             // Assert
             Mock.Assert(svc);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsPingSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            svc.InvokeEntitySetActionWithVoidResult("Endpoints", "Ping", null);
+
+            // Assert
+            // Nothing to assert. No exception is all we expect.
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsEchoSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var content = "arbitraryContent";
+
+            var input = new Hashtable();
+            input.Add("Content", content);
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<string>(new Endpoint(), "Echo", input);
+
+            // Assert
+            Assert.AreEqual(content, result);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<string>(new Endpoint(), "Time", null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result, format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeWithNonGenericSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult(new Endpoint(), "Time", "", null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
         }
     }
 }

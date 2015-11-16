@@ -90,6 +90,46 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             var result = this.Execute(uriAction, methodName, bodyParameters);
         }
 
+        public T InvokeEntitySetActionWithSingleResult<T>(object entity, string actionName, object inputParameters)
+        {
+            var methodName = "POST";
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+
+            //var typeName = this.ResolveNameFromType(entity.GetType());
+
+            //var entityDescriptor = this.GetEntityDescriptor(entity);
+            //var operationDescriptor = entityDescriptor.OperationDescriptors.Where(o => o.Title.EndsWith(actionName)).Single();
+
+            BodyOperationParameter[] bodyParameters;
+            if(inputParameters is Hashtable)
+            {
+                bodyParameters = GetBodyOperationParametersFromHashtable(inputParameters as Hashtable);
+            }
+            else if(inputParameters is Dictionary<string, object>)
+            {
+                bodyParameters = GetBodyOperationParametersFromDictionary(inputParameters as Dictionary<string, object>);
+            }
+            else
+            {
+                bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
+            }
+
+            var result = this.Execute<T>(uriAction, methodName, true, bodyParameters).Single();
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod)).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters});
+            return result;
+        }
+
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
