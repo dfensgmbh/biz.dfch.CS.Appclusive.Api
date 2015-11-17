@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 11/16/2015 6:54:45 AM
+// Generation date: 11/17/2015 8:28:24 PM
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
@@ -202,26 +202,29 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 "se\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Ping\" IsBindable=\"t" +
                 "rue\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
                 "on(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)\" Nullable=\"fa" +
-                "lse\" /></FunctionImport><FunctionImport Name=\"Echo\" ReturnType=\"Edm.String\" IsBi" +
-                "ndable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=" +
-                "\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)\" Nul" +
-                "lable=\"false\" /><Parameter Name=\"Content\" Type=\"Edm.String\" FixedLength=\"false\" " +
-                "Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Time\" ReturnType=\"Edm.S" +
-                "tring\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParam" +
-                "eter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.End" +
-                "point)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Refresh\" Retur" +
-                "nType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
-                "\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.E" +
-                "ndpoint\" /></FunctionImport><FunctionImport Name=\"Reload\" ReturnType=\"Edm.Boolea" +
-                "n\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter" +
-                "\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></Func" +
-                "tionImport><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\" IsBindable=\"tr" +
-                "ue\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch." +
-                "CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><Funct" +
-                "ionImport Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBi" +
-                "ndable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Diagnostics.Endpoint\" /></FunctionImport></EntityContainer></Sc" +
-                "hema></edmx:DataServices></edmx:Edmx>";
+                "lse\" /></FunctionImport><FunctionImport Name=\"AuthenticatedPing\" IsBindable=\"tru" +
+                "e\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection" +
+                "(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)\" Nullable=\"fals" +
+                "e\" /></FunctionImport><FunctionImport Name=\"Echo\" ReturnType=\"Edm.String\" IsBind" +
+                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"C" +
+                "ollection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)\" Nulla" +
+                "ble=\"false\" /><Parameter Name=\"Content\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
+                "icode=\"false\" /></FunctionImport><FunctionImport Name=\"Time\" ReturnType=\"Edm.Str" +
+                "ing\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParamet" +
+                "er\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpo" +
+                "int)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Refresh\" ReturnT" +
+                "ype=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.End" +
+                "point\" /></FunctionImport><FunctionImport Name=\"Reload\" ReturnType=\"Edm.Boolean\"" +
+                " IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></Functi" +
+                "onImport><FunctionImport Name=\"Enable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true" +
+                "\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Diagnostics.Endpoint\" /></FunctionImport><Functio" +
+                "nImport Name=\"Disable\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBind" +
+                "able=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Diagnostics.Endpoint\" /></FunctionImport></EntityContainer></Sche" +
+                "ma></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
