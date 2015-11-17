@@ -24,6 +24,7 @@ using biz.dfch.CS.Appclusive.Api.Diagnostics;
 using Telerik.JustMock;
 using System.Configuration;
 using System.Collections;
+using System.Net;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
@@ -85,6 +86,19 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
+        public void InvokeDiagnosticsAuthenticatedPingSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+
+            // Act
+            svc.InvokeEntitySetActionWithVoidResult("Endpoints", "AuthenticatedPing", null);
+
+            // Assert
+            // Nothing to assert. No exception is all we expect.
+        }
+
+        [TestMethod]
         public void InvokeDiagnosticsEchoSucceeds()
         {
             // Arrange
@@ -133,6 +147,24 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
             // Act
             var result = svc.InvokeEntitySetActionWithSingleResult(new Endpoint(), "Time", "", null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeWithNonGenericTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult(new Endpoint(), "Time", typeof(string), null);
 
             // Assert
             var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);

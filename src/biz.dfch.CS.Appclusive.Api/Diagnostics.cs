@@ -130,6 +130,17 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             return result;
         }
 
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod)).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
