@@ -72,10 +72,8 @@ namespace biz.dfch.CS.Appclusive.Api.Core
 
         public bool HasPendingLinkChanges()
         {
-            // DFTODO - fix when Links entity set has been renamed to Assocs
-            //var hasChanges = this.Links.Any(e => e.State != EntityStates.Unchanged);
-            //return hasChanges;
-            return false;
+            var hasChanges = this.Links.Any(e => e.State != EntityStates.Unchanged);
+            return hasChanges;
         }
 
         public bool HasPendingChanges()
