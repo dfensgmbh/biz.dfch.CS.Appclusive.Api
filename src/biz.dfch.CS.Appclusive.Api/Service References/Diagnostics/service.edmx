@@ -76,6 +76,9 @@
         <FunctionImport Name="Ping" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="AuthenticatedPing" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)" Nullable="false" />
+        </FunctionImport>
         <FunctionImport Name="Echo" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint)" Nullable="false" />
           <Parameter Name="Content" Type="Edm.String" FixedLength="false" Unicode="false" />
