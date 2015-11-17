@@ -90,6 +90,24 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             var result = this.Execute(uriAction, methodName, bodyParameters);
         }
 
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public T InvokeEntitySetActionWithSingleResult<T>(object entity, string actionName, object inputParameters)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
