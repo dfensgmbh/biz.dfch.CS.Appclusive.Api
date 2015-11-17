@@ -13,33 +13,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api
 {
-    public static class BaseExtensions
+    [ContractClassFor(typeof(IDataServiceClientHelper))]
+    internal abstract class ContractClassForIDataServiceClientHelper : IDataServiceClientHelper
     {
-        public static void AttachIfNeeded(this biz.dfch.CS.Appclusive.Api.Core.Core svc, string entitySetName, object entity)
+        public void AttachIfNeeded(object entity)
         {
-            Contract.Requires(null != svc);
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
             Contract.Requires(null != entity);
-            Contract.Requires("BaseEntity" == entity.GetType().Name);
-
-            return;
         }
 
-        public static Version GetVersion(this biz.dfch.CS.Appclusive.Api.Core.Core svc)
+        public void AttachIfNeeded(string entitySetName, object entity)
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            return assembly.GetName().Version;
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+        }
+
+        public bool HasPendingEntityChanges()
+        {
+            return default(bool);
+        }
+        public bool HasPendingLinkChanges()
+        {
+            return default(bool);
+        }
+
+        public bool HasPendingChanges()
+        {
+            return default(bool);
+        }
+
+        public void RevertEntityState(object entity)
+        {
+            Contract.Requires(null != entity);
         }
     }
 }

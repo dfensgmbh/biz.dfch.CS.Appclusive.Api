@@ -32,99 +32,22 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Core
         // DFTODO - comply with naming convention
         private String _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
 
-        [Ignore]
         [TestMethod]
         public void CreateOrderCreatesOrderItemsJobsAndApproval()
         {
-            var uri = new Uri(_uriPrefix + "Core");
-            biz.dfch.CS.Appclusive.Api.Core.Core svc = new biz.dfch.CS.Appclusive.Api.Core.Core(uri);
-            svc.Credentials = System.Net.CredentialCache.DefaultCredentials;
-
-            var count = svc.CatalogueItems.ToList().Count();
-
-            var catalogueItem = new CatalogueItem();
-            catalogueItem.Id = 0;
-            catalogueItem.Created = DateTimeOffset.Now;
-            catalogueItem.CreatedBy = "User";
-            catalogueItem.Modified = DateTimeOffset.Now;
-            catalogueItem.ModifiedBy = "User";
-            catalogueItem.Name = "CatalogueItem";
-            catalogueItem.Tid = "Tid";
-
-            svc.AddToCatalogueItems(catalogueItem);
-            svc.SaveChanges();
-
-            var catalogueItems = svc.CatalogueItems.ToList();
-            Assert.AreEqual(count + 1, catalogueItems.Count());
-
-            var order = new Order();
-            order.Id = 0;
-            order.Created = DateTimeOffset.Now;
-            order.CreatedBy = "User";
-            order.Modified = DateTimeOffset.Now;
-            order.ModifiedBy = "User";
-            order.Description = "Description";
-            order.Name = "MyOrder";
-            order.OrderItems = new DataServiceCollection<OrderItem>();
-            order.Parameters = new OrderParameters()
-                {
-                    Quantity = 1
-                    ,
-                    CatalogueItemId = catalogueItems.LastOrDefault().Id
-                }
-                .ToJsonString();
-            order.Status = "Created";
-            order.Tid = "Tid";
-
-
-            var orderCount = svc.Orders.ToList().Count();
-            var jobsCount = svc.Jobs.ToList().Count();
-            var approvalsCount = svc.Approvals.ToList().Count();
-
-            svc.AddToOrders(order);
-            svc.SaveChanges();
-
-
-            var orderResult = svc.Orders.Expand(o => o.OrderItems).ToList();
-            Assert.AreEqual(orderCount + 1, orderResult.Count());
-            var lastEntity = orderResult.LastOrDefault();
-            var orderEntity =
-                svc.Orders
-                    .AddQueryOption("$filter", String.Format("Id eq {0}", lastEntity.Id))
-                    .AddQueryOption("$expand", "OrderItems").FirstOrDefault();
-            Assert.AreEqual("Created", orderEntity.Status);
-            Assert.AreNotEqual("User", orderEntity.CreatedBy);
-
-            //var orderItemsResult = orderEntity.OrderItems;
-            //Assert.AreEqual(1, orderItemsResult.Count());
-            //var orderItemEntity = orderItemsResult.LastOrDefault();
-            //Assert.IsFalse(String.IsNullOrWhiteSpace(orderItemEntity.Parameters));
-
-
-            var jobResult = svc.Jobs.ToList();
-            //Assert.AreEqual(jobsCount + 2, jobResult.Count);
-            var jobResultEntity = jobResult.LastOrDefault();
-
-            
-            var approvalResult = svc.Approvals.ToList();
-            Assert.AreEqual(approvalsCount + 1, approvalResult.Count());
-            var approval = approvalResult.LastOrDefault();
-
-            approval.Status = "Approved";
-            svc.UpdateObject(approval);
-            svc.SaveChanges();
+            // DFTODO - implement
         }
 
         [TestMethod]
         public void ApproveApprovalChangesStateOfJobsApprovalAndOrder()
         {
-            // DFTODO Approve/Decline (-> Approval itself, Jobs and Order get adjusted)
+            // DFTODO - approve/Decline (-> Approval itself, Jobs and Order get adjusted)
         }
 
         [TestMethod]
         public void DeclineApprovalChangesStateOfJobsApprovalAndOrder()
         {
-            // DFTODO Approve/Decline (-> Approval itself, Jobs and Order get adjusted)
+            // DFTODO - approve/Decline (-> Approval itself, Jobs and Order get adjusted)
         }
     }
 }
