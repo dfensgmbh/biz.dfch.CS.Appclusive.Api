@@ -35,5 +35,7 @@ namespace biz.dfch.CS.Appclusive.Api
         bool HasPendingLinkChanges();
 
         bool HasPendingChanges();
+
+        void RevertEntityState(object entity);
     }
 }

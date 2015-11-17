@@ -83,6 +83,19 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             return HasPendingEntityChanges() || HasPendingLinkChanges();
         }
 
+        public void RevertEntityState(object entity)
+        {
+            var entityDescriptor = this.GetEntityDescriptor(entity);
+            if (EntityStates.Added == entityDescriptor.State || EntityStates.Deleted == entityDescriptor.State)
+            {
+                this.ChangeState(entity, EntityStates.Detached);
+            }
+            else
+            {
+                this.ChangeState(entity, EntityStates.Unchanged);
+            }
+        }
+
         public void InvokeEntitySetActionWithVoidResult(object entity, string actionName, object inputParameters)
         {
             InvokeEntitySetActionWithVoidResult(string.Concat(entity.GetType().Name, "s"), actionName, inputParameters);

@@ -206,5 +206,50 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             // Assert
             Assert.IsTrue(result);
         }
+
+        [TestMethod]
+        public void RevertEntityStateWithAddedStateSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            var node = new Node();
+            svc.AddToNodes(node);
+
+            // Act
+            svc.RevertEntityState(node);
+
+            // Assert
+            Assert.IsFalse(svc.HasPendingChanges());
+        }
+
+        [TestMethod]
+        public void RevertEntityStateWithModifiedStateSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            var node = svc.Nodes.First();
+            node.Description = "arbitrary-changed-description-setting-the-entity-state-to-modified";
+
+            // Act
+            svc.RevertEntityState(node);
+
+            // Assert
+            Assert.IsFalse(svc.HasPendingChanges());
+        }
+
+        [TestMethod]
+        public void RevertEntityStateWithDeletedStateSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            var entity = svc.Nodes.First();
+            svc.DeleteObject(entity);
+
+            // Act
+            svc.RevertEntityState(entity);
+
+            // Assert
+            Assert.IsFalse(svc.HasPendingChanges());
+        }
     }
 }

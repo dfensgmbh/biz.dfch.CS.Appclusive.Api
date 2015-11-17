@@ -49,5 +49,10 @@ namespace biz.dfch.CS.Appclusive.Api
         {
             return default(bool);
         }
+
+        public void RevertEntityState(object entity)
+        {
+            Contract.Requires(null != entity);
+        }
     }
 }
