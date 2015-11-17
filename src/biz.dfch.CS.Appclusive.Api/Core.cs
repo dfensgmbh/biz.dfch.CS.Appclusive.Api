@@ -64,6 +64,25 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             }
         }
 
+        public bool HasPendingEntityChanges()
+        {
+            var hasChanges = this.Entities.Any(e => e.State != EntityStates.Unchanged);
+            return hasChanges;
+        }
+
+        public bool HasPendingLinkChanges()
+        {
+            // DFTODO - fix when Links entity set has been renamed to Assocs
+            //var hasChanges = this.Links.Any(e => e.State != EntityStates.Unchanged);
+            //return hasChanges;
+            return false;
+        }
+
+        public bool HasPendingChanges()
+        {
+            return HasPendingEntityChanges() || HasPendingLinkChanges();
+        }
+
         public void InvokeEntitySetActionWithVoidResult(object entity, string actionName, object inputParameters)
         {
             InvokeEntitySetActionWithVoidResult(string.Concat(entity.GetType().Name, "s"), actionName, inputParameters);

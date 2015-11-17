@@ -178,5 +178,33 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             var p3 = result.Where(e => e.Name == "Field3").Single();
             Assert.AreEqual(FIELD3_VALUE, p3.Value);
         }
+
+        [TestMethod]
+        public void HasPendingChangesWithNoChangesReturnsFalse()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+
+            // Act
+            var result = svc.HasPendingChanges();
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void HasPendingChangesWithChangesReturnsTrue()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            var node = new Node();
+            svc.AddToNodes(node);
+
+            // Act
+            var result = svc.HasPendingChanges();
+
+            // Assert
+            Assert.IsTrue(result);
+        }
     }
 }

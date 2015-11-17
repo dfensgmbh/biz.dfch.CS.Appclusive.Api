@@ -35,5 +35,19 @@ namespace biz.dfch.CS.Appclusive.Api
             Contract.Requires(null != entity);
             Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
         }
+
+        public bool HasPendingEntityChanges()
+        {
+            return default(bool);
+        }
+        public bool HasPendingLinkChanges()
+        {
+            return default(bool);
+        }
+
+        public bool HasPendingChanges()
+        {
+            return default(bool);
+        }
     }
 }

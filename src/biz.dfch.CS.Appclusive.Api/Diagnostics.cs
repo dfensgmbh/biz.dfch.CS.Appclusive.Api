@@ -64,6 +64,23 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             }
         }
 
+        public bool HasPendingEntityChanges()
+        {
+            var hasChanges = this.Entities.Any(e => e.State != EntityStates.Unchanged);
+            return hasChanges;
+        }
+
+        public bool HasPendingLinkChanges()
+        {
+            var hasChanges = this.Links.Any(e => e.State != EntityStates.Unchanged);
+            return hasChanges;
+        }
+
+        public bool HasPendingChanges()
+        {
+            return HasPendingEntityChanges() || HasPendingLinkChanges();
+        }
+
         public void InvokeEntitySetActionWithVoidResult(object entity, string actionName, object inputParameters)
         {
             InvokeEntitySetActionWithVoidResult(string.Concat(entity.GetType().Name, "s"), actionName, inputParameters);

@@ -27,6 +27,13 @@ namespace biz.dfch.CS.Appclusive.Api
     interface IDataServiceClientHelper
     {
         void AttachIfNeeded(object entity);
+
         void AttachIfNeeded(string entitySetName, object entity);
+
+        bool HasPendingEntityChanges();
+
+        bool HasPendingLinkChanges();
+
+        bool HasPendingChanges();
     }
 }
