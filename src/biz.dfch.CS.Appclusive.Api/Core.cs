@@ -96,7 +96,8 @@ namespace biz.dfch.CS.Appclusive.Api.Core
 
         public void InvokeEntitySetActionWithVoidResult(object entity, string actionName, object inputParameters)
         {
-            InvokeEntitySetActionWithVoidResult(string.Concat(entity.GetType().Name, "s"), actionName, inputParameters);
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+            InvokeEntitySetActionWithVoidResult(entitySetName, actionName, inputParameters);
         }
 
         public void InvokeEntitySetActionWithVoidResult(string entitySetName, string actionName, object inputParameters)
@@ -122,26 +123,46 @@ namespace biz.dfch.CS.Appclusive.Api.Core
 
         public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
         }
 
         public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
         }
 
         public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
         }
 
         public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
         }
 
         public T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters)

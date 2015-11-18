@@ -118,7 +118,25 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeWithGenericHelperSucceeds()
+        public void InvokeDiagnosticsTimeWithGenericHelperAndEntitySetNameSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<string>("Endpoints", "Time", null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result, format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeWithGenericHelperAndEntitySucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
@@ -136,7 +154,25 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeWithNonGenericObjectHelperSucceeds()
+        public void InvokeDiagnosticsTimeWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult("Endpoints", "Time", "", null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeWithNonGenericHelperAndEntityAndObjectSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
@@ -154,7 +190,25 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeWithNonGenericTypeHelperSucceeds()
+        public void InvokeDiagnosticsTimeWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var provider = CultureInfo.InvariantCulture;
+            var format = "yyyy-MM-ddTHH:mm:ss.fffzzz";
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult("Endpoints", "Time", typeof(string), null);
+
+            // Assert
+            var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);
+            Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void InvokeDiagnosticsTimeWithNonGenericHelperAndEntityAndTypeSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);

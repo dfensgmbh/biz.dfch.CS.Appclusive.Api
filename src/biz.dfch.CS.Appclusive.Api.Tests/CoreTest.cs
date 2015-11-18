@@ -71,18 +71,102 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeTemplateActionSucceeds()
+        public void InvokeCoreNodeTemplateWithExecuteSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
-            svc.IgnoreMissingProperties = true;
-            //var result = svc.Nodes.Where(e => e.Id == endpointId).First();
 
             var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
 
             // Act
             var result = svc.Execute<Node>(_uriAction, "POST", true).Single();
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithGenericHelperAndEntitySetNameSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<Node>("Nodes", "Template", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithGenericHelperAndEntitySucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<Node>(new Node(), "Template", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult("Nodes", "Template", new Node(), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithNonGenericHelperAndEntityAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult(new Node(), "Template", new Node(), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult("Nodes", "Template", typeof(Node), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeTemplateWithNonGenericHelperAndEntityAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult(new Node(), "Template", typeof(Node), null);
 
             // Assert
             Assert.IsNotNull(result);
