@@ -120,7 +120,19 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             var result = this.Execute(uriAction, methodName, bodyParameters);
         }
 
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
         public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters)
         {
             // TODO: Implement this method
             throw new NotImplementedException();
@@ -132,10 +144,35 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             throw new NotImplementedException();
         }
 
+        public T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters)
+        {
+            const string METHOD_NAME = "POST";
+            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+
+            BodyOperationParameter[] bodyParameters;
+            if (inputParameters is Hashtable)
+            {
+                bodyParameters = GetBodyOperationParametersFromHashtable(inputParameters as Hashtable);
+            }
+            else if (inputParameters is Dictionary<string, object>)
+            {
+                bodyParameters = GetBodyOperationParametersFromDictionary(inputParameters as Dictionary<string, object>);
+            }
+            else
+            {
+                bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
+            }
+
+            var result = this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).Single();
+            return result;
+        }
+
         public T InvokeEntitySetActionWithSingleResult<T>(object entity, string actionName, object inputParameters)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+
+            var result = InvokeEntitySetActionWithSingleResult<T>(entitySetName, actionName, inputParameters);
+            return result;
         }
 
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)

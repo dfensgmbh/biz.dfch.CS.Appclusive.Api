@@ -99,7 +99,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsEchoSucceeds()
+        public void InvokeDiagnosticsEchoWithGenericHelperSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
@@ -118,7 +118,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeSucceeds()
+        public void InvokeDiagnosticsTimeWithGenericHelperSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
@@ -136,7 +136,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeWithNonGenericSucceeds()
+        public void InvokeDiagnosticsTimeWithNonGenericObjectHelperSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
@@ -154,7 +154,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeDiagnosticsTimeWithNonGenericTypeSucceeds()
+        public void InvokeDiagnosticsTimeWithNonGenericTypeHelperSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);

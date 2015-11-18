@@ -32,9 +32,15 @@ namespace biz.dfch.CS.Appclusive.Api
 
         void InvokeEntitySetActionWithVoidResult(string entitySetName, string actionName, object inputParameters);
 
+        T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters);
+
         T InvokeEntitySetActionWithSingleResult<T>(object entity, string actionName, object inputParameters);
 
+        object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters);
+
         object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters);
+
+        object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters);
 
         object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters);
 
