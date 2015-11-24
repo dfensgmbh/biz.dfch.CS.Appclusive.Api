@@ -51,6 +51,14 @@ namespace biz.dfch.CS.Appclusive.Api
             Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
         }
 
+        public T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(T);
+        }
+
         public T InvokeEntitySetActionWithSingleResult<T>(object entity, string actionName, object inputParameters)
         {
             Contract.Requires(null != entity);
@@ -59,11 +67,27 @@ namespace biz.dfch.CS.Appclusive.Api
             return default(T);
         }
 
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(object);
+        }
+
         public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
         {
             Contract.Requires(null != entity);
             Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
             Contract.Requires(null != type);
+
+            return default(object);
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
 
             return default(object);
         }
