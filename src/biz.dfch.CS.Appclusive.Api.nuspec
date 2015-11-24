@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>1.0.6</version>
+        <version>1.0.8</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -16,8 +16,8 @@
 Service reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20151028
-* add condition to job model
+        <releaseNotes>20151124
+* add Odata action helpers
 </releaseNotes>
         <copyright>Copyright © 2015 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
