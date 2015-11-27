@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 11/16/2015 6:54:48 AM
-namespace biz.dfch.CS.Appclusive.Api.Utilities
+// Generation date: 11/27/2015 4:24:26 PM
+namespace biz.dfch.CS.Appclusive.Api.Cmp
 {
     
     /// <summary>
-    /// There are no comments for Utilities in the schema.
+    /// There are no comments for Cmp in the schema.
     /// </summary>
-    public partial class Utilities : global::System.Data.Services.Client.DataServiceContext
+    public partial class Cmp : global::System.Data.Services.Client.DataServiceContext
     {
         /// <summary>
-        /// Initialize a new Utilities object.
+        /// Initialize a new Cmp object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public Utilities(global::System.Uri serviceRoot) : 
+        public Cmp(global::System.Uri serviceRoot) : 
                 base(serviceRoot, global::System.Data.Services.Common.DataServiceProtocolVersion.V3)
         {
             this.ResolveName = new global::System.Func<global::System.Type, string>(this.ResolveNameFromType);
@@ -39,7 +39,7 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Appclusive.Controllers.OdataServices.Utilities", "biz.dfch.CS.Appclusive.Api.Utilities");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "biz.dfch.CS.Appclusive.Core.OdataServices.Cmp", "biz.dfch.CS.Appclusive.Api.Cmp");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -54,36 +54,36 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         protected string ResolveNameFromType(global::System.Type clientType)
         {
-            if (clientType.Namespace.Equals("biz.dfch.CS.Appclusive.Api.Utilities", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("biz.dfch.CS.Appclusive.Api.Cmp", global::System.StringComparison.Ordinal))
             {
-                return string.Concat("biz.dfch.CS.Appclusive.Controllers.OdataServices.Utilities.", clientType.Name);
+                return string.Concat("biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.", clientType.Name);
             }
             return null;
         }
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for CimiTargets in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<Person> Persons
+        public global::System.Data.Services.Client.DataServiceQuery<CimiTarget> CimiTargets
         {
             get
             {
-                if ((this._Persons == null))
+                if ((this._CimiTargets == null))
                 {
-                    this._Persons = base.CreateQuery<Person>("Persons");
+                    this._CimiTargets = base.CreateQuery<CimiTarget>("CimiTargets");
                 }
-                return this._Persons;
+                return this._CimiTargets;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<Person> _Persons;
+        private global::System.Data.Services.Client.DataServiceQuery<CimiTarget> _CimiTargets;
         /// <summary>
-        /// There are no comments for Persons in the schema.
+        /// There are no comments for CimiTargets in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToPersons(Person person)
+        public void AddToCimiTargets(CimiTarget cimiTarget)
         {
-            base.AddObject("Persons", person);
+            base.AddObject("CimiTargets", cimiTarget);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
@@ -91,7 +91,35 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static global::Microsoft.Data.Edm.IEdmModel ParsedModel = LoadModelFromString();
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart0 = @"<edmx:Edmx Version=""1.0"" xmlns:edmx=""http://schemas.microsoft.com/ado/2007/06/edmx""><edmx:DataServices m:DataServiceVersion=""3.0"" m:MaxDataServiceVersion=""3.0"" xmlns:m=""http://schemas.microsoft.com/ado/2007/08/dataservices/metadata""><Schema Namespace=""biz.dfch.CS.Appclusive.Controllers.OdataServices.Utilities"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityType Name=""Person""><Key><PropertyRef Name=""Id"" /></Key><Property Name=""UserName"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""GivenName"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Email"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Id"" Type=""Edm.Int32"" Nullable=""false"" /><Property Name=""Tid"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Name"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Description"" Type=""Edm.String"" /><Property Name=""CreatedBy"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""ModifiedBy"" Type=""Edm.String"" Nullable=""false"" /><Property Name=""Created"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /><Property Name=""Modified"" Type=""Edm.DateTimeOffset"" Nullable=""false"" /></EntityType></Schema><Schema Namespace=""Default"" xmlns=""http://schemas.microsoft.com/ado/2009/11/edm""><EntityContainer Name=""Utilities"" m:IsDefaultEntityContainer=""true""><EntitySet Name=""Persons"" EntityType=""biz.dfch.CS.Appclusive.Controllers.OdataServices.Utilities.Person"" /></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart0 = "<edmx:Edmx Version=\"1.0\" xmlns:edmx=\"http://schemas.microsoft.com/ado/2007/06/edm" +
+                "x\"><edmx:DataServices m:DataServiceVersion=\"3.0\" m:MaxDataServiceVersion=\"3.0\" x" +
+                "mlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\"><Schema " +
+                "Namespace=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp\" xmlns=\"http://schemas." +
+                "microsoft.com/ado/2009/11/edm\"><EntityType Name=\"CimiTarget\"><Key><PropertyRef N" +
+                "ame=\"Id\" /></Key><Property Name=\"CimiId\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
+                "roperty Name=\"CimiType\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Cat" +
+                "alogueItemId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm." +
+                "Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.String\" Nullable=\"false" +
+                "\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"D" +
+                "escription\" Type=\"Edm.String\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" Nul" +
+                "lable=\"false\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Nullable=\"false\" /" +
+                "><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property" +
+                " Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Ro" +
+                "wVersion\" Type=\"Edm.Binary\" /></EntityType></Schema><Schema Namespace=\"Default\" " +
+                "xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Cmp\"" +
+                " m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"CimiTargets\" EntityType=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget\" /><FunctionImport Name=\"T" +
+                "emplate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget\" I" +
+                "sBindable=\"true\" EntitySet=\"CimiTargets\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Cmp.CimiTarget)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Crea" +
+                "te\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget\" IsBind" +
+                "able=\"true\" EntitySet=\"CimiTargets\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp." +
+                "CimiTarget)\" Nullable=\"false\" /><Parameter Name=\"CimiId\" Type=\"Edm.String\" Fixed" +
+                "Length=\"false\" Unicode=\"false\" /><Parameter Name=\"CimiType\" Type=\"Edm.String\" Fi" +
+                "xedLength=\"false\" Unicode=\"false\" /></FunctionImport></EntityContainer></Schema>" +
+                "</edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -124,21 +152,21 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
         }
     }
     /// <summary>
-    /// There are no comments for biz.dfch.CS.Appclusive.Controllers.OdataServices.Utilities.Person in the schema.
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget in the schema.
     /// </summary>
     /// <KeyProperties>
     /// Id
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("Persons")]
+    [global::System.Data.Services.Common.EntitySetAttribute("CimiTargets")]
     [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
-    public partial class Person : global::System.ComponentModel.INotifyPropertyChanged
+    public partial class CimiTarget : global::System.ComponentModel.INotifyPropertyChanged
     {
         /// <summary>
-        /// Create a new Person object.
+        /// Create a new CimiTarget object.
         /// </summary>
-        /// <param name="userName">Initial value of UserName.</param>
-        /// <param name="givenName">Initial value of GivenName.</param>
-        /// <param name="email">Initial value of Email.</param>
+        /// <param name="cimiId">Initial value of CimiId.</param>
+        /// <param name="cimiType">Initial value of CimiType.</param>
+        /// <param name="catalogueItemId">Initial value of CatalogueItemId.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
         /// <param name="name">Initial value of Name.</param>
@@ -147,92 +175,92 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Person CreatePerson(string userName, string givenName, string email, int ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static CimiTarget CreateCimiTarget(string cimiId, string cimiType, long catalogueItemId, long ID, string tid, string name, string createdBy, string modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
-            Person person = new Person();
-            person.UserName = userName;
-            person.GivenName = givenName;
-            person.Email = email;
-            person.Id = ID;
-            person.Tid = tid;
-            person.Name = name;
-            person.CreatedBy = createdBy;
-            person.ModifiedBy = modifiedBy;
-            person.Created = created;
-            person.Modified = modified;
-            return person;
+            CimiTarget cimiTarget = new CimiTarget();
+            cimiTarget.CimiId = cimiId;
+            cimiTarget.CimiType = cimiType;
+            cimiTarget.CatalogueItemId = catalogueItemId;
+            cimiTarget.Id = ID;
+            cimiTarget.Tid = tid;
+            cimiTarget.Name = name;
+            cimiTarget.CreatedBy = createdBy;
+            cimiTarget.ModifiedBy = modifiedBy;
+            cimiTarget.Created = created;
+            cimiTarget.Modified = modified;
+            return cimiTarget;
         }
         /// <summary>
-        /// There are no comments for Property UserName in the schema.
+        /// There are no comments for Property CimiId in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string UserName
+        public string CimiId
         {
             get
             {
-                return this._UserName;
+                return this._CimiId;
             }
             set
             {
-                this.OnUserNameChanging(value);
-                this._UserName = value;
-                this.OnUserNameChanged();
-                this.OnPropertyChanged("UserName");
+                this.OnCimiIdChanging(value);
+                this._CimiId = value;
+                this.OnCimiIdChanged();
+                this.OnPropertyChanged("CimiId");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _UserName;
-        partial void OnUserNameChanging(string value);
-        partial void OnUserNameChanged();
+        private string _CimiId;
+        partial void OnCimiIdChanging(string value);
+        partial void OnCimiIdChanged();
         /// <summary>
-        /// There are no comments for Property GivenName in the schema.
+        /// There are no comments for Property CimiType in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string GivenName
+        public string CimiType
         {
             get
             {
-                return this._GivenName;
+                return this._CimiType;
             }
             set
             {
-                this.OnGivenNameChanging(value);
-                this._GivenName = value;
-                this.OnGivenNameChanged();
-                this.OnPropertyChanged("GivenName");
+                this.OnCimiTypeChanging(value);
+                this._CimiType = value;
+                this.OnCimiTypeChanged();
+                this.OnPropertyChanged("CimiType");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _GivenName;
-        partial void OnGivenNameChanging(string value);
-        partial void OnGivenNameChanged();
+        private string _CimiType;
+        partial void OnCimiTypeChanging(string value);
+        partial void OnCimiTypeChanged();
         /// <summary>
-        /// There are no comments for Property Email in the schema.
+        /// There are no comments for Property CatalogueItemId in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Email
+        public long CatalogueItemId
         {
             get
             {
-                return this._Email;
+                return this._CatalogueItemId;
             }
             set
             {
-                this.OnEmailChanging(value);
-                this._Email = value;
-                this.OnEmailChanged();
-                this.OnPropertyChanged("Email");
+                this.OnCatalogueItemIdChanging(value);
+                this._CatalogueItemId = value;
+                this.OnCatalogueItemIdChanged();
+                this.OnPropertyChanged("CatalogueItemId");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Email;
-        partial void OnEmailChanging(string value);
-        partial void OnEmailChanged();
+        private long _CatalogueItemId;
+        partial void OnCatalogueItemIdChanging(long value);
+        partial void OnCatalogueItemIdChanged();
         /// <summary>
         /// There are no comments for Property Id in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public int Id
+        public long Id
         {
             get
             {
@@ -247,8 +275,8 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private int _Id;
-        partial void OnIdChanging(int value);
+        private long _Id;
+        partial void OnIdChanging(long value);
         partial void OnIdChanged();
         /// <summary>
         /// There are no comments for Property Tid in the schema.
@@ -404,6 +432,35 @@ namespace biz.dfch.CS.Appclusive.Api.Utilities
         private global::System.DateTimeOffset _Modified;
         partial void OnModifiedChanging(global::System.DateTimeOffset value);
         partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

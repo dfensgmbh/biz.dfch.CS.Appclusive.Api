@@ -57,8 +57,9 @@
       <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.JustMock">
-      <HintPath>../JustMock/Telerik.JustMock.dll</HintPath>
+    <Reference Include="Telerik.JustMock, Version=2015.2.715.1, Culture=neutral, PublicKeyToken=721b6c5bc0326b3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JustMock\Telerik.JustMock.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
