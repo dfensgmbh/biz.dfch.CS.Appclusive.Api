@@ -1,6 +1,8 @@
 # biz.dfch.CS.Appclusive.Api
 [![Build Status](https://build.dfch.biz/app/rest/builds/buildType:(id:CSharpDotNet_BizDfchCsAppclusiveApi_Build)/statusIcon)](https://build.dfch.biz/project.html?projectId=CSharpDotNet_BizDfchCsAppclusiveApi&tab=projectOverview)
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/dfensgmbh/biz.dfch.CS.Appclusive.Api/blob/master/LICENSE)
+![NuGet downloads](https://img.shields.io/nuget/dt/biz.dfch.CS.Appclusive.Api.svg)
+![Version](https://img.shields.io/nuget/v/biz.dfch.CS.Appclusive.Api.svg)
 
 Service Reference to the Appclusive Core Framework
 
