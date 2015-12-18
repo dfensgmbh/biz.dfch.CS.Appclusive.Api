@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>1.1.0</version>
+        <version>1.1.1</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -13,12 +13,14 @@
         <description>biz.dfch.CS.Appclusive.Api
 ========================
 
-Service reference to the Appclusive Framework
+Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20151214
-* Breaking database model changes
-  * User and tenant referenced by Id (FK)
+        <releaseNotes>20151218
+* OData controller for customers added
+* OData controller for constracts added
+* OData controller for permissions added
+* OData controller for roles added
 </releaseNotes>
         <copyright>Copyright © 2015 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
