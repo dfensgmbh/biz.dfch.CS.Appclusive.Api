@@ -16,15 +16,14 @@
 using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using biz.dfch.CS.Appclusive.Api.Diagnostics;
 using Telerik.JustMock;
 using System.Configuration;
 using System.Collections;
 using System.Net;
+using biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
