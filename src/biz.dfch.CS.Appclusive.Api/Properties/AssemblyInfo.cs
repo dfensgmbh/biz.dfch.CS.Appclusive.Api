@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("biz.dfch.CS.Appclusive.Api")]
-[assembly: AssemblyDescription("Service Reference to the Appclusive Core Framework")]
+[assembly: AssemblyDescription("Service Reference to the Appclusive Framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("d-fens GmbH")]
 [assembly: AssemblyProduct("biz.dfch.CS.Appclusive.Api")]
