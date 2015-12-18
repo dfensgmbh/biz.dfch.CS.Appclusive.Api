@@ -4,7 +4,7 @@
 ![NuGet downloads](https://img.shields.io/nuget/dt/biz.dfch.CS.Appclusive.Api.svg)
 ![Version](https://img.shields.io/nuget/v/biz.dfch.CS.Appclusive.Api.svg)
 
-Service Reference to the Appclusive Core Framework
+Service Reference to the Appclusive Framework
 
 * see [Releases](https://github.com/dfensgmbh/biz.dfch.CS.Appclusive.Api/releases) and [Tags](https://github.com/dfensgmbh/biz.dfch.CS.Appclusive.Api/tags) for the latest version
 * download this package on [NuGet](https://www.nuget.org/packages/biz.dfch.CS.Appclusive.Api)
