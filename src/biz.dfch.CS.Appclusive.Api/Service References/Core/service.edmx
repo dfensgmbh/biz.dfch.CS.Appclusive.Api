@@ -147,7 +147,7 @@
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
         <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
-        <Property Name="ParentId" Type="Edm.Int64" />
+        <Property Name="ParentId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -471,7 +471,9 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <Property Name="ParentId" Type="Edm.Guid" Nullable="false" />
+        <Property Name="CustomerId" Type="Edm.Int64" />
         <NavigationProperty Name="Parent" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner" ToRole="Parent" FromRole="ParentPartner" />
+        <NavigationProperty Name="Customer" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner" ToRole="Customer" FromRole="CustomerPartner" />
         <NavigationProperty Name="Children" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner" ToRole="Children" FromRole="ChildrenPartner" />
       </EntityType>
       <EntityType Name="Customer">
@@ -932,6 +934,10 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Parent" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="ParentPartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="Customer" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="CustomerPartner" Multiplicity="0..1" />
+      </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Children" Multiplicity="*" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="ChildrenPartner" Multiplicity="0..1" />
@@ -1167,7 +1173,7 @@
           <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Keys" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" IsBindable="true" EntitySet="Assocs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc)" Nullable="false" />
@@ -1247,6 +1253,8 @@
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" />
           <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" IsBindable="true" EntitySet="Carts" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart)" Nullable="false" />
@@ -1737,6 +1745,10 @@
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner">
           <End Role="ParentPartner" EntitySet="Tenants" />
           <End Role="Parent" EntitySet="Tenants" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner">
+          <End Role="CustomerPartner" EntitySet="Tenants" />
+          <End Role="Customer" EntitySet="Customers" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner">
           <End Role="ChildrenPartner" EntitySet="Tenants" />

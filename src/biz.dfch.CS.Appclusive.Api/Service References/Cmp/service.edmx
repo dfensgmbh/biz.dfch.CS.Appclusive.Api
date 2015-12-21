@@ -16,7 +16,9 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <Property Name="ParentId" Type="Edm.Guid" Nullable="false" />
+        <Property Name="CustomerId" Type="Edm.Int64" />
         <NavigationProperty Name="Parent" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner" ToRole="Parent" FromRole="ParentPartner" />
+        <NavigationProperty Name="Customer" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner" ToRole="Customer" FromRole="CustomerPartner" />
         <NavigationProperty Name="Children" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner" ToRole="Children" FromRole="ChildrenPartner" />
       </EntityType>
       <EntityType Name="User">
@@ -39,9 +41,57 @@
         <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
         <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
       </EntityType>
+      <EntityType Name="Customer">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ModifiedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+        <NavigationProperty Name="ContractMappings" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ContractMappings_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ContractMappingsPartner" ToRole="ContractMappings" FromRole="ContractMappingsPartner" />
+        <NavigationProperty Name="Tenants" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenants_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantsPartner" ToRole="Tenants" FromRole="TenantsPartner" />
+        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
+        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
+        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
+      </EntityType>
+      <EntityType Name="ContractMapping">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="ExternalType" Type="Edm.String" Nullable="false" />
+        <Property Name="ExternalId" Type="Edm.String" Nullable="false" />
+        <Property Name="IsPrimary" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="ValidUntil" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="CustomerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Parameters" Type="Edm.String" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ModifiedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+        <NavigationProperty Name="Customer" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner" ToRole="Customer" FromRole="CustomerPartner" />
+        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
+        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
+        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
+      </EntityType>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Parent" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="ParentPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="Customer" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="CustomerPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Children" Multiplicity="*" />
@@ -70,6 +120,42 @@
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget" Role="ModifiedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ContractMappings_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ContractMappingsPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" Role="ContractMappings" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="ContractMappingsPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenants_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantsPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenants" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="TenantsPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="TenantPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="CreatedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="CreatedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="ModifiedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" Role="Customer" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" Role="CustomerPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" Role="TenantPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="CreatedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" Role="CreatedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" Role="ModifiedByPartner" Multiplicity="0..1" />
       </Association>
     </Schema>
     <Schema Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Cmp" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
