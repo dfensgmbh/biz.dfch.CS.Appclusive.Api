@@ -147,7 +147,7 @@
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
         <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
-        <Property Name="ParentId" Type="Edm.Int64" />
+        <Property Name="ParentId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -1167,7 +1167,7 @@
           <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Keys" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" IsBindable="true" EntitySet="Assocs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc)" Nullable="false" />
@@ -1247,6 +1247,8 @@
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" />
           <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" IsBindable="true" EntitySet="Carts" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart)" Nullable="false" />
