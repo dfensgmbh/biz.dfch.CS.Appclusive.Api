@@ -44,6 +44,26 @@ namespace biz.dfch.CS.Appclusive.Api
 
         object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters);
 
+        void InvokeEntityActionWithVoidResult(object entity, string actionName, object inputParameters);
+
+        void InvokeEntityActionWithVoidResult(string entitySetName, long id, string actionName, object inputParameters);
+
+        void InvokeEntityActionWithVoidResult(string entitySetName, object id, string actionName, object inputParameters);
+
+        T InvokeEntityActionWithSingleResult<T>(string entitySetName, long id, string actionName, object inputParameters);
+
+        T InvokeEntityActionWithSingleResult<T>(string entitySetName, object id, string actionName, object inputParameters);
+
+        T InvokeEntityActionWithSingleResult<T>(object entity, string actionName, object inputParameters);
+
+        object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, object type, object inputParameters);
+
+        object InvokeEntityActionWithSingleResult(object entity, string actionName, object type, object inputParameters);
+
+        object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, Type type, object inputParameters);
+
+        object InvokeEntityActionWithSingleResult(object entity, string actionName, Type type, object inputParameters);
+
         BodyOperationParameter[] GetBodyOperationParametersFromObject(object input);
 
         BodyOperationParameter[] GetBodyOperationParametersFromHashtable(Hashtable input);
