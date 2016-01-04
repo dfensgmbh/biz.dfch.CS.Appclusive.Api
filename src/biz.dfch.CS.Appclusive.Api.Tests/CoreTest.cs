@@ -63,6 +63,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
         private static string _uriPrefix;
         private static Uri _uri;
+        private static long nodeId = 1218;
 
         static CoreTest()
         {
@@ -167,6 +168,90 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
             // Act
             var result = svc.InvokeEntitySetActionWithSingleResult(new Node(), "Template", typeof(Node), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithGenericHelperAndEntitySetNameSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult<Job>("Nodes", CoreTest.nodeId, "Status", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithGenericHelperAndEntitySucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult<Job>(new Node() { Id = CoreTest.nodeId }, "Status", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult("Nodes", CoreTest.nodeId, "Status", new Job(), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntityAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult(new Node() { Id = CoreTest.nodeId }, "Status", new Job(), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult("Nodes", CoreTest.nodeId, "Status", typeof(Job), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntityAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithSingleResult(new Node() { Id = CoreTest.nodeId }, "Status", typeof(Job), null);
 
             // Assert
             Assert.IsNotNull(result);

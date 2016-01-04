@@ -102,6 +102,101 @@ namespace biz.dfch.CS.Appclusive.Api
             return default(object);
         }
 
+        public void InvokeEntityInstanceActionWithVoidResult(object entity, string actionName)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+        }
+
+        public void InvokeEntityInstanceActionWithVoidResult(string entitySetName, long id, string actionName)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(id > 0);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+        }
+
+        public void InvokeEntityActionWithVoidResult(object entity, string actionName, object inputParameters)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+        }
+
+        public void InvokeEntityActionWithVoidResult(string entitySetName, object id, string actionName, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(null != id);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+        }
+
+        public void InvokeEntityActionWithVoidResult(string entitySetName, long id, string actionName, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(id > 0);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+        }
+
+        public T InvokeEntityActionWithSingleResult<T>(string entitySetName, object id, string actionName, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(null != id);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(T);
+        }
+
+        public T InvokeEntityActionWithSingleResult<T>(string entitySetName, long id, string actionName, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(id > 0);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(T);
+        }
+
+        public T InvokeEntityActionWithSingleResult<T>(object entity, string actionName, object inputParameters)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(T);
+        }
+
+        public object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, object type, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(id > 0);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(object);
+        }
+
+        public object InvokeEntityActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+            Contract.Requires(null != type);
+
+            return default(object);
+        }
+
+        public object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, Type type, object inputParameters)
+        {
+            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            Contract.Requires(id > 0);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+
+            return default(object);
+        }
+
+        public object InvokeEntityActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            Contract.Requires(null != entity);
+            Contract.Requires(!string.IsNullOrWhiteSpace(actionName));
+            Contract.Requires(null != type);
+
+            return default(object);
+        }
+
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             return default(BodyOperationParameter[]);
