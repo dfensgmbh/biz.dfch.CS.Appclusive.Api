@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Data.Services.Client;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,47 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper, IOdataActionHelper
     {
+        private const string AUTHORIZATION_HEADER_NAME = "Authorization";
+        private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
+        public const string AuthorisationBaererUserName = "[AuthorisationBaererUser]";
+
+        public new ICredentials Credentials
+        {
+            get
+            {
+                return base.Credentials;
+            }
+            set
+            {
+                if (base.Credentials != value)
+                {
+                    if (value is NetworkCredential)
+                    {
+                        NetworkCredential networkCredentials = (NetworkCredential)value;
+                        if (Diagnostics.AuthorisationBaererUserName == networkCredentials.UserName)
+                        {
+                            this.SendingRequest2 += Diagnostics_SendingRequest2;
+                        }
+                        else
+                        {
+                            this.SendingRequest2 -= Diagnostics_SendingRequest2;
+                        }
+                    }
+                    else
+                    {
+                        this.SendingRequest2 -= Diagnostics_SendingRequest2;
+                    }
+                    base.Credentials = value;
+                }
+            }
+        }
+
+        void Diagnostics_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        {
+            NetworkCredential networkCredentials = (NetworkCredential)this.Credentials;
+            e.RequestMessage.SetHeader(Diagnostics.AUTHORIZATION_HEADER_NAME, string.Format(Diagnostics.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+        }
+
         public static Version GetVersion()
         {
             var assembly = Assembly.GetExecutingAssembly();

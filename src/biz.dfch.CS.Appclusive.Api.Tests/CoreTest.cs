@@ -88,6 +88,22 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
+        public void InvokeCoreNodeTemplateWithAuthenticationBearerSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = new System.Net.NetworkCredential(biz.dfch.CS.Appclusive.Api.Core.Core.AuthorisationBaererUserName, "[Token]");
+
+            var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<Node>("Nodes", "Template", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
         public void InvokeCoreNodeTemplateWithGenericHelperAndEntitySetNameSucceeds()
         {
             // Arrange

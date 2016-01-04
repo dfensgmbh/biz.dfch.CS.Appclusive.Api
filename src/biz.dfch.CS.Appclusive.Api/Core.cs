@@ -23,11 +23,53 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Services.Client;
+using System.Net;
 
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     public partial class Core : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper, IOdataActionHelper
     {
+        private const string AUTHORIZATION_HEADER_NAME = "Authorization";
+        private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
+        public const string AuthorisationBaererUserName = "[AuthorisationBaererUser]";
+
+        public new ICredentials Credentials
+        {
+            get
+            {
+                return base.Credentials;
+            }
+            set
+            {
+                if (base.Credentials != value)
+                {
+                    if (value is NetworkCredential)
+                    {
+                        NetworkCredential networkCredentials = (NetworkCredential)value;
+                        if (Core.AuthorisationBaererUserName == networkCredentials.UserName)
+                        {
+                            this.SendingRequest2 += Core_SendingRequest2;
+                        }
+                        else
+                        {
+                            this.SendingRequest2 -= Core_SendingRequest2;
+                        }
+                    }
+                    else
+                    {
+                        this.SendingRequest2 -= Core_SendingRequest2;
+                    }
+                    base.Credentials = value;
+                }
+            }
+        }
+
+        void Core_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        {
+            NetworkCredential networkCredentials = (NetworkCredential)this.Credentials;
+            e.RequestMessage.SetHeader(Core.AUTHORIZATION_HEADER_NAME, string.Format(Core.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+        }
+
         public static Version GetVersion()
         {
             var assembly = Assembly.GetExecutingAssembly();
@@ -275,7 +317,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             var entitySetName = string.Concat(entity.GetType().Name, "s");
             dynamic dynamicEntity = entity;
             var id = dynamicEntity.Id;
-            
+
             InvokeEntityActionWithVoidResult(entitySetName, id, actionName, inputParameters);
         }
 
@@ -360,7 +402,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             const string METHOD_NAME = "POST";
             string entityUrl = Core.GetEntityUrl(entitySetName, id);
             var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
-           
+
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
             {
@@ -500,7 +542,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
-            if(null == input)
+            if (null == input)
             {
                 return operationParameters.ToArray();
             }
@@ -514,7 +556,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 operationParameters.Add(operationParameter);
             }
             var fields = input.GetType().GetFields(bindingFlags);
-            foreach(var field in fields)
+            foreach (var field in fields)
             {
                 var operationParameter = new BodyOperationParameter(field.Name, field.GetValue(input));
                 operationParameters.Add(operationParameter);
@@ -553,5 +595,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             }
             return operationParameters.ToArray();
         }
+
     }
 }
