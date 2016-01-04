@@ -301,7 +301,7 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).ToList();
+            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters);
         }
 
         public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters)
