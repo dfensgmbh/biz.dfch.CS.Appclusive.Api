@@ -301,14 +301,14 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters);
+            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters)
         {
             var entitySetName = string.Concat(entity.GetType().Name, "s");
 
-            var result = InvokeEntitySetActionWithListResult<T>(entitySetName, actionName, inputParameters);
+            var result = InvokeEntitySetActionWithListResult<T>(entitySetName, actionName, inputParameters).ToList();
             return result;
         }
 
@@ -501,7 +501,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters);
+            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters)
