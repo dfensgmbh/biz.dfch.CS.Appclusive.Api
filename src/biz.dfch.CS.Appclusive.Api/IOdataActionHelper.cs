@@ -44,6 +44,18 @@ namespace biz.dfch.CS.Appclusive.Api
 
         object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters);
 
+        object InvokeEntitySetActionWithListResult(string entitySetName, string actionName, Type type, object inputParameters);
+
+        object InvokeEntitySetActionWithListResult(object entity, string actionName, Type type, object inputParameters);
+
+        object InvokeEntitySetActionWithListResult(string entitySetName, string actionName, object type, object inputParameters);
+
+        object InvokeEntitySetActionWithListResult(object entity, string actionName, object type, object inputParameters);
+
+        IEnumerable<T> InvokeEntitySetActionWithListResult<T>(string entitySetName, string actionName, object inputParameters);
+
+        IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters);
+
         void InvokeEntityActionWithVoidResult(object entity, string actionName, object inputParameters);
 
         void InvokeEntityActionWithVoidResult(string entitySetName, long id, string actionName, object inputParameters);
@@ -63,6 +75,20 @@ namespace biz.dfch.CS.Appclusive.Api
         object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, Type type, object inputParameters);
 
         object InvokeEntityActionWithSingleResult(object entity, string actionName, Type type, object inputParameters);
+
+        object InvokeEntityActionWithListResult(string entitySetName, long id, string actionName, Type type, object inputParameters);
+
+        object InvokeEntityActionWithListResult(object entity, string actionName, Type type, object inputParameters);
+
+        object InvokeEntityActionWithListResult(string entitySetName, long id, string actionName, object type, object inputParameters);
+
+        object InvokeEntityActionWithListResult(object entity, string actionName, object type, object inputParameters);
+
+        IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, long id, string actionName, object inputParameters);
+
+        IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, object id, string actionName, object inputParameters);
+
+        IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters);
 
         BodyOperationParameter[] GetBodyOperationParametersFromObject(object input);
 

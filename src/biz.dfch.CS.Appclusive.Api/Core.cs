@@ -432,9 +432,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             return result;
         }
 
-
-
-
         public object InvokeEntityActionWithListResult(string entitySetName, long id, string actionName, Type type, object inputParameters)
         {
             var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntityActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
@@ -517,9 +514,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             var result = InvokeEntityActionWithListResult<T>(entitySetName, id, actionName, inputParameters);
             return result;
         }
-
-
-
 
         private static string GetEntityUrl(string entitySetName, object id)
         {
