@@ -67,7 +67,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
         static CoreTest()
         {
-            _uriPrefix = "https://172.19.115.33/Appclusive/api/";// ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+            _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
             _uri = new Uri(_uriPrefix + "Core");
         }
 
@@ -174,7 +174,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithGenericHelperAndEntitySetNameSucceeds()
+        public void InvokeCoreNodeStatusWithGenericHelperAndEntitySetNameSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
@@ -188,7 +188,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithGenericHelperAndEntitySucceeds()
+        public void InvokeCoreNodeStatusWithGenericHelperAndEntitySucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
@@ -202,7 +202,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
@@ -216,7 +216,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntityAndObjectSucceeds()
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntityAndObjectSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
@@ -230,7 +230,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
@@ -244,7 +244,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntityAndTypeSucceeds()
+        public void InvokeCoreNodeStatusWithNonGenericHelperAndEntityAndTypeSucceeds()
         {
             // Arrange
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);

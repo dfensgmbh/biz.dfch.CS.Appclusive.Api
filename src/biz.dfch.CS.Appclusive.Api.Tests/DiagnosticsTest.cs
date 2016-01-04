@@ -35,7 +35,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
 
         static DiagnosticsTest()
         {
-            _uriPrefix = ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
+            _uriPrefix =  ConfigurationManager.AppSettings["Service.Reference.URI.Prefix"];
             _uri = new Uri(_uriPrefix + "Diagnostics");
         }
 
