@@ -196,6 +196,80 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             return result;
         }
 
+        public object InvokeEntitySetActionWithListResult(string entitySetName, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithListResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithListResult(string entitySetName, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithListResult(object entity, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
+        public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(string entitySetName, string actionName, object inputParameters)
+        {
+            const string METHOD_NAME = "POST";
+            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+
+            BodyOperationParameter[] bodyParameters;
+            if (inputParameters is Hashtable)
+            {
+                bodyParameters = GetBodyOperationParametersFromHashtable(inputParameters as Hashtable);
+            }
+            else if (inputParameters is Dictionary<string, object>)
+            {
+                bodyParameters = GetBodyOperationParametersFromDictionary(inputParameters as Dictionary<string, object>);
+            }
+            else
+            {
+                bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
+            }
+
+            return this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).ToList();
+        }
+
+        public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters)
+        {
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+
+            var result = InvokeEntitySetActionWithListResult<T>(entitySetName, actionName, inputParameters);
+            return result;
+        }
+
         public void InvokeEntityActionWithVoidResult(object entity, string actionName, object inputParameters)
         {
             var entitySetName = string.Concat(entity.GetType().Name, "s");
@@ -313,6 +387,89 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             var id = dynamicEntity.Id;
 
             var result = InvokeEntityActionWithSingleResult<T>(entitySetName, id, actionName, inputParameters);
+            return result;
+        }
+
+        public object InvokeEntityActionWithListResult(string entitySetName, long id, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntityActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, id, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntityActionWithListResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntityActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntityActionWithListResult(string entitySetName, long id, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntityActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, id, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntityActionWithListResult(object entity, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntityActionWithListResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
+        public IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, long id, string actionName, object inputParameters)
+        {
+            return this.InvokeEntityActionWithListResult<T>(entitySetName, (object)id, actionName, inputParameters);
+        }
+
+        public IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, object id, string actionName, object inputParameters)
+        {
+            const string METHOD_NAME = "POST";
+            string entityUrl = Diagnostics.GetEntityUrl(entitySetName, id);
+            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
+
+            BodyOperationParameter[] bodyParameters;
+            if (inputParameters is Hashtable)
+            {
+                bodyParameters = GetBodyOperationParametersFromHashtable(inputParameters as Hashtable);
+            }
+            else if (inputParameters is Dictionary<string, object>)
+            {
+                bodyParameters = GetBodyOperationParametersFromDictionary(inputParameters as Dictionary<string, object>);
+            }
+            else
+            {
+                bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
+            }
+
+            return this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters);
+        }
+
+        public IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters)
+        {
+            var entitySetName = string.Concat(entity.GetType().Name, "s");
+
+            dynamic dynamicEntity = entity;
+            var id = dynamicEntity.Id;
+
+            var result = InvokeEntityActionWithListResult<T>(entitySetName, id, actionName, inputParameters);
             return result;
         }
 
