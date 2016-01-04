@@ -257,6 +257,90 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             Assert.IsNotNull(result);
         }
 
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithGenericHelperAndEntitySetNameSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult<string>("Nodes", CoreTest.nodeId, "AvailableActions", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithGenericHelperAndEntitySucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult<string>(new Node() { Id = CoreTest.nodeId }, "AvailableActions", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntitySetNameAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult("Nodes", CoreTest.nodeId, "AvailableActions", "", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntityAndObjectSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult(new Node() { Id = CoreTest.nodeId }, "AvailableActions", "", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntitySetNameAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult("Nodes", CoreTest.nodeId, "AvailableActions", typeof(string), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void InvokeCoreNodeAvailableActionsWithNonGenericHelperAndEntityAndTypeSucceeds()
+        {
+            // Arrange
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            // Act
+            var result = svc.InvokeEntityActionWithListResult(new Node() { Id = CoreTest.nodeId }, "AvailableActions", typeof(string), null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
         private const string FIELD3_VALUE = "field3";
 
         public class BodyOperationTestClass
