@@ -25,9 +25,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace biz.dfch.CS.Appclusive.Api.Diagnostics
+namespace biz.dfch.CS.Appclusive.Api.Cmp
 {
-    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper, IOdataActionHelper
+    public partial class Cmp : global::System.Data.Services.Client.DataServiceContext, IDataServiceClientHelper, IOdataActionHelper
     {
         private const string AUTHORIZATION_HEADER_NAME = "Authorization";
         private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
@@ -46,28 +46,28 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                     if (value is NetworkCredential)
                     {
                         NetworkCredential networkCredentials = (NetworkCredential)value;
-                        if (Diagnostics.AuthorisationBaererUserName == networkCredentials.UserName)
+                        if (Cmp.AuthorisationBaererUserName == networkCredentials.UserName)
                         {
-                            this.SendingRequest2 += Diagnostics_SendingRequest2;
+                            this.SendingRequest2 += Cmp_SendingRequest2;
                         }
                         else
                         {
-                            this.SendingRequest2 -= Diagnostics_SendingRequest2;
+                            this.SendingRequest2 -= Cmp_SendingRequest2;
                         }
                     }
                     else
                     {
-                        this.SendingRequest2 -= Diagnostics_SendingRequest2;
+                        this.SendingRequest2 -= Cmp_SendingRequest2;
                     }
                     base.Credentials = value;
                 }
             }
         }
 
-        void Diagnostics_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        void Cmp_SendingRequest2(object sender, SendingRequest2EventArgs e)
         {
             NetworkCredential networkCredentials = (NetworkCredential)this.Credentials;
-            e.RequestMessage.SetHeader(Diagnostics.AUTHORIZATION_HEADER_NAME, string.Format(Diagnostics.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+            e.RequestMessage.SetHeader(Cmp.AUTHORIZATION_HEADER_NAME, string.Format(Cmp.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
         }
 
         public static Version GetVersion()
@@ -144,7 +144,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 
         public void InvokeEntitySetActionWithVoidResult(string entitySetName, string actionName, object inputParameters)
         {
-            var methodName = "POST";
+            const string METHOD_NAME = "POST";
             var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
@@ -160,51 +160,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             {
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
-            var result = this.Execute(uriAction, methodName, bodyParameters);
-        }
-
-        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
-        {
-            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
-            Contract.Assert(null != mi, "No generic method type found.");
-            var genericMethod = mi.MakeGenericMethod(type);
-            Contract.Assert(null != genericMethod, "Cannot create generic method.");
-
-            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
-            return result;
-        }
-
-        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
-        {
-            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
-            Contract.Assert(null != mi, "No generic method type found.");
-            var genericMethod = mi.MakeGenericMethod(type);
-            Contract.Assert(null != genericMethod, "Cannot create generic method.");
-
-            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
-            return result;
-        }
-
-        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters)
-        {
-            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
-            Contract.Assert(null != mi, "No generic method type found.");
-            var genericMethod = mi.MakeGenericMethod(type.GetType());
-            Contract.Assert(null != genericMethod, "Cannot create generic method.");
-
-            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
-            return result;
-        }
-
-        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
-        {
-            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
-            Contract.Assert(null != mi, "No generic method type found.");
-            var genericMethod = mi.MakeGenericMethod(type.GetType());
-            Contract.Assert(null != genericMethod, "Cannot create generic method.");
-
-            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
-            return result;
+            var result = this.Execute(uriAction, METHOD_NAME, bodyParameters);
         }
 
         public T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters)
@@ -235,6 +191,50 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             var entitySetName = string.Concat(entity.GetType().Name, "s");
 
             var result = InvokeEntitySetActionWithSingleResult<T>(entitySetName, actionName, inputParameters);
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, object type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type.GetType());
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entitySetName")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entitySetName, actionName, inputParameters });
+            return result;
+        }
+
+        public object InvokeEntitySetActionWithSingleResult(object entity, string actionName, Type type, object inputParameters)
+        {
+            var mi = this.GetType().GetMethods().Where(m => (m.Name == "InvokeEntitySetActionWithSingleResult" && m.IsGenericMethod && m.GetParameters()[0].Name == "entity")).First();
+            Contract.Assert(null != mi, "No generic method type found.");
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var result = genericMethod.Invoke(this, new object[] { entity, actionName, inputParameters });
             return result;
         }
 
@@ -329,7 +329,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         public void InvokeEntityActionWithVoidResult(string entitySetName, object id, string actionName, object inputParameters)
         {
             var methodName = "POST";
-            string entityUrl = Diagnostics.GetEntityUrl(entitySetName, id);
+            string entityUrl = Cmp.GetEntityUrl(entitySetName, id);
             var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
@@ -400,7 +400,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         public T InvokeEntityActionWithSingleResult<T>(string entitySetName, object id, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            string entityUrl = Diagnostics.GetEntityUrl(entitySetName, id);
+            string entityUrl = Cmp.GetEntityUrl(entitySetName, id);
             var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
@@ -484,7 +484,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, object id, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            string entityUrl = Diagnostics.GetEntityUrl(entitySetName, id);
+            string entityUrl = Cmp.GetEntityUrl(entitySetName, id);
             var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
@@ -501,7 +501,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
+            return this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters)
