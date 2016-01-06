@@ -24,6 +24,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Telerik.JustMock;
 using biz.dfch.CS.Appclusive.Api.Core;
 using System.Configuration;
+using System.Net;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
@@ -90,9 +91,14 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         [TestMethod]
         public void InvokeCoreNodeTemplateWithAuthenticationBearerSucceeds()
         {
+            //Test runs only if there is a file TestSettings.txt in the project folders containing the settings in the format
+            //{key}={value}\n
+           
             // Arrange
+            TestSettings settings = TestSettings.Load();
+            string token = settings.GetValue("AccessToken");
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
-            svc.Credentials = new System.Net.NetworkCredential(biz.dfch.CS.Appclusive.Api.Core.Core.AuthorisationBaererUserName, "[Token]");
+            svc.Credentials = new System.Net.NetworkCredential(biz.dfch.CS.Appclusive.Api.Core.Core.AuthorisationBaererUserName, token);
 
             var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
 
