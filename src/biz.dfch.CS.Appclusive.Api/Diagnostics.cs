@@ -301,7 +301,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters);
+            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters)
@@ -501,7 +501,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters);
+            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters)
