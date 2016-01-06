@@ -79,6 +79,7 @@
     <Compile Include="DiagnosticsTest.cs" />
     <Compile Include="Diagnostics\EndpointTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\biz.dfch.CS.Appclusive.Api\biz.dfch.CS.Appclusive.Api.csproj">

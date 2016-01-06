@@ -1038,10 +1038,19 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation" Role="ModifiedByPartner" Multiplicity="0..1" />
       </Association>
     </Schema>
+    <Schema Namespace="biz.dfch.CS.Appclusive.Core.Managers" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <ComplexType Name="TenantManagerInformation">
+        <Property Name="Id" Type="Edm.Guid" Nullable="false" />
+        <Property Name="ParentId" Type="Edm.Guid" Nullable="false" />
+        <Property Name="NodeId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="JobId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CustomerId" Type="Edm.Int64" Nullable="false" />
+      </ComplexType>
+    </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Core" m:IsDefaultEntityContainer="true">
         <EntitySet Name="KeyNameValues" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" />
-        <EntitySet Name="JobInternals" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" />
+        <EntitySet Name="JobResponses" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" />
         <EntitySet Name="Jobs" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
         <EntitySet Name="Gates" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" />
         <EntitySet Name="Acls" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" />
@@ -1081,10 +1090,10 @@
         <FunctionImport Name="Notify" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
         </FunctionImport>
-        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobInternals" m:IsAlwaysBindable="true">
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse)" Nullable="false" />
         </FunctionImport>
-        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobInternals" m:IsAlwaysBindable="true">
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
@@ -1098,11 +1107,9 @@
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
-        <FunctionImport Name="Continue" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
+        <FunctionImport Name="JobResult" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
-        </FunctionImport>
-        <FunctionImport Name="Cancel" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" />
+          <Parameter Name="JobResult" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" IsBindable="true" EntitySet="Gates" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)" Nullable="false" />
@@ -1352,6 +1359,9 @@
           <Parameter Name="Id" Type="Edm.Guid" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Information" ReturnType="biz.dfch.CS.Appclusive.Core.Managers.TenantManagerInformation" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" IsBindable="true" EntitySet="Customers" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer)" Nullable="false" />
