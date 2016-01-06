@@ -31,6 +31,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     {
         private const string AUTHORIZATION_HEADER_NAME = "Authorization";
         private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
+        private const string AUTHORIZATION_BASIC_SCHEME = "Basic {0}";
         public const string AuthorisationBaererUserName = "[AuthorisationBaererUser]";
 
         public new ICredentials Credentials
@@ -46,13 +47,13 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                     if (value is NetworkCredential)
                     {
                         NetworkCredential networkCredentials = (NetworkCredential)value;
-                        if (Core.AuthorisationBaererUserName == networkCredentials.UserName)
+                        if (string.IsNullOrEmpty(networkCredentials.UserName) || (string.IsNullOrEmpty(networkCredentials.Password)))
                         {
-                            this.SendingRequest2 += Core_SendingRequest2;
+                            this.SendingRequest2 -= Core_SendingRequest2;                            
                         }
                         else
                         {
-                            this.SendingRequest2 -= Core_SendingRequest2;
+                            this.SendingRequest2 += Core_SendingRequest2;
                         }
                     }
                     else
@@ -66,8 +67,19 @@ namespace biz.dfch.CS.Appclusive.Api.Core
 
         void Core_SendingRequest2(object sender, SendingRequest2EventArgs e)
         {
-            NetworkCredential networkCredentials = (NetworkCredential)this.Credentials;
-            e.RequestMessage.SetHeader(Core.AUTHORIZATION_HEADER_NAME, string.Format(Core.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+            if (this.Credentials is NetworkCredential)
+            {
+                NetworkCredential networkCredentials = (NetworkCredential)this.Credentials;
+                if (Core.AuthorisationBaererUserName == networkCredentials.UserName)
+                {
+                    e.RequestMessage.SetHeader(Core.AUTHORIZATION_HEADER_NAME, string.Format(Core.AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+                }
+                else
+                {
+                    string basicAuthString = Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", networkCredentials.UserName, networkCredentials.Password)));
+                    e.RequestMessage.SetHeader(Core.AUTHORIZATION_HEADER_NAME, string.Format(Core.AUTHORIZATION_BASIC_SCHEME, basicAuthString));
+                }
+            }
         }
 
         public static Version GetVersion()

@@ -110,6 +110,29 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
+        public void InvokeCoreNodeTemplateWithAuthenticationBasicSucceeds()
+        {
+            //Test runs only if there is a file TestSettings.txt in the project folders containing the settings in the format
+            //{key}={value}\n
+
+            // Arrange
+            TestSettings settings = TestSettings.Load();
+            string username = settings.GetValue("Username");
+            string password = settings.GetValue("Password");
+            var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
+            svc.Credentials = new System.Net.NetworkCredential(username, password);
+            svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+
+            var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
+
+            // Act
+            var result = svc.InvokeEntitySetActionWithSingleResult<Node>("Nodes", "Template", null);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
         public void InvokeCoreNodeTemplateWithGenericHelperAndEntitySetNameSucceeds()
         {
             // Arrange
