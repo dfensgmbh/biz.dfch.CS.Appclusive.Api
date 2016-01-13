@@ -84,7 +84,7 @@
         </Key>
         <Property Name="EntityId" Type="Edm.Int64" Nullable="false" />
         <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
-        <Property Name="InheritFromParentEntity" Type="Edm.Boolean" Nullable="false" />
+        <Property Name="NoInheritanceFromParent" Type="Edm.Boolean" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -104,8 +104,10 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="Trustee" Type="Edm.String" Nullable="false" />
-        <Property Name="Action" Type="Edm.String" Nullable="false" />
+        <Property Name="TrusteeId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="TrusteeType" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Type" Type="Edm.Int64" Nullable="false" />
+        <Property Name="PermissionId" Type="Edm.Int64" Nullable="false" />
         <Property Name="AclId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
@@ -116,7 +118,6 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
-        <NavigationProperty Name="Acl" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartner" ToRole="Acl" FromRole="AclPartner" />
         <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
         <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
         <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
@@ -144,7 +145,7 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
-        <Property Name="Type" Type="Edm.String" Nullable="false" />
+        <Property Name="EntityId" Type="Edm.Int64" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
         <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         <Property Name="ParentId" Type="Edm.Int64" Nullable="false" />
@@ -522,6 +523,8 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
+        <Property Name="RoleType" Type="Edm.String" Nullable="false" />
+        <Property Name="MailAddress" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -656,10 +659,6 @@
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" Role="ModifiedByPartner" Multiplicity="0..1" />
-      </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" Role="Acl" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" Role="AclPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
@@ -1045,6 +1044,12 @@
         <Property Name="NodeId" Type="Edm.Int64" Nullable="false" />
         <Property Name="JobId" Type="Edm.Int64" Nullable="false" />
         <Property Name="CustomerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="BuiltInRoles" Type="biz.dfch.CS.Appclusive.Core.Managers.BuiltInRoles" Nullable="false" />
+      </ComplexType>
+      <ComplexType Name="BuiltInRoles">
+        <Property Name="TenantAdministrators" Type="Edm.Int64" Nullable="false" />
+        <Property Name="TenantUsers" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CreatorsOwners" Type="Edm.Int64" Nullable="false" />
       </ComplexType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1160,12 +1165,12 @@
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" IsBindable="true" EntitySet="Nodes" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)" Nullable="false" />
         </FunctionImport>
-        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" IsBindable="true" EntitySet="Nodes" m:IsAlwaysBindable="true">
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Status" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
@@ -1427,6 +1432,9 @@
           <Parameter Name="EntitySet" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="TenantId" Type="Edm.Guid" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="Countdown" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation)" Nullable="false" />
+        </FunctionImport>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
           <End Role="TenantPartner" EntitySet="KeyNameValues" />
           <End Role="Tenant" EntitySet="Tenants" />
@@ -1494,10 +1502,6 @@
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
           <End Role="ModifiedByPartner" EntitySet="Acls" />
           <End Role="ModifiedBy" EntitySet="Users" />
-        </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartner">
-          <End Role="AclPartner" EntitySet="Aces" />
-          <End Role="Acl" EntitySet="Acls" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
           <End Role="TenantPartner" EntitySet="Aces" />
