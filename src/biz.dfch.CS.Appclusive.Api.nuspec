@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>1.2.1</version>
+        <version>1.2.6</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -16,14 +16,10 @@
 Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20160106
-**Features**
-* Reading credentials from txt file
-* Basic authentication
-
-**Bugfixes**
-* Navigation property for Customer added to Cmp and Diagnostics
-* Completed JobInternals refactoring to JobResponses
+        <releaseNotes>201601013
+* Type property on Node removed
+* Changed Ace model to reflect current requirements
+* Changed Roles model to reflect current requirements
 </releaseNotes>
         <copyright>Copyright © 2015 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
