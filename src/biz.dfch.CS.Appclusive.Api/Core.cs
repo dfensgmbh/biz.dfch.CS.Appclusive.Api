@@ -34,22 +34,23 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private const string AUTHORIZATION_HEADER_NAME = "Authorization";
         private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
         private const string AUTHORIZATION_BASIC_SCHEME = "Basic {0}";
+        private const string DEFAULT_TENANT_HEADER_NAME = "Biz-Dfch-Tenant-Id";
         public const string AuthorisationBaererUserName = "[AuthorisationBaererUser]";
 
-        private string tenandHeaderName;
-        public string TenandHeaderName
+        private string tenantHeaderName;
+        public string TenantHeaderName
         {
             get
             {
-                if (string.IsNullOrEmpty(this.tenandHeaderName))
+                if (string.IsNullOrEmpty(this.tenantHeaderName))
                 {
-                    this.tenandHeaderName = Properties.Settings.Default.DefaultTenantHeaderName;
+                    this.tenantHeaderName = Core.DEFAULT_TENANT_HEADER_NAME;
                 }
-                return this.tenandHeaderName;
+                return this.tenantHeaderName;
             }
             set
             {
-                this.tenandHeaderName = value;
+                this.tenantHeaderName = value;
             }
         }
 
@@ -149,8 +150,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
 
             if (this.SetTenantHeader())
             {
-                Contract.Assert(!string.IsNullOrEmpty(this.TenandHeaderName), "There is no name for the tenant header defined. You can either set it in the config file (key=DefaultTenantHeaderName) or you can set the property TenandHeaderName");
-                e.RequestMessage.SetHeader(this.TenandHeaderName, this.TenantID);
+                e.RequestMessage.SetHeader(this.TenantHeaderName, this.TenantID);
             }
         }
 

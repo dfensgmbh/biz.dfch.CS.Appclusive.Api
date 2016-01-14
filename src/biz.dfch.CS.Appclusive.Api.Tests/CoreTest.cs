@@ -144,7 +144,6 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             string tenantId = settings.GetValue("TenantId");
             var svc = new biz.dfch.CS.Appclusive.Api.Core.Core(_uri);
             svc.Credentials = new System.Net.NetworkCredential(username, password);
-            svc.TenandHeaderName = null;
             svc.TenantID = tenantId;
 
             var _uriAction = new Uri(_uriPrefix + "Core/Nodes/Template");
