@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("d-fens GmbH")]
 [assembly: AssemblyProduct("biz.dfch.CS.Appclusive.Api.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2015 d-fens GmbH")]
+[assembly: AssemblyCopyright("Copyright © 2015-2016 d-fens GmbH")]
 [assembly: AssemblyTrademark("The d-fens logo is a registered trademark in the European Union")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.6.*")]
+[assembly: AssemblyVersion("1.2.7.*")]
 // [assembly: AssemblyFileVersion("0.0.3.0")]
