@@ -1153,13 +1153,15 @@
         <Property Name="NodeId" Type="Edm.Int64" Nullable="false" />
         <Property Name="JobId" Type="Edm.Int64" Nullable="false" />
         <Property Name="CustomerId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ConfigurationId" Type="Edm.Int64" Nullable="false" />
         <Property Name="BuiltInRoles" Type="biz.dfch.CS.Appclusive.Core.Managers.BuiltInRoles" Nullable="false" />
       </ComplexType>
       <ComplexType Name="BuiltInRoles">
-        <Property Name="TenantAdministrators" Type="Edm.Int64" Nullable="false" />
-        <Property Name="TenantUsers" Type="Edm.Int64" Nullable="false" />
-        <Property Name="CreatorsOwners" Type="Edm.Int64" Nullable="false" />
-        <Property Name="TenantEveryone" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CloudAdmin" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CloudUser" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CloudGuest" Type="Edm.Int64" Nullable="false" />
+        <Property Name="CreatorOwner" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Everyone" Type="Edm.Int64" Nullable="false" />
       </ComplexType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1296,13 +1298,6 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
-        <FunctionImport Name="Metadata" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
-          <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
-        </FunctionImport>
         <FunctionImport Name="GetEffectivePermissions" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
@@ -1389,13 +1384,6 @@
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="CatalogueId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="ProductId" Type="Edm.Int64" Nullable="false" />
-        </FunctionImport>
-        <FunctionImport Name="Metadata" ReturnType="Edm.String" IsBindable="true" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" />
-          <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" IsBindable="true" EntitySet="Carts" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart)" Nullable="false" />
