@@ -1239,10 +1239,22 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Status" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Acquire" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" />
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="WaitTimeout" Type="Edm.Int32" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="AcquireForEntityKind" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)" Nullable="false" />
+          <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="EntityId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="WaitTimeout" Type="Edm.Int32" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="AcquireForEntity" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)" Nullable="false" />
+          <Parameter Name="EntityId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="EntitySet" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="WaitTimeout" Type="Edm.Int32" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Release" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
