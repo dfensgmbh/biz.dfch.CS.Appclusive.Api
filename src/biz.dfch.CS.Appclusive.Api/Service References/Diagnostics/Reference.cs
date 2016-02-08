@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 03.02.2016 15:41:31
+// Generation date: 08.02.2016 15:25:03
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
@@ -2292,7 +2292,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
     }
 }
 // Original file name:
-// Generation date: 03.02.2016 15:41:31
+// Generation date: 08.02.2016 15:25:03
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics
 {
     
