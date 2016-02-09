@@ -610,12 +610,12 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Node" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_NodePartner" ToRole="Node" FromRole="NodePartner" />
-        <NavigationProperty Name="Attributes" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Attributes_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_AttributesPartner" ToRole="Attributes" FromRole="AttributesPartner" />
+        <NavigationProperty Name="Properties" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartner" ToRole="Properties" FromRole="PropertiesPartner" />
         <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
         <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
         <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
       </EntityType>
-      <EntityType Name="ExternalNodeAttribute">
+      <EntityType Name="ExternalNodeBag">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
@@ -630,10 +630,10 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
-        <NavigationProperty Name="ExternalNode" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner" ToRole="ExternalNode" FromRole="ExternalNodePartner" />
-        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
-        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
-        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
+        <NavigationProperty Name="ExternalNode" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner" ToRole="ExternalNode" FromRole="ExternalNodePartner" />
+        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
+        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
+        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
       </EntityType>
       <EntityType Name="ScheduledJob" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node">
         <Property Name="Crontab" Type="Edm.String" />
@@ -1096,9 +1096,9 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Node" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" Role="NodePartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Attributes_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_AttributesPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" Role="Attributes" Multiplicity="*" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" Role="AttributesPartner" Multiplicity="0..1" />
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" Role="Properties" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" Role="PropertiesPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
@@ -1112,21 +1112,21 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" Role="ModifiedByPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" Role="ExternalNode" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" Role="ExternalNodePartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" Role="ExternalNodePartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" Role="TenantPartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" Role="TenantPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="CreatedBy" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" Role="CreatedByPartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" Role="CreatedByPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" Role="ModifiedByPartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" Role="ModifiedByPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" Role="ManagementCredential" Multiplicity="0..1" />
@@ -1183,7 +1183,7 @@
         <EntitySet Name="SpecialOperations" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation" />
         <EntitySet Name="Folders" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Folder" />
         <EntitySet Name="ExternalNodes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" />
-        <EntitySet Name="ExternalNodeAttributes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" />
+        <EntitySet Name="ExternalNodeBags" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" />
         <EntitySet Name="ScheduledJobs" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob" />
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" IsBindable="true" EntitySet="KeyNameValues" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
@@ -1565,11 +1565,11 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
-        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" IsBindable="true" EntitySet="ExternalNodeAttributes" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute)" Nullable="false" />
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" IsBindable="true" EntitySet="ExternalNodeBags" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag)" Nullable="false" />
         </FunctionImport>
-        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute" IsBindable="true" EntitySet="ExternalNodeAttributes" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeAttribute)" Nullable="false" />
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" IsBindable="true" EntitySet="ExternalNodeBags" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
@@ -2065,9 +2065,9 @@
           <End Role="NodePartner" EntitySet="ExternalNodes" />
           <End Role="Node" EntitySet="Nodes" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Attributes_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_AttributesPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Attributes_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_AttributesPartner">
-          <End Role="AttributesPartner" EntitySet="ExternalNodes" />
-          <End Role="Attributes" EntitySet="ExternalNodeAttributes" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartner">
+          <End Role="PropertiesPartner" EntitySet="ExternalNodes" />
+          <End Role="Properties" EntitySet="ExternalNodeBags" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
           <End Role="TenantPartner" EntitySet="ExternalNodes" />
@@ -2081,20 +2081,20 @@
           <End Role="ModifiedByPartner" EntitySet="ExternalNodes" />
           <End Role="ModifiedBy" EntitySet="Users" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner">
-          <End Role="ExternalNodePartner" EntitySet="ExternalNodeAttributes" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartner">
+          <End Role="ExternalNodePartner" EntitySet="ExternalNodeBags" />
           <End Role="ExternalNode" EntitySet="ExternalNodes" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
-          <End Role="TenantPartner" EntitySet="ExternalNodeAttributes" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+          <End Role="TenantPartner" EntitySet="ExternalNodeBags" />
           <End Role="Tenant" EntitySet="Tenants" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
-          <End Role="CreatedByPartner" EntitySet="ExternalNodeAttributes" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+          <End Role="CreatedByPartner" EntitySet="ExternalNodeBags" />
           <End Role="CreatedBy" EntitySet="Users" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeAttribute_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
-          <End Role="ModifiedByPartner" EntitySet="ExternalNodeAttributes" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+          <End Role="ModifiedByPartner" EntitySet="ExternalNodeBags" />
           <End Role="ModifiedBy" EntitySet="Users" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner">
