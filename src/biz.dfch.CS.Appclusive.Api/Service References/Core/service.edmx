@@ -647,6 +647,27 @@
         <Property Name="HistoryDepth" Type="Edm.Int64" Nullable="false" />
         <NavigationProperty Name="ManagementCredential" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner" ToRole="ManagementCredential" FromRole="ManagementCredentialPartner" />
       </EntityType>
+      <EntityType Name="EntityBag">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Value" Type="Edm.String" Nullable="false" />
+        <Property Name="EntityId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ProtectionLevel" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ModifiedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
+        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
+        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
+      </EntityType>
       <EntityType Name="ScheduledJobInstance" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
@@ -1132,6 +1153,18 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" Role="ManagementCredential" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob" Role="ManagementCredentialPartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" Role="TenantPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="CreatedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" Role="CreatedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" Role="ModifiedByPartner" Multiplicity="0..1" />
+      </Association>
     </Schema>
     <Schema Namespace="biz.dfch.CS.Appclusive.Core.Managers" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <ComplexType Name="TenantManagerInformation">
@@ -1185,6 +1218,7 @@
         <EntitySet Name="ExternalNodes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" />
         <EntitySet Name="ExternalNodeBags" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag" />
         <EntitySet Name="ScheduledJobs" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob" />
+        <EntitySet Name="EntityBags" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" />
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" IsBindable="true" EntitySet="KeyNameValues" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue)" Nullable="false" />
         </FunctionImport>
@@ -1578,6 +1612,14 @@
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob" IsBindable="true" EntitySet="ScheduledJobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" IsBindable="true" EntitySet="EntityBags" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag" IsBindable="true" EntitySet="EntityBags" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
@@ -2132,6 +2174,18 @@
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner">
           <End Role="ManagementCredentialPartner" EntitySet="ScheduledJobs" />
           <End Role="ManagementCredential" EntitySet="ManagementCredentials" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+          <End Role="TenantPartner" EntitySet="EntityBags" />
+          <End Role="Tenant" EntitySet="Tenants" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+          <End Role="CreatedByPartner" EntitySet="EntityBags" />
+          <End Role="CreatedBy" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+          <End Role="ModifiedByPartner" EntitySet="EntityBags" />
+          <End Role="ModifiedBy" EntitySet="Users" />
         </AssociationSet>
       </EntityContainer>
     </Schema>
