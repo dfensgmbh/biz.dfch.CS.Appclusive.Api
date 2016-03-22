@@ -1475,6 +1475,9 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
+        <FunctionImport Name="Order" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" IsBindable="true" EntitySet="Orders" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
+        </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" IsBindable="true" EntitySet="Products" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product)" Nullable="false" />
         </FunctionImport>
