@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>2.2.0</version>
+        <version>2.2.1</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -16,10 +16,10 @@
 Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20160315
-* Updated API according Appclusive 2.2.0
-  * Order action on ApprovalsController to load associated order 
-  * HealthCheck endpoint
+        <releaseNotes>20160411
+* Updated API according Appclusive 2.2.1
+  * SetError action on JobsController
+  * Current user action on UsersController
 </releaseNotes>
         <copyright>Copyright © 2015-2016 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
