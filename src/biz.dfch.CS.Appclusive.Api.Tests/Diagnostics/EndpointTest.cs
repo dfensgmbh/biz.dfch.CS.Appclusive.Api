@@ -48,7 +48,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         public void GetEndpoint1BaseUriSucceeds()
         {
             var endpointName = "BaseUri";
-            var endpointCreator = "SYSTEM";
+            var endpointCreatorId = 1;
             long endpointId = 1;
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
@@ -59,8 +59,8 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
             Assert.AreEqual(new Guid("11111111-1111-1111-1111-111111111111"), result.Tid);
             Assert.AreEqual(endpointName, result.Name);
             Assert.AreEqual(endpointName, result.Description);
-            Assert.AreEqual(endpointCreator, result.CreatedBy);
-            Assert.AreEqual(endpointCreator, result.ModifiedBy);
+            Assert.AreEqual(endpointCreatorId, result.CreatedById);
+            Assert.AreEqual(endpointCreatorId, result.ModifiedById);
             Assert.AreEqual((new Version(0, 0, 0, 0)).ToString(), result.Version);
         }
 
@@ -68,7 +68,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         public void GetEndpointCoreSucceeds()
         {
             var endpointName = "Core";
-            var endpointCreator = "SYSTEM";
+            var endpointCreatorId = 1;
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Name == endpointName).First();
@@ -77,8 +77,8 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
             Assert.AreNotEqual(0, result.Id);
             Assert.AreEqual(TENANT_GUID_SYSTEM, result.Tid);
             Assert.AreEqual(endpointName, result.Name);
-            Assert.AreEqual(endpointCreator, result.CreatedBy);
-            Assert.AreEqual(endpointCreator, result.ModifiedBy);
+            Assert.AreEqual(endpointCreatorId, result.CreatedById);
+            Assert.AreEqual(endpointCreatorId, result.ModifiedById);
             Assert.AreNotEqual((new Version(0, 0, 0, 0)).ToString(), result.Version);
         }
 
@@ -86,7 +86,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
         public void GetEndpointDiagnosticsSucceeds()
         {
             var endpointName = "Diagnostics";
-            var endpointCreator = "SYSTEM";
+            var endpointCreatorId = 1;
             var svc = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
             svc.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var result = svc.Endpoints.Where(e => e.Name == endpointName).First();
@@ -95,8 +95,8 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
             Assert.AreNotEqual(0, result.Id);
             Assert.AreEqual(TENANT_GUID_SYSTEM, result.Tid);
             Assert.AreEqual(endpointName, result.Name);
-            Assert.AreEqual(endpointCreator, result.CreatedBy);
-            Assert.AreEqual(endpointCreator, result.ModifiedBy);
+            Assert.AreEqual(endpointCreatorId, result.CreatedById);
+            Assert.AreEqual(endpointCreatorId, result.ModifiedById);
             Assert.AreNotEqual((new Version(0, 0, 0, 0)).ToString(), result.Version);
         }
 
