@@ -55,7 +55,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
 
             Assert.IsNotNull(result);
             Assert.AreEqual(endpointId, result.Id);
-            Assert.AreEqual(Guid.Empty.ToString(), result.Tid);
+            Assert.AreEqual(new Guid("11111111-1111-1111-1111-111111111111"), result.Tid);
             Assert.AreEqual(endpointName, result.Name);
             Assert.AreEqual(endpointName, result.Description);
             Assert.AreEqual(endpointCreator, result.CreatedBy);
