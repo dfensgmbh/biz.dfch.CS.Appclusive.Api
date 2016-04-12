@@ -26,6 +26,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
     {
         private static string _uriPrefix;
         private static Uri _uri;
+        private static readonly Guid TENANT_GUID_SYSTEM = new Guid("11111111-1111-1111-1111-111111111111");
 
         static EndpointTest()
         {
@@ -74,7 +75,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
 
             Assert.IsNotNull(result);
             Assert.AreNotEqual(0, result.Id);
-            Assert.AreEqual(Guid.Empty.ToString(), result.Tid);
+            Assert.AreEqual(TENANT_GUID_SYSTEM, result.Tid);
             Assert.AreEqual(endpointName, result.Name);
             Assert.AreEqual(endpointCreator, result.CreatedBy);
             Assert.AreEqual(endpointCreator, result.ModifiedBy);
@@ -92,7 +93,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests.Diagnostics
 
             Assert.IsNotNull(result);
             Assert.AreNotEqual(0, result.Id);
-            Assert.AreEqual(Guid.Empty.ToString(), result.Tid);
+            Assert.AreEqual(TENANT_GUID_SYSTEM, result.Tid);
             Assert.AreEqual(endpointName, result.Name);
             Assert.AreEqual(endpointCreator, result.CreatedBy);
             Assert.AreEqual(endpointCreator, result.ModifiedBy);
