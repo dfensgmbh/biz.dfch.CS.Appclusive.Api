@@ -132,7 +132,7 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
         }
 
         [TestMethod]
-        public void InvokeCoreNodeTemplateWithTenantIDSucceeds()
+        public void InvokeCoreNodeTemplateWithTenantIdSucceeds()
         {
             //Test runs only if there is a file TestSettings.txt in the project folders containing the settings in the format
             //{key}={value}\n
