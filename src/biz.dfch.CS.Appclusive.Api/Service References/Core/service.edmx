@@ -1184,6 +1184,10 @@
         <Property Name="Everyone" Type="Edm.Int64" Nullable="false" />
       </ComplexType>
     </Schema>
+    <Schema Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Network" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
+      <EntityType Name="Machine" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
+    </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Core" m:IsDefaultEntityContainer="true">
         <EntitySet Name="KeyNameValues" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" />
@@ -1288,6 +1292,10 @@
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" IsBindable="true" EntitySet="Acls" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="BreakInheritance" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" />
+          <Parameter Name="CopyAces" Type="Edm.Boolean" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" IsBindable="true" EntitySet="Acls" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl)" Nullable="false" />
@@ -1451,6 +1459,11 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Requester" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="QuickCreate" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order)" Nullable="false" />
+          <Parameter Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="InvokeAction" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
