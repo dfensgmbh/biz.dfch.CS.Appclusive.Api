@@ -390,6 +390,9 @@
         <EntitySet Name="Tenants" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
         <EntitySet Name="Assocs" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" />
         <EntitySet Name="JobResponses" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" />
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Machine" IsBindable="true" EntitySet="Machines" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Machine)" Nullable="false" />
+        </FunctionImport>
         <FunctionImport Name="QuickCreate" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Machine)" Nullable="false" />
         </FunctionImport>
@@ -430,7 +433,6 @@
         </FunctionImport>
         <FunctionImport Name="Restart" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Machine" />
-          <Parameter Name="Force" Type="Edm.Boolean" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Network" IsBindable="true" EntitySet="Networks" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Network)" Nullable="false" />
