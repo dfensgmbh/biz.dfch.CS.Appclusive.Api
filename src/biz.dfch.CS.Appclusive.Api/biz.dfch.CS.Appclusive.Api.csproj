@@ -107,6 +107,7 @@
     <Compile Include="Diagnostics.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IDataServiceClientHelper.cs" />
+    <Compile Include="Infrastructure.cs" />
     <Compile Include="IOdataActionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Cmp\Reference.cs">
@@ -124,6 +125,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.datasvcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Infrastructure\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.datasvcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -134,6 +140,7 @@
     <None Include="Service References\Cmp\service.edmx" />
     <None Include="Service References\Core\service.edmx" />
     <None Include="Service References\Diagnostics\service.edmx" />
+    <None Include="Service References\Infrastructure\service.edmx" />
   </ItemGroup>
   <ItemGroup>
     <ServiceReferenceMetadataStorage Include="Service References\Cmp\">
@@ -143,6 +150,9 @@
       <Type>datasvcmap</Type>
     </ServiceReferenceMetadataStorage>
     <ServiceReferenceMetadataStorage Include="Service References\Diagnostics\">
+      <Type>datasvcmap</Type>
+    </ServiceReferenceMetadataStorage>
+    <ServiceReferenceMetadataStorage Include="Service References\Infrastructure\">
       <Type>datasvcmap</Type>
     </ServiceReferenceMetadataStorage>
   </ItemGroup>
@@ -160,6 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Cmp\Reference.datasvcmap">
+      <Generator>DataServicesCoreClientGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Infrastructure\Reference.datasvcmap">
       <Generator>DataServicesCoreClientGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
