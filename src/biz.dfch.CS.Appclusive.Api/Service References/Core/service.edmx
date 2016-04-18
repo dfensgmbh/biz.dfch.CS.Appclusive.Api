@@ -651,13 +651,13 @@
         <Key>
           <PropertyRef Name="Id" />
         </Key>
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Value" Type="Edm.String" Nullable="false" />
         <Property Name="EntityId" Type="Edm.Int64" Nullable="false" />
         <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         <Property Name="ProtectionLevel" Type="Edm.Int64" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
-        <Property Name="Name" Type="Edm.String" Nullable="false" />
         <Property Name="Description" Type="Edm.String" />
         <Property Name="CreatedById" Type="Edm.Int64" Nullable="false" />
         <Property Name="ModifiedById" Type="Edm.Int64" Nullable="false" />

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 15.04.2016 14:30:49
+// Generation date: 18.04.2016 15:10:51
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     
@@ -1663,12 +1663,12 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 "ces_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServ" +
                 "ices_Core_ManagementCredential_ManagementCredentialPartner\" ToRole=\"ManagementCr" +
                 "edential\" FromRole=\"ManagementCredentialPartner\" /></EntityType><EntityType Name" +
-                "=\"EntityBag\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Value\" Type=\"Ed" +
-                "m.String\" Nullable=\"false\" /><Property Name=\"EntityId\" Type=\"Edm.Int64\" Nullable" +
-                "=\"false\" /><Property Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Pr" +
-                "operty Name=\"ProtectionLevel\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name" +
-                "=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" N" +
-                "ullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Pr" +
+                "=\"EntityBag\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Name\" Type=\"Edm" +
+                ".String\" Nullable=\"false\" /><Property Name=\"Value\" Type=\"Edm.String\" Nullable=\"f" +
+                "alse\" /><Property Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property " +
+                "Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Protecti" +
+                "onLevel\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64" +
+                "\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Pr" +
                 "operty Name=\"Description\" Type=\"Edm.String\" /><Property Nam";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private const string ModelPart8 = "e=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\"" +
@@ -15829,34 +15829,56 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         /// <summary>
         /// Create a new EntityBag object.
         /// </summary>
+        /// <param name="name">Initial value of Name.</param>
         /// <param name="value">Initial value of Value.</param>
         /// <param name="entityId">Initial value of EntityId.</param>
         /// <param name="entityKindId">Initial value of EntityKindId.</param>
         /// <param name="protectionLevel">Initial value of ProtectionLevel.</param>
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="tid">Initial value of Tid.</param>
-        /// <param name="name">Initial value of Name.</param>
         /// <param name="createdById">Initial value of CreatedById.</param>
         /// <param name="modifiedById">Initial value of ModifiedById.</param>
         /// <param name="created">Initial value of Created.</param>
         /// <param name="modified">Initial value of Modified.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static EntityBag CreateEntityBag(string value, long entityId, long entityKindId, long protectionLevel, long ID, global::System.Guid tid, string name, long createdById, long modifiedById, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        public static EntityBag CreateEntityBag(string name, string value, long entityId, long entityKindId, long protectionLevel, long ID, global::System.Guid tid, long createdById, long modifiedById, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
         {
             EntityBag entityBag = new EntityBag();
+            entityBag.Name = name;
             entityBag.Value = value;
             entityBag.EntityId = entityId;
             entityBag.EntityKindId = entityKindId;
             entityBag.ProtectionLevel = protectionLevel;
             entityBag.Id = ID;
             entityBag.Tid = tid;
-            entityBag.Name = name;
             entityBag.CreatedById = createdById;
             entityBag.ModifiedById = modifiedById;
             entityBag.Created = created;
             entityBag.Modified = modified;
             return entityBag;
         }
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
         /// <summary>
         /// There are no comments for Property Value in the schema.
         /// </summary>
@@ -15989,28 +16011,6 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         private global::System.Guid _Tid;
         partial void OnTidChanging(global::System.Guid value);
         partial void OnTidChanged();
-        /// <summary>
-        /// There are no comments for Property Name in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Name
-        {
-            get
-            {
-                return this._Name;
-            }
-            set
-            {
-                this.OnNameChanging(value);
-                this._Name = value;
-                this.OnNameChanged();
-                this.OnPropertyChanged("Name");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Name;
-        partial void OnNameChanging(string value);
-        partial void OnNameChanged();
         /// <summary>
         /// There are no comments for Property Description in the schema.
         /// </summary>
@@ -16256,7 +16256,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     }
 }
 // Original file name:
-// Generation date: 15.04.2016 14:30:49
+// Generation date: 18.04.2016 15:10:51
 namespace biz.dfch.CS.Appclusive.Core.Managers
 {
     
@@ -16613,7 +16613,7 @@ namespace biz.dfch.CS.Appclusive.Core.Managers
     }
 }
 // Original file name:
-// Generation date: 15.04.2016 14:30:49
+// Generation date: 18.04.2016 15:10:51
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure
 {
     
