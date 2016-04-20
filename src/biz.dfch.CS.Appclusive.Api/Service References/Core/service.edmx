@@ -1184,10 +1184,6 @@
         <Property Name="Everyone" Type="Edm.Int64" Nullable="false" />
       </ComplexType>
     </Schema>
-    <Schema Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-      <EntityType Name="Network" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
-      <EntityType Name="Machine" BaseType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
-    </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <EntityContainer Name="Core" m:IsDefaultEntityContainer="true">
         <EntitySet Name="KeyNameValues" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue" />
