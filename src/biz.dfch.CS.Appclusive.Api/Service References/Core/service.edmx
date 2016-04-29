@@ -1497,6 +1497,8 @@
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="NotBefore" Type="Edm.DateTimeOffset" Nullable="false" />
+          <Parameter Name="ExpiresAt" Type="Edm.DateTimeOffset" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Order" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" IsBindable="true" EntitySet="Orders" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
