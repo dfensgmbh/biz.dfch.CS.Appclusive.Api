@@ -166,7 +166,9 @@
         <Property Name="NodeId" Type="Edm.Int64" Nullable="false" />
         <Property Name="Status" Type="Edm.String" Nullable="false" />
         <Property Name="Priority" Type="Edm.String" Nullable="false" />
-        <Property Name="CompletionRatio" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Completion" Type="Edm.Int64" Nullable="false" />
+        <Property Name="AssignedToId" Type="Edm.Int64" />
+        <Property Name="Due" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
