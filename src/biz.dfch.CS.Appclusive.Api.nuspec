@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>2.5.1</version>
+        <version>2.5.5</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -16,10 +16,9 @@
 Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20160429
-* Updated API according Appclusive 2.5.1
-  * Navigation methods for ~/Node(Id)/IncomingAssocs and ~/Node(Id)/OutgoingAssocs added
-  * Creation of subapprovals
+        <releaseNotes>20160513
+* Updated API according Appclusive 2.5.5
+  * Service reference for Csm endpoint added
 </releaseNotes>
         <copyright>Copyright © 2015-2016 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
