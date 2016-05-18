@@ -1329,6 +1329,15 @@
           <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="CreateWithJobConditionParameters" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse" IsBindable="true" EntitySet="JobResponses" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="ParentId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="Parameters" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="JobConditionParameters" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
         <FunctionImport Name="Status" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" IsBindable="true" EntitySet="Jobs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
