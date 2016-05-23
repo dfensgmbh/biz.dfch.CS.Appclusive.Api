@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 18.05.2016 09:15:31
+// Generation date: 23.05.2016 13:12:51
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     
@@ -16259,7 +16259,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     }
 }
 // Original file name:
-// Generation date: 18.05.2016 09:15:31
+// Generation date: 23.05.2016 13:12:51
 namespace biz.dfch.CS.Appclusive.Core.Managers
 {
     

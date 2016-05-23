@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 18.05.2016 09:15:27
+// Generation date: 23.05.2016 13:12:43
 namespace biz.dfch.CS.Appclusive.Api.Cmp
 {
     
@@ -138,6 +138,23 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget> _CimiTargets;
         /// <summary>
+        /// There are no comments for Networks in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network> Networks
+        {
+            get
+            {
+                if ((this._Networks == null))
+                {
+                    this._Networks = base.CreateQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network>("Networks");
+                }
+                return this._Networks;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network> _Networks;
+        /// <summary>
         /// There are no comments for Tenants in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -168,6 +185,14 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
         public void AddToCimiTargets(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget cimiTarget)
         {
             base.AddObject("CimiTargets", cimiTarget);
+        }
+        /// <summary>
+        /// There are no comments for Networks in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToNetworks(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network network)
+        {
+            base.AddObject("Networks", network);
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private abstract class GeneratedEdmModel
@@ -342,78 +367,125 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
                 "rtner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Mod" +
                 "ifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
                 "ces.Cmp.CimiTarget\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association" +
-                "><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMappi" +
-                "ng_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPart" +
-                "ner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"C" +
-                "ustomer\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.ContractMapping\" Role=\"CustomerPartner\" Multiplicity=\"0..1\" /></Associa" +
-                "tion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractM" +
-                "apping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartne" +
-                "r\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenan" +
-                "t\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.ContractMapping\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><As" +
-                "sociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_C" +
-                "reatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><" +
-                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" " +
-                "Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "ContractMapping\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><As" +
-                "sociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_M" +
-                "odifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"" +
-                "><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedB" +
-                "y\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.ContractMapping\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association" +
-                "></Schema><Schema Namespace=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp\" xmln" +
-                "s=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityTyp";
+                "><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_Network_Tenant" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplici" +
+                "ty=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network\" Ro" +
+                "le=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Cmp_Network_CreatedBy_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network\" Role=\"CreatedByPartner\"" +
+                " Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Cmp_Network_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Cmp.Network\" Role=\"ModifiedByPartner\" Multiplicity=" +
+                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_ContractMapping_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Customer_CustomerPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Customer\" Role=\"Customer\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.ContractMapping\" Role=\"CustomerPartner\" Multiplic" +
+                "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart2 = "e Name=\"CimiTarget\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"CimiId\" T" +
-                "ype=\"Edm.String\" Nullable=\"false\" /><Property Name=\"CimiType\" Type=\"Edm.String\" " +
-                "Nullable=\"false\" /><Property Name=\"CatalogueItemId\" Type=\"Edm.Int64\" Nullable=\"f" +
-                "alse\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"" +
-                "Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" " +
-                "Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Na" +
-                "me=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedByI" +
-                "d\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTi" +
-                "meOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\"" +
-                " Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationP" +
-                "roperty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_Tenant_biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole" +
-                "=\"TenantPartner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "mp_CimiTarget_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Crea" +
-                "tedByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProper" +
-                "ty Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_ModifiedBy_biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\"" +
-                " FromRole=\"ModifiedByPartner\" /></EntityType></Schema><Schema Namespace=\"Default" +
-                "\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Cm" +
-                "p\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"Tenants\" EntityType=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.Tenant\" /><EntitySet Name=\"Users\" Enti" +
-                "tyType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" /><EntitySet Name=\"" +
-                "Customers\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" " +
-                "/><EntitySet Name=\"CimiTargets\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
-                "vices.Cmp.CimiTarget\" /><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Cmp.CimiTarget\" IsBindable=\"true\" EntitySet=\"CimiT" +
-                "argets\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Colle" +
-                "ction(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget)\" Nullable=\"false" +
-                "\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Cmp.CimiTarget\" IsBindable=\"true\" EntitySet=\"CimiTarget" +
-                "s\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection" +
-                "(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget)\" Nullable=\"false\" /><" +
-                "Parameter Name=\"CimiId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
-                "<Parameter Name=\"CimiType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\"" +
-                " /></FunctionImport><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Par" +
-                "entPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_Tenant_ParentPartner\"><End Role=\"ParentPartner\" EntitySet" +
-                "=\"Tenants\" /><End Role=\"Parent\" EntitySet=\"Tenants\" /></AssociationSet><Associat" +
-                "ionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartnerSet\" Associat" +
-                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Customer_CustomerPartner\"><End Role=\"CustomerPartner\" EntitySet=\"Tenants\" /><E" +
-                "nd Role=\"Customer\" EntitySet=\"Customers\" /></AssociationSet><AssociationSet Name" +
+            private const string ModelPart2 = "Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"TenantPartne" +
+                "r\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"CreatedByPartne" +
+                "r\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"ModifiedByPa" +
+                "rtner\" Multiplicity=\"0..1\" /></Association></Schema><Schema Namespace=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Cmp\" xmlns=\"http://schemas.microsoft.com/ado/20" +
+                "09/11/edm\"><EntityType Name=\"CimiTarget\"><Key><PropertyRef Name=\"Id\" /></Key><Pr" +
+                "operty Name=\"CimiId\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"CimiTy" +
+                "pe\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"CatalogueItemId\" Type=\"" +
+                "Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"fal" +
+                "se\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Na" +
+                "me\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm." +
+                "String\" /><Property Name=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Prop" +
+                "erty Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Cre" +
+                "ated\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Typ" +
+                "e=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm." +
+                "Binary\" /><NavigationProperty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarge" +
+                "t_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\" To" +
+                "Role=\"Tenant\" FromRole=\"TenantPartner\" /><NavigationProperty Name=\"CreatedBy\" Re" +
+                "lationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Cmp_CimiTarget_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_User_CreatedByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartne" +
+                "r\" /><NavigationProperty Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget" +
+                "_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartne" +
+                "r\" ToRole=\"ModifiedBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType N" +
+                "ame=\"Network\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"CimiId\" Type=\"" +
+                "Edm.String\" Nullable=\"false\" /><Property Name=\"CimiType\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" /><Property Name=\"CatalogueItemId\" Type=\"Edm.Int64\" Nullable=\"false\"" +
+                " /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" " +
+                "Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nulla" +
+                "ble=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"C" +
+                "reatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\" Ty" +
+                "pe=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOff" +
+                "set\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Null" +
+                "able=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProper" +
+                "ty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Cmp_Network_Tenant_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"Tenant" +
+                "Partner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_Netwo" +
+                "rk_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartne" +
+                "r\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty Name=\"Mo" +
+                "difiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Cmp_Network_ModifiedBy_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\" FromRole=\"Mod" +
+                "ifiedByPartner\" /></EntityType></Schema><Schema Namespace=\"Default\" xmlns=\"http:" +
+                "//schemas.microsoft.com/ado/2009/11/edm\"><EntityContainer Name=\"Cmp\" m:IsDefault" +
+                "EntityContainer=\"true\"><EntitySet Name=\"Tenants\" EntityType=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Tenant\" /><EntitySet Name=\"Users\" EntityType=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.User\" /><EntitySet Name=\"Customers\" Ent" +
+                "ityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" /><EntitySet N" +
+                "ame=\"CimiTargets\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Cimi" +
+                "Target\" /><EntitySet Name=\"Networks\" EntityType=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Cmp.Network\" /><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Cmp.CimiTarget\" IsBindable=\"true\" EntitySet=\"Cim" +
+                "iTargets\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
+                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget)\" Nullable=\"fal" +
+                "se\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Cmp.CimiTarget\" IsBindable=\"true\" EntitySet=\"CimiTarg" +
+                "ets\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
+                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.CimiTarget)\" Nullable=\"false\" /" +
+                "><Parameter Name=\"CimiId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
+                "/><Parameter Name=\"CimiType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
+                "e\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Cmp.Network\" IsBindable=\"true\" EntitySet=\"Networks\" " +
+                "m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network)\" Nullable=\"false\" /></Funct" +
+                "ionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Cmp.Network\" IsBindable=\"true\" EntitySet=\"Networks\" m:IsAlwaysBind" +
+                "able=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Cmp.Network)\" Nullable=\"false\" /><Parameter Name=\"Cimi" +
+                "Id\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Cim" +
+                "iType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport>" +
+                "<AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Pare" +
+                "nt_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartnerSet\" Assoc" +
+                "iation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Tenant_ParentPartner\"><End Role=\"ParentPartner\" EntitySet=\"Tenants\" /><End Ro" +
+                "le=\"Parent\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Customer_CustomerPartnerSet\" Association=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_T" +
+                "enant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerP" +
+                "artner\"><End Role=\"CustomerPartner\" EntitySet=\"Tenants\" /><";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart3 = "End Role=\"Customer\" EntitySet=\"Customers\" /></AssociationSet><AssociationSet Name" +
                 "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_App" +
                 "clusive_Core_OdataServices_Core_Tenant_ChildrenPartnerSet\" Association=\"biz.dfch" +
                 ".CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices" +
@@ -458,28 +530,44 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
                 "iedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" " +
                 "Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi" +
                 "ve_Core_OdataServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_User_ModifiedByPartner\"><End Role=\"ModifiedBy";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart3 = "Partner\" EntitySet=\"Customers\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Ass" +
-                "ociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_" +
-                "CimiTarget_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPa" +
-                "rtnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Cmp_CimiTarget_Tenant_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"" +
-                "CimiTargets\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associ" +
-                "ationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_CreatedB" +
-                "y_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Assoc" +
-                "iation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Cmp_CimiTarget_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"CimiTarg" +
-                "ets\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSe" +
-                "t Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_ModifiedBy_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Associatio" +
+                "Services_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"C" +
+                "ustomers\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_Tenant_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Associatio" +
                 "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Cmp_CimiTarget_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"CimiTarget" +
-                "s\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet></EntityContain" +
-                "er></Schema></edmx:DataServices></edmx:Edmx>";
+                "ataServices_Cmp_CimiTarget_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"CimiTargets\" /><End " +
+                "Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Cmp_CimiTarget_CreatedBy_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp" +
+                "_CimiTarget_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Create" +
+                "dByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"CimiTargets\" /><End Role=\"Cr" +
+                "eatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Cmp_CimiTarget_ModifiedBy_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_Cimi" +
+                "Target_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy" +
+                "Partner\"><End Role=\"ModifiedByPartner\" EntitySet=\"CimiTargets\" /><End Role=\"Modi" +
+                "fiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Cmp_Network_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_Network_Tenant" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=" +
+                "\"TenantPartner\" EntitySet=\"Networks\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" />" +
+                "</AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Cmp_Network_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat" +
+                "edByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Cmp_Network_CreatedBy_biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" E" +
+                "ntitySet=\"Networks\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet" +
+                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cmp_Network_Mod" +
+                "ifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" +
+                "\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Cmp_Network_ModifiedBy_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"N" +
+                "etworks\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet></EntityC" +
+                "ontainer></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -2082,7 +2170,7 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
     }
 }
 // Original file name:
-// Generation date: 18.05.2016 09:15:27
+// Generation date: 23.05.2016 13:12:43
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Cmp
 {
     
@@ -2124,6 +2212,381 @@ namespace biz.dfch.CS.Appclusive.Core.OdataServices.Cmp
             cimiTarget.Created = created;
             cimiTarget.Modified = modified;
             return cimiTarget;
+        }
+        /// <summary>
+        /// There are no comments for Property CimiId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CimiId
+        {
+            get
+            {
+                return this._CimiId;
+            }
+            set
+            {
+                this.OnCimiIdChanging(value);
+                this._CimiId = value;
+                this.OnCimiIdChanged();
+                this.OnPropertyChanged("CimiId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CimiId;
+        partial void OnCimiIdChanging(string value);
+        partial void OnCimiIdChanged();
+        /// <summary>
+        /// There are no comments for Property CimiType in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CimiType
+        {
+            get
+            {
+                return this._CimiType;
+            }
+            set
+            {
+                this.OnCimiTypeChanging(value);
+                this._CimiType = value;
+                this.OnCimiTypeChanged();
+                this.OnPropertyChanged("CimiType");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CimiType;
+        partial void OnCimiTypeChanging(string value);
+        partial void OnCimiTypeChanged();
+        /// <summary>
+        /// There are no comments for Property CatalogueItemId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long CatalogueItemId
+        {
+            get
+            {
+                return this._CatalogueItemId;
+            }
+            set
+            {
+                this.OnCatalogueItemIdChanging(value);
+                this._CatalogueItemId = value;
+                this.OnCatalogueItemIdChanged();
+                this.OnPropertyChanged("CatalogueItemId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _CatalogueItemId;
+        partial void OnCatalogueItemIdChanging(long value);
+        partial void OnCatalogueItemIdChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _Id;
+        partial void OnIdChanging(long value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _Tid;
+        partial void OnTidChanging(global::System.Guid value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedById in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long CreatedById
+        {
+            get
+            {
+                return this._CreatedById;
+            }
+            set
+            {
+                this.OnCreatedByIdChanging(value);
+                this._CreatedById = value;
+                this.OnCreatedByIdChanged();
+                this.OnPropertyChanged("CreatedById");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _CreatedById;
+        partial void OnCreatedByIdChanging(long value);
+        partial void OnCreatedByIdChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedById in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long ModifiedById
+        {
+            get
+            {
+                return this._ModifiedById;
+            }
+            set
+            {
+                this.OnModifiedByIdChanging(value);
+                this._ModifiedById = value;
+                this.OnModifiedByIdChanged();
+                this.OnPropertyChanged("ModifiedById");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _ModifiedById;
+        partial void OnModifiedByIdChanging(long value);
+        partial void OnModifiedByIdChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
+        /// <summary>
+        /// There are no comments for Tenant in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public biz.dfch.CS.Appclusive.Api.Cmp.Tenant Tenant
+        {
+            get
+            {
+                return this._Tenant;
+            }
+            set
+            {
+                this._Tenant = value;
+                this.OnPropertyChanged("Tenant");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private biz.dfch.CS.Appclusive.Api.Cmp.Tenant _Tenant;
+        /// <summary>
+        /// There are no comments for CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public biz.dfch.CS.Appclusive.Api.Cmp.User CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this._CreatedBy = value;
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private biz.dfch.CS.Appclusive.Api.Cmp.User _CreatedBy;
+        /// <summary>
+        /// There are no comments for ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public biz.dfch.CS.Appclusive.Api.Cmp.User ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this._ModifiedBy = value;
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private biz.dfch.CS.Appclusive.Api.Cmp.User _ModifiedBy;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Cmp.Network in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Networks")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class Network : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Network object.
+        /// </summary>
+        /// <param name="cimiId">Initial value of CimiId.</param>
+        /// <param name="cimiType">Initial value of CimiType.</param>
+        /// <param name="catalogueItemId">Initial value of CatalogueItemId.</param>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="createdById">Initial value of CreatedById.</param>
+        /// <param name="modifiedById">Initial value of ModifiedById.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Network CreateNetwork(string cimiId, string cimiType, long catalogueItemId, long ID, global::System.Guid tid, string name, long createdById, long modifiedById, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Network network = new Network();
+            network.CimiId = cimiId;
+            network.CimiType = cimiType;
+            network.CatalogueItemId = catalogueItemId;
+            network.Id = ID;
+            network.Tid = tid;
+            network.Name = name;
+            network.CreatedById = createdById;
+            network.ModifiedById = modifiedById;
+            network.Created = created;
+            network.Modified = modified;
+            return network;
         }
         /// <summary>
         /// There are no comments for Property CimiId in the schema.
