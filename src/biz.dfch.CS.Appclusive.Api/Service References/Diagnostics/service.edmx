@@ -336,6 +336,9 @@
           <Parameter Name="TrusteeId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="TrusteeType" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.HealthCheck" IsBindable="true" EntitySet="HealthChecks" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.HealthCheck)" Nullable="false" />
+        </FunctionImport>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner">
           <End Role="ParentPartner" EntitySet="Tenants" />
           <End Role="Parent" EntitySet="Tenants" />

@@ -419,7 +419,7 @@
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Force" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
-        <FunctionImport Name="ListSnapshot" ReturnType="Collection(Edm.String)" IsBindable="true" m:IsAlwaysBindable="true">
+        <FunctionImport Name="ListSnapshots" ReturnType="Collection(Edm.String)" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Infrastructure.Machine" />
         </FunctionImport>
         <FunctionImport Name="GetSnapshot" ReturnType="Collection(Edm.String)" IsBindable="true" m:IsAlwaysBindable="true">
