@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 27.05.2016 07:19:08
+// Generation date: 31.05.2016 14:14:04
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     
@@ -529,6 +529,23 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<CostCentre> _CostCentres;
         /// <summary>
+        /// There are no comments for EntityKindMaterialMappings in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<EntityKindMaterialMapping> EntityKindMaterialMappings
+        {
+            get
+            {
+                if ((this._EntityKindMaterialMappings == null))
+                {
+                    this._EntityKindMaterialMappings = base.CreateQuery<EntityKindMaterialMapping>("EntityKindMaterialMappings");
+                }
+                return this._EntityKindMaterialMappings;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<EntityKindMaterialMapping> _EntityKindMaterialMappings;
+        /// <summary>
         /// There are no comments for SpecialOperations in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -845,6 +862,14 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         public void AddToCostCentres(CostCentre costCentre)
         {
             base.AddObject("CostCentres", costCentre);
+        }
+        /// <summary>
+        /// There are no comments for EntityKindMaterialMappings in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToEntityKindMaterialMappings(EntityKindMaterialMapping entityKindMaterialMapping)
+        {
+            base.AddObject("EntityKindMaterialMappings", entityKindMaterialMapping);
         }
         /// <summary>
         /// There are no comments for SpecialOperations in the schema.
@@ -1567,2156 +1592,2244 @@ namespace biz.dfch.CS.Appclusive.Api.Core
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private const string ModelPart7 = "re_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
                 "fiedByPartner\" ToRole=\"ModifiedBy\" FromRole=\"ModifiedByPartner\" /></EntityType><" +
-                "EntityType Name=\"SpecialOperation\"><Key><PropertyRef Name=\"Id\" /></Key><Property" +
-                " Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Gu" +
-                "id\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" " +
-                "/><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedById\" " +
-                "Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int6" +
-                "4\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullabl" +
-                "e=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\"" +
-                " /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProperty Name=\"Ten" +
-                "ant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPa" +
-                "rtner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Specia" +
-                "lOperation_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Created" +
-                "ByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty " +
-                "Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_ModifiedBy_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"Modifie" +
-                "dBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"Folder\" BaseT" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /><EntityType Name=\"Ex" +
-                "ternalNode\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"NodeId\" Type=\"Ed" +
-                "m.Int64\" Nullable=\"false\" /><Property Name=\"ExternalType\" Type=\"Edm.String\" Null" +
-                "able=\"false\" /><Property Name=\"ExternalId\" Type=\"Edm.String\" Nullable=\"false\" />" +
-                "<Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Typ" +
-                "e=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable" +
-                "=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"Crea" +
-                "tedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\" Type=" +
-                "\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset" +
-                "\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullabl" +
-                "e=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProperty " +
-                "Name=\"Node\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Node_NodePartner\" ToRole=\"Node\" FromRole=\"NodePartner\" " +
-                "/><NavigationProperty Name=\"Properties\" Relationship=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode" +
-                "_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Prope" +
-                "rtiesPartner\" ToRole=\"Properties\" FromRole=\"PropertiesPartner\" /><NavigationProp" +
-                "erty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole" +
-                "=\"TenantPartner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_C" +
-                "reatedByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationPro" +
-                "perty Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ModifiedBy_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"Modif" +
-                "iedBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"ExternalNod" +
-                "eBag\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Value\" Type=\"Edm.Strin" +
-                "g\" Nullable=\"false\" /><Property Name=\"ExternaldNodeId\" Type=\"Edm.Int64\" Nullable" +
-                "=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Nam" +
-                "e=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Name\" Type=\"Edm.Strin" +
-                "g\" Nullable=\"false\" /><Property Name=\"Description\" Type=\"Edm.String\" /><Property" +
-                " Name=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Modified" +
-                "ById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.Dat" +
-                "eTimeOffset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffs" +
-                "et\" Nullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><Navigati" +
-                "onProperty Name=\"ExternalNode\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Exter" +
-                "nalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNode" +
-                "Partner\" ToRole=\"ExternalNode\" FromRole=\"ExternalNodePartner\" /><NavigationPrope" +
-                "rty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRo" +
-                "le=\"TenantPartner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch" +
+                "EntityType Name=\"EntityKindMaterialMapping\"><Key><PropertyRef Name=\"Id\" /></Key>" +
+                "<Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Exter" +
+                "nalType\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"EntityKindId\" Type" +
+                "=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable=\"f" +
+                "alse\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"" +
+                "Description\" Type=\"Edm.String\" /><Property Name=\"CreatedById\" Type=\"Edm.Int64\" N" +
+                "ullable=\"false\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullable=\"false" +
+                "\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Prope" +
+                "rty Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=" +
+                "\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProperty Name=\"EntityKind\" Relations" +
+                "hip=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_EntityKind_EntityKindPartner\" ToRole=\"EntityKind\" FromRol" +
+                "e=\"EntityKindPartner\" /><NavigationProperty Name=\"Tenant\" Relationship=\"biz.dfch" +
                 ".CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
-                "ser_CreatedByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><Navigati" +
-                "onProperty Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Modifie" +
-                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRol" +
-                "e=\"ModifiedBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"Sch" +
-                "eduledJob\" BaseType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\"><Prope" +
-                "rty Name=\"Crontab\" Type=\"Edm.String\" /><Property Name=\"Action\" Type=\"Edm.String\"" +
-                " /><Property Name=\"ScheduledJobParameters\" Type=\"Edm.String\" /><Property Name=\"P" +
-                "arallelInvocation\" Type=\"Edm.String\" /><Property Name=\"MaximumRuntimeMinutes\" Ty" +
-                "pe=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"AutoDeleteIfNotScheduledDays\" " +
-                "Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"MaxRestartAttempts\" Type=\"Ed" +
-                "m.Int64\" Nullable=\"false\" /><Property Name=\"MaxRestartWaitTimeMinutes\" Type=\"Edm" +
-                ".Int64\" Nullable=\"false\" /><Property Name=\"HistoryDepth\" Type=\"Edm.Int64\" Nullab" +
-                "le=\"false\" /><NavigationProperty Name=\"ManagementCredential\" Relationship=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_ManagementCredential_ManagementCredentialPartner\" ToRole=\"ManagementCr" +
-                "edential\" FromRole=\"ManagementCredentialPartner\" /></EntityType><EntityType Name" +
-                "=\"EntityBag\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Name\" Type=\"Edm" +
-                ".String\" Nullable=\"false\" /><Property Name=\"Value\" Type=\"Edm.String\" Nullable=\"f" +
-                "alse\" /><Property Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property " +
-                "Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Protecti" +
-                "onLevel\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64" +
-                "\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Pr" +
-                "operty Name=\"Description\" Type=\"Edm.String\" /><Property Nam";
+                "_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPartner\" /><Navigati" +
+                "onProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMappin" +
+                "g_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" +
+                "\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty Name=\"Mod" +
+                "ifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"Modifie" +
+                "dBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"SpecialOperat" +
+                "ion\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int64\" Nu" +
+                "llable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Description\"" +
+                " Type=\"Edm.String\" /><Property Name=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"fal" +
+                "se\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Propert" +
+                "y Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Mo" +
+                "dified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"RowVersion\"" +
+                " Type=\"Edm.Binary\" /><NavigationProperty Name=\"Tenant\" Relationship=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant" +
+                "_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPartner\" /><NavigationProperty N" +
+                "ame=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_CreatedBy_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\" ToRole=\"CreatedBy\" " +
+                "FromRole=\"CreatedByPartner\" /><NavigationProperty Name=\"ModifiedBy\" Relationship" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_SpecialOperation_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\" FromRole=\"ModifiedByPartn" +
+                "er\" /></EntityType><EntityType Name=\"Folder\" BaseType=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Node\" /><EntityType Name=\"ExternalNode\"><Key><PropertyRef " +
+                "Name=\"Id\" /></Key><Property Name=\"NodeId\" Type=\"Edm.Int64\" Nullable=\"false\" /><P" +
+                "roperty Name=\"ExternalType\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=" +
+                "\"ExternalId\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm." +
+                "Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" " +
+                "/><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Property Name=\"Des" +
+                "cription\" Type=\"Edm.String\" /><Property Name=\"CreatedById\" Type=\"Edm.Int64\" Null" +
+                "able=\"false\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullable=\"false\" /" +
+                "><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property" +
+                " Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Name=\"Ro" +
+                "wVersion\" Type=\"Edm.Binary\" /><NavigationProperty Name=\"Node\" Relationship=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_" +
+                "NodePartner\" ToRole=\"Node\" FromRole=\"NodePartner\" /><NavigationProperty Name=\"Pr" +
+                "operties\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartner\" ToRole=\"Properti" +
+                "es\" FromRole=\"PropertiesPartner\" /><NavigationProperty Name=\"Tenant\" Relationshi" +
+                "p=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPartner\" /><Navigation" +
+                "Property Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_CreatedBy_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\" ToRole=\"Creat" +
+                "edBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty Name=\"ModifiedBy\" Relati" +
+                "onship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_ExternalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\" FromRole=\"ModifiedByPar" +
+                "tner\" /></EntityType><EntityType Name=\"ExternalNodeBag\"><Key><PropertyRef Name=\"" +
+                "Id\" /></Key><Property Name=\"Value\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
+                "y Name=\"ExternaldNodeId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\"" +
+                " Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullab" +
+                "le=\"false\" /><Property Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" /><Propert" +
+                "y Name=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedById\" Type=\"Edm." +
+                "Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullabl" +
+                "e=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" " +
+                "/><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProperty Name=\"ExternalNode\"" +
+                " Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_ExternalNode_ExternalNodePartner\" ToRole=\"ExternalNode\"" +
+                " FromRole=\"ExternalNodePartner\" /><NavigationProperty Name=\"Tenant\" Relationship" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPartner\" /><Navigati" +
+                "onProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedB" +
+                "y_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart8 = "e=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ModifiedById\"" +
-                " Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Created\" Type=\"Edm.DateTime" +
-                "Offset\" Nullable=\"false\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" N" +
-                "ullable=\"false\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationPro" +
-                "perty Name=\"Tenant\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"" +
-                "TenantPartner\" /><NavigationProperty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Create" +
-                "dByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty" +
+            private const string ModelPart8 = "edByPartner\" ToRole=\"CreatedBy\" FromRole=\"CreatedByPartner\" /><NavigationProperty" +
                 " Name=\"ModifiedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\" F" +
-                "romRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"ScheduledJobInstanc" +
-                "e\" BaseType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /><Association" +
-                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0.." +
-                "1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" Rol" +
-                "e=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_CreatedBy_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End" +
-                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" Role=\"Create" +
-                "dByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_KeyNameValue_ModifiedBy_biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Ty" +
-                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" Role=\"ModifiedB" +
-                "yPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Job_EntityKind_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End T" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"EntityKindPartner" +
-                "\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Job_ParentPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.J" +
-                "ob\" Role=\"Parent\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
-                "dataServices.Core.Job\" Role=\"ParentPartner\" Multiplicity=\"0..1\" /></Association>" +
-                "<Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ChildrenPartner\"><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"Children\" Multiplicity=\"" +
-                "*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"Childr" +
-                "enPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_Job_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\" ToRole=\"Modifie" +
+                "dBy\" FromRole=\"ModifiedByPartner\" /></EntityType><EntityType Name=\"ScheduledJob\"" +
+                " BaseType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\"><Property Name=\"" +
+                "Crontab\" Type=\"Edm.String\" /><Property Name=\"Action\" Type=\"Edm.String\" /><Proper" +
+                "ty Name=\"ScheduledJobParameters\" Type=\"Edm.String\" /><Property Name=\"ParallelInv" +
+                "ocation\" Type=\"Edm.String\" /><Property Name=\"MaximumRuntimeMinutes\" Type=\"Edm.In" +
+                "t64\" Nullable=\"false\" /><Property Name=\"AutoDeleteIfNotScheduledDays\" Type=\"Edm." +
+                "Int64\" Nullable=\"false\" /><Property Name=\"MaxRestartAttempts\" Type=\"Edm.Int64\" N" +
+                "ullable=\"false\" /><Property Name=\"MaxRestartWaitTimeMinutes\" Type=\"Edm.Int64\" Nu" +
+                "llable=\"false\" /><Property Name=\"HistoryDepth\" Type=\"Edm.Int64\" Nullable=\"false\"" +
+                " /><NavigationProperty Name=\"ManagementCredential\" Relationship=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_S" +
+                "cheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "ManagementCredential_ManagementCredentialPartner\" ToRole=\"ManagementCredential\" " +
+                "FromRole=\"ManagementCredentialPartner\" /></EntityType><EntityType Name=\"EntityBa" +
+                "g\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Name\" Type=\"Edm.String\" N" +
+                "ullable=\"false\" /><Property Name=\"Value\" Type=\"Edm.String\" Nullable=\"false\" /><P" +
+                "roperty Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Enti" +
+                "tyKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"ProtectionLevel\" T" +
+                "ype=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"Id\" Type=\"Edm.Int64\" Nullable" +
+                "=\"false\" /><Property Name=\"Tid\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Nam" +
+                "e=\"Description\" Type=\"Edm.String\" /><Property Name=\"CreatedById\" Type=\"Edm.Int64" +
+                "\" Nullable=\"false\" /><Property Name=\"ModifiedById\" Type=\"Edm.Int64\" Nullable=\"fa" +
+                "lse\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"Modified\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Property Na" +
+                "me=\"RowVersion\" Type=\"Edm.Binary\" /><NavigationProperty Name=\"Tenant\" Relationsh" +
+                "ip=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Tenant_TenantPartner\" ToRole=\"Tenant\" FromRole=\"TenantPartner\" /><NavigationPr" +
+                "operty Name=\"CreatedBy\" Relationship=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\" ToRole=\"CreatedBy\"" +
+                " FromRole=\"CreatedByPartner\" /><NavigationProperty Name=\"ModifiedBy\" Relationshi" +
+                "p=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_ModifiedByPartner\" ToRole=\"ModifiedBy\" FromRole=\"ModifiedByPartner\" />" +
+                "</EntityType><EntityType Name=\"ScheduledJobInstance\" BaseType=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.Node\" /><Association Name=\"biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
                 "vices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
                 "vices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.Job\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /" +
-                "></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
-                "_Job_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPart" +
-                "ner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Creat" +
-                "edBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.Job\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
-                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ModifiedBy_biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0" +
-                "..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"Modi" +
-                "fiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Gate_Tenant_biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch." +
-                "CS.Appclusive.Core.OdataServices.Core.Gate\" Role=\"TenantPartner\" Multiplicity=\"0" +
-                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Gate_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Create" +
-                "dByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role" +
-                "=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.Gate\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><" +
-                "Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate_ModifiedBy" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Typ" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multip" +
-                "licity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" " +
-                "Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_EntityKind_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=" +
-                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"En" +
-                "tityKindPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Ace_AcesPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.Ace\" Role=\"Aces\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.Acl\" Role=\"AcesPartner\" Multiplicity=\"0..1\" /></Associat" +
-                "ion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Tenant" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplici" +
-                "ty=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=" +
-                "\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Acl_CreatedBy_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz." +
-                "dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"CreatedByPartner\" Multipli" +
-                "city=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
-                "_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart9 = "OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"ModifiedByPartner\" Multipli" +
-                "city=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_T" +
-                "enantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" " +
-                "Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.Ace\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Ass" +
-                "ociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_CreatedBy_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz" +
-                ".dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=" +
-                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" Role=\"Cr" +
-                "eatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Ace_ModifiedBy_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" Role=\"ModifiedByPartner\" Mult" +
-                "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_EntityKind_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.EntityKind\" Role=\"TenantPartner\" Multiplicity=\"0..1\" />" +
-                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "EntityKind_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Created" +
-                "ByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=" +
-                "\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.EntityKind\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Associat" +
-                "ion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind" +
-                "_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartne" +
-                "r\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Modifie" +
-                "dBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.EntityKind\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><A" +
-                "ssociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Parent\" Multiplicity=\"0..1\"" +
-                " /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"ParentP" +
-                "artner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End Ty" +
-                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"EntityKindPartner" +
-                "\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Node_ChildrenPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.Node\" Role=\"Children\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.Node\" Role=\"ChildrenPartner\" Multiplicity=\"0..1\" /></Ass" +
-                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_" +
-                "IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAsso" +
-                "csPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role" +
-                "=\"IncomingAssocs\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.Node\" Role=\"IncomingAssocsPartner\" Multiplicity=\"0..1\" /></Associ" +
-                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Out" +
-                "goingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsP" +
-                "artner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"O" +
-                "utgoingAssocs\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.Node\" Role=\"OutgoingAssocsPartner\" Multiplicity=\"0..1\" /></Associati" +
-                "on><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Tenant" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplici" +
-                "ty=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role" +
-                "=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"CreatedByPartner\" Multi" +
-                "plicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.Node\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /><" +
-                "/Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_A" +
-                "ssoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner\"><" +
-                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Source\" Mul" +
-                "tiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ass" +
-                "oc\" Role=\"SourcePartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Node_DestinationPartner\"><End Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.Node\" Role=\"Destination\" Multiplicity=\"0..1\" " +
-                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"Destina" +
-                "tionPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_Assoc_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"TenantPartner\" Multiplicity=\"0" +
-                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Assoc_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat" +
-                "edByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Rol" +
-                "e=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.Assoc\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association" +
-                "><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Modifie" +
-                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End " +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Mul" +
-                "tiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ass" +
-                "oc\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Na" +
-                "me=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manageme";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart10 = "ntCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manage" +
-                "mentUri_ManagementUrisPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.ManagementUri\" Role=\"ManagementUris\" Multiplicity=\"*\" /><End Type=\"biz." +
-                "dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" Role=\"Managemen" +
-                "tUrisPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_ManagementCredential_Tenant_biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End " +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" Role=" +
-                "\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_ManagementCredential_CreatedBy_biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" " +
-                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" +
-                "\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=" +
-                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ModifiedBy_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multipl" +
-                "icity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Managem" +
-                "entCredential\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Ass" +
-                "ociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_Mana" +
-                "gementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCreden" +
-                "tial_ManagementCredentialPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.ManagementCredential\" Role=\"ManagementCredential\" Multiplicity=\"0..1" +
-                "\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" Rol" +
-                "e=\"ManagementCredentialPartner\" Multiplicity=\"0..1\" /></Association><Association" +
-                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_Tenant_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0." +
-                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" R" +
-                "ole=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_CreatedBy_biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.A" +
-                "ppclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><" +
-                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" Role=\"Cr" +
-                "eatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_ManagementUri_ModifiedBy_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><E" +
-                "nd Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" Role=\"Mod" +
-                "ifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner\"><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem\" Role=\"CatalogueItems" +
-                "\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.C" +
-                "atalogue\" Role=\"CatalogueItemsPartner\" Multiplicity=\"0..1\" /></Association><Asso" +
-                "ciation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Tenant_bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=" +
-                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" Ro" +
-                "le=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CreatedBy_biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End T" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" Role=\"CreatedByPa" +
-                "rtner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Catalogue_ModifiedBy_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core." +
-                "OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz." +
-                "dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" Role=\"ModifiedByPartner\" M" +
-                "ultiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Catalogue_CataloguePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
-                "dataServices.Core.Catalogue\" Role=\"Catalogue\" Multiplicity=\"0..1\" /><End Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem\" Role=\"CataloguePart" +
-                "ner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_Product_ProductPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
-                "dataServices.Core.Product\" Role=\"Product\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem\" Role=\"ProductPartner\" M" +
-                "ultiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_CatalogueItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.CatalogueItem\" Role=\"TenantPartner\" Multiplicity=" +
-                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_CatalogueItem_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "pclusive.Core.OdataServices.Core.KeyNameValue\" Role=\"TenantPartner\" Multiplicity" +
+                "=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_KeyNameValue_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
                 "User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
                 ".User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.CatalogueItem\" Role=\"CreatedByPartner\" Multiplicity=\"0.." +
-                "1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_CatalogueItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Use" +
-                "r_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.U" +
-                "ser\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.CatalogueItem\" Role=\"ModifiedByPartner\" Multiplicity=\"0.." +
-                "1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Cart" +
-                "ItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem" +
-                "\" Role=\"CartItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.Cart\" Role=\"CartItemsPartner\" Multiplicity=\"0..1\" /></Associatio" +
-                "n><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_Tenant_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicit" +
-                "y=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart11 = "ices.Core.Cart\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Associa" +
-                "tion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CreatedBy_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0." +
-                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" Role=\"Crea" +
-                "tedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_Cart_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" Role=\"ModifiedByPartner\" Mult" +
-                "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_CartItem_Cart_biz_dfch_CS_Appclusive_Core_OdataServices_Core_C" +
-                "art_CartPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\"" +
-                " Role=\"Cart\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.CartItem\" Role=\"CartPartner\" Multiplicity=\"0..1\" /></Association><A" +
-                "ssociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Catalog" +
-                "ueItem_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueIte" +
-                "mPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueIte" +
-                "m\" Role=\"CatalogueItem\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.CartItem\" Role=\"CatalogueItemPartner\" Multiplicity=\"0..1" +
+                "Core.OdataServices.Core.KeyNameValue\" Role=\"CreatedByPartner\" Multiplicity=\"0..1" +
                 "\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_CartItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tenant" +
-                "Partner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=" +
-                "\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.CartItem\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Ass" +
-                "ociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CreatedBy" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multipli" +
-                "city=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem" +
-                "\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=" +
-                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_ModifiedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\"" +
-                " /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" Role=\"Mod" +
-                "ifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Order_Requester_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_User_RequesterPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.User\" Role=\"Requester\" Multiplicity=\"0..1\" /><End Type=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"RequesterPartner\" Mult" +
-                "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_OrderItem_OrderItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.OrderItem\" Role=\"OrderItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.Order\" Role=\"OrderItemsPartner\" Multiplicity=" +
-                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCen" +
-                "tre_CostCentrePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".CostCentre\" Role=\"CostCentre\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.Order\" Role=\"CostCentrePartner\" Multiplicity=\"0.." +
-                "1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Order_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPa" +
-                "rtner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"T" +
-                "enant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.Order\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
-                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CreatedBy_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0." +
-                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"Cre" +
-                "atedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Order_ModifiedBy_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"ModifiedByPartner\" M" +
-                "ultiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_Order_OrderPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.Order\" Role=\"Order\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.OrderItem\" Role=\"OrderPartner\" Multiplicity=\"0..1\" /></Ass" +
-                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order" +
-                "Item_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCe" +
-                "ntrePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentr" +
-                "e\" Role=\"CostCentre\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.OrderItem\" Role=\"CostCentrePartner\" Multiplicity=\"0..1\" /><" +
-                "/Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_O" +
-                "rderItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPart" +
-                "ner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Ten" +
-                "ant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.OrderItem\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Associ" +
-                "ation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CreatedBy_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplici" +
-                "ty=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\"" +
-                " Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_ModifiedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\"" +
-                " /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=\"Mo" +
-                "difiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Approval_Tenant_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz" +
-                ".dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" Role=\"TenantPartner\" Multi" +
-                "plicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Approval_CreatedBy_biz_dfch_CS_Appclusive_";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart12 = "Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" Role=\"CreatedByPartner\"" +
-                " Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_Approval_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.Approval\" Role=\"ModifiedByPartner\" Multiplic" +
-                "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_CatalogueItem_CatalogueItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
-                "dataServices.Core.CatalogueItem\" Role=\"CatalogueItems\" Multiplicity=\"*\" /><End T" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" Role=\"CatalogueItem" +
-                "sPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Product_EntityKind_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><E" +
-                "nd Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" Role=\"EntityKin" +
-                "dPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Product_Tenant_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.Product\" Role=\"TenantPartner\" Multiplicity=\"" +
-                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_Product_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr" +
-                "eatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" " +
-                "Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
-                "ataServices.Core.Product\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Associ" +
-                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_" +
-                "ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" +
-                "\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Modified" +
-                "By\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.Product\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Assoc" +
-                "iation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Tenant_biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch" +
-                ".CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\"" +
-                " /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"TenantP" +
-                "artner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedByPartner\" Multiplicity=\"" +
-                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_User_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
-                "fiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" R" +
-                "ole=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
-                "ataServices.Core.User\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associat" +
-                "ion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission" +
-                "_Roles_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_RolesPartner\"><End Ty" +
-                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" Role=\"Roles\" Multiplici" +
-                "ty=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission\" R" +
-                "ole=\"RolesPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Permission_Tenant_biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission\" Role=\"TenantPartner\"" +
-                " Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_Permission_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataSer" +
-                "vices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.Permission\" Role=\"CreatedByPartner\" Multiplic" +
-                "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Permission_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Permission\" Role=\"ModifiedByPartner\" Multiplicity=\"0" +
-                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Role_Permissions_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permissio" +
-                "n_PermissionsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "Permission\" Role=\"Permissions\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Role\" Role=\"PermissionsPartner\" Multiplicity=\"0..1\" " +
+                "ore_KeyNameValue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_" +
+                "ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Use" +
+                "r\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.KeyNameValue\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" " +
                 "/></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Role_Users_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_UsersPartner\"><" +
-                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Users\" Mult" +
-                "iplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" R" +
-                "ole=\"UsersPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Role_Tenant_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.Role\" Role=\"TenantPartner\" Multiplicit" +
-                "y=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
-                "vices_Core_Role_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr" +
-                "eatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" " +
-                "Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
-                "ataServices.Core.Role\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Associati" +
-                "on><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Modifi" +
-                "edBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End" +
-                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Mu" +
-                "ltiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ro" +
-                "le\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Na" +
-                "me=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Tenant_ParentPartner\"><End Type=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.Tenant\" Role=\"Parent\" Multiplicity=\"0..1\" /><End" +
-                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenan";
+                "e_Job_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_Entit" +
+                "yKindPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKi" +
+                "nd\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Job\" Role=\"EntityKindPartner\" Multiplicity=\"0..1\" /></Asso" +
+                "ciation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Pa" +
+                "rent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner\"><End Type" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"Parent\" Multiplicity" +
+                "=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"P" +
+                "arentPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Job_Children_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_Job_ChildrenPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Job\" Role=\"Children\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.Job\" Role=\"ChildrenPartner\" Multiplicity=\"0..1\"" +
+                " /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Job_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartne" +
+                "r\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenan" +
+                "t\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.Job\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Na" +
+                "me=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_CreatedBy_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><E" +
+                "nd Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" Role=\"CreatedByPart" +
+                "ner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Job_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.Job\" Role=\"ModifiedByPartner\" Multiplicity=\"0" +
+                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Gate_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantP" +
+                "artner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"" +
+                "Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.Gate\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
+                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate_CreatedBy_biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0.." +
+                "1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" Role=\"Creat" +
+                "edByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Gate_ModifiedBy_biz_dfch";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart13 = "t\" Role=\"ParentPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_Customer_CustomerPartner\"><End Type=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.Customer\" Role=\"Customer\" Multiplicity=\"0..1\" />" +
-                "<End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Customer" +
-                "Partner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Tenant_ChildrenPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.Tenant\" Role=\"Children\" Multiplicity=\"*\" /><End Type=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"ChildrenPartner\" Multiplicity" +
-                "=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_Customer_ContractMappings_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_ContractMapping_ContractMappingsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.ContractMapping\" Role=\"ContractMappings\" Multiplicity=\"*\" " +
-                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"Cont" +
-                "ractMappingsPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenants_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Tenant_TenantsPartner\"><End Type=\"biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Tenant\" Role=\"Tenants\" Multiplicity=\"*\" /><End Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"TenantsPartner\" " +
-                "Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Customer_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+            private const string ModelPart9 = "_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0." +
+                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" Role=\"Modi" +
+                "fiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Acl_EntityKind_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><" +
+                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"EntityKindPa" +
+                "rtner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Ace_AcesPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "Ace\" Role=\"Aces\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.Acl\" Role=\"AcesPartner\" Multiplicity=\"0..1\" /></Association><Assoc" +
+                "iation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Tenant_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" " +
+                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" Role=\"TenantPar" +
+                "tner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Acl_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.Acl\" Role=\"CreatedByPartner\" Multiplicity=\"0..1" +
+                "\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedB" +
+                "yPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"" +
+                "ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
+                "rvices.Core.Acl\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><A" +
+                "ssociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0." +
+                ".1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" Role=\"Tenan" +
+                "tPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Ace_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Ace\" Role=\"CreatedByPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_Ace_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modif" +
+                "iedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Ro" +
+                "le=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.Ace\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associatio" +
+                "n><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_T" +
+                "enant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multi" +
+                "plicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entit" +
+                "yKind\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Nam" +
+                "e=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_CreatedBy_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1" +
+                "\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind\" Role=\"" +
+                "CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_EntityKind_ModifiedBy_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><En" +
+                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind\" Role=\"Modifie" +
+                "dByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Node_ParentPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.Node\" Role=\"Parent\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.Node\" Role=\"ParentPartner\" Multiplicity=\"0..1\" />" +
+                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_Entity" +
+                "KindPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKin" +
+                "d\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.Node\" Role=\"EntityKindPartner\" Multiplicity=\"0..1\" /></Asso" +
+                "ciation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_C" +
+                "hildren_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartner\"><En" +
+                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Children\" Mul" +
+                "tiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" " +
+                "Role=\"ChildrenPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartner\"><End Type=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"IncomingAssocs\" Multiplicity" +
+                "=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Inc" +
+                "omingAssocsPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner\"><End Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Assoc\" Role=\"OutgoingAssocs\" Multiplicity=\"*" +
+                "\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Outgoi" +
+                "ngAssocsPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Node_Tenant_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"TenantPartner\" Multiplicity=" +
+                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Crea" +
+                "tedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Ro" +
+                "le=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Node\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association" +
+                "><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Modified" +
+                "By_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End T" +
+                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Mult" +
+                "iplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" +
+                "\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associat";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart10 = "ion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Sourc" +
+                "e_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner\"><End Type=\"" +
+                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" Role=\"Source\" Multiplicity=" +
+                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"" +
+                "SourcePartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_Node_DestinationPartner\"><End Type=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.Node\" Role=\"Destination\" Multiplicity=\"0..1\" /><End Typ" +
+                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"DestinationPartne" +
+                "r\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Assoc_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_" +
                 "Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
                 "Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.Customer\" Role=\"TenantPartner\" Multiplicity=\"0..1\" />" +
-                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Customer_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy" +
-                "Partner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"C" +
-                "reatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.Customer\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association>" +
-                "<Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Modif" +
-                "iedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><En" +
-                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" M" +
-                "ultiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.C" +
-                "ustomer\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Associati" +
-                "on Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Customer" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner\"><End T" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"Customer\" Mu" +
-                "ltiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Co" +
-                "ntractMapping\" Role=\"CustomerPartner\" Multiplicity=\"0..1\" /></Association><Assoc" +
-                "iation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Tena" +
-                "nt_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Typ" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multipli" +
-                "city=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Contract" +
-                "Mapping\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association N" +
-                "ame=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_CreatedBy_bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicit" +
-                "y=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMap" +
-                "ping\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association N" +
-                "ame=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ModifiedBy_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multipli" +
-                "city=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Contract" +
-                "Mapping\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Associati" +
-                "on Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_Tenant_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0.." +
-                "1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" Role=" +
-                "\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_CostCentre_CreatedBy_biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Typ" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" Role=\"CreatedByPar" +
-                "tner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_Od" +
+                "ve.Core.OdataServices.Core.Assoc\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></A" +
+                "ssociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ass" +
+                "oc_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartne" +
+                "r\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Created" +
+                "By\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.Assoc\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
+                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_ModifiedBy_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=" +
+                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" Role=\"" +
+                "ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner\"" +
+                "><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri\" Role=\"" +
+                "ManagementUris\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.ManagementCredential\" Role=\"ManagementUrisPartner\" Multiplicity=\"0." +
+                ".1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_ManagementCredential_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.C" +
+                "ore.OdataServices.Core.ManagementCredential\" Role=\"TenantPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_ManagementCredential_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.ManagementCredential\" Role=\"CreatedByPartner\" Mult" +
+                "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_ManagementCredential_ModifiedBy_biz_dfch_CS_Appclusive_Core_Od" +
                 "ataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core." +
                 "OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz." +
-                "dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" Role=\"ModifiedByPartner\" " +
-                "Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"TenantPartner\" Multip" +
-                "licity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_SpecialOperation_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" Role=\"ModifiedB" +
+                "yPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartn" +
+                "er\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredenti" +
+                "al\" Role=\"ManagementCredential\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.ManagementUri\" Role=\"ManagementCredentialPartner" +
+                "\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_ManagementUri_Tenant_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
+                "rvices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.ManagementUri\" Role=\"TenantPartner\" Multiplici" +
+                "ty=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_ManagementUri_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.ManagementUri\" Role=\"CreatedByPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_ManagementUri_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.ManagementUri\" Role=\"ModifiedByPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "CatalogueItem_CatalogueItemsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.CatalogueItem\" Role=\"CatalogueItems\" Multiplicity=\"*\" /><End Type" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" Role=\"CatalogueItems" +
+                "Partner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Catalogue_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Catalogue\" Role=\"TenantPartner\" Multiplicit" +
+                "y=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Catalogue_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Us" +
+                "er_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.U" +
+                "ser\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Catalogue\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /><" +
+                "/Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_C" +
+                "atalogue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modified" +
+                "ByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=" +
+                "\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.Catalogue\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associa" +
+                "tion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue" +
+                "Item_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalogu" +
+                "ePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" R" +
+                "ole=\"Catalogue\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.CatalogueItem\" Role=\"CataloguePartner\" Multiplicity=\"0..1\" /></A" +
+                "ssociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cat" +
+                "alogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Produc" +
+                "tPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" Rol" +
+                "e=\"Product\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Ap";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart11 = "pclusive.Core.OdataServices.Core.CatalogueItem\" Role=\"ProductPartner\" Multiplicit" +
+                "y=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_CatalogueItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_T" +
+                "enant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.T" +
+                "enant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.CatalogueItem\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /><" +
+                "/Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_C" +
+                "atalogueItem_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat" +
+                "edByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Rol" +
+                "e=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.CatalogueItem\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Ass" +
+                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catal" +
+                "ogueItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modified" +
+                "ByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=" +
+                "\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.CatalogueItem\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Ass" +
+                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_" +
+                "CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartn" +
+                "er\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" Role=\"Ca" +
+                "rtItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.Cart\" Role=\"CartItemsPartner\" Multiplicity=\"0..1\" /></Association><Associa" +
+                "tion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_Tenant_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /" +
+                "><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" Role=\"TenantPar" +
+                "tner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Cart_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
                 "ices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
                 "vices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.A" +
-                "ppclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"CreatedByPartner\" Mult" +
+                "ppclusive.Core.OdataServices.Core.Cart\" Role=\"CreatedByPartner\" Multiplicity=\"0." +
+                ".1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Cart_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modifi" +
+                "edByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Rol" +
+                "e=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Cart\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associatio" +
+                "n><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Car" +
+                "t_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartPartner\"><End Type=\"bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" Role=\"Cart\" Multiplicity=\"0.." +
+                "1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" Role=\"C" +
+                "artPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_CartItem_CatalogueItem_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_CatalogueItem_CatalogueItemPartner\"><End Type=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.CatalogueItem\" Role=\"CatalogueItem\" Multip" +
+                "licity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartIt" +
+                "em\" Role=\"CatalogueItemPartner\" Multiplicity=\"0..1\" /></Association><Association" +
+                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Tenant_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /" +
+                "><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" Role=\"Tenan" +
+                "tPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_CartItem_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.CartItem\" Role=\"CreatedByPartner\" Mult" +
                 "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_SpecialOperation_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch" +
-                ".CS.Appclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"ModifiedByPartner" +
-                "\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Node_NodePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.Node\" Role=\"Node\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.ExternalNode\" Role=\"NodePartner\" Multiplicity=\"0..1\" /></" +
-                "Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ex" +
-                "ternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNod" +
-                "eBag_PropertiesPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.ExternalNodeBag\" Role=\"Properties\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.A" +
-                "ppclusive.Core.OdataServices.Core.ExternalNode\" Role=\"Prope";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart14 = "rtiesPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz" +
-                ".dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode\" Role=\"TenantPartner\" M" +
-                "ultiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataSer" +
-                "vices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.ExternalNode\" Role=\"CreatedByPartner\" Multipl" +
-                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_ExternalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.ExternalNode\" Role=\"ModifiedByPartner\" Multiplic" +
-                "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_ExternalNode_ExternalNodePartner\"><End Type=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.ExternalNode\" Role=\"ExternalNode\" Multiplicity=\"0..1\" /><En" +
-                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"Ex" +
-                "ternalNodePartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End " +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"Tena" +
-                "ntPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Typ" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"Created" +
-                "ByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End " +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"Modi" +
-                "fiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialP" +
-                "artner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCred" +
-                "ential\" Role=\"ManagementCredential\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.ScheduledJob\" Role=\"ManagementCredentialPart" +
+                "dataServices_Core_CartItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.CartItem\" Role=\"ModifiedByPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_Order_Requester_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Requ" +
+                "esterPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Ro" +
+                "le=\"Requester\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Order\" Role=\"RequesterPartner\" Multiplicity=\"0..1\" /></Associatio" +
+                "n><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderI" +
+                "tems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartner\"" +
+                "><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=\"Orde" +
+                "rItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Order\" Role=\"OrderItemsPartner\" Multiplicity=\"0..1\" /></Association><Associ" +
+                "ation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner\"><End Ty" +
+                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" Role=\"CostCentre\"" +
+                " Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".Order\" Role=\"CostCentrePartner\" Multiplicity=\"0..1\" /></Association><Associatio" +
+                "n Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Tenant_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><" +
+                "End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"TenantPart" +
                 "ner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "ve_Core_OdataServices_Core_Order_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Order\" Role=\"CreatedByPartner\" Multiplicity=\"0" +
+                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Order_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
+                "fiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" R" +
+                "ole=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.Order\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associa" +
+                "tion><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem" +
+                "_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner\"><End T" +
+                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" Role=\"Order\" Multipli" +
+                "city=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderIte" +
+                "m\" Role=\"OrderPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Cost";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart12 = "Centre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartne" +
+                "r\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" Role=\"C" +
+                "ostCentre\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.OrderItem\" Role=\"CostCentrePartner\" Multiplicity=\"0..1\" /></Associati" +
+                "on><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_T" +
+                "enant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End " +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multi" +
+                "plicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" +
+                "Item\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Name" +
+                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CreatedBy_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" " +
+                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=\"Cre" +
+                "atedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_OrderItem_ModifiedBy_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Ty" +
+                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" Role=\"ModifiedByPa" +
+                "rtner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_Approval_Tenant_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
+                "rvices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Approval\" Role=\"TenantPartner\" Multiplicity=\"0" +
+                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Approval_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr" +
+                "eatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" " +
+                "Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.Approval\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Assoc" +
+                "iation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Approva" +
+                "l_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartn" +
+                "er\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Modifi" +
+                "edBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.Approval\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><As" +
+                "sociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" +
+                "Items_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItem" +
+                "sPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueIte" +
+                "m\" Role=\"CatalogueItems\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Product\" Role=\"CatalogueItemsPartner\" Multiplicity=\"0..1\" " +
+                "/></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Product_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_E" +
+                "ntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Enti" +
+                "tyKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.Product\" Role=\"EntityKindPartner\" Multiplicity=\"0..1\" " +
+                "/></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Product_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPar" +
+                "tner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Te" +
+                "nant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.Product\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Associa" +
+                "tion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CreatedBy_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=" +
+                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" Role" +
+                "=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Product_ModifiedBy_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End" +
+                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" Role=\"ModifiedByP" +
+                "artner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_User_Tenant_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.User\" Role=\"TenantPartner\" Multiplicity=\"0..1\" />" +
+                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "User_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPart" +
+                "ner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Creat" +
+                "edBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.User\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Associa" +
+                "tion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=" +
+                "\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"M" +
+                "odifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Permission_Roles_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Role_RolesPartner\"><End Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.Role\" Role=\"Roles\" Multiplicity=\"*\" /><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Permission\" Role=\"RolesPartner\" Multiplicit" +
+                "y=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Permission_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tena" +
+                "nt_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tena" +
+                "nt\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Permission\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Assoc" +
+                "iation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permiss" +
+                "ion_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartn" +
+                "er\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Create" +
+                "dBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Permission\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><As" +
+                "sociation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_Modifi" +
+                "edBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End" +
+                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Mu" +
+                "ltiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Pe" +
+                "rmission\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Associat" +
+                "ion Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Permissions_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Permission_PermissionsPartner\"><End Typ" +
+                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permissio";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart13 = "n\" Role=\"Permissions\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Role\" Role=\"PermissionsPartner\" Multiplicity=\"0..1\" /></Associ" +
+                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Use" +
+                "rs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_UsersPartner\"><End Type=\"" +
+                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Users\" Multiplicity=\"" +
+                "*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" Role=\"Users" +
+                "Partner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Role_Tenant_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.Role\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /" +
+                "></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Role_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPar" +
+                "tner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Crea" +
+                "tedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.Role\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Association><Associ" +
+                "ation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_ModifiedBy_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity" +
+                "=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" Role=\"" +
+                "ModifiedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_Tenant_ParentPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Tenant\" Role=\"Parent\" Multiplicity=\"0..1\" /><End Type=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"ParentPartner\" Multipl" +
+                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cu" +
+                "stomer_CustomerPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.Customer\" Role=\"Customer\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Tenant\" Role=\"CustomerPartner\" Multiplicity=\"0..1\" /" +
+                "></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenP" +
+                "artner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"" +
+                "Children\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.Tenant\" Role=\"ChildrenPartner\" Multiplicity=\"0..1\" /></Association><Assoc" +
+                "iation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ContractMap" +
+                "pings_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_ContractMap" +
+                "pingsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Contract" +
+                "Mapping\" Role=\"ContractMappings\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.Customer\" Role=\"ContractMappingsPartner\" Multiplic" +
+                "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Customer_Tenants_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ten" +
+                "ant_TenantsPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Te" +
+                "nant\" Role=\"Tenants\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.Customer\" Role=\"TenantsPartner\" Multiplicity=\"0..1\" /></Associ" +
+                "ation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer" +
+                "_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><En" +
+                "d Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Mul" +
+                "tiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cus" +
+                "tomer\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Association Nam" +
+                "e=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CreatedBy_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" " +
+                "/><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"Crea" +
+                "tedByPartner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" Role=\"ModifiedByPartn" +
+                "er\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_ContractMapping_Customer_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_Customer_CustomerPartner\"><End Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Customer\" Role=\"Customer\" Multiplicity=\"0..1\" /><End Type=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"CustomerP" +
+                "artner\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"TenantPartner\" " +
+                "Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"CreatedByPartner\" " +
+                "Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" Role=\"ModifiedByPartn" +
+                "er\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_CostCentre_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
                 "vices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
                 "vices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.EntityBag\" Role=\"TenantPartner\" Multiplicity=\"0" +
-                "..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_C" +
-                "reatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\"" +
-                " Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
-                "dataServices.Core.EntityBag\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></Ass" +
-                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entit" +
-                "yBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPa" +
-                "rtner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Mod" +
-                "ifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.EntityBag\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Association" +
-                "></Schema><Schema Namespace=\"biz.dfch.CS.Appclusive.Core.Managers\" xmlns=\"http:/" +
-                "/schemas.microsoft.com/ado/2009/11/edm\"><ComplexType Name=\"TenantManagerInformat" +
-                "ion\"><Property Name=\"Id\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Pare" +
-                "ntId\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"NodeId\" Type=\"Edm.Int64" +
-                "\" Nullable=\"false\" /><Property Name=\"JobId\" Type=\"Edm.Int64\" Nullable=\"false\" />" +
-                "<Property Name=\"CustomerId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"" +
-                "ConfigurationId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"BuiltInRole" +
-                "s\" Type=\"biz.dfch.CS.Appclusive.Core.Managers.BuiltInRoles\" Nullable=\"false\" /><" +
-                "/ComplexType><ComplexType Name=\"BuiltInRoles\"><Property Name=\"CloudAdmin\" Type=\"" +
-                "Edm.Int64\" Nullable=\"false\" /><Property Name=\"CloudUser\" Type=\"Edm.Int64\" Nullab" +
-                "le=\"false\" /><Property Name=\"CloudGuest\" Type=\"Edm.Int64\" Nullable=\"false\" /><Pr" +
-                "operty Name=\"CreatorOwner\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"E" +
-                "veryone\" Type=\"Edm.Int64\" Nullable=\"false\" /></ComplexType></Schema><Schema Name" +
-                "space=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityCont" +
-                "ainer Name=\"Core\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyNameValu" +
-                "es\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" /><" +
-                "EntitySet Name=\"JobResponses\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.JobResponse\" /><EntitySet Name=\"Jobs\" EntityType=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.Job\" /><EntitySet Name=\"Gates\" EntityType=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.Gate\" /><EntitySet Name=\"Acls\" EntityType=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" /><EntitySet Name=\"Aces\" Enti" +
-                "tyType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" /><EntitySet Name=\"E" +
-                "ntityKinds\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKin" +
-                "d\" /><EntitySet Name=\"Nodes\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.Node\" /><EntitySet Name=\"Assocs\" EntityType=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.Assoc\" /><EntitySet Name=\"ManagementCredentials\" EntityType=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><EntityS" +
-                "et Name=\"ManagementUris\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.ManagementUri\" /><EntitySet Name=\"ActiveDirectoryUsers\" EntityType=\"biz.dfch" +
-                ".CS.Appclusive.Core.OdataServices.Core.ActiveDirectoryUser\" /><EntitySet Name=\"C" +
-                "atalogues\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\"" +
-                " /><EntitySet Name=\"CatalogueItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.CatalogueItem\" /><EntitySet Name=\"Carts\" EntityType=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.Cart\" /><EntitySet Name=\"CartItems\" EntityTyp" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" /><EntitySet Name=\"O" +
-                "rders\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" /><Enti" +
-                "tySet Name=\"OrderItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.OrderItem\" /><EntitySet Name=\"Approvals\" EntityType=\"biz";
+                "pclusive.Core.OdataServices.Core.CostCentre\" Role=\"TenantPartner\" Multiplicity=\"" +
+                "0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_CostCentre_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
+                "_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Use" +
+                "r\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.CostCentre\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></" +
+                "Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Co" +
+                "stCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modified" +
+                "ByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=" +
+                "\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.CostCentre\" Role=\"ModifiedByPartner\" Multiplic";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart15 = ".dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" /><EntitySet Name=\"Products" +
-                "\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" /><EntityS" +
-                "et Name=\"Users\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\"" +
-                " /><EntitySet Name=\"Permissions\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.Permission\" /><EntitySet Name=\"Roles\" EntityType=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.Role\" /><EntitySet Name=\"Tenants\" EntityType=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.Tenant\" /><EntitySet Name=\"Customers\" " +
-                "EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" /><EntitySe" +
-                "t Name=\"ContractMappings\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.ContractMapping\" /><EntitySet Name=\"CostCentres\" EntityType=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.CostCentre\" /><EntitySet Name=\"SpecialOperation" +
-                "s\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation\" " +
-                "/><EntitySet Name=\"Folders\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.Folder\" /><EntitySet Name=\"ExternalNodes\" EntityType=\"biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.ExternalNode\" /><EntitySet Name=\"ExternalNodeBags\" E" +
-                "ntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" /><En" +
-                "titySet Name=\"ScheduledJobs\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.ScheduledJob\" /><EntitySet Name=\"EntityBags\" EntityType=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.EntityBag\" /><FunctionImport Name=\"Template\" Ret" +
-                "urnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" IsBindable" +
-                "=\"true\" EntitySet=\"KeyNameValues\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bin" +
-                "dingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.K" +
-                "eyNameValue)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" " +
-                "ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" IsBinda" +
-                "ble=\"true\" EntitySet=\"KeyNameValues\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"" +
-                "bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.KeyNameValue)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fix" +
-                "edLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.Strin" +
-                "g\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Key\" Type=\"Edm.String\"" +
-                " FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Value\" Type=\"Edm.String\"" +
-                " FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Te" +
-                "mplate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse\" " +
-                "IsBindable=\"true\" EntitySet=\"JobResponses\" m:IsAlwaysBindable=\"true\"><Parameter " +
-                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.JobResponse)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"" +
-                "Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse\" " +
-                "IsBindable=\"true\" EntitySet=\"JobResponses\" m:IsAlwaysBindable=\"true\"><Parameter " +
-                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.JobResponse)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String" +
-                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm." +
-                "String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport N" +
-                "ame=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" I" +
-                "sBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bin" +
-                "dingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.J" +
-                "ob)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnTyp" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBindable=\"true\" EntityS" +
-                "et=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
-                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job)\" Nullable=\"false\" />" +
-                "<Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><" +
-                "Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
-                "e\" /><Parameter Name=\"Status\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
-                "se\" /></FunctionImport><FunctionImport Name=\"JobResult\" ReturnType=\"Edm.Boolean\"" +
-                " IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" " +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" /><Parameter Name=\"Job" +
-                "Result\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport" +
-                "><FunctionImport Name=\"SetError\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:Is" +
-                "AlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.Job\" /><Parameter Name=\"JobResult\" Type=\"Edm.Strin" +
-                "g\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"" +
-                "Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" IsBin" +
-                "dable=\"true\" EntitySet=\"Gates\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindin" +
-                "gParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate" +
-                ")\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" IsBindable=\"true\" EntitySe" +
-                "t=\"Gates\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
-                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /" +
-                "><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
-                "<Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
-                "se\" /><Parameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
-                "e\" /></FunctionImport><FunctionImport Name=\"Acquire\" ReturnType=\"Edm.Boolean\" Is" +
-                "Bindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
-                "e=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"fa" +
-                "lse\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
-                "se\" /><Parameter Name=\"WaitTimeout\" Type=\"Edm.Int32\" Nullable=\"false\" /></Functi" +
-                "onImport><FunctionImport Name=\"AcquireForEntityKind\" ReturnType=\"Edm.Boolean\" Is" +
-                "Bindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
-                "e=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"fa" +
-                "lse\" /><Parameter Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Param" +
-                "eter Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"WaitTi" +
-                "meout\" Type=\"Edm.Int32\" Nullable=\"false\" /></FunctionImport><FunctionImport Name" +
-                "=\"AcquireForEntity\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindabl" +
-                "e=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /><Parameter Name=\"EntityId\"" +
-                " Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"EntitySet\" Type=\"Edm.Strin" +
-                "g\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"WaitTimeout\" Type=\"Edm" +
-                ".Int32\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Release\" Retur" +
-                "nType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
-                "\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" />" +
-                "</FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Acl\" IsBindable=\"true\" EntitySet=\"Acls\" m:IsAlwaysBi" +
-                "ndable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.Acl)\" Nullable=\"false\" /></FunctionImport><Func" +
-                "tionImport Name=\"BreakInheritance\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><" +
-                "Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclus";
+            private const string ModelPart14 = "ity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_EntityKind_EntityKindPartner\"><End Type=\"biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.EntityKind\" Role=\"EntityKind\" Multiplicity=\"0..1\" /><End" +
+                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping\"" +
+                " Role=\"EntityKindPartner\" Multiplicity=\"0..1\" /></Association><Association Name=" +
+                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Type=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" Role=\"Tenant\" Multiplici" +
+                "ty=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind" +
+                "MaterialMapping\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Association><Assoc" +
+                "iation Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMa" +
+                "pping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPar" +
+                "tner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"Crea" +
+                "tedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.EntityKindMaterialMapping\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" />" +
+                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.EntityKindMaterialMapping\" Role=\"ModifiedByPartner" +
+                "\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"TenantPartner\" Mult" +
+                "iplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_SpecialOperation_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"CreatedByPartner\" Mu" +
+                "ltiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_SpecialOperation_ModifiedBy_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation\" Role=\"ModifiedByPartn" +
+                "er\" Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Node_NodePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.Node\" Role=\"Node\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.ExternalNode\" Role=\"NodePartner\" Multiplicity=\"0..1\" />" +
+                "</Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalN" +
+                "odeBag_PropertiesPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.ExternalNodeBag\" Role=\"Properties\" Multiplicity=\"*\" /><End Type=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.ExternalNode\" Role=\"PropertiesPartner\" Multi" +
+                "plicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.ExternalNode\" Role=\"TenantPartner\" Multiplicity=\"0..1\"" +
+                " /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr" +
+                "eatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" " +
+                "Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.ExternalNode\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></A" +
+                "ssociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ext" +
+                "ernalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modifie" +
+                "dByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role" +
+                "=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.ExternalNode\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Ass" +
+                "ociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Exter" +
+                "nalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalN" +
+                "ode_ExternalNodePartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.ExternalNode\" Role=\"ExternalNode\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"ExternalNodePartner\"" +
+                " Multiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Tenant_TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.Tenant\" Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"TenantPartner\" Multipl" +
+                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_User_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.User\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"CreatedByPartner\" Multipl" +
+                "icity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_User_ModifiedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.User\" Role=\"ModifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.ExternalNodeBag\" Role=\"ModifiedByPartner\" Mul" +
+                "tiplicity=\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_ManagementCredential_ManagementCredentialPartner\"><End Type=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" Role=\"Mana" +
+                "gementCredential\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.ScheduledJob\" Role=\"ManagementCredentialPartner\" Multiplicity=" +
+                "\"0..1\" /></Association><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_" +
+                "TenantPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\"" +
+                " Role=\"Tenant\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.EntityBag\" Role=\"TenantPartner\" Multiplicity=\"0..1\" /></Associati" +
+                "on><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_C" +
+                "reatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Use";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart16 = "ive.Core.OdataServices.Core.Acl\" /><Parameter Name=\"CopyAces\" Type=\"Edm.Boolean\" " +
-                "Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" IsBindable=\"true\" EntitySet=\"A" +
-                "cls\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
-                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl)\" Nullable=\"false\" /><Para" +
-                "meter Name=\"NoInheritanceFromParent\" Type=\"Edm.Boolean\" Nullable=\"false\" /><Para" +
-                "meter Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><" +
-                "FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.Ace\" IsBindable=\"true\" EntitySet=\"Aces\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.Ace)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"C" +
-                "reate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" IsBindabl" +
-                "e=\"true\" EntitySet=\"Aces\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPara" +
-                "meter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)\" Nul" +
-                "lable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
-                "code=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"fals" +
-                "e\" Unicode=\"false\" /><Parameter Name=\"Trustee\" Type=\"Edm.String\" FixedLength=\"fa" +
-                "lse\" Unicode=\"false\" /><Parameter Name=\"Action\" Type=\"Edm.String\" FixedLength=\"f" +
-                "alse\" Unicode=\"false\" /><Parameter Name=\"AclId\" Type=\"Edm.Int64\" Nullable=\"false" +
-                "\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.EntityKind\" IsBindable=\"true\" EntitySet=\"EntityK" +
-                "inds\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collect" +
-                "ion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind)\" Nullable=\"false\"" +
-                " /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.EntityKind\" IsBindable=\"true\" EntitySet=\"EntityKind" +
-                "s\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection" +
-                "(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind)\" Nullable=\"false\" />" +
-                "<Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><" +
-                "Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
-                "e\" /><Parameter Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicod" +
-                "e=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfc" +
-                "h.CS.Appclusive.Core.OdataServices.Core.Node\" IsBindable=\"true\" EntitySet=\"Nodes" +
-                "\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)\" Nullable=\"false\" /></Funct" +
-                "ionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core." +
-                "OdataServices.Core.JobResponse\" IsBindable=\"true\" EntitySet=\"JobResponses\" m:IsA" +
-                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfc" +
-                "h.CS.Appclusive.Core.OdataServices.Core.Node)\" Nullable=\"false\" /><Parameter Nam" +
-                "e=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name" +
-                "=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Paramete" +
-                "r Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
-                "ameter Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport>" +
-                "<FunctionImport Name=\"CreateWithJobConditionParameters\" ReturnType=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.JobResponse\" IsBindable=\"true\" EntitySet=\"Job" +
-                "Responses\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Co" +
-                "llection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)\" Nullable=\"false\" " +
-                "/><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
-                "><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /><Parameter Name=\"EntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Param" +
-                "eter Name=\"ParentId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Parame" +
-                "ters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"J" +
-                "obConditionParameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><" +
-                "/FunctionImport><FunctionImport Name=\"Status\" ReturnType=\"biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBinda" +
-                "ble=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core." +
-                "OdataServices.Core.Node\" /></FunctionImport><FunctionImport Name=\"AvailableActio" +
-                "ns\" ReturnType=\"Collection(Edm.String)\" IsBindable=\"true\" m:IsAlwaysBindable=\"tr" +
-                "ue\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.Node\" /></FunctionImport><FunctionImport Name=\"InvokeAction\" ReturnT" +
-                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBindable=\"true\" Entit" +
-                "ySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /><Parameter Name=\"Name\" Typ" +
-                "e=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters" +
-                "\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Func" +
-                "tionImport Name=\"GetEffectivePermissions\" ReturnType=\"Collection(biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.Ace)\" IsBindable=\"true\" EntitySet=\"Aces\" m:IsAlw" +
-                "aysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.Node\" /></FunctionImport><FunctionImport Name=\"HasPer" +
-                "mission\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><P" +
-                "arameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.Node\" /><Parameter Name=\"PermissionId\" Type=\"Edm.Int64\" Nullable=\"false\" /" +
-                "></FunctionImport><FunctionImport Name=\"CheckPermission\" ReturnType=\"Edm.Boolean" +
-                "\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\"" +
-                " Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /><Parameter Name=\"P" +
-                "ermissionId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"TrusteeId\" Typ" +
-                "e=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"TrusteeType\" Type=\"Edm.Int64\" " +
-                "Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc\" IsBindable=\"true\" EntitySe" +
-                "t=\"Assocs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Co" +
-                "llection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc)\" Nullable=\"false\"" +
-                " /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.Assoc\" IsBindable=\"true\" EntitySet=\"Assocs\" m:IsAlw" +
-                "aysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch." +
-                "CS.Appclusive.Core.OdataServices.Core.Assoc)\" Nullable=\"false\" /><Parameter Name" +
-                "=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=" +
-                "\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter" +
-                " Name=\"SourceId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Destinatio" +
-                "nId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Order\" Type=\"Edm.Int32" +
-                "\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" IsBindabl" +
-                "e=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"true\"><Parameter " +
-                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.ManagementCredential)\" Nullable=\"false\" /></Functio";
+            private const string ModelPart15 = "r_CreatedByPartner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Use" +
+                "r\" Role=\"CreatedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.EntityBag\" Role=\"CreatedByPartner\" Multiplicity=\"0..1\" /></A" +
+                "ssociation><Association Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ent" +
+                "ityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy" +
+                "Partner\"><End Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" Role=\"M" +
+                "odifiedBy\" Multiplicity=\"0..1\" /><End Type=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.EntityBag\" Role=\"ModifiedByPartner\" Multiplicity=\"0..1\" /></Associati" +
+                "on></Schema><Schema Namespace=\"biz.dfch.CS.Appclusive.Core.Managers\" xmlns=\"http" +
+                "://schemas.microsoft.com/ado/2009/11/edm\"><ComplexType Name=\"TenantManagerInform" +
+                "ation\"><Property Name=\"Id\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"Pa" +
+                "rentId\" Type=\"Edm.Guid\" Nullable=\"false\" /><Property Name=\"NodeId\" Type=\"Edm.Int" +
+                "64\" Nullable=\"false\" /><Property Name=\"JobId\" Type=\"Edm.Int64\" Nullable=\"false\" " +
+                "/><Property Name=\"CustomerId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name" +
+                "=\"ConfigurationId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"BuiltInRo" +
+                "les\" Type=\"biz.dfch.CS.Appclusive.Core.Managers.BuiltInRoles\" Nullable=\"false\" /" +
+                "></ComplexType><ComplexType Name=\"BuiltInRoles\"><Property Name=\"CloudAdmin\" Type" +
+                "=\"Edm.Int64\" Nullable=\"false\" /><Property Name=\"CloudUser\" Type=\"Edm.Int64\" Null" +
+                "able=\"false\" /><Property Name=\"CloudGuest\" Type=\"Edm.Int64\" Nullable=\"false\" /><" +
+                "Property Name=\"CreatorOwner\" Type=\"Edm.Int64\" Nullable=\"false\" /><Property Name=" +
+                "\"Everyone\" Type=\"Edm.Int64\" Nullable=\"false\" /></ComplexType></Schema><Schema Na" +
+                "mespace=\"Default\" xmlns=\"http://schemas.microsoft.com/ado/2009/11/edm\"><EntityCo" +
+                "ntainer Name=\"Core\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=\"KeyNameVa" +
+                "lues\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.KeyNameValue\" /" +
+                "><EntitySet Name=\"JobResponses\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.JobResponse\" /><EntitySet Name=\"Jobs\" EntityType=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Job\" /><EntitySet Name=\"Gates\" EntityType=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.Gate\" /><EntitySet Name=\"Acls\" EntityType=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" /><EntitySet Name=\"Aces\" En" +
+                "tityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" /><EntitySet Name=" +
+                "\"EntityKinds\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityK" +
+                "ind\" /><EntitySet Name=\"Nodes\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.Node\" /><EntitySet Name=\"Assocs\" EntityType=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Assoc\" /><EntitySet Name=\"ManagementCredentials\" EntityTyp" +
+                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><Entit" +
+                "ySet Name=\"ManagementUris\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.ManagementUri\" /><EntitySet Name=\"ActiveDirectoryUsers\" EntityType=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.ActiveDirectoryUser\" /><EntitySet Name=" +
+                "\"Catalogues\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogu" +
+                "e\" /><EntitySet Name=\"CatalogueItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.CatalogueItem\" /><EntitySet Name=\"Carts\" EntityType=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Cart\" /><EntitySet Name=\"CartItems\" EntityT" +
+                "ype=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" /><EntitySet Name=" +
+                "\"Orders\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" /><En" +
+                "titySet Name=\"OrderItems\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.OrderItem\" /><EntitySet Name=\"Approvals\" EntityType=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.Approval\" /><EntitySet Name=\"Products\" EntityType=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.Product\" /><EntitySet Name=\"Users\" En" +
+                "tityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" /><EntitySet Name" +
+                "=\"Permissions\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permis" +
+                "sion\" /><EntitySet Name=\"Roles\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.Role\" /><EntitySet Name=\"Tenants\" EntityType=\"biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.Tenant\" /><EntitySet Name=\"Customers\" EntityType=\"biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.Customer\" /><EntitySet Name=\"ContractMa" +
+                "ppings\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMappi" +
+                "ng\" /><EntitySet Name=\"CostCentres\" EntityType=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.CostCentre\" /><EntitySet Name=\"EntityKindMaterialMappings\" Entity" +
+                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping\" " +
+                "/><EntitySet Name=\"SpecialOperations\" EntityType=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.SpecialOperation\" /><EntitySet Name=\"Folders\" EntityType=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Folder\" /><EntitySet Name=\"ExternalNod" +
+                "es\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode\" /><" +
+                "EntitySet Name=\"ExternalNodeBags\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.ExternalNodeBag\" /><EntitySet Name=\"ScheduledJobs\" EntityType=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob\" /><EntitySet Name=\"Enti" +
+                "tyBags\" EntityType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag\" />" +
+                "<FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.KeyNameValue\" IsBindable=\"true\" EntitySet=\"KeyNameValues\" m:IsAlwaysB" +
+                "indable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.KeyNameValue)\" Nullable=\"false\" /></FunctionIm" +
+                "port><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.KeyNameValue\" IsBindable=\"true\" EntitySet=\"KeyNameValues\" m:IsAlwa" +
+                "ysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.KeyNameValue)\" Nullable=\"false\" /><Paramete" +
+                "r Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter" +
+                " Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
+                "ameter Name=\"Key\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Param" +
+                "eter Name=\"Value\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Func" +
+                "tionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.JobResponse\" IsBindable=\"true\" EntitySet=\"JobResponses\" m:" +
+                "IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse)\" Nullable=\"false\" /></Fu" +
+                "nctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.JobResponse\" IsBindable=\"true\" EntitySet=\"JobResponses\" m:" +
+                "IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse)\" Nullable=\"false\" /><Par" +
+                "ameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
+                "></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysB" +
+                "indable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Job)\" Nullable=\"false\" /></FunctionImport><Fun" +
+                "ctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBind";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart17 = "nImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.ManagementCredential\" IsBindable=\"true\" EntitySet=\"ManagementCre" +
-                "dentials\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
-                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)\" Nu" +
-                "llable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
-                "icode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"fal" +
-                "se\" Unicode=\"false\" /><Parameter Name=\"Username\" Type=\"Edm.String\" FixedLength=\"" +
-                "false\" Unicode=\"false\" /><Parameter Name=\"Password\" Type=\"Edm.String\" FixedLengt" +
-                "h=\"false\" Unicode=\"false\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" Fi" +
-                "xedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Encry" +
-                "pt\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredent" +
-                "ial\" IsBindable=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"tru" +
-                "e\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.ManagementCredential)\" Nullable=\"false\" /><Parameter Name=" +
-                "\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Functi" +
-                "onImport><FunctionImport Name=\"Encrypt\" ReturnType=\"Collection(biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.ManagementCredential)\" IsBindable=\"true\" EntitySet" +
-                "=\"ManagementCredentials\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParam" +
-                "eter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\"" +
-                " /><Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode" +
-                "=\"false\" /></FunctionImport><FunctionImport Name=\"Decrypt\" ReturnType=\"Edm.Strin" +
-                "g\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter" +
-                "\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" /><" +
-                "Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /></FunctionImport><FunctionImport Name=\"SetEncryptionKey\" ReturnType=\"Edm." +
-                "Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPar" +
-                "ameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Manageme" +
-                "ntCredential)\" Nullable=\"false\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.Stri" +
-                "ng\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=" +
-                "\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Management" +
-                "Uri\" IsBindable=\"true\" EntitySet=\"ManagementUris\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.ManagementUri)\" Nullable=\"false\" /></FunctionImport><FunctionImpo" +
-                "rt Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Mana" +
-                "gementUri\" IsBindable=\"true\" EntitySet=\"ManagementUris\" m:IsAlwaysBindable=\"true" +
-                "\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.ManagementUri)\" Nullable=\"false\" /><Parameter Name=\"Name\" T" +
+            private const string ModelPart16 = "able=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.Job)\" Nullable=\"false\" /><Parameter Name=\"Name\" Ty" +
+                "pe=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descripti" +
+                "on\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Sta" +
+                "tus\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><F" +
+                "unctionImport Name=\"JobResult\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAl" +
+                "waysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Job\" /><Parameter Name=\"JobResult\" Type=\"Edm.String\"" +
+                " FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Se" +
+                "tError\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Pa" +
+                "rameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Job\" /><Parameter Name=\"JobResult\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
+                "icode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" IsBindable=\"true\" EntitySet=\"G" +
+                "ates\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collect" +
+                "ion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /></F" +
+                "unctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.C" +
+                "ore.OdataServices.Core.Gate\" IsBindable=\"true\" EntitySet=\"Gates\" m:IsAlwaysBinda" +
+                "ble=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /><Parameter Name=\"Name\" T" +
                 "ype=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descript" +
                 "ion\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Ty" +
-                "pe\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Val" +
-                "ue\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Fu" +
-                "nctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.Catalogue\" IsBindable=\"true\" EntitySet=\"Catalogues\" m:IsAlwaysBindable=\"" +
-                "true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.Catalogue)\" Nullable=\"false\" /></FunctionImport><Functi" +
-                "onImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.Catalogue\" IsBindable=\"true\" EntitySet=\"Catalogues\" m:IsAlwaysBindable=\"true\">" +
-                "<Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core." +
-                "OdataServices.Core.Catalogue)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"E" +
-                "dm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" T" +
-                "ype=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Status\" " +
-                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Version" +
-                "\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Func" +
-                "tionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.CatalogueItem\" IsBindable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlwaysBind" +
+                "pe\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Fu" +
+                "nctionImport Name=\"Acquire\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlway" +
+                "sBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /><Parameter Name=\"N" +
+                "ame\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Wa" +
+                "itTimeout\" Type=\"Edm.Int32\" Nullable=\"false\" /></FunctionImport><FunctionImport " +
+                "Name=\"AcquireForEntityKind\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlway" +
+                "sBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Gate)\" Nullable=\"false\" /><Parameter Name=\"E" +
+                "ntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"EntityId\" Type" +
+                "=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"WaitTimeout\" Type=\"Edm.Int32\" N" +
+                "ullable=\"false\" /></FunctionImport><FunctionImport Name=\"AcquireForEntity\" Retur" +
+                "nType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
+                "\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.Gate)\" Nullable=\"false\" /><Parameter Name=\"EntityId\" Type=\"Edm.Int64\" Nullabl" +
+                "e=\"false\" /><Parameter Name=\"EntitySet\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
+                "icode=\"false\" /><Parameter Name=\"WaitTimeout\" Type=\"Edm.Int32\" Nullable=\"false\" " +
+                "/></FunctionImport><FunctionImport Name=\"Release\" ReturnType=\"Edm.Boolean\" IsBin" +
+                "dable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"" +
+                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.Gate\" /></FunctionImport><Functio" +
+                "nImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.Acl\" IsBindable=\"true\" EntitySet=\"Acls\" m:IsAlwaysBindable=\"true\"><Parameter " +
+                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.Acl)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"BreakInh" +
+                "eritance\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPa" +
+                "rameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" /><Parameter " +
+                "Name=\"CopyAces\" Type=\"Edm.Boolean\" Nullable=\"false\" /></FunctionImport><Function" +
+                "Import Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "Acl\" IsBindable=\"true\" EntitySet=\"Acls\" m:IsAlwaysBindable=\"true\"><Parameter Nam" +
+                "e=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.Acl)\" Nullable=\"false\" /><Parameter Name=\"NoInheritanceFromParent\" Type=\"Ed" +
+                "m.Boolean\" Nullable=\"false\" /><Parameter Name=\"EntityKindId\" Type=\"Edm.Int64\" Nu" +
+                "llable=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Core.Ace\" IsBindable=\"true\" EntitySet=\"A" +
+                "ces\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
+                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)\" Nullable=\"false\" /></Fun" +
+                "ctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.Ace\" IsBindable=\"true\" EntitySet=\"Aces\" m:IsAlwaysBindable=" +
+                "\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.Ace)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"" +
+                "Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" " +
+                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Trustee" +
+                "\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Actio" +
+                "n\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"AclI" +
+                "d\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Te" +
+                "mplate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind\" I" +
+                "sBindable=\"true\" EntitySet=\"EntityKinds\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.EntityKind)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Cre" +
+                "ate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind\" IsBi" +
+                "ndable=\"true\" EntitySet=\"EntityKinds\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
+                "\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.EntityKind)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fixe" +
+                "dLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String" +
+                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Version\" Type=\"Edm.Stri" +
+                "ng\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm" +
+                ".String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport " +
+                "Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\"" +
+                " IsBindable=\"true\" EntitySet=\"Nodes\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"" +
+                "bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.Node)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" Retur" +
+                "nType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse\" IsBindable=\"t" +
+                "rue\" EntitySet=\"JobResponses\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"binding" +
+                "Parameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node)" +
+                "\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false" +
+                "\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=" +
+                "\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLe" +
+                "ngth=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityKindId\" Type=\"Edm.Int64\" N" +
+                "ullable=\"false\" /></FunctionImport><FunctionImport Name=\"CreateWithJobConditionP" +
+                "arameters\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobRespons" +
+                "e\" IsBindable=\"true\" EntitySet=\"JobResponses\" m:IsAlwaysBindable=\"true\"><Paramet" +
+                "er Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.App";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart17 = "clusive.Core.OdataServices.Core.Node)\" Nullable=\"false\" /><Parameter Name=\"Name\" " +
+                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descrip" +
+                "tion\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"E" +
+                "ntityKindId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"ParentId\" Type" +
+                "=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" F" +
+                "ixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"JobConditionParameters\" Ty" +
+                "pe=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Function" +
+                "Import Name=\"Status\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Nam" +
+                "e=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" " +
+                "/></FunctionImport><FunctionImport Name=\"AvailableActions\" ReturnType=\"Collectio" +
+                "n(Edm.String)\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
+                "ingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /></Fun" +
+                "ctionImport><FunctionImport Name=\"InvokeAction\" ReturnType=\"biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBin" +
+                "dable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.Node\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLengt" +
+                "h=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" Fixed" +
+                "Length=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"GetEffec" +
+                "tivePermissions\" ReturnType=\"Collection(biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.Ace)\" IsBindable=\"true\" EntitySet=\"Aces\" m:IsAlwaysBindable=\"true\"><Param" +
+                "eter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.Node\" /></FunctionImport><FunctionImport Name=\"HasPermission\" ReturnType=\"Edm." +
+                "Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPar" +
+                "ameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /><Parameter " +
+                "Name=\"PermissionId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><Functi" +
+                "onImport Name=\"CheckPermission\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsA" +
+                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.Node\" /><Parameter Name=\"PermissionId\" Type=\"Edm.In" +
+                "t64\" Nullable=\"false\" /><Parameter Name=\"TrusteeId\" Type=\"Edm.Int64\" Nullable=\"f" +
+                "alse\" /><Parameter Name=\"TrusteeType\" Type=\"Edm.Int64\" Nullable=\"false\" /></Func" +
+                "tionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.Assoc\" IsBindable=\"true\" EntitySet=\"Assocs\" m:IsAlwaysBind" +
                 "able=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.CatalogueItem)\" Nullable=\"false\" /></FunctionImpo" +
-                "rt><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.CatalogueItem\" IsBindable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlwa" +
-                "ysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.CatalogueItem)\" Nullable=\"false\" /><Paramet" +
-                "er Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Paramete" +
-                "r Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Pa" +
-                "rameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
-                "ameter Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><P" +
-                "arameter Name=\"ValidFrom\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
-                "/><Parameter Name=\"ValidUntil\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /><Parameter Name=\"EndOfLife\" Type=\"Edm.String\" FixedLength=\"false\" Unicode" +
-                "=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
-                "icode=\"false\" /><Parameter Name=\"CatalogueId\" Type=\"Edm.Int64\" Nullable=\"false\" " +
-                "/><Parameter Name=\"ProductId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImpo" +
-                "rt><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.Cart\" IsBindable=\"true\" EntitySet=\"Carts\" m:IsAlwaysBindable=\"true" +
-                "\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.Cart)\" Nullable=\"false\" /></FunctionImport><FunctionImport " +
-                "Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" I" +
-                "sBindable=\"true\" EntitySet=\"Carts\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bi" +
-                "ndingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "Cart)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"" +
-                "false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLe" +
-                "ngth=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" " +
-                "ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" IsBindable=" +
-                "\"true\" EntitySet=\"CartItems\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingP" +
-                "arameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartIt" +
-                "em)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnTyp" +
-                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem\" IsBindable=\"true\" En" +
-                "titySet=\"CartItems\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\"" +
-                " Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem)\" Null" +
-                "able=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unic" +
-                "ode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false" +
-                "\" Unicode=\"false\" /><Parameter Name=\"Quantity\" Type=\"Edm.Int32\" Nullable=\"false\"" +
-                " /><Parameter Name=\"CartId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=" +
-                "\"CatalogueItemId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Parameter" +
-                "s\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><Fu";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart18 = "nctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.Order\" IsBindable=\"true\" EntitySet=\"Orders\" m:IsAlwaysBindable=\"true\"><Pa" +
-                "rameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.Order)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name" +
-                "=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" IsBi" +
-                "ndable=\"true\" EntitySet=\"Orders\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
-                "ingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Or" +
-                "der)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"f" +
-                "alse\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLen" +
-                "gth=\"false\" Unicode=\"false\" /><Parameter Name=\"Requester\" Type=\"Edm.String\" Fixe" +
-                "dLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\"" +
-                " FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Qu" +
-                "ickCreate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBin" +
-                "dable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"binding" +
-                "Parameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" +
-                ")\" Nullable=\"false\" /><Parameter Name=\"CatalogueItemId\" Type=\"Edm.Int64\" Nullabl" +
-                "e=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" U" +
-                "nicode=\"false\" /></FunctionImport><FunctionImport Name=\"InvokeAction\" ReturnType" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySe" +
-                "t=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz." +
-                "dfch.CS.Appclusive.Core.OdataServices.Core.Order\" /><Parameter Name=\"Name\" Type=" +
-                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" " +
-                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><Functi" +
-                "onImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.OrderItem\" IsBindable=\"true\" EntitySet=\"OrderItems\" m:IsAlwaysBindable=\"true" +
-                "\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.OrderItem)\" Nullable=\"false\" /></FunctionImport><FunctionIm" +
-                "port Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Or" +
-                "derItem\" IsBindable=\"true\" EntitySet=\"OrderItems\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.OrderItem)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.S" +
-                "tring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=" +
-                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Quantity\" Ty" +
-                "pe=\"Edm.Int32\" Nullable=\"false\" /><Parameter Name=\"Version\" Type=\"Edm.String\" Fi" +
-                "xedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Type\" Type=\"Edm.String\" Fix" +
-                "edLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String" +
-                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"OrderId\" Type=\"Edm.Int6" +
-                "4\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"InvokeAction\" Retur" +
-                "nType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBindable=\"true\" Ent" +
-                "itySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem\" /><Parameter Name=\"Na" +
-                "me\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Par" +
-                "ameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImpor" +
-                "t><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.Approval\" IsBindable=\"true\" EntitySet=\"Approvals\" m:IsAlwaysBindabl" +
-                "e=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclus" +
-                "ive.Core.OdataServices.Core.Approval)\" Nullable=\"false\" /></FunctionImport><Func" +
-                "tionImport Name=\"InvokeAction\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.Approval\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
-                "code=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false" +
-                "\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"CreateSubapproval\" Re" +
-                "turnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.JobResponse\" IsBindable" +
-                "=\"true\" EntitySet=\"JobResponses\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
-                "ingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" /><" +
-                "Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><P" +
-                "arameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false" +
-                "\" /><Parameter Name=\"NotBefore\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Pa" +
-                "rameter Name=\"ExpiresAt\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /></Function" +
-                "Import><FunctionImport Name=\"Order\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.Order\" IsBindable=\"true\" EntitySet=\"Orders\" m:IsAlwaysBindable=\"t" +
-                "rue\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataS" +
-                "ervices.Core.Approval\" /></FunctionImport><FunctionImport Name=\"Template\" Return" +
-                "Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" IsBindable=\"true\" " +
-                "EntitySet=\"Products\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter" +
-                "\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product)\" Null" +
-                "able=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.Product\" IsBindable=\"true\" EntitySet=\"P" +
-                "roducts\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Coll" +
-                "ection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product)\" Nullable=\"false\"" +
-                " /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
-                "/><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"f" +
-                "alse\" /><Parameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /><Parameter Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"" +
-                "false\" /><Parameter Name=\"ValidFrom\" Type=\"Edm.String\" FixedLength=\"false\" Unico" +
-                "de=\"false\" /><Parameter Name=\"ValidUntil\" Type=\"Edm.String\" FixedLength=\"false\" " +
-                "Unicode=\"false\" /><Parameter Name=\"EndOfSale\" Type=\"Edm.String\" FixedLength=\"fal" +
-                "se\" Unicode=\"false\" /><Parameter Name=\"EndOfLife\" Type=\"Edm.String\" FixedLength=" +
-                "\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Metadata\" Retur" +
-                "nType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"" +
-                "bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" " +
-                "/><Parameter Name=\"Request\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false" +
-                "\" /><Parameter Name=\"Action\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fals" +
-                "e\" /><Parameter Name=\"Locale\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
-                "se\" /><Parameter Name=\"Keys\" Type=\"Collection(Edm.String)\" Nullable=\"false\" Fixe" +
-                "dLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Templat" +
-                "e\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" IsBindable=\"" +
-                "true\" EntitySet=\"Users\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParame" +
-                "ter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.User)\" Null" +
-                "able=\"false\" /></FunctionImport><FunctionImport Name=\"Current\" ReturnType=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.User\" IsBindable=\"true\" EntitySet=\"Use" +
-                "rs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collectio" +
-                "n(biz.dfch.CS.Appclusive.Core.OdataServices.Core.User)\" Nul";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart19 = "lable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.User\" IsBindable=\"true\" EntitySet=\"User" +
-                "s\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection" +
-                "(biz.dfch.CS.Appclusive.Core.OdataServices.Core.User)\" Nullable=\"false\" /><Param" +
-                "eter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parame" +
-                "ter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><" +
-                "/FunctionImport><FunctionImport Name=\"Permissions\" ReturnType=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.Permission\" IsBindable=\"true\" EntitySet=\"Permissio" +
-                "ns\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch." +
-                "CS.Appclusive.Core.OdataServices.Core.User\" /></FunctionImport><FunctionImport N" +
-                "ame=\"Roles\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" IsB" +
-                "indable=\"true\" EntitySet=\"Roles\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
-                "ingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" /></Fun" +
-                "ctionImport><FunctionImport Name=\"HasPermission\" ReturnType=\"Edm.Boolean\" IsBind" +
-                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" /><Parameter Name=\"Permissio" +
-                "nName\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport>" +
-                "<FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
-                "vices.Core.Tenant\" IsBindable=\"true\" EntitySet=\"Tenants\" m:IsAlwaysBindable=\"tru" +
-                "e\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.Tenant)\" Nullable=\"false\" /></FunctionImport><FunctionImpo" +
-                "rt Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tena" +
-                "nt\" IsBindable=\"true\" EntitySet=\"Tenants\" m:IsAlwaysBindable=\"true\"><Parameter N" +
-                "ame=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.Tenant)\" Nullable=\"false\" /><Parameter Name=\"Id\" Type=\"Edm.Guid\" Nullable" +
+                "lusive.Core.OdataServices.Core.Assoc)\" Nullable=\"false\" /></FunctionImport><Func" +
+                "tionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.Assoc\" IsBindable=\"true\" EntitySet=\"Assocs\" m:IsAlwaysBindable=\"true\"><Param" +
+                "eter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataS" +
+                "ervices.Core.Assoc)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\"" +
+                " FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.S" +
+                "tring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"SourceId\" Type=\"Ed" +
+                "m.Int64\" Nullable=\"false\" /><Parameter Name=\"DestinationId\" Type=\"Edm.Int64\" Nul" +
+                "lable=\"false\" /><Parameter Name=\"Order\" Type=\"Edm.Int32\" Nullable=\"false\" /></Fu" +
+                "nctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.ManagementCredential\" IsBindable=\"true\" EntitySet=\"Manag" +
+                "ementCredentials\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" T" +
+                "ype=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredent" +
+                "ial)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnTy" +
+                "pe=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential\" IsBinda" +
+                "ble=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"true\"><Paramete" +
+                "r Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.ManagementCredential)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=" +
+                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\"" +
+                " Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Userna" +
+                "me\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Pas" +
+                "sword\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"" +
+                "EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Functio" +
+                "nImport><FunctionImport Name=\"Encrypt\" ReturnType=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.ManagementCredential\" IsBindable=\"true\" EntitySet=\"ManagementC" +
+                "redentials\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"C" +
+                "ollection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential)\" " +
+                "Nullable=\"false\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength" +
+                "=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Encrypt\" Retur" +
+                "nType=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCrede" +
+                "ntial)\" IsBindable=\"true\" EntitySet=\"ManagementCredentials\" m:IsAlwaysBindable=\"" +
+                "true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.ManagementCredential\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm." +
+                "String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport N" +
+                "ame=\"Decrypt\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true" +
+                "\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.ManagementCredential\" /><Parameter Name=\"EncryptionKey\" Type=\"Edm.Stri" +
+                "ng\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=" +
+                "\"SetEncryptionKey\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable" +
+                "=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusi" +
+                "ve.Core.OdataServices.Core.ManagementCredential)\" Nullable=\"false\" /><Parameter " +
+                "Name=\"EncryptionKey\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></F" +
+                "unctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.ManagementUri\" IsBindable=\"true\" EntitySet=\"ManagementU" +
+                "ris\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
+                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri)\" Nullable=\"fals" +
+                "e\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.ManagementUri\" IsBindable=\"true\" EntitySet=\"Manag" +
+                "ementUris\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Co" +
+                "llection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri)\" Nullable" +
                 "=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=" +
                 "\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Un" +
-                "icode=\"false\" /></FunctionImport><FunctionImport Name=\"Information\" ReturnType=\"" +
-                "biz.dfch.CS.Appclusive.Core.Managers.TenantManagerInformation\" IsBindable=\"true\"" +
-                " m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.Tenant\" /></FunctionImport><FunctionImport Na" +
-                "me=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Custome" +
-                "r\" IsBindable=\"true\" EntitySet=\"Customers\" m:IsAlwaysBindable=\"true\"><Parameter " +
-                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
-                "es.Core.Customer)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Cre" +
-                "ate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer\" IsBind" +
-                "able=\"true\" EntitySet=\"Customers\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bin" +
-                "dingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.C" +
-                "ustomer)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLengt" +
-                "h=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" Fixe" +
-                "dLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Templat" +
-                "e\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping\" I" +
-                "sBindable=\"true\" EntitySet=\"ContractMappings\" m:IsAlwaysBindable=\"true\"><Paramet" +
-                "er Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataSer" +
-                "vices.Core.ContractMapping)\" Nullable=\"false\" /></FunctionImport><FunctionImport" +
-                " Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Contra" +
-                "ctMapping\" IsBindable=\"true\" EntitySet=\"ContractMappings\" m:IsAlwaysBindable=\"tr" +
-                "ue\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.ContractMapping)\" Nullable=\"false\" /><Parameter Name=\"Nam" +
+                "icode=\"false\" /><Parameter Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
+                "code=\"false\" /><Parameter Name=\"Value\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
+                "code=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue\" IsBindable=\"true\" EntitySe" +
+                "t=\"Catalogues\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type" +
+                "=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalogue)\" Nullable" +
+                "=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.Catalogue\" IsBindable=";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart18 = "\"true\" EntitySet=\"Catalogues\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingP" +
+                "arameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Catalo" +
+                "gue)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"f" +
+                "alse\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLen" +
+                "gth=\"false\" Unicode=\"false\" /><Parameter Name=\"Status\" Type=\"Edm.String\" FixedLe" +
+                "ngth=\"false\" Unicode=\"false\" /><Parameter Name=\"Version\" Type=\"Edm.String\" Fixed" +
+                "Length=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template" +
+                "\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem\" IsBi" +
+                "ndable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.CatalogueItem)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"" +
+                "Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" +
+                "\" IsBindable=\"true\" EntitySet=\"CatalogueItems\" m:IsAlwaysBindable=\"true\"><Parame" +
+                "ter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataSe" +
+                "rvices.Core.CatalogueItem)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm." +
+                "String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type" +
+                "=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Type\" Type=" +
+                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Version\" Typ" +
+                "e=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"ValidFrom\"" +
+                " Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"ValidU" +
+                "ntil\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"E" +
+                "ndOfLife\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Nam" +
+                "e=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Paramete" +
+                "r Name=\"CatalogueId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Produc" +
+                "tId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"" +
+                "Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" IsBin" +
+                "dable=\"true\" EntitySet=\"Carts\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindin" +
+                "gParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart" +
+                ")\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart\" IsBindable=\"true\" EntitySe" +
+                "t=\"Carts\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
+                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cart)\" Nullable=\"false\" /" +
+                "><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "<Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
+                "se\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.CartItem\" IsBindable=\"true\" EntitySet=\"CartIte" +
+                "ms\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collectio" +
+                "n(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CartItem)\" Nullable=\"false\" /><" +
+                "/FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.CartItem\" IsBindable=\"true\" EntitySet=\"CartItems\" m:IsA" +
+                "lwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.CartItem)\" Nullable=\"false\" /><Parameter" +
+                " Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter " +
+                "Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"Quantity\" Type=\"Edm.Int32\" Nullable=\"false\" /><Parameter Name=\"CartI" +
+                "d\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"CatalogueItemId\" Type=\"E" +
+                "dm.Int64\" Nullable=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.Int64\" Nulla" +
+                "ble=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Order\" IsBindable=\"true\" EntitySet=\"Or" +
+                "ders\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collect" +
+                "ion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order)\" Nullable=\"false\" /></" +
+                "FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.Order\" IsBindable=\"true\" EntitySet=\"Orders\" m:IsAlwaysBi" +
+                "ndable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.Order)\" Nullable=\"false\" /><Parameter Name=\"Nam" +
                 "e\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Desc" +
                 "ription\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name" +
-                "=\"ExternalType\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Paramet" +
-                "er Name=\"ExternalId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Pa" +
-                "rameter Name=\"CustomerId\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
-                "/></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.Role\" IsBindable=\"true\" EntitySet=\"Roles\" m:IsAlwa" +
-                "ysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.Role)\" Nullable=\"false\" /></FunctionImport>" +
-                "<FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.Role\" IsBindable=\"true\" EntitySet=\"Roles\" m:IsAlwaysBindable=\"true\"><Pa" +
-                "rameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.Role)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Strin" +
+                "=\"Requester\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter " +
+                "Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Func" +
+                "tionImport><FunctionImport Name=\"QuickCreate\" ReturnType=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBinda" +
+                "ble=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.Order)\" Nullable=\"false\" /><Parameter Name=\"Catalo" +
+                "gueItemId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"Parameters\" Type" +
+                "=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionIm" +
+                "port Name=\"InvokeAction\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter" +
+                " Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Or" +
+                "der\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
+                "se\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode" +
+                "=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.OrderItem\" IsBindable=\"true\" EntitySet=\"O" +
+                "rderItems\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Co" +
+                "llection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem)\" Nullable=\"fa" +
+                "lse\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.OrderItem\" IsBindable=\"true\" EntitySet=\"OrderIt" +
+                "ems\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collecti" +
+                "on(biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem)\" Nullable=\"false\" /" +
+                "><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" />" +
+                "<Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fal" +
+                "se\" /><Parameter Name=\"Quantity\" Type=\"Edm.Int32\" Nullable=\"false\" /><Parameter " +
+                "Name=\"Version\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Paramete" +
+                "r Name=\"Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter" +
+                " Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Para" +
+                "meter Name=\"OrderId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><Funct" +
+                "ionImport Name=\"InvokeAction\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.Job\" IsBindable=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Para" +
+                "meter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.OrderItem\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Uni" +
+                "code=\"false\" /><Parameter Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false" +
+                "\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" IsBindable=\"true\" Enti" +
+                "tySet=\"Approvals\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" T" +
+                "ype=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.C";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart19 = "ore.Approval)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"InvokeAc" +
+                "tion\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job\" IsBindable" +
+                "=\"true\" EntitySet=\"Jobs\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParam" +
+                "eter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" /><Paramete" +
+                "r Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter" +
+                " Name=\"Parameters\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Fun" +
+                "ctionImport><FunctionImport Name=\"CreateSubapproval\" ReturnType=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.JobResponse\" IsBindable=\"true\" EntitySet=\"JobRes" +
+                "ponses\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Approval\" /><Parameter Name=\"Name\" Typ" +
+                "e=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descriptio" +
+                "n\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"NotB" +
+                "efore\" Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /><Parameter Name=\"ExpiresAt\" " +
+                "Type=\"Edm.DateTimeOffset\" Nullable=\"false\" /></FunctionImport><FunctionImport Na" +
+                "me=\"Order\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order\" IsB" +
+                "indable=\"true\" EntitySet=\"Orders\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bin" +
+                "dingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval\" />" +
+                "</FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Product\" IsBindable=\"true\" EntitySet=\"Products\" m:Is" +
+                "AlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.df" +
+                "ch.CS.Appclusive.Core.OdataServices.Core.Product)\" Nullable=\"false\" /></Function" +
+                "Import><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.Product\" IsBindable=\"true\" EntitySet=\"Products\" m:IsAlwaysBindab" +
+                "le=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.Product)\" Nullable=\"false\" /><Parameter Name=\"Name\"" +
+                " Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Descri" +
+                "ption\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"" +
+                "Type\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"V" +
+                "ersion\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=" +
+                "\"ValidFrom\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter N" +
+                "ame=\"ValidUntil\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parame" +
+                "ter Name=\"EndOfSale\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Pa" +
+                "rameter Name=\"EndOfLife\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
+                "></FunctionImport><FunctionImport Name=\"Metadata\" ReturnType=\"Edm.String\" IsBind" +
+                "able=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.Product\" /><Parameter Name=\"Reques" +
+                "t\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Acti" +
+                "on\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Loc" +
+                "ale\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Ke" +
+                "ys\" Type=\"Collection(Edm.String)\" Nullable=\"false\" FixedLength=\"false\" Unicode=\"" +
+                "false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.User\" IsBindable=\"true\" EntitySet=\"Users\" m" +
+                ":IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.User)\" Nullable=\"false\" /></Function" +
+                "Import><FunctionImport Name=\"Current\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.User\" IsBindable=\"true\" EntitySet=\"Users\" m:IsAlwaysBindable=\"t" +
+                "rue\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.User)\" Nullable=\"false\" /></FunctionImport><FunctionImpo" +
+                "rt Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" +
+                "\" IsBindable=\"true\" EntitySet=\"Users\" m:IsAlwaysBindable=\"true\"><Parameter Name=" +
+                "\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.User)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLengt" +
+                "h=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" Fixe" +
+                "dLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Permiss" +
+                "ions\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission\" IsB" +
+                "indable=\"true\" EntitySet=\"Permissions\" m:IsAlwaysBindable=\"true\"><Parameter Name" +
+                "=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.User\" /" +
+                "></FunctionImport><FunctionImport Name=\"Roles\" ReturnType=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.Role\" IsBindable=\"true\" EntitySet=\"Roles\" m:IsAlwaysBi" +
+                "ndable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.User\" /></FunctionImport><FunctionImport Name=\"HasPermissi" +
+                "on\" ReturnType=\"Edm.Boolean\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parame" +
+                "ter Name=\"bindingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".User\" /><Parameter Name=\"PermissionName\" Type=\"Edm.String\" FixedLength=\"false\" " +
+                "Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" IsBindable=\"true\" EntitySe" +
+                "t=\"Tenants\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"C" +
+                "ollection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant)\" Nullable=\"fals" +
+                "e\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.Tenant\" IsBindable=\"true\" EntitySet=\"Tenants\" m:I" +
+                "sAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.Tenant)\" Nullable=\"false\" /><Parameter" +
+                " Name=\"Id\" Type=\"Edm.Guid\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.S" +
+                "tring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=" +
+                "\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImp" +
+                "ort Name=\"Information\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Managers.TenantMa" +
+                "nagerInformation\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant\" />" +
+                "</FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.Customer\" IsBindable=\"true\" EntitySet=\"Customers\" m:" +
+                "IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.Customer)\" Nullable=\"false\" /></Funct" +
+                "ionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.Customer\" IsBindable=\"true\" EntitySet=\"Customers\" m:IsAlwaysB" +
+                "indable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.Customer)\" Nullable=\"false\" /><Parameter Name=" +
+                "\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"" +
+                "Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionI" +
+                "mport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.ContractMapping\" IsBindable=\"true\" EntitySet=\"ContractMappings\"" +
+                " m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping)\" Nullable=\"false\"" +
+                " /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclu" +
+                "sive.Core.OdataServices.Core.ContractMapping\" IsBindable=\"t";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart20 = "rue\" EntitySet=\"ContractMappings\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
+                "ingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Co" +
+                "ntractMapping)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fixe" +
+                "dLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String" +
+                "\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"ExternalType\" Type=\"Edm" +
+                ".String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"ExternalId\" Type" +
+                "=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"CustomerId\"" +
+                " Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Temp" +
+                "late\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" IsB" +
+                "indable=\"true\" EntitySet=\"CostCentres\" m:IsAlwaysBindable=\"true\"><Parameter Name" +
+                "=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.C" +
+                "ore.CostCentre)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Creat" +
+                "e\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre\" IsBind" +
+                "able=\"true\" EntitySet=\"CostCentres\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".CostCentre)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedL" +
+                "ength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" " +
+                "FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Tem" +
+                "plate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMate" +
+                "rialMapping\" IsBindable=\"true\" EntitySet=\"EntityKindMaterialMappings\" m:IsAlways" +
+                "Bindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping)\" Nullable=\"false\" " +
+                "/></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.EntityKindMaterialMapping\" IsBindable=\"true\" EntityS" +
+                "et=\"EntityKindMaterialMappings\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindi" +
+                "ngParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ent" +
+                "ityKindMaterialMapping)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Str" +
+                "ing\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"E" +
+                "dm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"ExternalType\" " +
+                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"EntityK" +
+                "indId\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><FunctionImport Name" +
+                "=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" IsB" +
+                "indable=\"true\" EntitySet=\"Roles\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bind" +
+                "ingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ro" +
+                "le)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnTyp" +
+                "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role\" IsBindable=\"true\" Entity" +
+                "Set=\"Roles\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"C" +
+                "ollection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role)\" Nullable=\"false\"" +
+                " /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
+                "/><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"f" +
+                "alse\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.Permission\" IsBindable=\"true\" EntitySet=\"Per" +
+                "missions\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Col" +
+                "lection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission)\" Nullable=\"fa" +
+                "lse\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.Permission\" IsBindable=\"true\" EntitySet=\"Permis" +
+                "sions\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collec" +
+                "tion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission)\" Nullable=\"false" +
+                "\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"" +
+                "false\" /></FunctionImport><FunctionImport Name=\"SetCreatedBy\" ReturnType=\"Edm.St" +
+                "ring\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParame" +
+                "ter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOper" +
+                "ation)\" Nullable=\"false\" /><Parameter Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=" +
+                "\"false\" /><Parameter Name=\"EntitySet\" Type=\"Edm.String\" FixedLength=\"false\" Unic" +
+                "ode=\"false\" /><Parameter Name=\"CreatedById\" Type=\"Edm.Int64\" Nullable=\"false\" />" +
+                "</FunctionImport><FunctionImport Name=\"ClearAuditLog\" ReturnType=\"Edm.String\" Is" +
+                "Bindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
+                "e=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation)\" " +
+                "Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"ReloadProducts\" Return" +
+                "Type=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
+                "indingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".SpecialOperation)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Ra" +
+                "iseUpdateConfigurationEvent\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlway" +
+                "sBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.SpecialOperation)\" Nullable=\"false\" /></Func" +
+                "tionImport><FunctionImport Name=\"SetTenant\" ReturnType=\"Edm.String\" IsBindable=\"" +
+                "true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collect" +
+                "ion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation)\" Nullable=\"" +
+                "false\" /><Parameter Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Paramet" +
+                "er Name=\"EntitySet\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
+                "ameter Name=\"TenantId\" Type=\"Edm.Guid\" Nullable=\"false\" /></FunctionImport><Func" +
+                "tionImport Name=\"Countdown\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlways" +
+                "Bindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.SpecialOperation)\" Nullable=\"false\" /></Funct" +
+                "ionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.Folder\" IsBindable=\"true\" EntitySet=\"Folders\" m:IsAlwaysBin" +
+                "dable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.Folder)\" Nullable=\"false\" /></FunctionImport><Fu" +
+                "nctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.Folder\" IsBindable=\"true\" EntitySet=\"Folders\" m:IsAlwaysBindable=\"true\"><P" +
+                "arameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.Folder)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.St" +
+                "ring\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"" +
+                "Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImpo" +
+                "rt Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ex" +
+                "ternalNode\" IsBindable=\"true\" EntitySet=\"ExternalNodes\" m:IsAlwaysBindable=\"true" +
+                "\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.ExternalNode)\" Nullable=\"false\" /></FunctionImport><Functio" +
+                "nImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".ExternalNode\" IsBindable=\"true\" EntitySet=\"ExternalNodes\" m:IsAlwaysBindable=\"t" +
+                "rue\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive." +
+                "Core.OdataServices.Core.ExternalNode)\" Nullable=\"false\" /><Parameter Name=\"Name\"" +
+                " Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><P";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart21 = "arameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\"" +
+                " /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appc" +
+                "lusive.Core.OdataServices.Core.ExternalNodeBag\" IsBindable=\"true\" EntitySet=\"Ext" +
+                "ernalNodeBags\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type" +
+                "=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag)\" Nu" +
+                "llable=\"false\" /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz." +
+                "dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNodeBag\" IsBindable=\"true\" En" +
+                "titySet=\"ExternalNodeBags\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingPar" +
+                "ameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.External" +
+                "NodeBag)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLengt" +
+                "h=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" Fixe" +
+                "dLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Templat" +
+                "e\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob\" IsBi" +
+                "ndable=\"true\" EntitySet=\"ScheduledJobs\" m:IsAlwaysBindable=\"true\"><Parameter Nam" +
+                "e=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.ScheduledJob)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Cr" +
+                "eate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob\" I" +
+                "sBindable=\"true\" EntitySet=\"ScheduledJobs\" m:IsAlwaysBindable=\"true\"><Parameter " +
+                "Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.ScheduledJob)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Strin" +
                 "g\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm" +
                 ".String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport " +
-                "Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permi" +
-                "ssion\" IsBindable=\"true\" EntitySet=\"Permissions\" m:IsAlwaysBindable=\"true\"><Para" +
-                "meter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.Permission)\" Nullable=\"false\" /></FunctionImport><FunctionImport N" +
-                "ame=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permissi" +
-                "on\" IsBindable=\"true\" EntitySet=\"Permissions\" m:IsAlwaysBindable=\"true\"><Paramet" +
-                "er Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataSer" +
-                "vices.Core.Permission)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Stri" +
-                "ng\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Ed" +
-                "m.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport" +
-                " Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Cost" +
-                "Centre\" IsBindable=\"true\" EntitySet=\"CostCentres\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.CostCentre)\" Nullable=\"false\" /></FunctionImport><FunctionImport " +
-                "Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCen" +
-                "tre\" IsBindable=\"true\" EntitySet=\"CostCentres\" m:IsAlwaysBindable=\"true\"><Parame" +
+                "Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Entit" +
+                "yBag\" IsBindable=\"true\" EntitySet=\"EntityBags\" m:IsAlwaysBindable=\"true\"><Parame" +
                 "ter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.CostCentre)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.Str" +
-                "ing\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"E" +
-                "dm.String\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImpor" +
-                "t Name=\"SetCreatedBy\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindab" +
-                "le=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.SpecialOperation)\" Nullable=\"false\" /><Parameter Na" +
-                "me=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"EntitySet\" Ty" +
-                "pe=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"CreatedBy" +
-                "Id\" Type=\"Edm.Int64\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"C" +
-                "learAuditLog\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true" +
-                "\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.SpecialOperation)\" Nullable=\"false\" /></FunctionImport><Fun" +
-                "ctionImport Name=\"ReloadProducts\" ReturnType=\"Edm.String\" I";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart20 = "sBindable=\"true\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
-                "e=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation)\" " +
-                "Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"RaiseUpdateConfigurati" +
-                "onEvent\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Pa" +
-                "rameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.SpecialOperation)\" Nullable=\"false\" /></FunctionImport><Function" +
-                "Import Name=\"SetTenant\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBind" +
-                "able=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.SpecialOperation)\" Nullable=\"false\" /><Parameter " +
-                "Name=\"EntityId\" Type=\"Edm.Int64\" Nullable=\"false\" /><Parameter Name=\"EntitySet\" " +
-                "Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"TenantI" +
-                "d\" Type=\"Edm.Guid\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Cou" +
-                "ntdown\" ReturnType=\"Edm.String\" IsBindable=\"true\" m:IsAlwaysBindable=\"true\"><Par" +
-                "ameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.SpecialOperation)\" Nullable=\"false\" /></FunctionImport><FunctionI" +
-                "mport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".Folder\" IsBindable=\"true\" EntitySet=\"Folders\" m:IsAlwaysBindable=\"true\"><Parame" +
-                "ter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.Folder)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"C" +
-                "reate\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Folder\" IsBind" +
-                "able=\"true\" EntitySet=\"Folders\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindi" +
-                "ngParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Fol" +
-                "der)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"f" +
-                "alse\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLen" +
-                "gth=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name=\"Template\" R" +
-                "eturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode\" IsBindab" +
-                "le=\"true\" EntitySet=\"ExternalNodes\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"b" +
-                "indingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".ExternalNode)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name=\"Create" +
-                "\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode\" IsBin" +
-                "dable=\"true\" EntitySet=\"ExternalNodes\" m:IsAlwaysBindable=\"true\"><Parameter Name" +
-                "=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.ExternalNode)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" F" +
-                "ixedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.Str" +
-                "ing\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><FunctionImport Name" +
-                "=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalN" +
-                "odeBag\" IsBindable=\"true\" EntitySet=\"ExternalNodeBags\" m:IsAlwaysBindable=\"true\"" +
-                "><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.ExternalNodeBag)\" Nullable=\"false\" /></FunctionImport><Funct" +
-                "ionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.ExternalNodeBag\" IsBindable=\"true\" EntitySet=\"ExternalNodeBags\" m:IsAlwaysBin" +
-                "dable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.ExternalNodeBag)\" Nullable=\"false\" /><Parameter " +
-                "Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Parameter N" +
-                "ame=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /></Func" +
-                "tionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.ScheduledJob\" IsBindable=\"true\" EntitySet=\"ScheduledJobs\" " +
-                "m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob)\" Nullable=\"false\" /><" +
-                "/FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.ScheduledJob\" IsBindable=\"true\" EntitySet=\"ScheduledJob" +
-                "s\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection" +
-                "(biz.dfch.CS.Appclusive.Core.OdataServices.Core.ScheduledJob)\" Nullable=\"false\" " +
-                "/><Parameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /" +
-                "><Parameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"fa" +
-                "lse\" /></FunctionImport><FunctionImport Name=\"Template\" ReturnType=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.EntityBag\" IsBindable=\"true\" EntitySet=\"Entit" +
-                "yBags\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collec" +
-                "tion(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag)\" Nullable=\"false\"" +
-                " /></FunctionImport><FunctionImport Name=\"Create\" ReturnType=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.EntityBag\" IsBindable=\"true\" EntitySet=\"EntityBags\"" +
-                " m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"Collection(b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag)\" Nullable=\"false\" /><Pa" +
-                "rameter Name=\"Name\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" /><Par" +
-                "ameter Name=\"Description\" Type=\"Edm.String\" FixedLength=\"false\" Unicode=\"false\" " +
-                "/></FunctionImport><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenan" +
-                "t_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner" +
-                "\" EntitySet=\"KeyNameValues\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Associa" +
-                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Key" +
-                "NameValue_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedB" +
-                "yPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_CreatedBy_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner" +
-                "\" EntitySet=\"KeyNameValues\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Associ" +
-                "ationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ke" +
-                "yNameValue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modifi" +
-                "edByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_ModifiedBy_biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByP" +
-                "artner\" EntitySet=\"KeyNameValues\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Job_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_En" +
-                "tityKindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_EntityKind_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKind" +
-                "Partner\" EntitySet=\"Jobs\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /></A" +
-                "ssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartnerSe" +
-                "t\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_Job_ParentPartner\"><End Role=\"ParentPartner\" Entity";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart21 = "Set=\"Jobs\" /><End Role=\"Parent\" EntitySet=\"Jobs\" /></AssociationSet><AssociationS" +
-                "et Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_Job_ChildrenPartnerSet\" Association=\"biz.dfc" +
+                "rvices.Core.EntityBag)\" Nullable=\"false\" /></FunctionImport><FunctionImport Name" +
+                "=\"Create\" ReturnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityBag\" " +
+                "IsBindable=\"true\" EntitySet=\"EntityBags\" m:IsAlwaysBindable=\"true\"><Parameter Na" +
+                "me=\"bindingParameter\" Type=\"Collection(biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.EntityBag)\" Nullable=\"false\" /><Parameter Name=\"Name\" Type=\"Edm.String\" Fi" +
+                "xedLength=\"false\" Unicode=\"false\" /><Parameter Name=\"Description\" Type=\"Edm.Stri" +
+                "ng\" FixedLength=\"false\" Unicode=\"false\" /></FunctionImport><AssociationSet Name=" +
+                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_KeyNameValue_Tenant_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfc" +
                 "h.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Job_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ChildrenP" +
-                "artner\"><End Role=\"ChildrenPartner\" EntitySet=\"Jobs\" /><End Role=\"Children\" Enti" +
-                "tySet=\"Jobs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Job_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_T" +
-                "enant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Tenant_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" Ent" +
-                "itySet=\"Jobs\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Assoc" +
-                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_CreatedBy_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Associatio" +
-                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Job_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Us" +
-                "er_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Jobs\" /><End Role=\"" +
-                "CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Job_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Mod" +
-                "ifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><" +
-                "End Role=\"ModifiedByPartner\" EntitySet=\"Jobs\" /><End Role=\"ModifiedBy\" EntitySet" +
-                "=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Gate_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tena" +
-                "nt_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate_Tenant_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" Entit" +
-                "ySet=\"Gates\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associ" +
-                "ationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate_CreatedBy_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Associatio" +
-                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Gate_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
-                "ser_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Gates\" /><End Role" +
-                "=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Gate_ModifiedBy_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate" +
-                "_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartne" +
-                "r\"><End Role=\"ModifiedByPartner\" EntitySet=\"Gates\" /><End Role=\"ModifiedBy\" Enti" +
-                "tySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Acl_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_EntityKind_EntityKindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Od" +
-                "ataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_EntityKind_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End" +
-                " Role=\"EntityKindPartner\" EntitySet=\"Acls\" /><End Role=\"EntityKind\" EntitySet=\"E" +
-                "ntityKinds\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_" +
-                "AcesPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Ace_AcesPartner\"><End Role=\"AcesPartner\" EntitySet=\"Acls\" /><" +
-                "End Role=\"Aces\" EntitySet=\"Aces\" /></AssociationSet><AssociationSet Name=\"biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Acl_Tenant_biz_dfch_CS_Appclusive_Core_" +
+                "s_Core_KeyNameValue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant" +
+                "_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"KeyNameValues\" /><End Role=" +
+                "\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_KeyNameValue_CreatedBy_biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "KeyNameValue_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat" +
+                "edByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"KeyNameValues\" /><End Role=" +
+                "\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_KeyNameValue_ModifiedBy_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_KeyNameValue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_M" +
+                "odifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"KeyNameValues\" /><End" +
+                " Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Job_EntityKind_biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_EntityKind_EntityKindPartnerSet\" Association=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Job_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_" +
+                "EntityKindPartner\"><End Role=\"EntityKindPartner\" EntitySet=\"Jobs\" /><End Role=\"E" +
+                "ntityKind\" EntitySet=\"EntityKinds\" /></AssociationSet><AssociationSet Name=\"biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_Job_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.C" +
+                "ore.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner\"><End Role=\"Pa" +
+                "rentPartner\" EntitySet=\"Jobs\" /><End Role=\"Parent\" EntitySet=\"Jobs\" /></Associat" +
+                "ionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_" +
+                "Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ChildrenPartnerSet\" " +
+                "Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Job_Children_biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Job_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=\"Jobs\" /><End " +
+                "Role=\"Children\" EntitySet=\"Jobs\" /></AssociationSet><AssociationSet Name=\"biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Job_Tenant_biz_dfch_CS_Appclusive_Core_" +
                 "OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Tenan" +
+                "Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Tenan" +
                 "t_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role" +
-                "=\"TenantPartner\" EntitySet=\"Acls\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></A" +
+                "=\"TenantPartner\" EntitySet=\"Jobs\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></A" +
                 "ssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Acl_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPa" +
+                "re_Job_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPa" +
                 "rtnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Acl_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
+                "S_Appclusive_Core_OdataServices_Core_Job_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
                 "dataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=" +
-                "\"Acls\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Association" +
-                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_ModifiedBy_biz_dfch" +
+                "\"Jobs\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Association" +
+                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ModifiedBy_biz_dfch" +
                 "_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"b" +
                 "iz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_" +
-                "ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Acls\" /><End Role=\"M" +
+                "ervices_Core_Job_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_" +
+                "ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Jobs\" /><End Role=\"M" +
                 "odifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Tenant_bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"Te" +
-                "nantPartner\" EntitySet=\"Aces\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Assoc" +
-                "iationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_A" +
-                "ce_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartne" +
-                "rSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_Ace_CreatedBy_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Ace" +
-                "s\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet " +
-                "Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_ModifiedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Ace_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
-                "fiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Aces\" /><End Role=\"Modif" +
-                "iedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_EntityKind_Tenant_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind" +
-                "_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><En" +
-                "d Role=\"TenantPartner\" EntitySet=\"EntityKinds\" /><End Role=\"Tenant\" EntitySet=\"T" +
-                "enants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_EntityKind_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appc";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart22 = "lusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ent" +
-                "ityKind_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByP" +
-                "artner\"><End Role=\"CreatedByPartner\" EntitySet=\"EntityKinds\" /><End Role=\"Create" +
-                "dBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_EntityKind_ModifiedBy_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity" +
-                "Kind_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPa" +
-                "rtner\"><End Role=\"ModifiedByPartner\" EntitySet=\"EntityKinds\" /><End Role=\"Modifi" +
-                "edBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataSer" +
-                "vices_Core_Node_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner\"><End Role=\"ParentPar" +
-                "tner\" EntitySet=\"Nodes\" /><End Role=\"Parent\" EntitySet=\"Nodes\" /></AssociationSe" +
-                "t><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Enti" +
-                "tyKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartn" +
-                "erSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKindPartner\" Ent" +
-                "itySet=\"Nodes\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /></AssociationS" +
-                "et><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Chi" +
-                "ldren_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartnerSet\" As" +
-                "sociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_Node_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=\"Nodes\" /><End" +
-                " Role=\"Children\" EntitySet=\"Nodes\" /></AssociationSet><AssociationSet Name=\"biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet\" Association=\"biz.d" +
-                "fch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Asso" +
-                "c_IncomingAssocsPartner\"><End Role=\"IncomingAssocsPartner\" EntitySet=\"Nodes\" /><" +
-                "End Role=\"IncomingAssocs\" EntitySet=\"Assocs\" /></AssociationSet><AssociationSet " +
-                "Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartnerSet\" Associat" +
-                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_Assoc_OutgoingAssocsPartner\"><End Role=\"OutgoingAssocsPartner\" EntitySet=\"" +
-                "Nodes\" /><End Role=\"OutgoingAssocs\" EntitySet=\"Assocs\" /></AssociationSet><Assoc" +
-                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Tenant_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_" +
-                "TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Nodes\" /><End Role=\"Tenant\" " +
-                "EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_CreatedBy_bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"C" +
-                "reatedByPartner\" EntitySet=\"Nodes\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modifie" +
-                "dByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" E" +
-                "ntitySet=\"Nodes\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><" +
-                "AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob" +
-                "_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementC" +
-                "redential_ManagementCredentialPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJo" +
-                "b_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Management" +
-                "Credential_ManagementCredentialPartner\"><End Role=\"ManagementCredentialPartner\" " +
-                "EntitySet=\"Nodes\" /><End Role=\"ManagementCredential\" EntitySet=\"ManagementCreden" +
-                "tials\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_" +
-                "SourcePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Node_SourcePartner\"><End Role=\"SourcePartner\" EntitySet" +
-                "=\"Assocs\" /><End Role=\"Source\" EntitySet=\"Nodes\" /></AssociationSet><Association" +
-                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartnerSet\" Associatio" +
-                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Node_DestinationPartner\"><End Role=\"DestinationPartner\" EntitySet=\"Assocs\" /><" +
-                "End Role=\"Destination\" EntitySet=\"Nodes\" /></AssociationSet><AssociationSet Name" +
-                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Tenant_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.A" +
-                "ppclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
-                "_Assoc_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartne" +
-                "r\"><End Role=\"TenantPartner\" EntitySet=\"Assocs\" /><End Role=\"Tenant\" EntitySet=\"" +
-                "Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Assoc_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_CreatedBy_biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByP" +
-                "artner\" EntitySet=\"Assocs\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Associa" +
-                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ass" +
-                "oc_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPart" +
-                "nerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_Assoc_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntityS" +
-                "et=\"Assocs\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Assoc" +
-                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" +
-                "ial_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataService";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart23 = "s_Core_ManagementUri_ManagementUrisPartnerSet\" Association=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Managem" +
-                "entCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Mana" +
-                "gementUri_ManagementUrisPartner\"><End Role=\"ManagementUrisPartner\" EntitySet=\"Ma" +
-                "nagementCredentials\" /><End Role=\"ManagementUris\" EntitySet=\"ManagementUris\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_ManagementCredential_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_Tenant_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"" +
-                "TenantPartner\" EntitySet=\"ManagementCredentials\" /><End Role=\"Tenant\" EntitySet=" +
-                "\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_ManagementCredential_CreatedBy_biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementC" +
-                "redential_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedB" +
-                "yPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"ManagementCredentials\" /><End " +
-                "Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ModifiedBy_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_ManagementCredential_ModifiedBy_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"" +
-                "ManagementCredentials\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associatio" +
-                "nSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manage" +
-                "mentUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Mana" +
-                "gementCredential_ManagementCredentialPartnerSet\" Association=\"biz.dfch.CS.Appclu" +
-                "sive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Mana" +
-                "gementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ma" +
-                "nagementCredential_ManagementCredentialPartner\"><End Role=\"ManagementCredentialP" +
-                "artner\" EntitySet=\"ManagementUris\" /><End Role=\"ManagementCredential\" EntitySet=" +
-                "\"ManagementCredentials\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_ManagementUri_Tenant_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manageme" +
-                "ntUri_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" +
-                "\"><End Role=\"TenantPartner\" EntitySet=\"ManagementUris\" /><End Role=\"Tenant\" Enti" +
-                "tySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_ManagementUri_CreatedBy_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUr" +
-                "i_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" +
-                "\"><End Role=\"CreatedByPartner\" EntitySet=\"ManagementUris\" /><End Role=\"CreatedBy" +
-                "\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_ManagementUri_ModifiedBy_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manage" +
-                "mentUri_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedB" +
-                "yPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"ManagementUris\" /><End Role=\"" +
-                "ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet\" Associatio" +
-                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_CatalogueItem_CatalogueItemsPartner\"><End Role=\"CatalogueItemsPartner\" " +
-                "EntitySet=\"Catalogues\" /><End Role=\"CatalogueItems\" EntitySet=\"CatalogueItems\" /" +
-                "></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Catalogue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Te" +
-                "nantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Tenant_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" Entit" +
-                "ySet=\"Catalogues\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><A" +
-                "ssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Cre" +
-                "atedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" " +
-                "Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Catalogue_CreatedBy_biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Cat" +
-                "alogues\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Associati" +
-                "onSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_ModifiedBy_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Associ" +
-                "ation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Catalogue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Catalo" +
-                "gues\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Association" +
-                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue" +
-                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartnerSet\" A" +
-                "ssociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Catalogue_CataloguePartner\"><End Role=\"CataloguePartner\" Entity" +
-                "Set=\"CatalogueItems\" /><End Role=\"Catalogue\" EntitySet=\"Catalogues\" /></Associat" +
-                "ionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cata" +
-                "logueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Product" +
-                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_Product_ProductPartner\"><End Role=\"ProductPartner\" E" +
-                "ntitySet=\"CatalogueItems\" /><End Role=\"Product\" EntitySet=\"Products\" /></Associa" +
-                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cat" +
-                "alogueItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPa" +
-                "rtnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_CatalogueItem_Tenant_biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntityS" +
-                "et=\"CatalogueItems\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet>" +
-                "<AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueIt" +
-                "em_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart24 = "_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CreatedBy_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Cr" +
-                "eatedByPartner\" EntitySet=\"CatalogueItems\" /><End Role=\"CreatedBy\" EntitySet=\"Us" +
-                "ers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_CatalogueItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Modifie" +
-                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End " +
-                "Role=\"ModifiedByPartner\" EntitySet=\"CatalogueItems\" /><End Role=\"ModifiedBy\" Ent" +
-                "itySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_CartItem_CartItemsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartner\"><End Role" +
-                "=\"CartItemsPartner\" EntitySet=\"Carts\" /><End Role=\"CartItems\" EntitySet=\"CartIte" +
-                "ms\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Cart_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Te" +
-                "nantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Cart_Tenant_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=" +
-                "\"Carts\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Association" +
-                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CreatedBy_biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"bi" +
-                "z.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Cart_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_C" +
-                "reatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Carts\" /><End Role=\"Cre" +
-                "atedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Cart_ModifiedBy_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_Modi" +
-                "fiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><E" +
-                "nd Role=\"ModifiedByPartner\" EntitySet=\"Carts\" /><End Role=\"ModifiedBy\" EntitySet" +
-                "=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_CartItem_Cart_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ca" +
-                "rt_CartPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Cart_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Cart_CartPartner\"><End Role=\"CartPartner\" EntitySet=\"" +
-                "CartItems\" /><End Role=\"Cart\" EntitySet=\"Carts\" /></AssociationSet><AssociationS" +
-                "et Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CatalogueItem_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemPartner" +
-                "Set\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_CartItem_CatalogueItem_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_CatalogueItem_CatalogueItemPartner\"><End Role=\"CatalogueIt" +
-                "emPartner\" EntitySet=\"CartItems\" /><End Role=\"CatalogueItem\" EntitySet=\"Catalogu" +
-                "eItems\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_CartItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_T" +
-                "enant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Tenant_biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner" +
-                "\" EntitySet=\"CartItems\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Association" +
-                "Set><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartIte" +
-                "m_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" +
-                "Set\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_CartItem_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=" +
-                "\"CartItems\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Associ" +
-                "ationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_ModifiedB" +
-                "y_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Asso" +
-                "ciation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_CartItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"CartI" +
-                "tems\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Association" +
-                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Requester_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_User_RequesterPartnerSet\" Association=\"b" +
-                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Order_Requester_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
-                "_RequesterPartner\"><End Role=\"RequesterPartner\" EntitySet=\"Orders\" /><End Role=\"" +
-                "Requester\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_OrderItem_OrderItemsPartnerSet\" Association=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderI" +
-                "temsPartner\"><End Role=\"OrderItemsPartner\" EntitySet=\"Orders\" /><End Role=\"Order" +
-                "Items\" EntitySet=\"OrderItems\" /></AssociationSet><AssociationSet Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_CostCentre_CostCentrePartnerSet\" Association=\"biz.dfch.CS." +
-                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
-                "e_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_Cos" +
-                "tCentrePartner\"><End Role=\"CostCentrePartner\" EntitySet=\"Orders\" /><End Role=\"Co" +
-                "stCentre\" EntitySet=\"CostCentres\" /></AssociationSet><AssociationSet Name=\"biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Order_Tenant_biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusi" +
-                "ve.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_" +
-                "Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End" +
-                " Role=\"TenantPartner\" EntitySet=\"Orders\" /><End Role=\"Tenant\" EntitySet=\"Tenants" +
-                "\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_Order_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr" +
-                "eatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CreatedBy_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\"" +
-                " EntitySet=\"Orders\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet" +
-                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Modi" +
-                "fiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart25 = "ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_ModifiedBy_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPar" +
-                "tner\" EntitySet=\"Orders\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associat" +
-                "ionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Orde" +
-                "rItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartnerSet" +
-                "\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Order_OrderPartner\"><End Role=\"OrderPartner\" EntitySet=\"OrderItems\" " +
-                "/><End Role=\"Order\" EntitySet=\"Orders\" /></AssociationSet><AssociationSet Name=\"" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartnerSet\" Association=" +
-                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_CostCentre_CostCentrePartner\"><End Role=\"CostCentrePartner\" EntitySet=\"OrderI" +
-                "tems\" /><End Role=\"CostCentre\" EntitySet=\"CostCentres\" /></AssociationSet><Assoc" +
-                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Tenant_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Associat" +
-                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_OrderItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"OrderItems\" /><End" +
-                " Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CreatedBy_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_OrderItem_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Creat" +
-                "edByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"OrderItems\" /><End Role=\"Cr" +
-                "eatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_OrderItem_ModifiedBy_biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ord" +
-                "erItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy" +
-                "Partner\"><End Role=\"ModifiedByPartner\" EntitySet=\"OrderItems\" /><End Role=\"Modif" +
-                "iedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_Approval_Tenant_biz_dfch_CS_Appclusive_Core_Oda" +
+                "S_Appclusive_Core_OdataServices_Core_Gate_Tenant_biz_dfch_CS_Appclusive_Core_Oda" +
                 "taServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Cor" +
-                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Approval_Ten" +
-                "ant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Ro" +
-                "le=\"TenantPartner\" EntitySet=\"Approvals\" /><End Role=\"Tenant\" EntitySet=\"Tenants" +
-                "\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_Approval_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
-                "_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
-                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Approval_CreatedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPa" +
-                "rtner\" EntitySet=\"Approvals\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Assoc" +
-                "iationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_A" +
-                "pproval_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedB" +
-                "yPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_Approval_ModifiedBy_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\"" +
-                " EntitySet=\"Approvals\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associatio" +
-                "nSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Produc" +
-                "t_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Ca" +
-                "talogueItemsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner\"><E" +
-                "nd Role=\"CatalogueItemsPartner\" EntitySet=\"Products\" /><End Role=\"CatalogueItems" +
-                "\" EntitySet=\"CatalogueItems\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
-                "S_Appclusive_Core_OdataServices_Core_Product_EntityKind_biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_EntityKind_EntityKindPartnerSet\" Association=\"biz.dfch.CS" +
-                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Product_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_" +
-                "EntityKindPartner\"><End Role=\"EntityKindPartner\" EntitySet=\"Products\" /><End Rol" +
-                "e=\"EntityKind\" EntitySet=\"EntityKinds\" /></AssociationSet><AssociationSet Name=\"" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Tenant_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.A" +
-                "ppclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
-                "_Product_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPart" +
-                "ner\"><End Role=\"TenantPartner\" EntitySet=\"Products\" /><End Role=\"Tenant\" EntityS" +
-                "et=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Product_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CreatedBy_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Cr" +
-                "eatedByPartner\" EntitySet=\"Products\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /" +
-                "></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Product_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Mo" +
-                "difiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ModifiedBy_biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPa" +
-                "rtner\" EntitySet=\"Products\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Assoc" +
-                "iationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
-                "ser_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSe" +
-                "t\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_User_Tenant_biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Users\" /><En" +
-                "d Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy_biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
-                "ser_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartn" +
-                "er\"><End Role=\"CreatedByPartner\" EntitySet=\"Users\" /><End Role=\"CreatedBy\" Entit" +
-                "ySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_User_ModifiedBy_biz_dfch_CS_Appclusive";
+                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Gate_Tenant_" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"" +
+                "TenantPartner\" EntitySet=\"Gates\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></As" +
+                "sociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Gate_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPa" +
+                "rtnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Gate_CreatedBy_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_User_CreatedByPartner\"><End Role=\"Create";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart26 = "_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appc" +
-                "lusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Us" +
-                "er_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPart" +
-                "ner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Users\" /><End Role=\"ModifiedBy\" En" +
-                "titySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Permission_Roles_biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_Role_RolesPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_Roles_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_Role_RolesPartner\"><End Role=\"RolesPart" +
-                "ner\" EntitySet=\"Permissions\" /><End Role=\"Roles\" EntitySet=\"Roles\" /></Associati" +
-                "onSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permi" +
-                "ssion_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" +
-                "Set\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Permission_Tenant_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Perm" +
-                "issions\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associatio" +
-                "nSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_CreatedBy_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Associat" +
-                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Permission_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Permission" +
-                "s\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet " +
-                "Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_ModifiedBy_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_Permission_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Permission" +
-                "s\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet" +
-                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Permissions_biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Permission_PermissionsPartnerSet\" Associat" +
-                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Role_Permissions_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Permission_PermissionsPartner\"><End Role=\"PermissionsPartner\" EntitySet=\"Role" +
-                "s\" /><End Role=\"Permissions\" EntitySet=\"Permissions\" /></AssociationSet><Associa" +
-                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Users_biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_User_UsersPartnerSet\" Association=\"biz.df" +
-                "ch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_Role_Users_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_UsersPart" +
-                "ner\"><End Role=\"UsersPartner\" EntitySet=\"Roles\" /><End Role=\"Users\" EntitySet=\"U" +
-                "sers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Role_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_" +
-                "TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Tenant_biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySe" +
-                "t=\"Roles\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associati" +
-                "onSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_CreatedBy_biz_df" +
-                "ch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"" +
-                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Role_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
-                "_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Roles\" /><End Role=\"C" +
-                "reatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_Role_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusiv" +
-                "e.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Mo" +
-                "difiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\">" +
-                "<End Role=\"ModifiedByPartner\" EntitySet=\"Roles\" /><End Role=\"ModifiedBy\" EntityS" +
-                "et=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Tenant_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_Tenant_ParentPartner\"><End Role=\"ParentPartner\"" +
-                " EntitySet=\"Tenants\" /><End Role=\"Parent\" EntitySet=\"Tenants\" /></AssociationSet" +
-                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Cus" +
-                "tomer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartnerSet" +
-                "\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Customer_CustomerPartner\"><End Role=\"CustomerPartner\" EntitySet=\"Ten" +
-                "ants\" /><End Role=\"Customer\" EntitySet=\"Customers\" /></AssociationSet><Associati" +
-                "onSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartnerSet\" Association" +
-                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_T" +
-                "enant_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=\"Tenants\" /><End Ro" +
-                "le=\"Children\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Customer_ContractMappings_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_ContractMapping_ContractMappingsPartnerSet\" A" +
-                "ssociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_Customer_ContractMappings_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_ContractMapping_ContractMappingsPartner\"><End Role=\"ContractM" +
-                "appingsPartner\" EntitySet=\"Customers\" /><End Role=\"ContractMappings\" EntitySet=\"" +
-                "ContractMappings\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusiv" +
-                "e_Core_OdataServices_Core_Customer_Tenants_biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_Tenant_TenantsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Oda" +
-                "taServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenants_" +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantsPartner\"><End Role=" +
-                "\"TenantsPartner\" EntitySet=\"Customers\" /><End Role=\"Tenants\" EntitySet=\"Tenants\"" +
-                " /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_Customer_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_T" +
-                "enantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenant_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" Entit" +
-                "ySet=\"Customers\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><As" +
-                "sociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Creat" +
-                "edBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Cr";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart27 = "eatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CreatedBy_biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartne" +
-                "r\" EntitySet=\"Customers\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Associati" +
-                "onSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Custo" +
-                "mer_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPar" +
+            private const string ModelPart22 = "dByPartner\" EntitySet=\"Gates\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Assoc" +
+                "iationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_G" +
+                "ate_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPar" +
                 "tnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS" +
-                "_Appclusive_Core_OdataServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" Ent" +
-                "itySet=\"Customers\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet" +
-                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMa" +
-                "pping_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerP" +
-                "artnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_ContractMapping_Customer_biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_Customer_CustomerPartner\"><End Role=\"CustomerPartn" +
-                "er\" EntitySet=\"ContractMappings\" /><End Role=\"Customer\" EntitySet=\"Customers\" />" +
-                "</AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tena" +
-                "nt_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Tenant_biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPar" +
-                "tner\" EntitySet=\"ContractMappings\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></" +
-                "AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Use" +
-                "r_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
-                "re.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_CreatedBy_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Cre" +
-                "atedByPartner\" EntitySet=\"ContractMappings\" /><End Role=\"CreatedBy\" EntitySet=\"U" +
-                "sers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odat" +
-                "aServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Mo" +
-                "difiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\">" +
-                "<End Role=\"ModifiedByPartner\" EntitySet=\"ContractMappings\" /><End Role=\"Modified" +
-                "By\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appcl" +
-                "usive_Core_OdataServices_Core_CostCentre_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
-                "aServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_Te" +
-                "nant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End R" +
-                "ole=\"TenantPartner\" EntitySet=\"CostCentres\" /><End Role=\"Tenant\" EntitySet=\"Tena" +
-                "nts\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_CostCentre_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
-                "_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
-                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CreatedBy_biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Crea" +
-                "tedByPartner\" EntitySet=\"CostCentres\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" " +
-                "/></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServic" +
-                "es_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Use" +
-                "r_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.C" +
-                "ore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfc" +
-                "h_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"Modif" +
-                "iedByPartner\" EntitySet=\"CostCentres\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\"" +
-                " /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
-                "ces_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
-                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_" +
-                "dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"Tena" +
-                "ntPartner\" EntitySet=\"SpecialOperations\" /><End Role=\"Tenant\" EntitySet=\"Tenants" +
-                "\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
-                "ices_Core_SpecialOperation_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_Create" +
-                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End R" +
-                "ole=\"CreatedByPartner\" EntitySet=\"SpecialOperations\" /><End Role=\"CreatedBy\" Ent" +
-                "itySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_C" +
-                "ore_OdataServices_Core_SpecialOperation_ModifiedBy_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive" +
-                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialO" +
-                "peration_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modified" +
-                "ByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"SpecialOperations\" /><End Ro" +
-                "le=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Cor" +
-                "e_OdataServices_Core_Node_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive." +
-                "Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Pare" +
-                "nt_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner\"><End Role=" +
-                "\"ParentPartner\" EntitySet=\"Folders\" /><End Role=\"Parent\" EntitySet=\"Nodes\" /></A" +
-                "ssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
-                "re_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_Ent" +
-                "ityKindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appclu" +
-                "sive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKind" +
-                "Partner\" EntitySet=\"Folders\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" />" +
-                "</AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children" +
-                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core" +
-                "_OdataServices_Core_Node_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=" +
-                "\"Folders\" /><End Role=\"Children\" EntitySet=\"Nodes\" /></AssociationSet><Associati" +
-                "onSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet\" As" +
-                "sociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_Assoc_IncomingAssocsPartner\"><End Role=\"IncomingAssocsPartner\" Entit" +
-                "ySet=\"Folders\" /><End Role=\"IncomingAssocs\" EntitySet=\"Asso";
+                "_Appclusive_Core_OdataServices_Core_Gate_ModifiedBy_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntityS" +
+                "et=\"Gates\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Associ" +
+                "ationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_EntityKind_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartnerSet\" Ass" +
+                "ociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Acl_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKindPartner\" EntitySet=\"Acl" +
+                "s\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /></AssociationSet><Associat" +
+                "ionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Ace_AcesPartnerSet\" Association=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartner\"><End" +
+                " Role=\"AcesPartner\" EntitySet=\"Acls\" /><End Role=\"Aces\" EntitySet=\"Aces\" /></Ass" +
+                "ociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Acl_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerS" +
+                "et\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Acl_Tenant_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Acls\" /><End" +
+                " Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Acl_CreatedBy_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl" +
+                "_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"" +
+                "><End Role=\"CreatedByPartner\" EntitySet=\"Acls\" /><End Role=\"CreatedBy\" EntitySet" +
+                "=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Acl_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
+                "ser_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_ModifiedBy_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedBy" +
+                "Partner\" EntitySet=\"Acls\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associa" +
+                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace" +
+                "_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" " +
+                "Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Ace_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Aces\" /><End Rol" +
+                "e=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Ace_CreatedBy_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Cre" +
+                "atedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><En" +
+                "d Role=\"CreatedByPartner\" EntitySet=\"Aces\" /><End Role=\"CreatedBy\" EntitySet=\"Us" +
+                "ers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Ace_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_" +
+                "ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_ModifiedBy_biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPart" +
+                "ner\" EntitySet=\"Aces\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Association" +
+                "Set><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityK" +
+                "ind_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSe" +
+                "t\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_EntityKind_Tenant_biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Entity" +
+                "Kinds\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationS" +
+                "et Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_CreatedBy_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Associatio" +
+                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_EntityKind_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"EntityKinds\"" +
+                " /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Na" +
+                "me=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_ModifiedBy_biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"" +
+                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_EntityKind_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"EntityKinds\"" +
+                " /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet N" +
+                "ame=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Node_ParentPartnerSet\" Association=\"biz.dfch.CS.A" +
+                "ppclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner\">" +
+                "<End Role=\"ParentPartner\" EntitySet=\"Nodes\" /><End Role=\"Parent\" EntitySet=\"Node" +
+                "s\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Entity" +
+                "Kind_EntityKindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_EntityKind_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"En" +
+                "tityKindPartner\" EntitySet=\"Nodes\" /><End Role=\"EntityKind\" EntitySet=\"EntityKin" +
+                "ds\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Ch" +
+                "ildrenPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_Node_ChildrenPartner\"><End Role=\"ChildrenPartner\" Enti" +
+                "tySet=\"Nodes\" /><End Role=\"Children\" EntitySet=\"Nodes\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" +
+                "cs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet" +
+                "\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_Assoc_IncomingAssocsPartner\"><End Role=\"IncomingAssocsPartner\" E" +
+                "ntitySet=\"Nodes\" /><End Role=\"IncomingAssocs\" EntitySet=\"Assocs\" /></Association" +
+                "Set><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart28 = "cs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
-                "vices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_As" +
-                "soc_OutgoingAssocsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner\"><End Ro" +
-                "le=\"OutgoingAssocsPartner\" EntitySet=\"Folders\" /><End Role=\"OutgoingAssocs\" Enti" +
+            private const string ModelPart23 = "Services_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "Assoc_OutgoingAssocsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
+                "rvices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_b" +
+                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner\"><End " +
+                "Role=\"OutgoingAssocsPartner\" EntitySet=\"Nodes\" /><End Role=\"OutgoingAssocs\" Enti" +
                 "tySet=\"Assocs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_C" +
                 "ore_OdataServices_Core_Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
                 "e_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
                 "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Tenant_biz_dfch_CS_Ap" +
                 "pclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\"" +
-                " EntitySet=\"Folders\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet" +
-                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Creat" +
-                "edBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" As" +
-                "sociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
-                "_Core_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Folders\" /" +
-                "><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name" +
-                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch" +
+                " EntitySet=\"Nodes\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><" +
+                "AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Created" +
+                "By_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Asso" +
+                "ciation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Nodes\" /><En" +
+                "d Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy" +
+                "Partner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Nodes\" /><End Role=\"ModifiedBy" +
+                "\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartnerSet" +
+                "\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_ScheduledJob_ManagementCredential_biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_ManagementCredential_ManagementCredentialPartner\">" +
+                "<End Role=\"ManagementCredentialPartner\" EntitySet=\"Nodes\" /><End Role=\"Managemen" +
+                "tCredential\" EntitySet=\"ManagementCredentials\" /></AssociationSet><AssociationSe" +
+                "t Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Node_SourcePartnerSet\" Association=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePart" +
+                "ner\"><End Role=\"SourcePartner\" EntitySet=\"Assocs\" /><End Role=\"Source\" EntitySet" +
+                "=\"Nodes\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Node_DestinationPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner\"><End Role=\"De" +
+                "stinationPartner\" EntitySet=\"Assocs\" /><End Role=\"Destination\" EntitySet=\"Nodes\"" +
+                " /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Assoc_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tena" +
+                "ntPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Assoc_Tenant_biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"" +
+                "Assocs\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Association" +
+                "Set Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_CreatedBy_biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Assoc_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
+                "_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Assocs\" /><End Role=\"" +
+                "CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Assoc_ModifiedBy_biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclus" +
+                "ive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc" +
+                "_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartne" +
+                "r\"><End Role=\"ModifiedByPartner\" EntitySet=\"Assocs\" /><End Role=\"ModifiedBy\" Ent" +
+                "itySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_ManagementUri_ManagementUrisPartnerSet\" Association=\"b" +
+                "iz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_ManagementUri_ManagementUrisPartner\"><End Role=\"ManagementUrisPa" +
+                "rtner\" EntitySet=\"ManagementCredentials\" /><End Role=\"ManagementUris\" EntitySet=" +
+                "\"ManagementUris\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_ManagementCredential_Tenant_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Manageme" +
+                "ntCredential_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tenant" +
+                "Partner\"><End Role=\"TenantPartner\" EntitySet=\"ManagementCredentials\" /><End Role" +
+                "=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_ManagementCredential_CreatedBy_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_ManagementCredential_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Management" +
+                "Credentials\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" +
+                "ial_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPar" +
+                "tnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_ManagementCredential_ModifiedBy_biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedBy" +
+                "Partner\" EntitySet=\"ManagementCredentials\" /><End Role=\"ModifiedBy\" EntitySet=\"U" +
+                "sers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_ManagementCredential_ManagementCredentialPartnerSet\" Association" +
+                "=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_ManagementUri_ManagementCredential_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_ManagementCredential_ManagementCredentialPartner\"><End Role=\"M" +
+                "anagementCredentialPartner\" EntitySet=\"ManagementUris\" /><End Role=\"ManagementCr" +
+                "edential\" EntitySet=\"ManagementCredentials\" /></AssociationSet><AssociationSet N" +
+                "ame=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_Tenant_biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartne";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart24 = "rSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_ManagementUri_Tenant_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"M" +
+                "anagementUris\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Asso" +
+                "ciationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_Cr" +
+                "eatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\"" +
+                " Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_ManagementUri_CreatedBy_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet" +
+                "=\"ManagementUris\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><" +
+                "AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUr" +
+                "i_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartn" +
+                "erSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_ManagementUri_ModifiedBy_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" " +
+                "EntitySet=\"ManagementUris\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associ" +
+                "ationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ca" +
+                "talogue_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueI" +
+                "tem_CatalogueItemsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItem" +
+                "s_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPar" +
+                "tner\"><End Role=\"CatalogueItemsPartner\" EntitySet=\"Catalogues\" /><End Role=\"Cata" +
+                "logueItems\" EntitySet=\"CatalogueItems\" /></AssociationSet><AssociationSet Name=\"" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Tenant_biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Catalogue_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tenant" +
+                "Partner\"><End Role=\"TenantPartner\" EntitySet=\"Catalogues\" /><End Role=\"Tenant\" E" +
+                "ntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Catalogue_CreatedBy_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
+                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Cre" +
+                "atedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><En" +
+                "d Role=\"CreatedByPartner\" EntitySet=\"Catalogues\" /><End Role=\"CreatedBy\" EntityS" +
+                "et=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_Catalogue_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odata" +
+                "Services.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_ModifiedB" +
+                "y_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Ro" +
+                "le=\"ModifiedByPartner\" EntitySet=\"Catalogues\" /><End Role=\"ModifiedBy\" EntitySet" +
+                "=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServic" +
+                "es_Core_Catalogue_CataloguePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_" +
+                "Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePart" +
+                "ner\"><End Role=\"CataloguePartner\" EntitySet=\"CatalogueItems\" /><End Role=\"Catalo" +
+                "gue\" EntitySet=\"Catalogues\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_CatalogueItem_Product_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Product_ProductPartnerSet\" Association=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_C" +
+                "atalogueItem_Product_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Prod" +
+                "uctPartner\"><End Role=\"ProductPartner\" EntitySet=\"CatalogueItems\" /><End Role=\"P" +
+                "roduct\" EntitySet=\"Products\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_CatalogueItem_Tenant_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cat" +
+                "alogueItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPa" +
+                "rtner\"><End Role=\"TenantPartner\" EntitySet=\"CatalogueItems\" /><End Role=\"Tenant\"" +
+                " EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_CatalogueItem_CreatedBy_biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusiv" +
+                "e.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalog" +
+                "ueItem_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPa" +
+                "rtner\"><End Role=\"CreatedByPartner\" EntitySet=\"CatalogueItems\" /><End Role=\"Crea" +
+                "tedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_CatalogueItem_ModifiedBy_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_C" +
+                "atalogueItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
+                "fiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"CatalogueItems\" /><End R" +
+                "ole=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_CartItem_CartItemsPartnerSet\" Association=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartIte" +
+                "msPartner\"><End Role=\"CartItemsPartner\" EntitySet=\"Carts\" /><End Role=\"CartItems" +
+                "\" EntitySet=\"CartItems\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Cart_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_Tenant_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"Tenan" +
+                "tPartner\" EntitySet=\"Carts\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Associa" +
+                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Car" +
+                "t_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" +
+                "Set\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Cart_CreatedBy_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Car" +
+                "ts\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet" +
+                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_ModifiedBy_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Cart_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_M" +
+                "odifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Carts\" /><End Role=\"M" +
+                "odifiedBy\" EntitySet=\"Users\" /></AssociationSet><Associatio";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart25 = "nSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Cart_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_Cart_CartPartnerSet\" Association=\"biz.dfch" +
                 ".CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices" +
-                "_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modifi" +
-                "edByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Folders\" /><End Role=\"Modi" +
-                "fiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_" +
-                "OdataServices_Core_Node_NodePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_" +
-                "Node_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_NodePartner\"><End Role=" +
-                "\"NodePartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Node\" EntitySet=\"Nodes\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_ExternalNode_Properties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Exte" +
-                "rnalNodeBag_PropertiesPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odata" +
-                "Services.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Proper" +
-                "ties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPa" +
-                "rtner\"><End Role=\"PropertiesPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Prop" +
-                "erties\" EntitySet=\"ExternalNodeBags\" /></AssociationSet><AssociationSet Name=\"bi" +
-                "z_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_App" +
-                "clusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.C" +
-                "S.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Te" +
-                "nantPartner\"><End Role=\"TenantPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Te" +
-                "nant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
-                "ppclusive_Core_OdataServices_Core_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_" +
-                "Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ext" +
-                "ernalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedB" +
-                "yPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Cr" +
-                "eatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_ExternalNode_ModifiedBy_biz_dfch_CS_Appclusiv" +
+                "_Core_CartItem_Cart_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartPart" +
+                "ner\"><End Role=\"CartPartner\" EntitySet=\"CartItems\" /><End Role=\"Cart\" EntitySet=" +
+                "\"Carts\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_CartItem_CatalogueItem_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_CatalogueItem_CatalogueItemPartnerSet\" Association=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem" +
+                "_CatalogueItem_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cata" +
+                "logueItemPartner\"><End Role=\"CatalogueItemPartner\" EntitySet=\"CartItems\" /><End " +
+                "Role=\"CatalogueItem\" EntitySet=\"CatalogueItems\" /></AssociationSet><AssociationS" +
+                "et Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Tenant_biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_CartItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant" +
+                "_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"CartItems\" /><End Role=\"Ten" +
+                "ant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_CartItem_CreatedBy_biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive" +
+                ".Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem" +
+                "_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"" +
+                "><End Role=\"CreatedByPartner\" EntitySet=\"CartItems\" /><End Role=\"CreatedBy\" Enti" +
+                "tySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_CartItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Oda" +
+                "taServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_Modified" +
+                "By_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End R" +
+                "ole=\"ModifiedByPartner\" EntitySet=\"CartItems\" /><End Role=\"ModifiedBy\" EntitySet" +
+                "=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Order_Requester_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "User_RequesterPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
+                ".Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Requester_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_RequesterPartner\"><End Role=\"RequesterP" +
+                "artner\" EntitySet=\"Orders\" /><End Role=\"Requester\" EntitySet=\"Users\" /></Associa" +
+                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ord" +
+                "er_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItem" +
+                "sPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_OrderItem_OrderItemsPartner\"><End Role=\"OrderItemsPartne" +
+                "r\" EntitySet=\"Orders\" /><End Role=\"OrderItems\" EntitySet=\"OrderItems\" /></Associ" +
+                "ationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Or" +
+                "der_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCen" +
+                "trePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_CostCentre_CostCentrePartner\"><End Role=\"CostCentrePar" +
+                "tner\" EntitySet=\"Orders\" /><End Role=\"CostCentre\" EntitySet=\"CostCentres\" /></As" +
+                "sociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Order_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartn" +
+                "erSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_Order_Tenant_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Orders\"" +
+                " /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Nam" +
+                "e=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CreatedBy_biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch" +
+                ".CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Order_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Create" +
+                "dByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Orders\" /><End Role=\"Created" +
+                "By\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_Order_ModifiedBy_biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_Modifi" +
+                "edBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End" +
+                " Role=\"ModifiedByPartner\" EntitySet=\"Orders\" /><End Role=\"ModifiedBy\" EntitySet=" +
+                "\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_O" +
+                "rder_OrderPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Order_OrderPartner\"><End Role=\"OrderPartner\" Ent" +
+                "itySet=\"OrderItems\" /><End Role=\"Order\" EntitySet=\"Orders\" /></AssociationSet><A" +
+                "ssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Cos" +
+                "tCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePart" +
+                "nerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_CostCentre_CostCentrePartner\"><End Role=\"CostCentrePartne" +
+                "r\" EntitySet=\"OrderItems\" /><End Role=\"CostCentre\" EntitySet=\"CostCentres\" /></A" +
+                "ssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_OrderItem_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tenant" +
+                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_OrderItem_Tenant_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet" +
+                "=\"OrderItems\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Created" +
+                "By_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Asso" +
+                "ciation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_OrderItem_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"OrderIt" +
+                "ems\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSe" +
+                "t Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_ModifiedBy_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Associatio" +
+                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_OrderItem_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"OrderItems" +
+                "\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associatio";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart26 = "nSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Approva" +
+                "l_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\"" +
+                " Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Approval_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Approvals\"" +
+                " /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Nam" +
+                "e=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Approval_CreatedBy_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.d" +
+                "fch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Approval_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_" +
+                "CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Approvals\" /><End Role" +
+                "=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Approval_ModifiedBy_biz_dfch_CS_Appclusiv" +
                 "e_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Ap" +
                 "pclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "ExternalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modi" +
-                "fiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"ExternalNodes\" /><End Ro" +
-                "le=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_d" +
-                "fch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_ExternalNode_ExternalNodePartnerSet\" Assoc" +
-                "iation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_ExternalNode_ExternalNodePartner\"><End Role=\"ExternalNodePartn" +
-                "er\" EntitySet=\"ExternalNodeBags\" /><End Role=\"ExternalNode\" EntitySet=\"ExternalN" +
-                "odes\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
-                "ces.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"T" +
-                "enantPartner\" EntitySet=\"ExternalNodeBags\" /><End Role=\"Tenant\" EntitySet=\"Tenan" +
-                "ts\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
-                "rvices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
-                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Create" +
-                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End R" +
-                "ole=\"CreatedByPartner\" EntitySet=\"ExternalNodeBags\" /><End Role=\"CreatedBy\" Enti" +
-                "tySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_Oda" +
-                "taServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.C" +
-                "ore.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNo" +
-                "deBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByP" +
-                "artner\"><End Role=\"ModifiedByPartner\" EntitySet=\"ExternalNodeBags\" /><End Role=\"" +
-                "ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_" +
-                "CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Node_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core" +
-                ".OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner\"><End Role=\"Par" +
-                "entPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"Parent\" EntitySet=\"Nodes\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_E" +
-                "ntityKindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
-                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKi" +
-                "ndPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"EntityKind\" EntitySet=\"EntityK" +
-                "inds\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odata" +
-                "Services_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_" +
-                "ChildrenPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Childre";
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart29 = "n_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartner\"><End Role=" +
-                "\"ChildrenPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"Children\" EntitySet=\"No" +
-                "des\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Assoc_IncomingAssocsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSe" +
-                "rvices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_b" +
-                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartner\"><End " +
-                "Role=\"IncomingAssocsPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"IncomingAsso" +
-                "cs\" EntitySet=\"Assocs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appc" +
-                "lusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_O" +
-                "dataServices_Core_Assoc_OutgoingAssocsPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
-                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Nod" +
-                "e_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAs" +
-                "socsPartner\"><End Role=\"OutgoingAssocsPartner\" EntitySet=\"ScheduledJobs\" /><End " +
-                "Role=\"OutgoingAssocs\" EntitySet=\"Assocs\" /></AssociationSet><AssociationSet Name" +
-                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Tenant_biz_dfch_CS_Appclus" +
-                "ive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Ap" +
-                "pclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"" +
-                "><End Role=\"TenantPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"Tenant\" Entity" +
-                "Set=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Co" +
-                "re_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
-                "ore_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
-                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_CreatedBy_biz_dfch" +
-                "_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Created" +
-                "ByPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /" +
+                "Approval_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modified" +
+                "ByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Approvals\" /><End Role=\"Modi" +
+                "fiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet\" Association=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_CatalogueItem_CatalogueItemsPartner\"><End Role=\"CatalogueItemsPartner\" EntitySe" +
+                "t=\"Products\" /><End Role=\"CatalogueItems\" EntitySet=\"CatalogueItems\" /></Associa" +
+                "tionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Pro" +
+                "duct_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_Entity" +
+                "KindPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_Product_EntityKind_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKind" +
+                "Partner\" EntitySet=\"Products\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /" +
                 "></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataService" +
-                "s_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Modif" +
-                "iedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz" +
-                "_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclusi" +
-                "ve_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\"" +
-                " EntitySet=\"ScheduledJobs\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associ" +
-                "ationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Sc" +
-                "heduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_M" +
-                "anagementCredential_ManagementCredentialPartnerSet\" Association=\"biz.dfch.CS.App" +
-                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_S" +
-                "cheduledJob_ManagementCredential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "ManagementCredential_ManagementCredentialPartner\"><End Role=\"ManagementCredentia" +
-                "lPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"ManagementCredential\" EntitySet" +
-                "=\"ManagementCredentials\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
-                "pclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_Od" +
-                "ataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Co" +
-                "re.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_T" +
-                "enant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End " +
-                "Role=\"TenantPartner\" EntitySet=\"EntityBags\" /><End Role=\"Tenant\" EntitySet=\"Tena" +
-                "nts\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
-                "ervices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
-                "User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices" +
-                ".Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfc" +
+                "s_Core_Product_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tena" +
+                "ntPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_Product_Tenant_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet" +
+                "=\"Products\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CreatedBy_b" +
+                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Associat" +
+                "ion=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_Product_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"Products\" /><" +
+                "End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_ModifiedBy_biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfc" +
+                "h.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Product_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Mo" +
+                "difiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Products\" /><End Role=" +
+                "\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_User_Tenant_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.C" +
+                "ore.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Tenan" +
+                "t_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role" +
+                "=\"TenantPartner\" EntitySet=\"Users\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></" +
+                "AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_User_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy" +
+                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy_biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntityS" +
+                "et=\"Users\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedBy_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Associati" +
+                "on=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_User_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"Users\" /><End " +
+                "Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_Roles_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Role_RolesPartnerSet\" Association=\"biz.dfch.CS.Appcl" +
+                "usive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Per" +
+                "mission_Roles_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_RolesPartner\">" +
+                "<End Role=\"RolesPartner\" EntitySet=\"Permissions\" /><End Role=\"Roles\" EntitySet=\"" +
+                "Roles\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Permission_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices." +
+                "Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_Tenant_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPart" +
+                "ner\" EntitySet=\"Permissions\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Associ" +
+                "ationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Pe" +
+                "rmission_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedBy" +
+                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Permission_CreatedBy_biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" E" +
+                "ntitySet=\"Permissions\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Association" +
+                "Set><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permiss" +
+                "ion_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPar" +
+                "tnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Permission_ModifiedBy_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" E" +
+                "ntitySet=\"Permissions\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></Associatio" +
+                "nSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_P" +
+                "ermissions_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Permission_Permissions" +
+                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Role_Permissions_biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Permission_PermissionsPartner\"><End Role=\"PermissionsPart" +
+                "ner\" EntitySet=\"Roles\" /><End Role=\"Permissions\" EntitySet=";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart27 = "\"Permissions\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_Role_Users_biz_dfch_CS_Appclusive_Core_OdataServices_Core_U" +
+                "ser_UsersPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Users_biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_User_UsersPartner\"><End Role=\"UsersPartner\" EntitySet=" +
+                "\"Roles\" /><End Role=\"Users\" EntitySet=\"Users\" /></AssociationSet><AssociationSet" +
+                " Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_Tenant_biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Role_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPar" +
+                "tner\"><End Role=\"TenantPartner\" EntitySet=\"Roles\" /><End Role=\"Tenant\" EntitySet" +
+                "=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_Role_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataService" +
+                "s.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role_CreatedBy_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByP" +
+                "artner\" EntitySet=\"Roles\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Associat" +
+                "ionSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Role" +
+                "_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartne" +
+                "rSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_Role_ModifiedBy_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=" +
+                "\"Roles\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><Associati" +
+                "onSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfc" +
+                "h_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartnerSet\" Association=\"bi" +
+                "z.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_" +
+                "ParentPartner\"><End Role=\"ParentPartner\" EntitySet=\"Tenants\" /><End Role=\"Parent" +
+                "\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_Tenant_Customer_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_Customer_CustomerPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Co" +
+                "re.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Cust" +
+                "omer_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner\"><E" +
+                "nd Role=\"CustomerPartner\" EntitySet=\"Tenants\" /><End Role=\"Customer\" EntitySet=\"" +
+                "Customers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_" +
+                "OdataServices_Core_Tenant_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Tenant_ChildrenPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Children_biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_Tenant_ChildrenPartner\"><End Role=\"Childr" +
+                "enPartner\" EntitySet=\"Tenants\" /><End Role=\"Children\" EntitySet=\"Tenants\" /></As" +
+                "sociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Customer_ContractMappings_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Contr" +
+                "actMapping_ContractMappingsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core." +
+                "OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Contr" +
+                "actMappings_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Contr" +
+                "actMappingsPartner\"><End Role=\"ContractMappingsPartner\" EntitySet=\"Customers\" />" +
+                "<End Role=\"ContractMappings\" EntitySet=\"ContractMappings\" /></AssociationSet><As" +
+                "sociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenan" +
+                "ts_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantsPartnerSet\" Asso" +
+                "ciation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_Customer_Tenants_biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_Tenant_TenantsPartner\"><End Role=\"TenantsPartner\" EntitySet=\"Customers\" /" +
+                "><End Role=\"Tenants\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name" +
+                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Tenant_biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.C" +
+                "S.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Customer_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Tenant" +
+                "Partner\"><End Role=\"TenantPartner\" EntitySet=\"Customers\" /><End Role=\"Tenant\" En" +
+                "titySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_Customer_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.O" +
+                "dataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_Create" +
+                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End R" +
+                "ole=\"CreatedByPartner\" EntitySet=\"Customers\" /><End Role=\"CreatedBy\" EntitySet=\"" +
+                "Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Customer_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServi" +
+                "ces.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_ModifiedBy_biz_" +
+                "dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"Mo" +
+                "difiedByPartner\" EntitySet=\"Customers\" /><End Role=\"ModifiedBy\" EntitySet=\"Users" +
+                "\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_ContractMapping_Customer_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Customer_CustomerPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapping_Custom" +
+                "er_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Customer_CustomerPartner\"><End" +
+                " Role=\"CustomerPartner\" EntitySet=\"ContractMappings\" /><End Role=\"Customer\" Enti" +
+                "tySet=\"Customers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_ContractMapping_Tenant_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Cor" +
+                "e.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMapp" +
+                "ing_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\">" +
+                "<End Role=\"TenantPartner\" EntitySet=\"ContractMappings\" /><End Role=\"Tenant\" Enti" +
+                "tySet=\"Tenants\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_ContractMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.C" +
+                "ore.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ContractMa" +
+                "pping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPar" +
+                "tner\"><End Role=\"CreatedByPartner\" EntitySet=\"ContractMappings\" /><End Role=\"Cre" +
+                "atedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_ContractMapping_ModifiedBy_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS." +
+                "Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_ContractMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
+                "_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart28 = "=\"ContractMappings\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet" +
+                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre" +
+                "_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" " +
+                "Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_CostCentre_Tenant_biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"CostCentr" +
+                "es\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet " +
+                "Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CreatedBy_biz_df" +
+                "ch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"" +
+                "biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odata" +
+                "Services_Core_CostCentre_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"CostCentres\" />" +
+                "<End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=" +
+                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz" +
+                ".dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"CostCentres\" />" +
+                "<End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationSet Name" +
+                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Entit" +
+                "yKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartne" +
+                "rSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner\"><End Role=\"En" +
+                "tityKindPartner\" EntitySet=\"EntityKindMaterialMappings\" /><End Role=\"EntityKind\"" +
+                " EntitySet=\"EntityKinds\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Ap" +
+                "pclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch." +
+                "CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"EntityKindMateri" +
+                "alMappings\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialM" +
+                "apping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPa" +
+                "rtnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_CreatedBy_biz_dfc" +
                 "h_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"Create" +
-                "dByPartner\" EntitySet=\"EntityBags\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /><" +
-                "/AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_" +
-                "Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_Mo" +
-                "difiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
-                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_" +
-                "Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedBy" +
-                "Partner\" EntitySet=\"EntityBags\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></A" +
-                "ssociationSet></EntityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+                "dByPartner\" EntitySet=\"EntityKindMaterialMappings\" /><End Role=\"CreatedBy\" Entit" +
+                "ySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.App" +
+                "clusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_E" +
+                "ntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"EntityKindMa" +
+                "terialMappings\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><A" +
+                "ssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperat" +
+                "ion_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSe" +
+                "t\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Cor" +
+                "e_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"" +
+                "SpecialOperations\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><" +
+                "AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOpera" +
+                "tion_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPart" +
+                "nerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_SpecialOperation_CreatedBy_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\"" +
+                " EntitySet=\"SpecialOperations\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Ass" +
+                "ociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core" +
+                "_SpecialOperation_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User" +
+                "_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Co" +
+                "re.biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_ModifiedBy_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"" +
+                "ModifiedByPartner\" EntitySet=\"SpecialOperations\" /><End Role=\"ModifiedBy\" Entity" +
+                "Set=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_N" +
+                "ode_ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Cor" +
+                "e.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclus" +
+                "ive_Core_OdataServices_Core_Node_ParentPartner\"><End Role=\"ParentPartner\" Entity" +
+                "Set=\"Folders\" /><End Role=\"Parent\" EntitySet=\"Nodes\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_EntityKind_biz" +
+                "_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartnerSet\" Ass" +
+                "ociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataService" +
+                "s_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKindPartner\" EntitySet=\"Fo" +
+                "lders\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /></AssociationSet><Asso" +
+                "ciationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartnerSet\" Associatio" +
+                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_No" +
+                "de_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=\"Folders\" /><End Role=" +
+                "\"Children\" EntitySet=\"Nodes\" /></AssociationSet><AssociationSet Name=\"biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet\" Association=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Inco" +
+                "mingAssocsPartner\"><End Role=\"IncomingAssocsPartner\" EntitySet=\"Folders\" /><End " +
+                "Role=\"IncomingAssocs\" EntitySet=\"Assocs\" /></AssociationSet><AssociationSet Name" +
+                "=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartnerSet\" Association=" +
+                "\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Odat" +
+                "aServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_Assoc_OutgoingAssocsPartner\"><End Role=\"OutgoingAssocsPartner\" EntitySet=\"Fold" +
+                "ers\" /><End Role=\"OutgoingAssocs\" EntitySet=\"Assocs\" /></AssociationSet><Associa" +
+                "tionSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Cor";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart29 = "e_Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" +
+                "Set\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_App" +
+                "clusive_Core_OdataServices_Core_Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySet=\"Folders\" /" +
+                "><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet><AssociationSet Name=" +
+                "\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS" +
+                ".Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Co" +
+                "re_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByP" +
+                "artner\"><End Role=\"CreatedByPartner\" EntitySet=\"Folders\" /><End Role=\"CreatedBy\"" +
+                " EntitySet=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Od" +
+                "ataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy_" +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role" +
+                "=\"ModifiedByPartner\" EntitySet=\"Folders\" /><End Role=\"ModifiedBy\" EntitySet=\"Use" +
+                "rs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_ExternalNode_Node_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Nod" +
+                "e_NodePartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Node_biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_Node_NodePartner\"><End Role=\"NodePartner\" EntitySe" +
+                "t=\"ExternalNodes\" /><End Role=\"Node\" EntitySet=\"Nodes\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Prop" +
+                "erties_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_Properties" +
+                "PartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch" +
+                "_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Properties_biz_dfch_CS_Appcl" +
+                "usive_Core_OdataServices_Core_ExternalNodeBag_PropertiesPartner\"><End Role=\"Prop" +
+                "ertiesPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Properties\" EntitySet=\"Ext" +
+                "ernalNodeBags\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_C" +
+                "ore_OdataServices_Core_ExternalNode_Tenant_biz_dfch_CS_Appclusive_Core_OdataServ" +
+                "ices_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.Odat" +
+                "aServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_Tenan" +
+                "t_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role" +
+                "=\"TenantPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"Tenant\" EntitySet=\"Tenan" +
+                "ts\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSe" +
+                "rvices_Core_ExternalNode_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Cor" +
+                "e_User_CreatedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_CreatedBy_bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"C" +
+                "reatedByPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"CreatedBy\" EntitySet=\"Us" +
+                "ers\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_ExternalNode_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_User_ModifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNode_ModifiedB" +
+                "y_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Ro" +
+                "le=\"ModifiedByPartner\" EntitySet=\"ExternalNodes\" /><End Role=\"ModifiedBy\" Entity" +
+                "Set=\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core" +
+                "_OdataServices_Core_ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_ExternalNode_ExternalNodePartnerSet\" Association=\"biz.dfch.CS.Ap" +
+                "pclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "ExternalNodeBag_ExternalNode_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Exte" +
+                "rnalNode_ExternalNodePartner\"><End Role=\"ExternalNodePartner\" EntitySet=\"Externa" +
+                "lNodeBags\" /><End Role=\"ExternalNode\" EntitySet=\"ExternalNodes\" /></AssociationS" +
+                "et><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_External" +
+                "NodeBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartn" +
+                "erSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_A" +
+                "ppclusive_Core_OdataServices_Core_ExternalNodeBag_Tenant_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" EntitySe" +
+                "t=\"ExternalNodeBags\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSet" +
+                "><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNo" +
+                "deBag_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPar" +
+                "tnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS" +
+                "_Appclusive_Core_OdataServices_Core_ExternalNodeBag_CreatedBy_biz_dfch_CS_Appclu" +
+                "sive_Core_OdataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\"" +
+                " EntitySet=\"ExternalNodeBags\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></Asso" +
+                "ciationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "ExternalNodeBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_M" +
+                "odifiedByPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core" +
+                ".biz_dfch_CS_Appclusive_Core_OdataServices_Core_ExternalNodeBag_ModifiedBy_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner\"><End Role=\"Mod" +
+                "ifiedByPartner\" EntitySet=\"ExternalNodeBags\" /><End Role=\"ModifiedBy\" EntitySet=" +
+                "\"Users\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_Oda" +
+                "taServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_" +
+                "ParentPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.bi" +
+                "z_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_" +
+                "Core_OdataServices_Core_Node_ParentPartner\"><End Role=\"ParentPartner\" EntitySet=" +
+                "\"ScheduledJobs\" /><End Role=\"Parent\" EntitySet=\"Nodes\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_EntityKind_b" +
+                "iz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartnerSet\" A" +
+                "ssociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusiv" +
+                "e_Core_OdataServices_Core_Node_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_EntityKind_EntityKindPartner\"><End Role=\"EntityKindPartner\" EntitySet=\"" +
+                "ScheduledJobs\" /><End Role=\"EntityKind\" EntitySet=\"EntityKinds\" /></AssociationS" +
+                "et><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Chi" +
+                "ldren_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartnerSet\" As" +
+                "sociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Node_ChildrenPartner\"><End Role=\"ChildrenPartner\" EntitySet=\"ScheduledJobs" +
+                "\" /><End Role=\"Children\" EntitySet=\"Nodes\" /></AssociationSet><AssociationSet Na" +
+                "me=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_" +
+                "CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet\" Associatio" +
+                "n=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_C" +
+                "ore_Assoc_IncomingAssocsPartner\"><End Role=\"IncomingAssocsP";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+            private const string ModelPart30 = "artner\" EntitySet=\"ScheduledJobs\" /><End Role=\"IncomingAssocs\" EntitySet=\"Assocs\"" +
+                " /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServi" +
+                "ces_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Asso" +
+                "c_OutgoingAssocsPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServic" +
+                "es.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_d" +
+                "fch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner\"><End Role" +
+                "=\"OutgoingAssocsPartner\" EntitySet=\"ScheduledJobs\" /><End Role=\"OutgoingAssocs\" " +
+                "EntitySet=\"Assocs\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusi" +
+                "ve_Core_OdataServices_Core_Node_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices" +
+                "_Core_Tenant_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataSer" +
+                "vices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Tenant_biz_dfch_C" +
+                "S_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPart" +
+                "ner\" EntitySet=\"ScheduledJobs\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></Asso" +
+                "ciationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_" +
+                "Node_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPart" +
+                "nerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_" +
+                "Appclusive_Core_OdataServices_Core_Node_CreatedBy_biz_dfch_CS_Appclusive_Core_Od" +
+                "ataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=\"" +
+                "ScheduledJobs\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Ass" +
+                "ociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ModifiedBy" +
+                "_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" Assoc" +
+                "iation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Co" +
+                "re_OdataServices_Core_Node_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_" +
+                "Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"ScheduledJ" +
+                "obs\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet><AssociationS" +
+                "et Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_ManagementC" +
+                "redential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_Ma" +
+                "nagementCredentialPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServ" +
+                "ices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ScheduledJob_Management" +
+                "Credential_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_M" +
+                "anagementCredentialPartner\"><End Role=\"ManagementCredentialPartner\" EntitySet=\"S" +
+                "cheduledJobs\" /><End Role=\"ManagementCredential\" EntitySet=\"ManagementCredential" +
+                "s\" /></AssociationSet><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataSer" +
+                "vices_Core_EntityBag_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenan" +
+                "t_TenantPartnerSet\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core." +
+                "biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Tenant_biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_Tenant_TenantPartner\"><End Role=\"TenantPartner\" E" +
+                "ntitySet=\"EntityBags\" /><End Role=\"Tenant\" EntitySet=\"Tenants\" /></AssociationSe" +
+                "t><AssociationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag" +
+                "_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerS" +
+                "et\" Association=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appc" +
+                "lusive_Core_OdataServices_Core_EntityBag_CreatedBy_biz_dfch_CS_Appclusive_Core_O" +
+                "dataServices_Core_User_CreatedByPartner\"><End Role=\"CreatedByPartner\" EntitySet=" +
+                "\"EntityBags\" /><End Role=\"CreatedBy\" EntitySet=\"Users\" /></AssociationSet><Assoc" +
+                "iationSet Name=\"biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityBag_Modifie" +
+                "dBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet\" As" +
+                "sociation=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive" +
+                "_Core_OdataServices_Core_EntityBag_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataS" +
+                "ervices_Core_User_ModifiedByPartner\"><End Role=\"ModifiedByPartner\" EntitySet=\"En" +
+                "tityBags\" /><End Role=\"ModifiedBy\" EntitySet=\"Users\" /></AssociationSet></Entity" +
+                "Container></Schema></edmx:DataServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
-                return string.Concat(ModelPart0, ModelPart1, ModelPart2, ModelPart3, ModelPart4, ModelPart5, ModelPart6, ModelPart7, ModelPart8, ModelPart9, ModelPart10, ModelPart11, ModelPart12, ModelPart13, ModelPart14, ModelPart15, ModelPart16, ModelPart17, ModelPart18, ModelPart19, ModelPart20, ModelPart21, ModelPart22, ModelPart23, ModelPart24, ModelPart25, ModelPart26, ModelPart27, ModelPart28, ModelPart29);
+                return string.Concat(ModelPart0, ModelPart1, ModelPart2, ModelPart3, ModelPart4, ModelPart5, ModelPart6, ModelPart7, ModelPart8, ModelPart9, ModelPart10, ModelPart11, ModelPart12, ModelPart13, ModelPart14, ModelPart15, ModelPart16, ModelPart17, ModelPart18, ModelPart19, ModelPart20, ModelPart21, ModelPart22, ModelPart23, ModelPart24, ModelPart25, ModelPart26, ModelPart27, ModelPart28, ModelPart29, ModelPart30);
             }
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             public static global::Microsoft.Data.Edm.IEdmModel GetInstance()
@@ -14438,6 +14551,375 @@ namespace biz.dfch.CS.Appclusive.Api.Core
         }
     }
     /// <summary>
+    /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("EntityKindMaterialMappings")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class EntityKindMaterialMapping : global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new EntityKindMaterialMapping object.
+        /// </summary>
+        /// <param name="name">Initial value of Name.</param>
+        /// <param name="externalType">Initial value of ExternalType.</param>
+        /// <param name="entityKindId">Initial value of EntityKindId.</param>
+        /// <param name="ID">Initial value of Id.</param>
+        /// <param name="tid">Initial value of Tid.</param>
+        /// <param name="createdById">Initial value of CreatedById.</param>
+        /// <param name="modifiedById">Initial value of ModifiedById.</param>
+        /// <param name="created">Initial value of Created.</param>
+        /// <param name="modified">Initial value of Modified.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static EntityKindMaterialMapping CreateEntityKindMaterialMapping(string name, string externalType, long entityKindId, long ID, global::System.Guid tid, long createdById, long modifiedById, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            EntityKindMaterialMapping entityKindMaterialMapping = new EntityKindMaterialMapping();
+            entityKindMaterialMapping.Name = name;
+            entityKindMaterialMapping.ExternalType = externalType;
+            entityKindMaterialMapping.EntityKindId = entityKindId;
+            entityKindMaterialMapping.Id = ID;
+            entityKindMaterialMapping.Tid = tid;
+            entityKindMaterialMapping.CreatedById = createdById;
+            entityKindMaterialMapping.ModifiedById = modifiedById;
+            entityKindMaterialMapping.Created = created;
+            entityKindMaterialMapping.Modified = modified;
+            return entityKindMaterialMapping;
+        }
+        /// <summary>
+        /// There are no comments for Property Name in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.OnNameChanging(value);
+                this._Name = value;
+                this.OnNameChanged();
+                this.OnPropertyChanged("Name");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Name;
+        partial void OnNameChanging(string value);
+        partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property ExternalType in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ExternalType
+        {
+            get
+            {
+                return this._ExternalType;
+            }
+            set
+            {
+                this.OnExternalTypeChanging(value);
+                this._ExternalType = value;
+                this.OnExternalTypeChanged();
+                this.OnPropertyChanged("ExternalType");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ExternalType;
+        partial void OnExternalTypeChanging(string value);
+        partial void OnExternalTypeChanged();
+        /// <summary>
+        /// There are no comments for Property EntityKindId in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long EntityKindId
+        {
+            get
+            {
+                return this._EntityKindId;
+            }
+            set
+            {
+                this.OnEntityKindIdChanging(value);
+                this._EntityKindId = value;
+                this.OnEntityKindIdChanged();
+                this.OnPropertyChanged("EntityKindId");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _EntityKindId;
+        partial void OnEntityKindIdChanging(long value);
+        partial void OnEntityKindIdChanged();
+        /// <summary>
+        /// There are no comments for Property Id in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _Id;
+        partial void OnIdChanging(long value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// There are no comments for Property Tid in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Guid Tid
+        {
+            get
+            {
+                return this._Tid;
+            }
+            set
+            {
+                this.OnTidChanging(value);
+                this._Tid = value;
+                this.OnTidChanged();
+                this.OnPropertyChanged("Tid");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Guid _Tid;
+        partial void OnTidChanging(global::System.Guid value);
+        partial void OnTidChanged();
+        /// <summary>
+        /// There are no comments for Property Description in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Description
+        {
+            get
+            {
+                return this._Description;
+            }
+            set
+            {
+                this.OnDescriptionChanging(value);
+                this._Description = value;
+                this.OnDescriptionChanged();
+                this.OnPropertyChanged("Description");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Description;
+        partial void OnDescriptionChanging(string value);
+        partial void OnDescriptionChanged();
+        /// <summary>
+        /// There are no comments for Property CreatedById in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long CreatedById
+        {
+            get
+            {
+                return this._CreatedById;
+            }
+            set
+            {
+                this.OnCreatedByIdChanging(value);
+                this._CreatedById = value;
+                this.OnCreatedByIdChanged();
+                this.OnPropertyChanged("CreatedById");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _CreatedById;
+        partial void OnCreatedByIdChanging(long value);
+        partial void OnCreatedByIdChanged();
+        /// <summary>
+        /// There are no comments for Property ModifiedById in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public long ModifiedById
+        {
+            get
+            {
+                return this._ModifiedById;
+            }
+            set
+            {
+                this.OnModifiedByIdChanging(value);
+                this._ModifiedById = value;
+                this.OnModifiedByIdChanged();
+                this.OnPropertyChanged("ModifiedById");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private long _ModifiedById;
+        partial void OnModifiedByIdChanging(long value);
+        partial void OnModifiedByIdChanged();
+        /// <summary>
+        /// There are no comments for Property Created in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return this._Created;
+            }
+            set
+            {
+                this.OnCreatedChanging(value);
+                this._Created = value;
+                this.OnCreatedChanged();
+                this.OnPropertyChanged("Created");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+        /// <summary>
+        /// There are no comments for Property Modified in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return this._Modified;
+            }
+            set
+            {
+                this.OnModifiedChanging(value);
+                this._Modified = value;
+                this.OnModifiedChanged();
+                this.OnPropertyChanged("Modified");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+        /// <summary>
+        /// There are no comments for Property RowVersion in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte[] RowVersion
+        {
+            get
+            {
+                if ((this._RowVersion != null))
+                {
+                    return ((byte[])(this._RowVersion.Clone()));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                this.OnRowVersionChanging(value);
+                this._RowVersion = value;
+                this.OnRowVersionChanged();
+                this.OnPropertyChanged("RowVersion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte[] _RowVersion;
+        partial void OnRowVersionChanging(byte[] value);
+        partial void OnRowVersionChanged();
+        /// <summary>
+        /// There are no comments for EntityKind in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public EntityKind EntityKind
+        {
+            get
+            {
+                return this._EntityKind;
+            }
+            set
+            {
+                this._EntityKind = value;
+                this.OnPropertyChanged("EntityKind");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private EntityKind _EntityKind;
+        /// <summary>
+        /// There are no comments for Tenant in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Tenant Tenant
+        {
+            get
+            {
+                return this._Tenant;
+            }
+            set
+            {
+                this._Tenant = value;
+                this.OnPropertyChanged("Tenant");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Tenant _Tenant;
+        /// <summary>
+        /// There are no comments for CreatedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public User CreatedBy
+        {
+            get
+            {
+                return this._CreatedBy;
+            }
+            set
+            {
+                this._CreatedBy = value;
+                this.OnPropertyChanged("CreatedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private User _CreatedBy;
+        /// <summary>
+        /// There are no comments for ModifiedBy in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public User ModifiedBy
+        {
+            get
+            {
+                return this._ModifiedBy;
+            }
+            set
+            {
+                this._ModifiedBy = value;
+                this.OnPropertyChanged("ModifiedBy");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private User _ModifiedBy;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
     /// There are no comments for biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation in the schema.
     /// </summary>
     /// <KeyProperties>
@@ -16266,7 +16748,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     }
 }
 // Original file name:
-// Generation date: 27.05.2016 07:19:08
+// Generation date: 31.05.2016 14:14:04
 namespace biz.dfch.CS.Appclusive.Core.Managers
 {
     
