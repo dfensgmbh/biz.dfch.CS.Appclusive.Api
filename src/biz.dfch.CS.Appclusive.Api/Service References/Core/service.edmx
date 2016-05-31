@@ -575,6 +575,26 @@
         <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
         <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
       </EntityType>
+      <EntityType Name="EntityKindMaterialMapping">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="ExternalType" Type="Edm.String" Nullable="false" />
+        <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.Guid" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="ModifiedById" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+        <NavigationProperty Name="EntityKind" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner" ToRole="EntityKind" FromRole="EntityKindPartner" />
+        <NavigationProperty Name="Tenant" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner" ToRole="Tenant" FromRole="TenantPartner" />
+        <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
+        <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
+      </EntityType>
       <EntityType Name="SpecialOperation">
         <Key>
           <PropertyRef Name="Id" />
@@ -1101,6 +1121,22 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" Role="ModifiedByPartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKind" Role="EntityKind" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" Role="EntityKindPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" Role="TenantPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="CreatedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" Role="CreatedByPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" Role="ModifiedBy" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" Role="ModifiedByPartner" Multiplicity="0..1" />
+      </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" Role="Tenant" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation" Role="TenantPartner" Multiplicity="0..1" />
@@ -1213,6 +1249,7 @@
         <EntitySet Name="Customers" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" />
         <EntitySet Name="ContractMappings" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ContractMapping" />
         <EntitySet Name="CostCentres" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" />
+        <EntitySet Name="EntityKindMaterialMappings" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" />
         <EntitySet Name="SpecialOperations" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.SpecialOperation" />
         <EntitySet Name="Folders" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Folder" />
         <EntitySet Name="ExternalNodes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ExternalNode" />
@@ -1580,7 +1617,25 @@
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="ExternalType" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="ExternalId" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="CustomerId" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="CustomerId" Type="Edm.Int64" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" IsBindable="true" EntitySet="CostCentres" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" IsBindable="true" EntitySet="CostCentres" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" IsBindable="true" EntitySet="EntityKindMaterialMappings" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping" IsBindable="true" EntitySet="EntityKindMaterialMappings" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityKindMaterialMapping)" Nullable="false" />
+          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="ExternalType" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role" IsBindable="true" EntitySet="Roles" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Role)" Nullable="false" />
@@ -1595,14 +1650,6 @@
         </FunctionImport>
         <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission" IsBindable="true" EntitySet="Permissions" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission)" Nullable="false" />
-          <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
-          <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
-        </FunctionImport>
-        <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" IsBindable="true" EntitySet="CostCentres" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre)" Nullable="false" />
-        </FunctionImport>
-        <FunctionImport Name="Create" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" IsBindable="true" EntitySet="CostCentres" m:IsAlwaysBindable="true">
-          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre)" Nullable="false" />
           <Parameter Name="Name" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Description" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
@@ -2104,6 +2151,22 @@
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
           <End Role="ModifiedByPartner" EntitySet="CostCentres" />
+          <End Role="ModifiedBy" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_EntityKind_biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKind_EntityKindPartner">
+          <End Role="EntityKindPartner" EntitySet="EntityKindMaterialMappings" />
+          <End Role="EntityKind" EntitySet="EntityKinds" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
+          <End Role="TenantPartner" EntitySet="EntityKindMaterialMappings" />
+          <End Role="Tenant" EntitySet="Tenants" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner">
+          <End Role="CreatedByPartner" EntitySet="EntityKindMaterialMappings" />
+          <End Role="CreatedBy" EntitySet="Users" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_EntityKindMaterialMapping_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner">
+          <End Role="ModifiedByPartner" EntitySet="EntityKindMaterialMappings" />
           <End Role="ModifiedBy" EntitySet="Users" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_SpecialOperation_Tenant_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_TenantPartner">
