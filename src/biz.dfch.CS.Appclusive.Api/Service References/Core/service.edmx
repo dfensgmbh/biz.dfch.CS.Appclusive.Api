@@ -1332,6 +1332,11 @@
           <Parameter Name="NoInheritanceFromParent" Type="Edm.Boolean" Nullable="false" />
           <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="CreateNodeAcl" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" IsBindable="true" EntitySet="Acls" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl)" Nullable="false" />
+          <Parameter Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+          <Parameter Name="EntityId" Type="Edm.Int64" Nullable="false" />
+        </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" Nullable="false" />
         </FunctionImport>
@@ -1395,6 +1400,9 @@
           <Parameter Name="PermissionId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="TrusteeId" Type="Edm.Int64" Nullable="false" />
           <Parameter Name="TrusteeType" Type="Edm.Int64" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="CreateAcl" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" IsBindable="true" EntitySet="Acls" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" IsBindable="true" EntitySet="Assocs" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc)" Nullable="false" />
