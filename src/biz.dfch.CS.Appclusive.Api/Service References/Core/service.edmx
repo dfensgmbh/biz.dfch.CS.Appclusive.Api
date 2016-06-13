@@ -1404,7 +1404,7 @@
         <FunctionImport Name="CreateAcl" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl" IsBindable="true" EntitySet="Acls" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
-        <FunctionImport Name="GetPermissions" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission)" IsBindable="true" EntitySet="Permissions" m:IsAlwaysBindable="true">
+        <FunctionImport Name="GetSelectablePermissions" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Permission)" IsBindable="true" EntitySet="Permissions" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" IsBindable="true" EntitySet="Assocs" m:IsAlwaysBindable="true">
