@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 13.06.2016 15:04:41
+// Generation date: 13.06.2016 17:11:18
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     
@@ -2580,7 +2580,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
                 "urnType=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Acl\" IsBindable=\"true\" E" +
                 "ntitySet=\"Acls\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Typ" +
                 "e=\"biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node\" /></FunctionImport><Func" +
-                "tionImport Name=\"GetSelectablePermissions\" ReturnType=\"Collection(biz.dfch.CS.Ap" +
+                "tionImport Name=\"GetAssignablePermissions\" ReturnType=\"Collection(biz.dfch.CS.Ap" +
                 "pclusive.Core.OdataServices.Core.Permission)\" IsBindable=\"true\" EntitySet=\"Permi" +
                 "ssions\" m:IsAlwaysBindable=\"true\"><Parameter Name=\"bindingParameter\" Type=\"biz.d" +
                 "fch.CS.Appclusive.Core.OdataServices.Core.Node\" /></FunctionImport><FunctionImpo" +
@@ -16761,7 +16761,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     }
 }
 // Original file name:
-// Generation date: 13.06.2016 15:04:41
+// Generation date: 13.06.2016 17:11:18
 namespace biz.dfch.CS.Appclusive.Core.Managers
 {
     
