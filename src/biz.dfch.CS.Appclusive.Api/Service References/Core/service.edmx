@@ -1391,6 +1391,9 @@
         <FunctionImport Name="GetEffectivePermissions" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
         </FunctionImport>
+        <FunctionImport Name="GetAllPermissions" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace)" IsBindable="true" EntitySet="Aces" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
+        </FunctionImport>
         <FunctionImport Name="HasPermission" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
           <Parameter Name="PermissionId" Type="Edm.Int64" Nullable="false" />
