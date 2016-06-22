@@ -1579,6 +1579,7 @@
           <Parameter Name="Request" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Action" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Locale" Type="Edm.String" FixedLength="false" Unicode="false" />
+          <Parameter Name="Type" Type="Edm.String" FixedLength="false" Unicode="false" />
           <Parameter Name="Keys" Type="Collection(Edm.String)" Nullable="false" FixedLength="false" Unicode="false" />
         </FunctionImport>
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" IsBindable="true" EntitySet="Users" m:IsAlwaysBindable="true">
