@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 29.06.2016 13:07:51
+// Generation date: 29.06.2016 13:51:16
 namespace biz.dfch.CS.Appclusive.Api.Cmp
 {
     
@@ -2170,7 +2170,7 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
     }
 }
 // Original file name:
-// Generation date: 29.06.2016 13:07:51
+// Generation date: 29.06.2016 13:51:16
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Cmp
 {
     
