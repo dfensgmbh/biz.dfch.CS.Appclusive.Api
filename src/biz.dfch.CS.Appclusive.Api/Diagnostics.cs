@@ -675,5 +675,44 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             }
             return operationParameters.ToArray();
         }
+
+        public SemverCompatibilityFlags GetSemverCompatibility()
+        {
+            var assemblyVersion = this.GetType().Assembly.GetName().Version;
+
+            var result = GetSemverCompatibility(assemblyVersion);
+            return result;
+        }
+
+        public SemverCompatibilityFlags GetSemverCompatibility(Version value)
+        {
+            Contract.Requires(null != value);
+
+            var serverVersion = new DiagnosticsEndpointCommunication().GetBaseUriVersion(this._Endpoints);
+            
+            var result = SemverCompatibilityFlags.Compatible;
+
+            if(value < serverVersion)
+            {
+                result |= SemverCompatibilityFlags.ServerIsNewer;
+            }
+
+            if(value.Major < serverVersion.Major)
+            {
+                result |= SemverCompatibilityFlags.BreakingChanges;
+            }
+
+            if(value.Major < serverVersion.Major || value.Minor < serverVersion.Minor)
+            {
+                result |= SemverCompatibilityFlags.AdditionalFeatures;
+            }
+
+            if(value.Major < serverVersion.Major || value.Minor < serverVersion.Minor || value.Build < serverVersion.Build)
+            {
+                result |= SemverCompatibilityFlags.Patched;
+            }
+
+            return result;
+        }
     }
 }

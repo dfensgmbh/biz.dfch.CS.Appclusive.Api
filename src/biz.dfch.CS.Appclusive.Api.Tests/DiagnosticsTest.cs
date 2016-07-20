@@ -24,6 +24,7 @@ using System.Configuration;
 using System.Collections;
 using System.Net;
 using biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics;
+using biz.dfch.CS.Appclusive.Api.Diagnostics;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
@@ -222,6 +223,132 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             // Assert
             var expectedDateTimeOffset = DateTimeOffset.ParseExact(result.ToString(), format, provider);
             Assert.IsNotNull(expectedDateTimeOffset);
+        }
+
+        [TestMethod]
+        public void SameVersionReturnCompatibleVersion()
+        {
+            // Arrange
+            var clientVersion = new Version(2, 2, 2, 2);
+            var serverVersion = new Version(2, 2, 2, 2);
+
+            var communication = Mock.Create<DiagnosticsEndpointCommunication>();
+            Mock.Arrange(() => communication
+                    .GetBaseUriVersion(Arg.IsAny<System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint>>()))
+                .IgnoreInstance()
+                .Returns(serverVersion)
+                .MustBeCalled();
+
+            var sut = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            
+            // Act
+            var result = sut.GetSemverCompatibility(clientVersion);
+
+            // Assert
+            Mock.Assert(communication);
+            Assert.AreEqual(SemverCompatibilityFlags.Compatible, result);
+        }
+
+        [TestMethod]
+        public void LastFieldIsIgnored()
+        {
+            // Arrange
+            var clientVersion = new Version(2, 2, 2, 42);
+            var serverVersion = new Version(2, 2, 2, 5);
+
+            var communication = Mock.Create<DiagnosticsEndpointCommunication>();
+            Mock.Arrange(() => communication
+                    .GetBaseUriVersion(Arg.IsAny<System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint>>()))
+                .IgnoreInstance()
+                .Returns(serverVersion)
+                .MustBeCalled();
+
+            var sut = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            
+            // Act
+            var result = sut.GetSemverCompatibility(clientVersion);
+
+            // Assert
+            Mock.Assert(communication);
+            Assert.AreEqual(SemverCompatibilityFlags.Compatible, result);
+        }
+
+        [TestMethod]
+        public void ServerIsNewerMajorMinorPatch()
+        {
+            // Arrange
+            var clientVersion = new Version(1, 1, 1, 1);
+            var serverVersion = new Version(3, 3, 3, 2);
+
+            var communication = Mock.Create<DiagnosticsEndpointCommunication>();
+            Mock.Arrange(() => communication
+                    .GetBaseUriVersion(Arg.IsAny<System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint>>()))
+                .IgnoreInstance()
+                .Returns(serverVersion)
+                .MustBeCalled();
+
+            var sut = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            
+            // Act
+            var result = sut.GetSemverCompatibility(clientVersion);
+
+            // Assert
+            Mock.Assert(communication);
+            Assert.IsTrue(SemverCompatibilityFlags.ServerIsNewer < result);
+            Assert.AreEqual(
+                SemverCompatibilityFlags.BreakingChanges | SemverCompatibilityFlags.AdditionalFeatures | SemverCompatibilityFlags.Patched
+                , result);
+        }
+
+        [TestMethod]
+        public void ServerIsNewerMajorClientIsNewerMinor()
+        {
+            // Arrange
+            var clientVersion = new Version(1, 3, 2, 2);
+            var serverVersion = new Version(3, 1, 2, 2);
+
+            var communication = Mock.Create<DiagnosticsEndpointCommunication>();
+            Mock.Arrange(() => communication
+                    .GetBaseUriVersion(Arg.IsAny<System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint>>()))
+                .IgnoreInstance()
+                .Returns(serverVersion)
+                .MustBeCalled();
+
+            var sut = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            
+            // Act
+            var result = sut.GetSemverCompatibility(clientVersion);
+
+            // Assert
+            Mock.Assert(communication);
+            Assert.IsTrue(SemverCompatibilityFlags.ServerIsNewer < result);
+            Assert.IsTrue(0 != (SemverCompatibilityFlags.BreakingChanges & result) ? true : false);
+        }
+
+        [TestMethod]
+        public void ClientIsNewerMajorClientIsNewerMinor()
+        {
+            // Arrange
+            var clientVersion = new Version(3, 3, 2, 2);
+            var serverVersion = new Version(1, 1, 2, 2);
+
+            var communication = Mock.Create<DiagnosticsEndpointCommunication>();
+            Mock.Arrange(() => communication
+                    .GetBaseUriVersion(Arg.IsAny<System.Data.Services.Client.DataServiceQuery<biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.Endpoint>>()))
+                .IgnoreInstance()
+                .Returns(serverVersion)
+                .MustBeCalled();
+
+            var sut = new biz.dfch.CS.Appclusive.Api.Diagnostics.Diagnostics(_uri);
+            
+            // Act
+            var result = sut.GetSemverCompatibility(clientVersion);
+
+            // Assert
+            Mock.Assert(communication);
+            Assert.IsFalse(SemverCompatibilityFlags.ServerIsNewer < result);
+            Assert.IsFalse(0 != (SemverCompatibilityFlags.BreakingChanges & result) ? true : false);
+            Assert.AreEqual(SemverCompatibilityFlags.Compatible, result);
         }
     }
 }

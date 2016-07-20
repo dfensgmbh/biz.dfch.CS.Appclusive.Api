@@ -144,6 +144,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiagnosticsEndpointCommunication.cs" />
+    <Compile Include="SemverCompatibilityFlags.cs" />
     <Compile Include="ContractClassForIDataServiceClientHelper.cs" />
     <Compile Include="ContractClassForIOdataActionHelper.cs" />
     <Compile Include="Cmp.cs" />
