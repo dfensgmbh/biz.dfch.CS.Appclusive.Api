@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 19.07.2016 13:44:09
+// Generation date: 7/26/2016 2:39:55 PM
 namespace biz.dfch.CS.Appclusive.Api.Fab
 {
     
@@ -2084,7 +2084,7 @@ namespace biz.dfch.CS.Appclusive.Api.Fab
     }
 }
 // Original file name:
-// Generation date: 19.07.2016 13:44:09
+// Generation date: 7/26/2016 2:39:55 PM
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Fab
 {
     
