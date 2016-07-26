@@ -678,7 +678,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 
         public SemverCompatibilityFlags GetSemverCompatibility()
         {
-            var assemblyVersion = this.GetType().Assembly.GetName().Version;
+            var assemblyVersion = Diagnostics.GetVersion();
 
             var result = GetSemverCompatibility(assemblyVersion);
             return result;

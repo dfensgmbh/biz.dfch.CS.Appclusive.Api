@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biz.dfch.CS.Appclusive.Api.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{0A7069C0-7A80-4904-B9B1-85D6E752AB3B}"
 	ProjectSection(SolutionItems) = preProject
+		AssemblyVersion.cs = AssemblyVersion.cs
 		biz.dfch.CS.Appclusive.Api.nuspec = biz.dfch.CS.Appclusive.Api.nuspec
 	EndProjectSection
 EndProject
