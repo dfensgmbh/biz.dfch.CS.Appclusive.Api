@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>3.5.0</version>
+        <version>4.0.0</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -17,7 +17,10 @@ Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
         <releaseNotes>20160726
-* updated API from Appclusive 3.5.0
+# BREAKING CHANGES
+
+* introduced base class for DataServiceContext to include common functionality across endpoints
+* this is a breaking change as the base type of Core, Diagnostics etc is now DataServiceContextBase and not DataServiceContext
 </releaseNotes>
         <copyright>Copyright © 2015-2016 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>
