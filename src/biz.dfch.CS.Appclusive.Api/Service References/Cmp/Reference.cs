@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Cmp
     /// <summary>
     /// There are no comments for Cmp in the schema.
     /// </summary>
-    public partial class Cmp : global::System.Data.Services.Client.DataServiceContext
+    public partial class Cmp : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Cmp object.

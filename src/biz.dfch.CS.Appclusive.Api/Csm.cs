@@ -13,17 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data.Services.Client;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api.Csm
 {

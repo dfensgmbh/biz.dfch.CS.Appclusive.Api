@@ -14,17 +14,6 @@
  * limitations under the License.
  */
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Services.Client;
-using System.Net;
-
 namespace biz.dfch.CS.Appclusive.Api.Core
 {
     public partial class Core : DataServiceContextBase
