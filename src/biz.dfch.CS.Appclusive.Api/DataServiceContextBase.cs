@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Data.Services.Client;
 using System.Data.Services.Common;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Net;
@@ -35,6 +36,43 @@ namespace biz.dfch.CS.Appclusive.Api
         IOdataActionHelper,
         IAppclusiveTenantHeader
     {
+        static DataServiceContextBase()
+        {
+            // this is a runtime check to ensure we have not forgotten 
+            // to change the base class of an auto-generated service reference
+            // to DataServiceContextBase
+            var assembly = typeof(DataServiceContextBase).Assembly;
+            foreach (var definedType in assembly.DefinedTypes)
+            {
+                if (!(definedType.IsPublic || definedType.IsNested))
+                {
+                    continue;
+                }
+
+                if (definedType.IsInterface)
+                {
+                    continue;
+                }
+
+                if (!(definedType.BaseType is DataServiceContext))
+                {
+                    continue;
+                }
+
+                var dataServiceContextFullName = definedType.FullName;
+                var definedTypeParts = dataServiceContextFullName.Split('.');
+                if (2 > definedTypeParts.Length)
+                {
+                    continue;
+                }
+                
+                Contract.Assert(
+                    definedTypeParts[definedTypeParts.Length -1] == definedTypeParts[definedTypeParts.Length -2]
+                    ,
+                    string.Format("'{0}' must derive from DataServiceContextBase", dataServiceContextFullName)
+                    );
+            }
+        }
 
         #region Constructors from DataServiceContext
         
@@ -109,6 +147,8 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public static Version GetVersion()
         {
+            Contract.Ensures(null != Contract.Result<Version>());
+
             var assembly = Assembly.GetExecutingAssembly();
             var assemblyName = assembly.GetName();
             return assemblyName.Version;
