@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Fab
     /// <summary>
     /// There are no comments for Fab in the schema.
     /// </summary>
-    public partial class Fab : global::System.Data.Services.Client.DataServiceContext
+    public partial class Fab : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Fab object.

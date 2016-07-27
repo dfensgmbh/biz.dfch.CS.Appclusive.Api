@@ -1,5 +1,5 @@
 ﻿/**
- * Copyright 2016 d-fens GmbH
+ * Copyright 2015 d-fens GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,17 +23,19 @@ using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api
 {
-    [Flags]
-    public enum SemverCompatibilityFlags : int
+    [ContractClass(typeof(ContractClassForIAppclusiveTenantHeader))]
+    interface IAppclusiveTenantHeader
     {
-        Compatible = 0x0000
-        ,
-        ServerIsNewer = 0x8
-        ,
-        Patched = ServerIsNewer | 0x1
-        ,
-        AdditionalFeatures = ServerIsNewer | 0x2
-        ,
-        BreakingChanges = ServerIsNewer | 0x4
+        void AttachIfNeeded(object entity);
+
+        void AttachIfNeeded(string entitySetName, object entity);
+
+        bool HasPendingEntityChanges();
+
+        bool HasPendingLinkChanges();
+
+        bool HasPendingChanges();
+
+        void RevertEntityState(object entity);
     }
 }

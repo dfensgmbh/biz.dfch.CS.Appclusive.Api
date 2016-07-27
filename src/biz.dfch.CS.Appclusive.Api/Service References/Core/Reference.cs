@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Core
     /// <summary>
     /// There are no comments for Core in the schema.
     /// </summary>
-    public partial class Core : global::System.Data.Services.Client.DataServiceContext
+    public partial class Core : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Core object.
