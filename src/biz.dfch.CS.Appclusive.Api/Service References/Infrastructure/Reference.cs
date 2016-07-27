@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Infrastructure
     /// <summary>
     /// There are no comments for Infrastructure in the schema.
     /// </summary>
-    public partial class Infrastructure : global::System.Data.Services.Client.DataServiceContext
+    public partial class Infrastructure : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Infrastructure object.

@@ -16,7 +16,7 @@ namespace biz.dfch.CS.Appclusive.Api.Csm
     /// <summary>
     /// There are no comments for Csm in the schema.
     /// </summary>
-    public partial class Csm : global::System.Data.Services.Client.DataServiceContext
+    public partial class Csm : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Csm object.
