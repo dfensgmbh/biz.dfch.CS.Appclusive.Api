@@ -23,6 +23,7 @@ using System.Threading.Tasks;
 
 namespace biz.dfch.CS.Appclusive.Api
 {
+    [Flags]
     public enum SemverCompatibilityFlags : int
     {
         Compatible = 0x0000
