@@ -147,6 +147,8 @@
     <Compile Include="..\AssemblyVersion.cs">
       <Link>Properties\AssemblyVersion.cs</Link>
     </Compile>
+    <Compile Include="ContractClassForIAppclusiveTenantHeader.cs" />
+    <Compile Include="IAppclusiveTenantHeader.cs" />
     <Compile Include="DataServiceContextBase.cs" />
     <Compile Include="DiagnosticsEndpointCommunication.cs" />
     <Compile Include="SemverCompatibilityFlags.cs" />

@@ -22,6 +22,7 @@ using System.Data.Services.Common;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +30,10 @@ using System.Threading.Tasks;
 namespace biz.dfch.CS.Appclusive.Api
 {
     public class DataServiceContextBase : 
-        global::System.Data.Services.Client.DataServiceContext,
+        DataServiceContext,
         IDataServiceClientHelper, 
-        IOdataActionHelper
+        IOdataActionHelper,
+        IAppclusiveTenantHeader
     {
 
         #region Constructors from DataServiceContext
@@ -105,8 +107,6 @@ namespace biz.dfch.CS.Appclusive.Api
         
         #endregion
 
-        #region IDataServiceClientHelper
-
         public static Version GetVersion()
         {
             var assembly = Assembly.GetExecutingAssembly();
@@ -114,6 +114,8 @@ namespace biz.dfch.CS.Appclusive.Api
             return assemblyName.Version;
         }
         
+        #region IDataServiceClientHelper
+
         public void AttachIfNeeded(object entity)
         {
             var entitySetName = string.Concat(entity.GetType().Name, "s");
@@ -132,7 +134,7 @@ namespace biz.dfch.CS.Appclusive.Api
         {
             try
             {
-                this.AttachTo(entitySetName, entity);
+                AttachTo(entitySetName, entity);
             }
             catch (InvalidOperationException ex)
             {
@@ -145,13 +147,13 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public bool HasPendingEntityChanges()
         {
-            var hasChanges = this.Entities.Any(e => e.State != EntityStates.Unchanged);
+            var hasChanges = Entities.Any(e => e.State != EntityStates.Unchanged);
             return hasChanges;
         }
 
         public bool HasPendingLinkChanges()
         {
-            var hasChanges = this.Links.Any(e => e.State != EntityStates.Unchanged);
+            var hasChanges = Links.Any(e => e.State != EntityStates.Unchanged);
             return hasChanges;
         }
 
@@ -162,14 +164,14 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public void RevertEntityState(object entity)
         {
-            var entityDescriptor = this.GetEntityDescriptor(entity);
+            var entityDescriptor = GetEntityDescriptor(entity);
             if (EntityStates.Added == entityDescriptor.State || EntityStates.Deleted == entityDescriptor.State)
             {
-                this.ChangeState(entity, EntityStates.Detached);
+                ChangeState(entity, EntityStates.Detached);
             }
             else
             {
-                this.ChangeState(entity, EntityStates.Unchanged);
+                ChangeState(entity, EntityStates.Unchanged);
             }
         }
 
@@ -186,7 +188,7 @@ namespace biz.dfch.CS.Appclusive.Api
         public void InvokeEntitySetActionWithVoidResult(string entitySetName, string actionName, object inputParameters)
         {
             var methodName = "POST";
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -201,7 +203,7 @@ namespace biz.dfch.CS.Appclusive.Api
             {
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
-            var result = this.Execute(uriAction, methodName, bodyParameters);
+            var result = Execute(uriAction, methodName, bodyParameters);
         }
 
         public object InvokeEntitySetActionWithSingleResult(string entitySetName, string actionName, Type type, object inputParameters)
@@ -251,7 +253,7 @@ namespace biz.dfch.CS.Appclusive.Api
         public T InvokeEntitySetActionWithSingleResult<T>(string entitySetName, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -267,7 +269,7 @@ namespace biz.dfch.CS.Appclusive.Api
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            var result = this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).Single();
+            var result = Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).Single();
             return result;
         }
 
@@ -326,7 +328,7 @@ namespace biz.dfch.CS.Appclusive.Api
         public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(string entitySetName, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entitySetName, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -342,7 +344,7 @@ namespace biz.dfch.CS.Appclusive.Api
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
+            return Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntitySetActionWithListResult<T>(object entity, string actionName, object inputParameters)
@@ -364,14 +366,14 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public void InvokeEntityActionWithVoidResult(string entitySetName, long id, string actionName, object inputParameters)
         {
-            this.InvokeEntityActionWithVoidResult(entitySetName, (object)id, actionName, inputParameters);
+            InvokeEntityActionWithVoidResult(entitySetName, (object)id, actionName, inputParameters);
         }
 
         public void InvokeEntityActionWithVoidResult(string entitySetName, object id, string actionName, object inputParameters)
         {
             var methodName = "POST";
-            string entityUrl = GetEntityUrl(entitySetName, id);
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
+            var entityUrl = GetEntityUrl(entitySetName, id);
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -386,7 +388,7 @@ namespace biz.dfch.CS.Appclusive.Api
             {
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
-            var result = this.Execute(uriAction, methodName, bodyParameters);
+            var result = Execute(uriAction, methodName, bodyParameters);
         }
 
         public object InvokeEntityActionWithSingleResult(string entitySetName, long id, string actionName, Type type, object inputParameters)
@@ -435,14 +437,14 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public T InvokeEntityActionWithSingleResult<T>(string entitySetName, long id, string actionName, object inputParameters)
         {
-            return this.InvokeEntityActionWithSingleResult<T>(entitySetName, (object)id, actionName, inputParameters);
+            return InvokeEntityActionWithSingleResult<T>(entitySetName, (object)id, actionName, inputParameters);
         }
 
         public T InvokeEntityActionWithSingleResult<T>(string entitySetName, object id, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            string entityUrl = GetEntityUrl(entitySetName, id);
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
+            var entityUrl = GetEntityUrl(entitySetName, id);
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -458,7 +460,7 @@ namespace biz.dfch.CS.Appclusive.Api
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            var result = this.Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).Single();
+            var result = Execute<T>(uriAction, METHOD_NAME, true, bodyParameters).Single();
             return result;
         }
 
@@ -519,14 +521,14 @@ namespace biz.dfch.CS.Appclusive.Api
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, long id, string actionName, object inputParameters)
         {
-            return this.InvokeEntityActionWithListResult<T>(entitySetName, (object)id, actionName, inputParameters);
+            return InvokeEntityActionWithListResult<T>(entitySetName, (object)id, actionName, inputParameters);
         }
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(string entitySetName, object id, string actionName, object inputParameters)
         {
             const string METHOD_NAME = "POST";
-            string entityUrl = GetEntityUrl(entitySetName, id);
-            var uriAction = new Uri(string.Concat(this.BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
+            var entityUrl = GetEntityUrl(entitySetName, id);
+            var uriAction = new Uri(string.Concat(BaseUri.AbsoluteUri.TrimEnd('/'), "/", entityUrl, "/", actionName));
 
             BodyOperationParameter[] bodyParameters;
             if (inputParameters is Hashtable)
@@ -542,7 +544,7 @@ namespace biz.dfch.CS.Appclusive.Api
                 bodyParameters = GetBodyOperationParametersFromObject(inputParameters);
             }
 
-            return this.Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
+            return Execute<T>(uriAction, METHOD_NAME, false, bodyParameters).ToList();
         }
 
         public IEnumerable<T> InvokeEntityActionWithListResult<T>(object entity, string actionName, object inputParameters)
@@ -643,5 +645,131 @@ namespace biz.dfch.CS.Appclusive.Api
         
         #endregion
    
+        #region IAppclusiveTenantHeader
+
+        private const string AUTHORIZATION_HEADER_NAME = "Authorization";
+        private const string AUTHORIZATION_BEARER_SCHEME = "Bearer {0}";
+        private const string AUTHORIZATION_BASIC_SCHEME = "Basic {0}";
+        private const string DEFAULT_TENANT_HEADER_NAME = "Biz-Dfch-Tenant-Id";
+        public const string AuthorisationBaererUserName = "[AuthorisationBaererUser]";
+
+        private string tenantHeaderName;
+        public string TenantHeaderName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(tenantHeaderName))
+                {
+                    tenantHeaderName = DEFAULT_TENANT_HEADER_NAME;
+                }
+                return tenantHeaderName;
+            }
+            set
+            {
+                tenantHeaderName = value;
+            }
+        }
+
+        private string tenantID;
+        public string TenantID
+        {
+            get
+            {
+                return tenantID;
+            }
+            set
+            {
+                if (value != tenantID)
+                {
+                    tenantID = value;
+                    RegisterSendingRequestEvent();
+                }
+            }
+        }
+
+        public new ICredentials Credentials
+        {
+            get
+            {
+                return base.Credentials;
+            }
+            set
+            {
+                if (base.Credentials != value)
+                {
+                    base.Credentials = value;
+                    RegisterSendingRequestEvent();
+                }
+            }
+        }
+
+        private bool SetBasicAuthenticationHeader()
+        {
+            var setHeader = false;
+            if (Credentials is NetworkCredential)
+            {
+                var networkCredentials = (NetworkCredential)Credentials;
+                if ((!string.IsNullOrEmpty(networkCredentials.UserName)) && (!string.IsNullOrEmpty(networkCredentials.Password)))
+                {
+                    setHeader = AuthorisationBaererUserName != networkCredentials.UserName;
+                }
+            }
+            return setHeader;
+        }
+
+        private bool SetBearerAuthenticationHeader()
+        {
+            var setHeader = false;
+            if (Credentials is NetworkCredential)
+            {
+                var networkCredentials = (NetworkCredential)Credentials;
+                if ((!string.IsNullOrEmpty(networkCredentials.UserName)) && (!string.IsNullOrEmpty(networkCredentials.Password)))
+                {
+                    setHeader = AuthorisationBaererUserName == networkCredentials.UserName;
+                }
+            }
+            return setHeader;
+        }
+
+        private bool SetTenantHeader()
+        {
+            return !string.IsNullOrEmpty(TenantID);
+        }
+
+        private void RegisterSendingRequestEvent()
+        {
+
+            if ((SetBearerAuthenticationHeader()) || (SetBasicAuthenticationHeader()) || (SetTenantHeader()))
+            {
+                SendingRequest2 += DataServiceContext_SendingRequest2;
+            }
+            else
+            {
+                SendingRequest2 -= DataServiceContext_SendingRequest2;
+            }
+        }
+
+        public void DataServiceContext_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        {
+            if (SetBearerAuthenticationHeader())
+            {
+                var networkCredentials = (NetworkCredential)Credentials;
+                e.RequestMessage.SetHeader(AUTHORIZATION_HEADER_NAME, string.Format(AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+            }
+
+            if (SetBasicAuthenticationHeader())
+            {
+                var networkCredentials = (NetworkCredential)Credentials;
+                var basicAuthString = Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", networkCredentials.UserName, networkCredentials.Password)));
+                e.RequestMessage.SetHeader(AUTHORIZATION_HEADER_NAME, string.Format(AUTHORIZATION_BASIC_SCHEME, basicAuthString));
+            }
+
+            if (SetTenantHeader())
+            {
+                e.RequestMessage.SetHeader(TenantHeaderName, TenantID);
+            }
+        }
+
+        #endregion Request Headers
     }
 }
