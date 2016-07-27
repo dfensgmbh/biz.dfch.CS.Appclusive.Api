@@ -24,6 +24,8 @@ using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -152,6 +154,51 @@ namespace biz.dfch.CS.Appclusive.Api
             var assembly = Assembly.GetExecutingAssembly();
             var assemblyName = assembly.GetName();
             return assemblyName.Version;
+        }
+
+        private volatile string metadata = null;
+        private object syncRoot = new object();
+
+        public string GetMetadata()
+        {
+            Contract.Ensures(!string.IsNullOrWhiteSpace(Contract.Result<string>()));
+
+            if (null != metadata)
+            {
+                return metadata;
+            }
+
+            lock (syncRoot)
+            {
+                if (null != metadata)
+                {
+                    return metadata;
+                }
+
+                using (var httpClient = new HttpClient())
+                {
+                    httpClient.DefaultRequestHeaders.Add("UserAgent", this.GetType().FullName);
+
+                    var authorisationHeaderValue = GetAuthorisationHeaderValue();
+                    if (default(string) != authorisationHeaderValue)
+                    {
+                        httpClient.DefaultRequestHeaders.Add(AUTHORIZATION_HEADER_NAME, authorisationHeaderValue);
+                    }
+
+                    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
+
+                    if (SetTenantHeader())
+                    {
+                        httpClient.DefaultRequestHeaders.Add(TenantHeaderName, TenantID);
+                    }
+
+                    var response = httpClient.GetAsync(GetMetadataUri().AbsoluteUri).Result;
+                    response.EnsureSuccessStatusCode();
+
+                    metadata = response.Content.ReadAsStringAsync().Result;
+                    return metadata;
+                }
+            }
         }
         
         #region IDataServiceClientHelper
@@ -789,21 +836,34 @@ namespace biz.dfch.CS.Appclusive.Api
             }
         }
 
-        public void DataServiceContext_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        private string GetAuthorisationHeaderValue()
         {
+            var result = default(string);
+
             if (SetBearerAuthenticationHeader())
             {
                 var networkCredentials = (NetworkCredential)Credentials;
-                e.RequestMessage.SetHeader(AUTHORIZATION_HEADER_NAME, string.Format(AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password));
+                result = string.Format(AUTHORIZATION_BEARER_SCHEME, networkCredentials.Password);
             }
 
             if (SetBasicAuthenticationHeader())
             {
                 var networkCredentials = (NetworkCredential)Credentials;
                 var basicAuthString = Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", networkCredentials.UserName, networkCredentials.Password)));
-                e.RequestMessage.SetHeader(AUTHORIZATION_HEADER_NAME, string.Format(AUTHORIZATION_BASIC_SCHEME, basicAuthString));
+                result = string.Format(AUTHORIZATION_BASIC_SCHEME, basicAuthString);
             }
 
+            return result;
+        }
+
+        public void DataServiceContext_SendingRequest2(object sender, SendingRequest2EventArgs e)
+        {
+            var authorisationHeaderValue = GetAuthorisationHeaderValue();
+            if (default(string) != authorisationHeaderValue)
+            {
+                e.RequestMessage.SetHeader(AUTHORIZATION_HEADER_NAME, authorisationHeaderValue);
+            }
+            
             if (SetTenantHeader())
             {
                 e.RequestMessage.SetHeader(TenantHeaderName, TenantID);
