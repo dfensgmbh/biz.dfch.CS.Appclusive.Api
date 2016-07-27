@@ -34,7 +34,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
             Contract.Requires(null != value);
             Contract.Ensures(null != Contract.Result<SemverCompatibilityFlags>());
 
-            var serverVersion = new DiagnosticsEndpointCommunication().GetBaseUriVersion(this._Endpoints);
+            var serverVersion = new DiagnosticsEndpointCommunication().GetBaseUriVersion(_Endpoints);
             
             var result = SemverCompatibilityFlags.Compatible;
 
