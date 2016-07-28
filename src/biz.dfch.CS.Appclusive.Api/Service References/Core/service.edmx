@@ -1657,6 +1657,27 @@
         <FunctionImport Name="Information" ReturnType="biz.dfch.CS.Appclusive.Core.Managers.TenantManagerInformation" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
         </FunctionImport>
+        <FunctionImport Name="IsAncestor" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsParent" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsChild" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsDescendant" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsSelf" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsSibling" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
+        <FunctionImport Name="IsRelated" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant" />
+        </FunctionImport>
         <FunctionImport Name="Current" ReturnType="biz.dfch.CS.Appclusive.Core.Managers.TenantManagerInformation" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Core.Tenant)" Nullable="false" />
         </FunctionImport>

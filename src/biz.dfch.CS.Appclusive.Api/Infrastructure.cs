@@ -16,7 +16,7 @@
  
 ﻿namespace biz.dfch.CS.Appclusive.Api.Infrastructure
 {
-    public partial class Infrastructure :DataServiceContextBase
+    public partial class Infrastructure : DataServiceContextBase
     {
         // N/A
     }

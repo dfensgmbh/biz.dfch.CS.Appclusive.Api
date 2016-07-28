@@ -666,7 +666,7 @@ namespace biz.dfch.CS.Appclusive.Api
         private Type GetCallerType()
         {
             // this is an internal method that will retrieve the caller type of the caller 
-            var frame = new StackFrame(2);
+            var frame = new StackFrame(1);
             var method = frame.GetMethod();
 
             var type = method.DeclaringType;
