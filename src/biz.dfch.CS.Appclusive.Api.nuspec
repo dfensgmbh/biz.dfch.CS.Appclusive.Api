@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>biz.dfch.CS.Appclusive.Api</id>
-        <version>4.4.0</version>
+        <version>4.5.0</version>
         <title>biz.dfch.CS.Appclusive.Api</title>
         <authors>d-fens GmbH</authors>
         <owners>d-fens GmbH</owners>
@@ -16,10 +16,10 @@
 Service Reference to the Appclusive Framework
 		</description>
         <summary>Service reference to the Appclusive Framework</summary>
-        <releaseNotes>20160822
+        <releaseNotes>20160824
 # FEATURE
 
-* updated Appclusive API to 3.8.0
+* updated Appclusive API to 3.9.0
 </releaseNotes>
         <copyright>Copyright © 2015-2016 d-fens GmbH</copyright>
         <tags>dfch OData service reference Appclusive C#</tags>

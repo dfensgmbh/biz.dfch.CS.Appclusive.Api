@@ -333,6 +333,7 @@
         <Property Name="ValidatePattern" Type="Edm.String" />
         <Property Name="ValidateScript" Type="Edm.String" />
         <Property Name="Type" Type="Edm.String" Nullable="false" />
+        <Property Name="KeyNameValueFilter" Type="Edm.String" />
         <Property Name="Default" Type="Edm.String" />
         <Property Name="Minimum" Type="Edm.Double" />
         <Property Name="Maximum" Type="Edm.Double" />
@@ -422,6 +423,10 @@
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType)" Nullable="false" />
         </FunctionImport>
         <FunctionImport Name="IsValid" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType" />
+          <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
+        </FunctionImport>
+        <FunctionImport Name="GetValidationResults" ReturnType="Collection(Edm.String)" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType" />
           <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
         </FunctionImport>
