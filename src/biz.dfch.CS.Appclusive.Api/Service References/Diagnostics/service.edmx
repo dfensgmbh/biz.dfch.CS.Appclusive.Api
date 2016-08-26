@@ -422,6 +422,10 @@
         <FunctionImport Name="Template" ReturnType="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType" IsBindable="true" EntitySet="DataTypes" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType)" Nullable="false" />
         </FunctionImport>
+        <FunctionImport Name="EntityKindVersion" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType)" IsBindable="true" EntitySet="DataTypes" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType)" Nullable="false" />
+          <Parameter Name="Id" Type="Edm.Int64" Nullable="false" />
+        </FunctionImport>
         <FunctionImport Name="IsValid" ReturnType="Edm.Boolean" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics.DataType" />
           <Parameter Name="Value" Type="Edm.String" FixedLength="false" Unicode="false" />
