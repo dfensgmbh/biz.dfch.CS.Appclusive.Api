@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("d-fens GmbH")]
 [assembly: AssemblyProduct("biz.dfch.CS.Appclusive.Api.Tests")]
 [assembly: AssemblyCopyright("Copyright © 2015-2016 d-fens GmbH")]
-[assembly: AssemblyTrademark("The d-fens logo is a registered trademark in the European Union")]
+[assembly: AssemblyTrademark("The d-fens logo is a registered trademark in the European Union. Appclusive is a registered trademark in Switzerland and/or other countries.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
