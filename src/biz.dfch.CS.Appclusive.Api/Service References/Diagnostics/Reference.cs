@@ -9,14 +9,14 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 8/26/2016 11:32:48 AM
+// Generation date: 8/26/2016 5:23:13 PM
 namespace biz.dfch.CS.Appclusive.Api.Diagnostics
 {
     
     /// <summary>
     /// There are no comments for Diagnostics in the schema.
     /// </summary>
-    public partial class Diagnostics : global::System.Data.Services.Client.DataServiceContext
+    public partial class Diagnostics : DataServiceContextBase
     {
         /// <summary>
         /// Initialize a new Diagnostics object.
@@ -2919,7 +2919,7 @@ namespace biz.dfch.CS.Appclusive.Api.Diagnostics
     }
 }
 // Original file name:
-// Generation date: 8/26/2016 11:32:48 AM
+// Generation date: 8/26/2016 5:23:13 PM
 namespace biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics
 {
     
