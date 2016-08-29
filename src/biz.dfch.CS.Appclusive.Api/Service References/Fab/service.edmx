@@ -180,17 +180,29 @@
         <NavigationProperty Name="CreatedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Fab_Rating_CreatedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_CreatedByPartner" ToRole="CreatedBy" FromRole="CreatedByPartner" />
         <NavigationProperty Name="ModifiedBy" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Fab_Rating_ModifiedBy_biz_dfch_CS_Appclusive_Core_OdataServices_Core_User_ModifiedByPartner" ToRole="ModifiedBy" FromRole="ModifiedByPartner" />
       </EntityType>
+    </Schema>
+    <Schema Namespace="biz.dfch.CS.Appclusive.Public.OdataServices.Fab" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
       <ComplexType Name="RatingResult">
-        <Property Name="CatalogueItemId" Type="Edm.Int32" Nullable="false" />
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Currency" Type="Edm.String" Nullable="false" />
         <Property Name="Value" Type="Edm.Double" Nullable="false" />
-        <Property Name="Currency" Type="Edm.String" />
       </ComplexType>
       <ComplexType Name="RatingRequest">
         <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
-        <Property Name="CatalogueItemId" Type="Edm.Int32" Nullable="false" />
-        <Property Name="Currency" Type="Edm.String" />
+        <Property Name="EntityKindId" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Currency" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" />
+      </ComplexType>
+      <ComplexType Name="CostInformation">
+        <Property Name="CurrentCost" Type="Edm.Double" Nullable="false" />
+        <Property Name="Configuration" Type="biz.dfch.CS.Appclusive.Public.OdataServices.Fab.CostQuotaConfiguration" Nullable="false" />
+      </ComplexType>
+      <ComplexType Name="CostQuotaConfiguration">
+        <Property Name="Threshold" Type="Edm.Double" Nullable="false" />
+        <Property Name="Quota" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Currency" Type="Edm.String" Nullable="false" />
+        <Property Name="NotificationAddress" Type="Edm.String" />
       </ComplexType>
     </Schema>
     <Schema Namespace="Default" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -199,9 +211,12 @@
         <EntitySet Name="Users" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.User" />
         <EntitySet Name="Customers" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Customer" />
         <EntitySet Name="Ratings" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Fab.Rating" />
-        <FunctionImport Name="Rate" ReturnType="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Fab.RatingResult)" IsBindable="true" m:IsAlwaysBindable="true">
+        <FunctionImport Name="Rate" ReturnType="Collection(biz.dfch.CS.Appclusive.Public.OdataServices.Fab.RatingResult)" IsBindable="true" m:IsAlwaysBindable="true">
           <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Fab.Rating)" Nullable="false" />
-          <Parameter Name="RatingRequest" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Fab.RatingRequest)" Nullable="false" />
+          <Parameter Name="RatingRequest" Type="Collection(biz.dfch.CS.Appclusive.Public.OdataServices.Fab.RatingRequest)" Nullable="false" />
+        </FunctionImport>
+        <FunctionImport Name="GetCostInformation" ReturnType="biz.dfch.CS.Appclusive.Public.OdataServices.Fab.CostInformation" IsBindable="true" m:IsAlwaysBindable="true">
+          <Parameter Name="bindingParameter" Type="Collection(biz.dfch.CS.Appclusive.Core.OdataServices.Fab.Rating)" Nullable="false" />
         </FunctionImport>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Tenant_ParentPartner">
           <End Role="ParentPartner" EntitySet="Tenants" />
