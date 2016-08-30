@@ -339,6 +339,7 @@
         <Property Name="Maximum" Type="Edm.Double" />
         <Property Name="Increment" Type="Edm.Double" />
         <Property Name="IncrementFunction" Type="Edm.String" />
+        <Property Name="ValidateType" Type="Edm.String" />
         <Property Name="IsRequired" Type="Edm.Boolean" Nullable="false" />
         <Property Name="Unit" Type="Edm.String" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
