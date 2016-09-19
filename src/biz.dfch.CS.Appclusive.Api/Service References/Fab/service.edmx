@@ -200,7 +200,7 @@
       </ComplexType>
       <ComplexType Name="CostQuotaConfiguration">
         <Property Name="Threshold" Type="Edm.Double" Nullable="false" />
-        <Property Name="Quota" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Quota" Type="Edm.Double" Nullable="false" />
         <Property Name="Currency" Type="Edm.String" Nullable="false" />
         <Property Name="NotificationAddress" Type="Edm.String" />
       </ComplexType>
