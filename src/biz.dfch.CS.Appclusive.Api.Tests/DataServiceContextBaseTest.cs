@@ -15,13 +15,11 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Data.Services.Client;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
+using biz.dfch.CS.Appclusive.Core.OdataServices.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Telerik.JustMock;
 
 namespace biz.dfch.CS.Appclusive.Api.Tests
 {
@@ -51,6 +49,43 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
                     Assert.AreNotEqual(definedTypeParts[definedTypeParts.Length -1], definedTypeParts[definedTypeParts.Length -2]);
                 }
             }
+        }
+
+        [Ignore]
+        [TestMethod]
+        public void GetSingleActionSucceeds()
+        {
+            // Arrange
+            var id = 1L;
+            var name = "arbitrary-name";
+            var type = typeof(Node);
+
+            var node = new Node
+            {
+                Id = id,
+                Name = name
+            };
+
+            var sut = new DataServiceContextBase(new Uri("http://appclusive/api/Core"));
+
+            var methodInfo = Mock.Create<MethodInfo>();
+            Mock.Arrange(() => methodInfo.Invoke(Arg.IsAny<object>(), Arg.IsAny<object[]>()))
+                .IgnoreInstance()
+                .Returns(node)
+                .MustBeCalled();
+
+            // Act
+            var result = sut.GetSingleEntity(type, id);
+            Assert.IsNotNull(result);
+
+            // Assert
+            dynamic entity = result;
+            Assert.AreEqual(id, entity.Id);
+            Assert.AreEqual(name, entity.Name);
+
+            Assert.AreEqual(type.Name, entity.GetType().Name);
+
+            Mock.Assert(methodInfo);
         }
     }
 }
