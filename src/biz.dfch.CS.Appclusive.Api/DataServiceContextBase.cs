@@ -673,16 +673,6 @@ namespace biz.dfch.CS.Appclusive.Api
             return type;
         }
 
-        private static Type GetCallerType(int skipFrames)
-        {
-            // this is an internal method that will retrieve the caller type of the caller 
-            var frame = new StackFrame(skipFrames);
-            var method = frame.GetMethod();
-
-            var type = method.DeclaringType;
-            return type;
-        }
-
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
@@ -748,7 +738,7 @@ namespace biz.dfch.CS.Appclusive.Api
             const string methodName = "Execute";
             const string paramName = "requestUri";
 
-            var mi = GetCallerType(2).GetMethods().First(m => m.Name == methodName && m.IsGenericMethod && m.GetParameters()[0].Name == paramName);
+            var mi = GetCallerType().GetMethods().First(m => m.Name == methodName && m.IsGenericMethod && m.GetParameters()[0].Name == paramName);
 
             var genericMethod = mi.MakeGenericMethod(type);
             Contract.Assert(null != genericMethod, "Cannot create generic method.");
