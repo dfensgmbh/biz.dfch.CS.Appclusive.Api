@@ -673,6 +673,16 @@ namespace biz.dfch.CS.Appclusive.Api
             return type;
         }
 
+        private static Type GetCallerType(int skipFrames)
+        {
+            // this is an internal method that will retrieve the caller type of the caller 
+            var frame = new StackFrame(skipFrames);
+            var method = frame.GetMethod();
+
+            var type = method.DeclaringType;
+            return type;
+        }
+
         public BodyOperationParameter[] GetBodyOperationParametersFromObject(object input)
         {
             var operationParameters = new List<BodyOperationParameter>();
@@ -729,7 +739,26 @@ namespace biz.dfch.CS.Appclusive.Api
             }
             return operationParameters.ToArray();
         }
-        
+
+        public object GetSingleEntity(Type type, long id)
+        {
+            Contract.Requires(null != type);
+            Contract.Requires(0 < id);
+
+            const string methodName = "Execute";
+            const string paramName = "requestUri";
+
+            var mi = GetCallerType(2).GetMethods().First(m => m.Name == methodName && m.IsGenericMethod && m.GetParameters()[0].Name == paramName);
+
+            var genericMethod = mi.MakeGenericMethod(type);
+            Contract.Assert(null != genericMethod, "Cannot create generic method.");
+
+            var uri = new Uri(string.Format("{0}/{1}s({2}L)", BaseUri.AbsoluteUri.TrimEnd('/'), type.Name, id));
+
+            var result = genericMethod.Invoke(this, new object[] { uri });
+            return result;
+        }
+
         #endregion
    
         #region IAppclusiveTenantHeader

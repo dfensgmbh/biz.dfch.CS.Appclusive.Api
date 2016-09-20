@@ -572,5 +572,6 @@ namespace biz.dfch.CS.Appclusive.Api.Tests
             // Assert
             Assert.IsFalse(svc.HasPendingChanges());
         }
+
     }
 }
